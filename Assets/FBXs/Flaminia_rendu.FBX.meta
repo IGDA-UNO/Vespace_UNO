@@ -1,0 +1,133 @@
+fileFormatVersion: 2
+guid: 1488f58d6d2f178408f71360efa4f321
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: cheveux
+    100002: default002
+    100004: Eyelashes002
+    100006: Flaminia_panier_test_export_marvelous
+    100008: //RootNode
+    100010: HEAD001
+    100012: ribbon
+    400000: cheveux
+    400002: default002
+    400004: Eyelashes002
+    400006: Flaminia_panier_test_export_marvelous
+    400008: //RootNode
+    400010: HEAD001
+    400012: ribbon
+    2100000: Default Fabric_FRONT_3574
+    2100002: Material3844
+    2100004: Material3840
+    2100006: Material3848
+    2100008: sousous_robe-froufrou_FRONT_49012478
+    2100010: corset_FRONT_55464583
+    2100012: 'Material #31'
+    2100014: 'Material #32'
+    2100016: Body
+    2100018: 'Material #34'
+    2100020: 'Material #33'
+    2300000: cheveux
+    2300002: default002
+    2300004: Eyelashes002
+    2300006: Flaminia_panier_test_export_marvelous
+    2300008: HEAD001
+    2300010: ribbon
+    3300000: cheveux
+    3300002: default002
+    3300004: Eyelashes002
+    3300006: Flaminia_panier_test_export_marvelous
+    3300008: HEAD001
+    3300010: ribbon
+    4300000: Flaminia_panier_test_export_marvelous
+    4300002: HEAD001
+    4300004: Eyelashes002
+    4300006: default002
+    4300008: cheveux
+    4300010: ribbon
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

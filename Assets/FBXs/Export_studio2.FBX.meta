@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 6d245064b249c2443962aef588514a56
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: "Bo\xEEte001"
+    100002: "Bo\xEEte002"
+    100004: "Bo\xEEte003"
+    100006: "Bo\xEEte004"
+    100008: "Bo\xEEte005"
+    100010: "Bo\xEEte006"
+    100012: "Bo\xEEte007"
+    100014: "Bo\xEEte008"
+    100016: "Bo\xEEte009"
+    100018: "Bo\xEEte010"
+    100020: "Bo\xEEte011"
+    100022: "Bo\xEEte012"
+    100024: "Bo\xEEte014"
+    100026: "Bo\xEEte038"
+    100028: //RootNode
+    100030: Groupe001
+    100032: PhysCamera001
+    100034: PhysCamera001.Target
+    100036: PhysCamera002
+    100038: PhysCamera002.Cible
+    100040: PhysCamera003
+    100042: PhysCamera003.Cible
+    100044: PhysCamera004
+    100046: PhysCamera004.Cible
+    100048: Plan001
+    100050: Plan002
+    100052: Plan003
+    100054: Plan004
+    100056: Plan005
+    100058: VRaySun001
+    100060: VRaySun001.Target
+    400000: "Bo\xEEte001"
+    400002: "Bo\xEEte002"
+    400004: "Bo\xEEte003"
+    400006: "Bo\xEEte004"
+    400008: "Bo\xEEte005"
+    400010: "Bo\xEEte006"
+    400012: "Bo\xEEte007"
+    400014: "Bo\xEEte008"
+    400016: "Bo\xEEte009"
+    400018: "Bo\xEEte010"
+    400020: "Bo\xEEte011"
+    400022: "Bo\xEEte012"
+    400024: "Bo\xEEte014"
+    400026: "Bo\xEEte038"
+    400028: //RootNode
+    400030: Groupe001
+    400032: PhysCamera001
+    400034: PhysCamera001.Target
+    400036: PhysCamera002
+    400038: PhysCamera002.Cible
+    400040: PhysCamera003
+    400042: PhysCamera003.Cible
+    400044: PhysCamera004
+    400046: PhysCamera004.Cible
+    400048: Plan001
+    400050: Plan002
+    400052: Plan003
+    400054: Plan004
+    400056: Plan005
+    400058: VRaySun001
+    400060: VRaySun001.Target
+    2100000: Enduit
+    2100002: No Name
+    2100004: 'Material #25'
+    2300000: "Bo\xEEte001"
+    2300002: "Bo\xEEte002"
+    2300004: "Bo\xEEte003"
+    2300006: "Bo\xEEte004"
+    2300008: "Bo\xEEte005"
+    2300010: "Bo\xEEte006"
+    2300012: "Bo\xEEte007"
+    2300014: "Bo\xEEte008"
+    2300016: "Bo\xEEte009"
+    2300018: "Bo\xEEte010"
+    2300020: "Bo\xEEte011"
+    2300022: "Bo\xEEte012"
+    2300024: "Bo\xEEte014"
+    2300026: "Bo\xEEte038"
+    2300028: Plan001
+    2300030: Plan002
+    2300032: Plan003
+    2300034: Plan004
+    2300036: Plan005
+    3300000: "Bo\xEEte001"
+    3300002: "Bo\xEEte002"
+    3300004: "Bo\xEEte003"
+    3300006: "Bo\xEEte004"
+    3300008: "Bo\xEEte005"
+    3300010: "Bo\xEEte006"
+    3300012: "Bo\xEEte007"
+    3300014: "Bo\xEEte008"
+    3300016: "Bo\xEEte009"
+    3300018: "Bo\xEEte010"
+    3300020: "Bo\xEEte011"
+    3300022: "Bo\xEEte012"
+    3300024: "Bo\xEEte014"
+    3300026: "Bo\xEEte038"
+    3300028: Plan001
+    3300030: Plan002
+    3300032: Plan003
+    3300034: Plan004
+    3300036: Plan005
+    4300000: "Bo\xEEte001"
+    4300002: "Bo\xEEte002"
+    4300004: "Bo\xEEte003"
+    4300006: "Bo\xEEte004"
+    4300008: "Bo\xEEte005"
+    4300010: "Bo\xEEte006"
+    4300012: Plan002
+    4300014: Plan003
+    4300016: "Bo\xEEte014"
+    4300018: Plan004
+    4300020: "Bo\xEEte038"
+    4300022: "Bo\xEEte012"
+    4300024: "Bo\xEEte007"
+    4300026: "Bo\xEEte008"
+    4300028: "Bo\xEEte009"
+    4300030: "Bo\xEEte010"
+    4300032: "Bo\xEEte011"
+    4300034: Plan001
+    4300036: Plan005
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
