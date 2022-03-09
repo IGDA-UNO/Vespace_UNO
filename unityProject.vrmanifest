@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.theatremarionnettesdemo.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\Ben\\Documents\\Theatre Marionnettes V4\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\nlbennet\\OneDrive - University of New Orleans\\Documents\\GitHub\\Vespace\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Theatre Marionnettes Demo [Testing]"
