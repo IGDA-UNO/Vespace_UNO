@@ -12,30 +12,20 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject ensembleUI;
     public bool activeUI;
     public GameObject leftHand;
-    //public bool display;
-
+ 
     public SteamVR_LaserPointer laserPointer;
     public Color hit_color;
     public Color miss_color;
 
-    private SteamVR_Action_Boolean actionBoolean;
-
-
-    // Start is called before the first frame update
-
+  
     void Start()
-    {
-        //Display();
+    { 
         activeUI = false;
-        actionBoolean = SteamVR_Actions._default.GrabGrip;
+        
         laserPointer.color = miss_color;
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
-    }
-    void Update()
-    {
-        
     }
 
     public void Display()
@@ -61,27 +51,23 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     //LaserPointer functions overload:
-    //Surcharge des fonctions de LaserPointer : 
-
     public void PointerClick(object sender, PointerEventArgs e)
     {
         EnsembleObject ensemble = e.target.GetComponent<EnsembleObject>();
         if (ensemble != null)
         {
             //The object is an Ensemble object
-            
             Orientation();
             Display();
             //omekaPad.displayItem(voo.OmekaVirtualObjectID);
         }
         if (e.target.gameObject.layer == 5)
         {
-            //layer of the UI: 5
-            //layer de l'UI : 5 
-            Button bouton = e.target.GetComponent<Button>();
-            if (bouton != null)
+            //layer of the UI: 5 
+            Button button = e.target.GetComponent<Button>();
+            if (button != null)
             {
-                bouton.onClick.Invoke();
+                button.onClick.Invoke();
             }
         }
     }
