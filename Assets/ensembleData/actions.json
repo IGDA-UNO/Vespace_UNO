@@ -1,0 +1,6408 @@
+{
+	"fileName": "actions.json",
+	"actions": [
+		{
+			"name": "compliment",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"greet in subtle modest way",
+				"sensible compliment",
+				"complimenting a young provincial on good manners",
+				"compliment-accept-default",
+				"compliment-reject-default"
+			]
+		},
+		{
+			"name": "greet in subtle modest way",
+			"displayName": "greet in subtle modest way",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "responder",
+					"value": 60,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "vain",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "sensible compliment",
+			"displayName": "sensible compliment",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 70,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 65,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "flattered",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "complimenting a young provincial on good manners",
+			"displayName": "complimenting a young provincial on good manners",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "old",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "flattered",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "compliment-accept-default",
+			"displayName": "compliment-accept-default",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "compliment-reject-default",
+			"displayName": "compliment-reject-default",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "help someone",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"steal something for a friend _a",
+				"steal something for a friend _r",
+				"pay poor person's expenses",
+				"man helps woman out of \"bienséance\" (a)",
+				"keep a secret for someone",
+				"experienced person gives good advice",
+				"discreet thanks for help from a social superior",
+				"a man gives a hand to a woman (a)",
+				"bonne physionomie man grateful to benefactor",
+				"a noble helps a inebriated man",
+				"helpsomeone-accept-default",
+				"helpsomeone-reject-default"
+			]
+		},
+		{
+			"name": "steal something for a friend _a",
+			"displayName": "steal something for a friend _a",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "honest",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "steal something for a friend _r",
+			"displayName": "steal something for a friend _r",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "honest",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "initiator",
+					"second": "responder",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "embarrassing event",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "pay poor person's expenses",
+			"displayName": "pay poor person's expenses",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "generous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "man helps woman out of \"bienséance\" (a)",
+			"displayName": "man helps woman out of \"bienséance\" (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "responder",
+					"value": 70,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "keep a secret for someone",
+			"displayName": "keep a secret for someone",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "indiscreet / loose lipped",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "trustworthy",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "experienced person gives good advice",
+			"displayName": "experienced person gives good advice",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 80,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "responder",
+					"value": 70,
+					"operator": "<"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "discreet thanks for help from a social superior",
+			"displayName": "discreet thanks for help from a social superior",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": false,
+					"second": "responder"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "owes a favor to",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "a man gives a hand to a woman (a)",
+			"displayName": "a man gives a hand to a woman (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 60,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "tired / fatigued",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "bonne physionomie man grateful to benefactor",
+			"displayName": "bonne physionomie man grateful to benefactor",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "owes a favor to",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "a noble helps a inebriated man",
+			"displayName": "a noble helps a inebriated man",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "initiator",
+					"value": 75,
+					"operator": ">"
+				},
+				{
+					"category": "Status",
+					"type": "inebriated",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "helpsomeone-accept-default",
+			"displayName": "helpsomeone-accept-default",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "helpsomeone-reject-default",
+			"displayName": "helpsomeone-reject-default",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "give a gift",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"encourages friend's friend with a pick-me-up (a)",
+				"giftgift-accept-default",
+				"givegift-reject-default"
+			]
+		},
+		{
+			"name": "encourages friend's friend with a pick-me-up (a)",
+			"displayName": "encourages friend's friend with a pick-me-up (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">",
+					"second": "responder"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": true,
+					"second": "someone"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "responder",
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "giftgift-accept-default",
+			"displayName": "giftgift-accept-default",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "givegift-reject-default",
+			"displayName": "givegift-reject-default",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "seduce/flirt",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"homosexual sexual assault",
+				"man professes passion for virtuous woman, get rejected and loves her even more",
+				"looking at someone/ faire les yeux doux",
+				"discovered cheater refused a kiss",
+				"virtuous wife rejects man's attempt to seduce her",
+				"get drunk together",
+				"talk about the loved one",
+				"seduce/flirt-accept-default",
+				"seduce/flirt-reject-default"
+			]
+		},
+		{
+			"name": "homosexual sexual assault",
+			"displayName": "homosexual sexual assault",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "SocialRecordLabel",
+					"type": "sexual harassment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "responder",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Status",
+					"type": "gobsmacked",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "man professes passion for virtuous woman, get rejected and loves her even more",
+			"displayName": "man professes passion for virtuous woman, get rejected and loves her even more",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 70,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 80,
+					"operator": "<",
+					"second": "initiator"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 20,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "gobsmacked",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "looking at someone/ faire les yeux doux",
+			"displayName": "looking at someone/ faire les yeux doux",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "discovered cheater refused a kiss",
+			"displayName": "discovered cheater refused a kiss",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"first": "initiator",
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "virtuous wife rejects man's attempt to seduce her",
+			"displayName": "virtuous wife rejects man's attempt to seduce her",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "married",
+					"first": "initiator",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 60,
+					"second": "initiator",
+					"operator": ">"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 40,
+					"second": "responder",
+					"operator": "<"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "suspicious of",
+					"first": "third",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "third",
+					"second": "initiator",
+					"value": 20,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "-"
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "third",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "get drunk together",
+			"displayName": "get drunk together",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 70,
+					"second": "responder",
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 60,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "responder",
+					"value": 60,
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "Status",
+					"type": "inebriated",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "inebriated",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "talk about the loved one",
+			"displayName": "talk about the loved one",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 80,
+					"second": "third"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"first": "responder",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "third",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "third",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "seduce/flirt-accept-default",
+			"displayName": "seduce/flirt-accept-default",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "seduce/flirt-reject-default",
+			"displayName": "seduce/flirt-reject-default",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "affinity-up",
+			"intent": {
+				"category": "Network",
+				"type": "Affinity",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"compliment",
+				"help someone",
+				"give a gift",
+				"seduce/flirt"
+			]
+		},
+		{
+			"name": "embarrass",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"takes money from financially dependent other and puts in embarrassing situation",
+				"squander husband",
+				"greedy domestique steals all of rich man's money",
+				"pee on someone's stuff",
+				"reproach someone",
+				"embarrass-default-accept",
+				"embarrass-default-reject"
+			]
+		},
+		{
+			"name": "takes money from financially dependent other and puts in embarrassing situation",
+			"displayName": "takes money from financially dependent other and puts in embarrassing situation",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "squander husband",
+			"displayName": "squander husband",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "married",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "third",
+					"value": 66,
+					"second": "responder",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "third",
+					"second": "responder",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "embarrassing event",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "third",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "greedy domestique steals all of rich man's money",
+			"displayName": "greedy domestique steals all of rich man's money",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "credulous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 25,
+					"operator": "-"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "pee on someone's stuff",
+			"displayName": "pee on someone's stuff",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "child ",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "intimidates",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "Trait",
+					"type": "child ",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "embarrassing event",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "reproach someone",
+			"displayName": "reproach someone",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "embarrass-default-accept",
+			"displayName": "embarrass-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "embarrass-default-reject",
+			"displayName": "embarrass-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "insult",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"insulted",
+				"feels competition, refuses to stay",
+				"mocking woman insults man, leads to less affinity for women in general",
+				"soldier does not respect broke noble's status",
+				"insult-default-accept",
+				"insult-default-reject"
+			]
+		},
+		{
+			"name": "insulted",
+			"displayName": "insulted",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "devout",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 50,
+					"second": "initiator",
+					"operator": "<"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "responder",
+					"value": false,
+					"second": "initiator"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "caught in a lie",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 15,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "feels competition, refuses to stay",
+			"displayName": "feels competition, refuses to stay",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 81,
+					"operator": "<"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "responder",
+					"value": 80,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 30,
+					"operator": "-"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "jealous of",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "mocking woman insults man, leads to less affinity for women in general",
+			"displayName": "mocking woman insults man, leads to less affinity for women in general",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "mocking",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "third",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "third",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "soldier does not respect broke noble's status",
+			"displayName": "soldier does not respect broke noble's status",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "military officer",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "insult-default-accept",
+			"displayName": "insult-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "insult-default-reject",
+			"displayName": "insult-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "affinity-down",
+			"intent": {
+				"category": "Network",
+				"type": "Affinity",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"embarrass",
+				"insult"
+			]
+		},
+		{
+			"name": "display wit",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"yell something witty at actor during play",
+				"refrain from yelling something witty at actor during play",
+				"displaywit-default-accept",
+				"displaywit-default-reject"
+			]
+		},
+		{
+			"name": "yell something witty at actor during play",
+			"displayName": "yell something witty at actor during play",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"first": "other",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "other",
+					"second": "initiator",
+					"value": 20,
+					"operator": "-"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "ridicules",
+					"first": "responder",
+					"second": "other",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "refrain from yelling something witty at actor during play",
+			"displayName": "refrain from yelling something witty at actor during play",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "clumsy / awkward",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "other",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "other",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "ridicules",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "ridicules",
+					"first": "other",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "amused",
+					"first": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "displaywit-default-accept",
+			"displayName": "displaywit-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "displaywit-default-reject",
+			"displayName": "displaywit-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "display initiative",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"pay for someone applauding during the play",
+				"servant starts whistling",
+				"displayinitiative-default-accept",
+				"displayinitiative-default-reject"
+			]
+		},
+		{
+			"name": "pay for someone applauding during the play",
+			"displayName": "pay for someone applauding during the play",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "poor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "someone",
+					"value": 50,
+					"second": "responder",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Trait",
+					"type": "mocking",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "someone",
+					"second": "responder",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "servant starts whistling",
+			"displayName": "servant starts whistling",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 50,
+					"second": "responder",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 50
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "displayinitiative-default-accept",
+			"displayName": "displayinitiative-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "displayinitiative-default-reject",
+			"displayName": "displayinitiative-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "display worldliness",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"behave like the others at the theater",
+				"talk about science / philosophy",
+				"displayworldliness-default-accept",
+				"displayworldliness-default-reject"
+			]
+		},
+		{
+			"name": "behave like the others at the theater",
+			"displayName": "behave like the others at the theater",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"first": "initiator",
+					"value": 70,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"first": "responder",
+					"value": 50,
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "talk about science / philosophy",
+			"displayName": "talk about science / philosophy",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"first": "initiator",
+					"value": 70,
+					"operator": "<"
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"first": "responder",
+					"value": 70,
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "displayworldliness-default-accept",
+			"displayName": "displayworldliness-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "displayworldliness-default-reject",
+			"displayName": "displayworldliness-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "emulation-up",
+			"intent": {
+				"category": "Network",
+				"type": "Emulation",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"display wit",
+				"display initiative",
+				"display worldliness"
+			]
+		},
+		{
+			"name": "display eccentricity",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"respond in patois, but gain everyone's admiration",
+				"displayeccentricity-default-accept",
+				"displayeccentricity-default-reject"
+			]
+		},
+		{
+			"name": "respond in patois, but gain everyone's admiration",
+			"displayName": "respond in patois, but gain everyone's admiration",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "other",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "other",
+					"second": "initiator",
+					"value": 10
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "other",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "displayeccentricity-default-accept",
+			"displayName": "displayeccentricity-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "displayeccentricity-default-reject",
+			"displayName": "displayeccentricity-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "emulation-down",
+			"intent": {
+				"category": "Network",
+				"type": "Emulation",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"display eccentricity"
+			]
+		},
+		{
+			"name": "brag",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"engage in a noble dance while not noble",
+				"dressing up compared to one's social rank",
+				"brag-default-accept",
+				"brag-default-reject"
+			]
+		},
+		{
+			"name": "engage in a noble dance while not noble",
+			"displayName": "engage in a noble dance while not noble",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"value": 50,
+					"second": "initiator",
+					"operator": "<"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "embarrassing event",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "scandalous",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "dressing up compared to one's social rank",
+			"displayName": "dressing up compared to one's social rank",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "married",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "elegantly dressed",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitClothing",
+					"type": "wearing a sword",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "bourgeois",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "initiator",
+					"second": "other",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "other",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "brag-default-accept",
+			"displayName": "brag-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "brag-default-reject",
+			"displayName": "brag-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "lie",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"attractive woman lies about relationship status (a)",
+				"attractive woman lies about relationship status (r)",
+				"lie-default-accept",
+				"lie-default-reject"
+			]
+		},
+		{
+			"name": "attractive woman lies about relationship status (a)",
+			"displayName": "attractive woman lies about relationship status (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "married",
+					"first": "initiator",
+					"value": false,
+					"second": "someone"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 70,
+					"operator": ">"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "attractive woman lies about relationship status (r)",
+			"displayName": "attractive woman lies about relationship status (r)",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 70,
+					"operator": ">"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"value": 60,
+					"operator": "<",
+					"second": "initiator"
+				}
+			],
+			"effects": [
+				{
+					"category": "SocialRecordLabel",
+					"type": "caught in a lie",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 30,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 15,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "lie-default-accept",
+			"displayName": "lie-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "lie-default-reject",
+			"displayName": "lie-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "tell the truth",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"true but partial explanation turns into open conflict",
+				"virtuous tells clergy of being preyed upon, is disbelieved by devout",
+				"admit that you are of low status despite virtue & comportment",
+				"confess true virtuous feelings",
+				"telltruth-default-accept",
+				"telltruth-default-reject"
+			]
+		},
+		{
+			"name": "true but partial explanation turns into open conflict",
+			"displayName": "true but partial explanation turns into open conflict",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": false,
+					"second": "responder"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 50,
+					"second": "initiator",
+					"operator": "<"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"value": 50,
+					"operator": "<",
+					"second": "initiator"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "responder",
+					"value": true,
+					"second": "someone"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "someone",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "someone",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "virtuous tells clergy of being preyed upon, is disbelieved by devout",
+			"displayName": "virtuous tells clergy of being preyed upon, is disbelieved by devout",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "clergy",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "third",
+					"value": 50,
+					"operator": ">",
+					"second": "responder"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "third",
+					"value": false,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "third",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "hypocritical",
+					"first": "third",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "flirted with / made a pass at",
+					"first": "third",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "upset",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "suspicious of",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "admit that you are of low status despite virtue & comportment",
+			"displayName": "admit that you are of low status despite virtue & comportment",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "cares for",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "confess true virtuous feelings",
+			"displayName": "confess true virtuous feelings",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "Trait",
+					"type": "honest",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "telltruth-default-accept",
+			"displayName": "telltruth-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "telltruth-default-reject",
+			"displayName": "telltruth-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "credibility-up",
+			"intent": {
+				"category": "Network",
+				"type": "Credibility",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"brag",
+				"lie",
+				"tell the truth"
+			]
+		},
+		{
+			"name": "reveal ignorance",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"revealignorance-default-accept",
+				"revealignorance-default-reject"
+			]
+		},
+		{
+			"name": "revealignorance-default-accept",
+			"displayName": "revealignorance-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "revealignorance-default-reject",
+			"displayName": "revealignorance-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "tear off the mask",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"tearoffmask-default-accept",
+				"tearoffmask-default-reject"
+			]
+		},
+		{
+			"name": "tearoffmask-default-accept",
+			"displayName": "tearoffmask-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "tearoffmask-default-reject",
+			"displayName": "tearoffmask-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "credibility-down",
+			"intent": {
+				"category": "Network",
+				"type": "Credibility",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"reveal ignorance",
+				"tear off the mask"
+			]
+		},
+		{
+			"name": "impress",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"too tired for gossips",
+				"gift given meant to impress but does not impress receiver",
+				"flatter with kindness and attention",
+				"impress-default-accept",
+				"impress-default-reject"
+			]
+		},
+		{
+			"name": "too tired for gossips",
+			"displayName": "too tired for gossips",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 60,
+					"second": "responder",
+					"operator": ">"
+				},
+				{
+					"category": "Status",
+					"type": "tired / fatigued",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "gift given meant to impress but does not impress receiver",
+			"displayName": "gift given meant to impress but does not impress receiver",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 50,
+					"second": "responder",
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "vain",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "flatter with kindness and attention",
+			"displayName": "flatter with kindness and attention",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "initiator",
+					"value": 70,
+					"second": "responder",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "other",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "flattered",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "impress-default-accept",
+			"displayName": "impress-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "impress-default-reject",
+			"displayName": "impress-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "make a scene (not subtle)",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"embrace someone in public (a)",
+				"embrace someone in public (r)",
+				"play a bad trick",
+				"makescene-default-accept",
+				"makescene-default-reject"
+			]
+		},
+		{
+			"name": "embrace someone in public (a)",
+			"displayName": "embrace someone in public (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 70,
+					"second": "responder",
+					"operator": ">"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 60,
+					"second": "initiator",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "embrace someone in public (r)",
+			"displayName": "embrace someone in public (r)",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 70,
+					"second": "responder",
+					"operator": ">"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 50,
+					"operator": "<",
+					"second": "initiator"
+				}
+			],
+			"effects": [
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "play a bad trick",
+			"displayName": "play a bad trick",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "joker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "someone",
+					"value": false
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "makescene-default-accept",
+			"displayName": "makescene-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "makescene-default-reject",
+			"displayName": "makescene-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "draw attention (subtle)",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"lie about not liking something to get attention",
+				"someone not knowing how to behave draws attention to oneself",
+				"glorieuse making eyes at someone",
+				"drawattention-default-accept",
+				"drawattention-default-reject"
+			]
+		},
+		{
+			"name": "lie about not liking something to get attention",
+			"displayName": "lie about not liking something to get attention",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 60,
+					"second": "responder",
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "deceptive",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "credulous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "someone not knowing how to behave draws attention to oneself",
+			"displayName": "someone not knowing how to behave draws attention to oneself",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 60,
+					"operator": "<"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "initiator",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "responder",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "glorieuse making eyes at someone",
+			"displayName": "glorieuse making eyes at someone",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "glorieux",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 7,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "intimidates",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "drawattention-default-accept",
+			"displayName": "drawattention-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "drawattention-default-reject",
+			"displayName": "drawattention-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "curiosity / attention-up",
+			"intent": {
+				"category": "Network",
+				"type": "Curiosity / Attention",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"impress",
+				"make a scene (not subtle)",
+				"draw attention (subtle)"
+			]
+		},
+		{
+			"name": "deflecting",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"draw attention away from self by using third person ally to give a gift",
+				"look away",
+				"remaining silent",
+				"insist on low status to drive off high status lover",
+				"discretely leave the theatre and ask for ticket refurbishment, but being noticed",
+				"attempt to conceal information from friend fails",
+				"deflecting-default-accept",
+				"deflecting-default-reject"
+			]
+		},
+		{
+			"name": "draw attention away from self by using third person ally to give a gift",
+			"displayName": "draw attention away from self by using third person ally to give a gift",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 60,
+					"operator": ">",
+					"second": "responder"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 60,
+					"operator": ">"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "third",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "Trait",
+					"type": "indiscreet / loose lipped",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "generous",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "third",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "third",
+					"value": 10,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "look away",
+			"displayName": "look away",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "shy",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "shy",
+					"first": "third",
+					"value": true
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"value": 66,
+					"second": "initiator",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "third",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "Trait",
+					"type": "cold / distant",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "remaining silent",
+			"displayName": "remaining silent",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 50,
+					"operator": "<"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "intimidates",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "insist on low status to drive off high status lover",
+			"displayName": "insist on low status to drive off high status lover",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "flattered",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "discretely leave the theatre and ask for ticket refurbishment, but being noticed",
+			"displayName": "discretely leave the theatre and ask for ticket refurbishment, but being noticed",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "shy",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "SocialRecordLabel",
+					"type": "caught in a lie",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "attempt to conceal information from friend fails",
+			"displayName": "attempt to conceal information from friend fails",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "deflecting-default-accept",
+			"displayName": "deflecting-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "deflecting-default-reject",
+			"displayName": "deflecting-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "blend in",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"eccentric, unattractive man prefers staying on his own (a)",
+				"eccentric, unattractive person prefers staying on his own but nonetheless gets attention (r)",
+				"dress up as stranger",
+				"try to blend in while being new to the game",
+				"blendin-default-accept",
+				"blendin-default-reject"
+			]
+		},
+		{
+			"name": "eccentric, unattractive man prefers staying on his own (a)",
+			"displayName": "eccentric, unattractive man prefers staying on his own (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 30,
+					"operator": "<"
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 30,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "eccentric, unattractive person prefers staying on his own but nonetheless gets attention (r)",
+			"displayName": "eccentric, unattractive person prefers staying on his own but nonetheless gets attention (r)",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "initiator",
+					"value": 30,
+					"operator": "<"
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "dress up as stranger",
+			"displayName": "dress up as stranger",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "embarrassing event",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "try to blend in while being new to the game",
+			"displayName": "try to blend in while being new to the game",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "flattered",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "blendin-default-accept",
+			"displayName": "blendin-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "blendin-default-reject",
+			"displayName": "blendin-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "curiosity / attention-down",
+			"intent": {
+				"category": "Network",
+				"type": "Curiosity / Attention",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"deflecting",
+				"blend in"
+			]
+		},
+		{
+			"name": "attack someone",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"fight against someone for friend",
+				"assault of a man against a young woman defends herself",
+				"fight against someone for a young woman",
+				"attack-default-accept",
+				"attacksomeone-default-reject"
+			]
+		},
+		{
+			"name": "fight against someone for friend",
+			"displayName": "fight against someone for friend",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "initiator",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "threatened by",
+					"first": "third",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "assault of a man against a young woman defends herself",
+			"displayName": "assault of a man against a young woman defends herself",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "upset",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "someone",
+					"value": 50
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "sexual harassment",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 30,
+					"operator": "<",
+					"second": "someone"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "-"
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "responder",
+					"second": "someone",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "fight against someone for a young woman",
+			"displayName": "fight against someone for a young woman",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "attack-default-accept",
+			"displayName": "attack-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "attacksomeone-default-reject",
+			"displayName": "attacksomeone-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "insult honor",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"reveal a dirty secret",
+				"call by an embarrassing surname",
+				"refuse to accept insult to honor",
+				"insulthonor-default-accept",
+				"insulthonor-default-reject"
+			]
+		},
+		{
+			"name": "reveal a dirty secret",
+			"displayName": "reveal a dirty secret",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "SocialRecordLabel",
+					"type": "caught in a lie",
+					"first": "responder",
+					"value": true,
+					"second": "initiator"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "embarrassing event",
+					"first": "responder",
+					"value": true,
+					"second": "someone"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "someone",
+					"value": 50
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "call by an embarrassing surname",
+			"displayName": "call by an embarrassing surname",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "shy",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"first": "responder",
+					"value": 66,
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "DirectedStatus",
+					"type": "ridicules",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "refuse to accept insult to honor",
+			"displayName": "refuse to accept insult to honor",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "responder",
+					"value": 50,
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "insulthonor-default-accept",
+			"displayName": "insulthonor-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "insulthonor-default-reject",
+			"displayName": "insulthonor-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "blackmail",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"blackmail-default-insults",
+				"blackmail-default-reject"
+			]
+		},
+		{
+			"name": "blackmail-default-insults",
+			"displayName": "blackmail-default-insults",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "blackmail-default-reject",
+			"displayName": "blackmail-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "rivals-start",
+			"intent": {
+				"category": "Relationship",
+				"type": "Rivals",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"attack someone",
+				"insult honor",
+				"blackmail"
+			]
+		},
+		{
+			"name": "forgive",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"excuse and forgive someone for perceived wrong",
+				"forgive-default-accept",
+				"forgive-default-reject"
+			]
+		},
+		{
+			"name": "excuse and forgive someone for perceived wrong",
+			"displayName": "excuse and forgive someone for perceived wrong",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"value": 50,
+					"second": "responder",
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "forgive-default-accept",
+			"displayName": "forgive-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "forgive-default-reject",
+			"displayName": "forgive-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "apologize",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"apologize-default-accept",
+				"apologize-default-reject"
+			]
+		},
+		{
+			"name": "apologize-default-accept",
+			"displayName": "apologize-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "apologize-default-reject",
+			"displayName": "apologize-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "rivals-stop",
+			"intent": {
+				"category": "Relationship",
+				"type": "Rivals",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"forgive",
+				"apologize"
+			]
+		},
+		{
+			"name": "demonstrate virtue",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"lover catches virtuous partner, disbelieves display of virtue",
+				"virtuous behavior is convincing to friend, results in esteem",
+				"reject concurrent lover",
+				"move listeners to tears through honesty, virtue",
+				"express gratitude toward benefactor",
+				"demonstratevirtue-default-accept",
+				"demonstratevirtue-default-reject"
+			]
+		},
+		{
+			"name": "lover catches virtuous partner, disbelieves display of virtue",
+			"displayName": "lover catches virtuous partner, disbelieves display of virtue",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "responder",
+					"value": false,
+					"second": "third"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "third",
+					"value": 60,
+					"second": "responder",
+					"operator": ">"
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "caught in a lie",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "initiator",
+					"second": "third",
+					"value": true
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "flirted with / made a pass at",
+					"first": "third",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "virtuous behavior is convincing to friend, results in esteem",
+			"displayName": "virtuous behavior is convincing to friend, results in esteem",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "reject concurrent lover",
+			"displayName": "reject concurrent lover",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"first": "third",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "third",
+					"value": 80,
+					"second": "initiator",
+					"operator": ">"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"first": "third",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "move listeners to tears through honesty, virtue",
+			"displayName": "move listeners to tears through honesty, virtue",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"value": 50,
+					"second": "initiator",
+					"operator": ">"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"first": "responder",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "feeling socially connected",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "express gratitude toward benefactor",
+			"displayName": "express gratitude toward benefactor",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "DirectedStatus",
+					"type": "owes a favor to",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "initiator",
+					"second": "responder",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "demonstratevirtue-default-accept",
+			"displayName": "demonstratevirtue-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "demonstratevirtue-default-reject",
+			"displayName": "demonstratevirtue-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "esteem-start",
+			"intent": {
+				"category": "Relationship",
+				"type": "Esteem",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"demonstrate virtue"
+			]
+		},
+		{
+			"name": "criticize",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"shout criticism at bad actor",
+				"criticize-default-accept",
+				"criticize-default-reject"
+			]
+		},
+		{
+			"name": "shout criticism at bad actor",
+			"displayName": "shout criticism at bad actor",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"first": "initiator",
+					"value": 50,
+					"operator": ">"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "clumsy / awkward",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "-"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "criticize-default-accept",
+			"displayName": "criticize-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "criticize-default-reject",
+			"displayName": "criticize-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "play a trick",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"playtrick-default-accept",
+				"playtrick-default-reject"
+			]
+		},
+		{
+			"name": "playtrick-default-accept",
+			"displayName": "playtrick-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "playtrick-default-reject",
+			"displayName": "playtrick-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "behave rudely",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"express ingratitude toward benefactor",
+				"look with disdain after discovering a lie",
+				"behaverudely-default-accept",
+				"behaverudely-default-reject"
+			]
+		},
+		{
+			"name": "express ingratitude toward benefactor",
+			"displayName": "express ingratitude toward benefactor",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "DirectedStatus",
+					"type": "owes a favor to",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Status",
+					"type": "grateful",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"first": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "look with disdain after discovering a lie",
+			"displayName": "look with disdain after discovering a lie",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "SocialRecordLabel",
+					"type": "caught in a lie",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				}
+			]
+		},
+		{
+			"name": "behaverudely-default-accept",
+			"displayName": "behaverudely-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "behaverudely-default-reject",
+			"displayName": "behaverudely-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "esteem-stop",
+			"intent": {
+				"category": "Relationship",
+				"type": "Esteem",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"criticize",
+				"play a trick",
+				"behave rudely"
+			]
+		},
+		{
+			"name": "ask for a favor",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"devout refuses to help poor desperate virtuous",
+				"a noble ask a non-noble to introduce him to a higher noble (a)",
+				"askforfavor-default-accept",
+				"askforfavor-default-reject"
+			]
+		},
+		{
+			"name": "devout refuses to help poor desperate virtuous",
+			"displayName": "devout refuses to help poor desperate virtuous",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "upset",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "a noble ask a non-noble to introduce him to a higher noble (a)",
+			"displayName": "a noble ask a non-noble to introduce him to a higher noble (a)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"first": "third",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "initiator",
+					"value": 60,
+					"operator": ">"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"first": "third",
+					"value": 85,
+					"operator": ">"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "responder",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": false,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "responder",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 15,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "askforfavor-default-accept",
+			"displayName": "askforfavor-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "askforfavor-default-reject",
+			"displayName": "askforfavor-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "form alliance",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"intervene between a and b in favor of a",
+				"fight to help an unknown man",
+				"help withheld because person unable to pay",
+				"formalliance-default-accept",
+				"formalliance-default-reject"
+			]
+		},
+		{
+			"name": "intervene between a and b in favor of a",
+			"displayName": "intervene between a and b in favor of a",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "threatened by",
+					"first": "responder",
+					"value": true,
+					"second": "third"
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "third",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				}
+			]
+		},
+		{
+			"name": "fight to help an unknown man",
+			"displayName": "fight to help an unknown man",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"first": "initiator",
+					"value": 60,
+					"operator": ">"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "wearing a sword",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"first": "initiator",
+					"value": 60,
+					"operator": ">"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "threatened by",
+					"first": "responder",
+					"value": true,
+					"second": "third"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"first": "initiator",
+					"second": "third",
+					"value": true
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "help withheld because person unable to pay",
+			"displayName": "help withheld because person unable to pay",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "formalliance-default-accept",
+			"displayName": "formalliance-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "formalliance-default-reject",
+			"displayName": "formalliance-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": []
+		},
+		{
+			"name": "ally-start",
+			"intent": {
+				"category": "Relationship",
+				"type": "Ally",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": true
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"ask for a favor",
+				"form alliance"
+			]
+		},
+		{
+			"name": "betray",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"greedy ally betrays rich man",
+				"follow advice and break up",
+				"betray-default-accept",
+				"betray-default-reject"
+			]
+		},
+		{
+			"name": "greedy ally betrays rich man",
+			"displayName": "greedy ally betrays rich man",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "credulous",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "Trait",
+					"type": "deceptive",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "follow advice and break up",
+			"displayName": "follow advice and break up",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"first": "initiator",
+					"value": true,
+					"second": "responder"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"value": true,
+					"second": "someone"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"first": "initiator",
+					"value": true,
+					"second": "someone"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"first": "someone",
+					"value": 30,
+					"second": "responder",
+					"operator": "<"
+				}
+			],
+			"effects": [
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "Status",
+					"type": "upset",
+					"first": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "betray-default-accept",
+			"displayName": "betray-default-accept",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "betray-default-reject",
+			"displayName": "betray-default-reject",
+			"influenceRules": [],
+			"isAccept": false,
+			"conditions": [],
+			"effects": [
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "ally-stop",
+			"intent": {
+				"category": "Relationship",
+				"type": "Ally",
+				"first": "initiator",
+				"second": "responder",
+				"intentType": false
+			},
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"betray"
+			]
+		}
+	]
+}

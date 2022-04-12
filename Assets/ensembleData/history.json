@@ -1,0 +1,2688 @@
+{
+	"history": [
+		{
+			"pos": 0,
+			"data": [
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 40,
+					"first": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 60,
+					"first": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 1,
+					"first": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"value": 60,
+					"first": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "charming",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "wearing a sword",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "elegantly dressed",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "disdainful",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"value": 60,
+					"first": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "married",
+					"value": true,
+					"first": "Jacob",
+					"second": "Mlle Habert"
+				},
+				{
+					"category": "Trait",
+					"type": "joker",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Jacob",
+					"second": "M. d'Orsan"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Jacob",
+					"second": "M. d'Orsan"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"value": true,
+					"first": "Jacob",
+					"second": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"value": true,
+					"first": "Jacob"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": true,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 75,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "Status",
+					"type": "upset",
+					"value": true,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": false,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "Trait",
+					"type": "credulous",
+					"value": true,
+					"first": "Chevalier des Grieux"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Chevalier des Grieux",
+					"second": "Tiberge"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 25,
+					"first": "Manon"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Manon"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Manon"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"value": true,
+					"first": "Manon"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 80,
+					"first": "Manon"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Manon"
+				},
+				{
+					"category": "Trait",
+					"type": "charming",
+					"value": true,
+					"first": "Manon"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "clergy",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Status",
+					"type": "inebriated",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "mocking",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "hypocritical",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Père Joseph",
+					"second": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "intelligent",
+					"value": false,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 15,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 40,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"value": true,
+					"first": "Père Joseph"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 61,
+					"first": "Père Joseph",
+					"second": "Tiberge"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 31,
+					"first": "Tiberge",
+					"second": "Père Joseph"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"value": true,
+					"first": "Geneviève"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 60,
+					"first": "Geneviève",
+					"second": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"value": 50,
+					"first": "Geneviève"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Geneviève"
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"value": true,
+					"first": "Geneviève"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "flirted with / made a pass at",
+					"value": true,
+					"first": "Geneviève",
+					"second": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": false,
+					"first": "Geneviève"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": false,
+					"first": "Geneviève"
+				},
+				{
+					"category": "Trait",
+					"type": "indiscreet / loose lipped",
+					"value": true,
+					"first": "Geneviève"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"value": true,
+					"first": "Geneviève"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 45,
+					"first": "Frontin"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 45,
+					"first": "Frontin"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"value": true,
+					"first": "Frontin",
+					"second": "Chevalier des Grieux"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "en livrée",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"value": 61,
+					"first": "Frontin",
+					"second": "Jean-Jacques Adult"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"value": false,
+					"first": "Frontin",
+					"second": "Chevalier des Grieux"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"value": false,
+					"first": "Frontin",
+					"second": "Jean-Jacques"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "resentful of",
+					"value": true,
+					"first": "Frontin",
+					"second": "Chevalier des Grieux"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"value": 61,
+					"first": "Frontin",
+					"second": "Manon"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Frontin",
+					"second": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": false,
+					"first": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "joker",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "ambitious",
+					"value": true,
+					"first": "Frontin"
+				},
+				{
+					"category": "Trait",
+					"type": "child ",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "shy",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "clumsy / awkward",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "unctuous",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"value": false,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 25,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 80,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Jean-Jacques Young"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 95,
+					"first": "Jean-Jacques Young",
+					"second": "Vulson"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Jean-Jacques Young",
+					"second": "Vulson"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 75,
+					"first": "Tiberge"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": true,
+					"first": "Tiberge"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "clergy",
+					"value": true,
+					"first": "Tiberge"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": true,
+					"first": "Tiberge"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Tiberge",
+					"second": "Chevalier des Grieux"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Tiberge"
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"value": true,
+					"first": "Tiberge"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"value": 61,
+					"first": "Lisette"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 45,
+					"first": "Lisette"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 61,
+					"first": "Lisette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "jealous of",
+					"value": true,
+					"first": "Lisette",
+					"second": "Manon"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 70,
+					"first": "Lisette",
+					"second": "Frontin"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Lisette",
+					"second": "Jean-Jacques Young"
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "en livrée",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Lisette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"value": true,
+					"first": "Lisette",
+					"second": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 50,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": true,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "Trait",
+					"type": "credulous",
+					"value": true,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "married",
+					"value": true,
+					"first": "Mlle Habert",
+					"second": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": false,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "trusts",
+					"value": true,
+					"first": "Mlle Habert",
+					"second": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 40,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": true,
+					"first": "Mlle Habert"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Vulson"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Vulson"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "cares for",
+					"value": true,
+					"first": "Vulson",
+					"second": "Jean-Jacques Young"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 75,
+					"first": "Vulson",
+					"second": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Vulson"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Vulson"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"value": true,
+					"first": "Vulson"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Vulson",
+					"second": "Jean-Jacques Young"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 70,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": true,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"value": 80,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 70,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "Trait",
+					"type": "penetrating",
+					"value": true,
+					"first": "M. d'Orsan"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"value": true,
+					"first": "M. d'Orsan",
+					"second": "Jacob"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "M. d'Orsan",
+					"second": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Barna Bredanna"
+				},
+				{
+					"category": "Trait",
+					"type": "child ",
+					"value": true,
+					"first": "Barna Bredanna"
+				},
+				{
+					"category": "Trait",
+					"type": "shy",
+					"value": true,
+					"first": "Barna Bredanna"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Barna Bredanna",
+					"second": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "clumsy / awkward",
+					"value": true,
+					"first": "Barna Bredanna"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": false,
+					"first": "Barna Bredanna"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 15,
+					"first": "Barna Bredanna"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "soldier",
+					"value": true,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"value": true,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": true,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 70,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 70,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"value": true,
+					"first": "Mirabeau",
+					"second": "Gensac"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "Mirabeau",
+					"second": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 45,
+					"first": "Mirabeau"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 30,
+					"first": "l'Aubergiste"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "merchant",
+					"value": true,
+					"first": "l'Aubergiste"
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"value": true,
+					"first": "l'Aubergiste"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"value": true,
+					"first": "l'Aubergiste"
+				},
+				{
+					"category": "Trait",
+					"type": "boorish",
+					"value": true,
+					"first": "l'Aubergiste"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "domestique / servant",
+					"value": true,
+					"first": "Théodore"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": false,
+					"first": "Théodore"
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"value": 70,
+					"first": "Théodore"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"value": true,
+					"first": "Théodore"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 85,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 75,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 70,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 30,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Trait",
+					"type": "generous",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Status",
+					"type": "embarrassed",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": false,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"value": false,
+					"first": "Béatrice de Bouillon",
+					"second": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": true,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"value": true,
+					"first": "Lisette",
+					"second": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Béatrice de Bouillon",
+					"second": "Lisette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "intimidates",
+					"value": true,
+					"first": "Béatrice de Bouillon",
+					"second": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": false,
+					"first": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Madame Clot"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "intimidates",
+					"value": true,
+					"first": "Madame Clot",
+					"second": "Jean-Jacques Young"
+				},
+				{
+					"category": "Trait",
+					"type": "cold / distant",
+					"value": true,
+					"first": "Madame Clot"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 30,
+					"first": "Madame Clot"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": true,
+					"first": "Madame Clot"
+				},
+				{
+					"category": "Trait",
+					"type": "disdainful",
+					"value": true,
+					"first": "Madame Clot"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": false,
+					"first": "Madame Clot"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 25,
+					"first": "Lescaut"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "military officer",
+					"value": true,
+					"first": "Lescaut"
+				},
+				{
+					"category": "Status",
+					"type": "inebriated",
+					"value": true,
+					"first": "Lescaut"
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"value": false,
+					"first": "Lescaut"
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"value": 60,
+					"first": "Lescaut"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "poorly dressed",
+					"value": true,
+					"first": "Lescaut"
+				},
+				{
+					"category": "Trait",
+					"type": "boorish",
+					"value": true,
+					"first": "Lescaut"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Lescaut"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "prostitute",
+					"value": true,
+					"first": "Flaminia"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Flaminia"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Flaminia"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 20,
+					"first": "Flaminia"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Flaminia"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"value": true,
+					"first": "Flaminia"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 20,
+					"first": "Flaminia"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"value": true,
+					"first": "Flaminia"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 20,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 80,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"value": true,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 50,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 75,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 78,
+					"first": "Zanuzzi",
+					"second": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Zanuzzi"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 90,
+					"first": "Compère"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 30,
+					"first": "Compère"
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"value": 60,
+					"first": "Compère"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 41,
+					"first": "Compère",
+					"second": "Flaminia"
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"value": true,
+					"first": "Compère",
+					"second": "l'Aubergiste"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 51,
+					"first": "Compère",
+					"second": "Lescaut"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 51,
+					"first": "Compère",
+					"second": "Mlle Habert"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "compère",
+					"value": true,
+					"first": "Compère"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"value": true,
+					"first": "Compère"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": true,
+					"first": "Compère"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 90,
+					"first": "Compère"
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"value": 70,
+					"first": "Compère",
+					"second": "Flaminia"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Compère"
+				},
+				{
+					"category": "Trait",
+					"type": "indiscreet / loose lipped",
+					"value": true,
+					"first": "Compère"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 60,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": false,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": true,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": false,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 60,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 60,
+					"first": "Mme de Ferval",
+					"second": "Jacob"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"value": 65,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "elegantly dressed",
+					"value": true,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "lovers",
+					"value": true,
+					"first": "Mme de Ferval",
+					"second": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": true,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"value": true,
+					"first": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"value": false,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 35,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Trait",
+					"type": "unctuous",
+					"value": true,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 80,
+					"first": "Jean-Jacques Adult"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 90,
+					"first": "Jean-Jacques Adult",
+					"second": "Vulson"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 55,
+					"first": "L'Officier"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 60,
+					"first": "L'Officier"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "L'Officier"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "intimidates",
+					"value": true,
+					"first": "L'Officier",
+					"second": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "old",
+					"value": true,
+					"first": "L'Officier"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": false,
+					"first": "L'Officier"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "strangers",
+					"value": true,
+					"first": "L'Officier",
+					"second": "Jacob"
+				},
+				{
+					"category": "Trait",
+					"type": "cold / distant",
+					"value": true,
+					"first": "L'Officier"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"value": 71,
+					"first": "Antoine"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 71,
+					"first": "Antoine"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 39,
+					"first": "Antoine"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 81,
+					"first": "Antoine"
+				},
+				{
+					"category": "Trait",
+					"type": "glorieux",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Trait",
+					"type": "impudent",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Trait",
+					"type": "inconstant / volage",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Trait",
+					"type": "indiscreet / loose lipped",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "flirted with / made a pass at",
+					"value": true,
+					"first": "Antoine",
+					"second": "Mme de Ferval"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "flirted with / made a pass at",
+					"value": true,
+					"first": "Antoine",
+					"second": "Manon"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": true,
+					"first": "Antoine"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 45,
+					"first": "Antoine"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "cares for",
+					"value": true,
+					"first": "Antoine",
+					"second": "Renette"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 71,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 61,
+					"first": "Ernestine"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"value": true,
+					"first": "Ernestine",
+					"second": "Lescaut"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "trusts",
+					"value": true,
+					"first": "Ernestine",
+					"second": "Mlle Habert"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 71,
+					"first": "Ernestine",
+					"second": "Béatrice de Bouillon"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Ernestine",
+					"second": "Madame Clot"
+				},
+				{
+					"category": "Status",
+					"type": "upset",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "charming",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "foreigner",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "honest",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": false,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": true,
+					"first": "Ernestine"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Gensac"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "soldier",
+					"value": true,
+					"first": "Gensac"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Gensac"
+				},
+				{
+					"category": "SocialRecordLabel",
+					"type": "did harm to / punished ",
+					"value": true,
+					"first": "Mirabeau",
+					"second": "Gensac"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 15,
+					"first": "Gensac",
+					"second": "Mirabeau"
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"value": true,
+					"first": "Gensac",
+					"second": "Mirabeau"
+				},
+				{
+					"category": "Trait",
+					"type": "impudent",
+					"value": true,
+					"first": "Gensac"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 15,
+					"first": "Gensac"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 25,
+					"first": "Gensac"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 5,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": true,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"value": true,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "Trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": true,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "Trait",
+					"type": "mocking",
+					"value": true,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "Trait",
+					"type": "penetrating",
+					"value": true,
+					"first": "Donatien Alphonse"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 75,
+					"first": "Renette"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 45,
+					"first": "Renette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "financially dependent on",
+					"value": true,
+					"first": "Renette",
+					"second": "Antoine"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"value": true,
+					"first": "Renette",
+					"second": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Trait",
+					"type": "impudent",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Trait",
+					"type": "médisant",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Renette",
+					"second": "Lisette"
+				},
+				{
+					"category": "Status",
+					"type": "flattered",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "prostitute",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"value": true,
+					"first": "Renette"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 90,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 51,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Attribute",
+					"type": "cunningness",
+					"value": 60,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Attribute",
+					"type": "nosy / curious",
+					"value": 70,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 70,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 60,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Relationship",
+					"type": "rivals",
+					"value": true,
+					"first": "l'Espion",
+					"second": "l'Officier"
+				},
+				{
+					"category": "Status",
+					"type": "amused",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "elegantly dressed",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "wearing a sword",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Trait",
+					"type": "trustworthy",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Trait",
+					"type": "penetrating",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Trait",
+					"type": "deceptive",
+					"value": true,
+					"first": "l'Espion"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 51,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 61,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"value": 61,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 61,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "hates",
+					"value": true,
+					"first": "M. de Maugis",
+					"second": "Père Joseph"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "owes a favor to",
+					"value": true,
+					"first": "M. de Maugis",
+					"second": "Théodore"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 61,
+					"first": "M. de Maugis",
+					"second": "Ernestine"
+				},
+				{
+					"category": "Status",
+					"type": "inebriated",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "ambitious",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "disdainful",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "flirtatious / seductive",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "mocking",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "intimidating / imposing",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "unctuous",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "Trait",
+					"type": "well-known",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "wearing a sword",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": true,
+					"first": "M. de Maugis"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "jealous of",
+					"value": true,
+					"first": "M. de Maugis",
+					"second": "M. d'Orsan"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 65,
+					"first": "Marianne"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 55,
+					"first": "Marianne"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 80,
+					"first": "Marianne"
+				},
+				{
+					"category": "Attribute",
+					"type": "social standing",
+					"value": 30,
+					"first": "Marianne"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"value": 55,
+					"first": "M. d'Orsan",
+					"second": "Marianne"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"value": 55,
+					"first": "M. de Maugis",
+					"second": "Marianne"
+				},
+				{
+					"category": "Network",
+					"type": "credibility",
+					"value": 65,
+					"first": "Lescaut",
+					"second": "Marianne"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"value": 65,
+					"first": "M. d'Orsan",
+					"second": "Marianne"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"value": 65,
+					"first": "M. de Maugis",
+					"second": "Marianne"
+				},
+				{
+					"category": "Network",
+					"type": "curiosity / attention",
+					"value": 75,
+					"first": "Lescaut",
+					"second": "Marianne"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": true,
+					"first": "Marianne"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Marianne"
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"value": true,
+					"first": "Marianne"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Marianne"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Marianne"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "young / youthful",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 61,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "charming",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "ambitious",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "vain",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "unctuous",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 61,
+					"first": "Violette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"value": true,
+					"first": "Violette",
+					"second": "Père Joseph"
+				},
+				{
+					"category": "Trait",
+					"type": "médisant",
+					"value": true,
+					"first": "Violette"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"value": false,
+					"first": "Violette"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 40,
+					"first": "Denis"
+				},
+				{
+					"category": "Trait",
+					"type": "charming",
+					"value": true,
+					"first": "Denis"
+				},
+				{
+					"category": "Trait",
+					"type": "eccentric",
+					"value": true,
+					"first": "Denis"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 75,
+					"first": "Denis"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 75,
+					"first": "Denis"
+				},
+				{
+					"category": "Trait",
+					"type": "provincial ",
+					"value": true,
+					"first": "Denis"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "noble",
+					"value": false,
+					"first": "Denis"
+				},
+				{
+					"category": "Trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Denis"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 80,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "bourgeois",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "author",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Trait",
+					"type": "bonne physionomie / has a trustworthy face",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Trait",
+					"type": "joker",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "author",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 61,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Status",
+					"type": "happy",
+					"value": true,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Attribute",
+					"type": "self-assuredness",
+					"value": 70,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 65,
+					"first": "M. Deslandes",
+					"second": "M. de Maugis"
+				},
+				{
+					"category": "NonActionableRelationship",
+					"type": "friends",
+					"value": true,
+					"first": "M. Deslandes",
+					"second": "M. de Maugis"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 50,
+					"first": "M. Deslandes"
+				},
+				{
+					"category": "Attribute",
+					"type": "appropriate behavior",
+					"value": 71,
+					"first": "Henriette"
+				},
+				{
+					"category": "Attribute",
+					"type": "sophistication",
+					"value": 61,
+					"first": "Henriette"
+				},
+				{
+					"category": "Attribute",
+					"type": "sensitiveness / sensibilité",
+					"value": 61,
+					"first": "Henriette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "offended by",
+					"value": true,
+					"first": "Henriette",
+					"second": "M. Maugis"
+				},
+				{
+					"category": "Network",
+					"type": "affinity",
+					"value": 61,
+					"first": "Henriette",
+					"second": "Ernestine"
+				},
+				{
+					"category": "Network",
+					"type": "emulation",
+					"value": 51,
+					"first": "Henriette",
+					"second": "Mme de Ferval"
+				},
+				{
+					"category": "Trait",
+					"type": "beautiful",
+					"value": false,
+					"first": "Henriette"
+				},
+				{
+					"category": "Trait",
+					"type": "female",
+					"value": true,
+					"first": "Henriette"
+				},
+				{
+					"category": "Trait",
+					"type": "kind",
+					"value": true,
+					"first": "Henriette"
+				},
+				{
+					"category": "Trait",
+					"type": "modest",
+					"value": true,
+					"first": "Henriette"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": false,
+					"first": "Henriette"
+				},
+				{
+					"category": "DirectedStatus",
+					"type": "ridicules",
+					"value": true,
+					"first": "Henriette",
+					"second": "Lisette"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "author",
+					"value": true,
+					"first": "Pannard"
+				},
+				{
+					"category": "TraitConditionProfession",
+					"type": "theatre personnel",
+					"value": true,
+					"first": "Pannard"
+				},
+				{
+					"category": "Attribute",
+					"type": "theater knowledge",
+					"value": 95,
+					"first": "Pannard"
+				},
+				{
+					"category": "Attribute",
+					"type": "attractiveness / charisma",
+					"value": 30,
+					"first": "Pannard"
+				},
+				{
+					"category": "TraitClothing",
+					"type": "poorly dressed",
+					"value": true,
+					"first": "Pannard"
+				},
+				{
+					"category": "Trait",
+					"type": "poor",
+					"value": true,
+					"first": "Pannard"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": false,
+					"first": "Pannard"
+				},
+				{
+					"category": "Trait",
+					"type": "male",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "virtuous",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "devout",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "talkative",
+					"value": false,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "rich",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "indifferent / unflappable",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "cold / distant",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "penetrating",
+					"value": true,
+					"first": "Père Guillaume"
+				},
+				{
+					"category": "Trait",
+					"type": "greedy",
+					"value": true,
+					"first": "Père Guillaume"
+				}
+			]
+		}
+	]
+}

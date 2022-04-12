@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Valve.VR.Extras;
 using Valve.VR;
+using Ensemble;
 
 public class ENSEMBLE_UIHandler : MonoBehaviour
 {
@@ -17,7 +18,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Color hit_color;
     public Color miss_color;
 
-  
+    public string objectName;
+    public EnsembleData data;
+
+
+
     void Start()
     { 
         activeUI = false;
@@ -59,6 +64,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             //The object is an Ensemble object
             Orientation();
             Display();
+            objectName = gameObject.name;
+            getCharacterData(objectName);
             //omekaPad.displayItem(voo.OmekaVirtualObjectID);
         }
         if (e.target.gameObject.layer == 5)
@@ -80,5 +87,19 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void PointerOutside(object sender, PointerEventArgs e)
     {
         laserPointer.color = miss_color;
+    }
+
+    public void getCharacterData(string objectName)
+    {
+        Predicate searchPredicate = new Predicate();
+        searchPredicate.First = objectName;
+        List<Predicate> characterData = data.ensemble.get(searchPredicate);
+
+        foreach (Predicate datum in characterData)
+        {
+            //Debug.LogFormat("First: { 0}, Second: { 1}, Category: { 0}, Type: { 2}, Value: { 3}", datum.First, datum.Second, datum.Category, datum.Type, datum.Value);
+            string[] temp = new string[] { datum.First, datum.Second, datum.Category, datum.Type, "TEMP" };
+            Debug.LogFormat("First: { 0}, Second: { 1}, Category: { 0}, Type: { 2}, Value: { 3}", temp);
+        }
     }
 }
