@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using Valve.VR.Extras;
 using Valve.VR;
 using Ensemble;
+using System.Linq;
 
 public class ENSEMBLE_UIHandler : MonoBehaviour
 {
@@ -18,8 +19,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Color hit_color;
     public Color miss_color;
 
-    public string objectName;
+    //public string objectName;
     public EnsembleData data;
+    public GameObject characterMenu;
 
 
 
@@ -64,8 +66,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             //The object is an Ensemble object
             Orientation();
             Display();
-            objectName = gameObject.name;
-            getCharacterData(objectName);
+            
+            getCharacterData(ensemble.name);
+            characterMenu = GameObject.Find("Character_Name");
+            characterMenu.GetComponent<UnityEngine.UI.Text>().text = ensemble.name;
             //omekaPad.displayItem(voo.OmekaVirtualObjectID);
         }
         if (e.target.gameObject.layer == 5)
@@ -93,13 +97,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         Predicate searchPredicate = new Predicate();
         searchPredicate.First = objectName;
-        List<Predicate> characterData = data.ensemble.get(searchPredicate);
+
+        Debug.Log(objectName);
+
+        List<Predicate> socialRecordData = data.ensemble.getSocialRecordCopyAtTimestep(0);
+        List<Predicate> characterData = socialRecordData.FindAll(predicate => predicate.First == objectName).ToList();
 
         foreach (Predicate datum in characterData)
         {
             //Debug.LogFormat("First: { 0}, Second: { 1}, Category: { 0}, Type: { 2}, Value: { 3}", datum.First, datum.Second, datum.Category, datum.Type, datum.Value);
             string[] temp = new string[] { datum.First, datum.Second, datum.Category, datum.Type, "TEMP" };
-            Debug.LogFormat("First: { 0}, Second: { 1}, Category: { 0}, Type: { 2}, Value: { 3}", temp);
+            Debug.LogFormat("First: {0}, Second: {1}, Category: {0}, Type: {2}, Value: {3}", temp);
         }
     }
 }

@@ -11,6 +11,7 @@ public class EnsembleObject : MonoBehaviour
     private LineRenderer linerenderer;
     private Vector3 thisCenter;
     private ENSEMBLE_UIHandler handler;
+    public string currentName;
 
     public void drawLineFromObject(GameObject targetObject, float duration)
     {
@@ -57,7 +58,10 @@ public class EnsembleObject : MonoBehaviour
             points[0] = target_object.transform.position;
             points[1] = thisCenter;
             linerenderer.SetPositions(points);
+            currentName = target_object.name;
+            
         }
+        // Debug.Log(currentName);
     }
 
 }
