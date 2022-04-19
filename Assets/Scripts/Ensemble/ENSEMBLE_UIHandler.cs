@@ -32,18 +32,31 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     //public string objectName;
     public EnsembleData data;
+
     public GameObject characterMenu;
     public GameObject attributesMenu;
     public GameObject traitsMenu;
     public GameObject clothingMenu;
     public GameObject professionMenu;
+    public GameObject directedStatusMenu;
+    public GameObject networkMenu;
+    public GameObject nonActionableRelationshipMenu;
+    public GameObject relationshipMenu;
+    public GameObject socialRecordLabelMenu;
+    public GameObject statusMenu;
+    public GameObject historyMenu;
 
     public StringBuilder attributesBuilder;
     public StringBuilder traitsBuilder;
     public StringBuilder clothingBuilder;
     public StringBuilder professionBuilder;
-
-
+    public StringBuilder directedStatusBuilder;
+    public StringBuilder networkBuilder;
+    public StringBuilder nonActionableRelationshipBuilder;
+    public StringBuilder relationshipBuilder;
+    public StringBuilder socialRecordLabelBuilder;
+    public StringBuilder statusBuilder;
+    public StringBuilder historyBuilder;
 
     void Start()
     {
@@ -51,7 +64,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         actionsActiveUI = false;
         attributesActiveUI = false;
         historyActiveUI = false;
-        
 
         laserPointer.color = miss_color;
         laserPointer.PointerIn += PointerInside;
@@ -62,7 +74,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         traitsBuilder = new StringBuilder();
         clothingBuilder = new StringBuilder();
         professionBuilder = new StringBuilder();
-
+        directedStatusBuilder = new StringBuilder();
+        networkBuilder = new StringBuilder();
+        nonActionableRelationshipBuilder = new StringBuilder();
+        relationshipBuilder = new StringBuilder();
+        socialRecordLabelBuilder = new StringBuilder();
+        statusBuilder = new StringBuilder();
+        historyBuilder = new StringBuilder();
     }
 
     public void DisplayMain()
@@ -98,8 +116,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             historyUI.SetActive(false);
             historyActiveUI = false;
+
+            FindObjectsGetStrings();
         }
-       
+        
     }
 
     public void DisplayAttributes()
@@ -118,16 +138,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyUI.SetActive(false);
             historyActiveUI = false;
 
-            attributesMenu = GameObject.Find("AttributesList");
-            Debug.Log(attributesMenu);
-            traitsMenu = GameObject.Find("TraitsList");
-            clothingMenu = GameObject.Find("TraitClothingList");
-            professionMenu = GameObject.Find("ProfessionList");
-
-            attributesMenu.GetComponent<UnityEngine.UI.Text>().text = attributesBuilder.ToString();
-            traitsMenu.GetComponent<UnityEngine.UI.Text>().text = traitsBuilder.ToString();
-            clothingMenu.GetComponent<UnityEngine.UI.Text>().text = clothingBuilder.ToString();
-            professionMenu.GetComponent<UnityEngine.UI.Text>().text = professionBuilder.ToString();
+            FindObjectsGetStrings();
         }
     }
     public void DisplayHistory()
@@ -145,6 +156,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             historyUI.SetActive(true);
             historyActiveUI = true;
+
+            FindObjectsGetStrings();
+
+            historyMenu = GameObject.Find("HistoryList");
+            historyMenu.GetComponent<UnityEngine.UI.Text>().text = historyBuilder.ToString();
         }
     }
 
@@ -162,6 +178,31 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         historyUI.SetActive(false);
         historyActiveUI = false;
+    }
+
+    private void FindObjectsGetStrings()
+    {
+        attributesMenu = GameObject.Find("AttributesList");
+        traitsMenu = GameObject.Find("TraitsList");
+        clothingMenu = GameObject.Find("TraitClothingList");
+        professionMenu = GameObject.Find("ProfessionList");
+        directedStatusMenu = GameObject.Find("DirectedStatusList");
+        networkMenu = GameObject.Find("NetworkList");
+        nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
+        relationshipMenu = GameObject.Find("RelationshipList");
+        socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
+        statusMenu = GameObject.Find("StatusList");
+
+        attributesMenu.GetComponent<UnityEngine.UI.Text>().text = attributesBuilder.ToString();
+        traitsMenu.GetComponent<UnityEngine.UI.Text>().text = traitsBuilder.ToString();
+        clothingMenu.GetComponent<UnityEngine.UI.Text>().text = clothingBuilder.ToString();
+        professionMenu.GetComponent<UnityEngine.UI.Text>().text = professionBuilder.ToString();
+        directedStatusMenu.GetComponent<UnityEngine.UI.Text>().text = directedStatusBuilder.ToString();
+        networkMenu.GetComponent<UnityEngine.UI.Text>().text = networkBuilder.ToString();
+        nonActionableRelationshipMenu.GetComponent<UnityEngine.UI.Text>().text = nonActionableRelationshipBuilder.ToString();
+        relationshipMenu.GetComponent<UnityEngine.UI.Text>().text = relationshipBuilder.ToString();
+        socialRecordLabelMenu.GetComponent<UnityEngine.UI.Text>().text = socialRecordLabelBuilder.ToString();
+        statusMenu.GetComponent<UnityEngine.UI.Text>().text = statusBuilder.ToString();
     }
 
     private void Orientation()
@@ -201,6 +242,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             characterMenu.GetComponent<UnityEngine.UI.Text>().text = ensemble.name;
 
             getCharacterData(ensemble.name);
+            getCharacterHistory(ensemble.name);
+            getCharacterActions(ensemble.name);
         }
         if (e.target.gameObject.layer == 5)
         {
@@ -228,16 +271,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         Predicate searchPredicate = new Predicate();
         searchPredicate.First = objectName;
 
-        Debug.Log(objectName);
-
         List<Predicate> socialRecordData = data.ensemble.getSocialRecordCopyAtTimestep(0);
         List<Predicate> characterData = socialRecordData.FindAll(predicate => predicate.First == objectName).ToList();
 
         foreach (Predicate datum in characterData)
         {
-            //Debug.LogFormat("First: { 0}, Second: { 1}, Category: { 0}, Type: { 2}, Value: { 3}", datum.First, datum.Second, datum.Category, datum.Type, datum.Value);
-            string[] temp = new string[] { datum.First, datum.Second, datum.Category, datum.Type, "TEMP" };
-            Debug.LogFormat("First: {0}, Second: {1}, Category: {0}, Type: {2}, Value: {3}", temp);
+            string[] predicateDebug = new string[] { datum.First, datum.Second, datum.Category, datum.Type };
+            string predicateToString = string.Format("First: {0}, Second: {1}, Category: {2}, Type: {3}", predicateDebug);
+            //Debug.Log(predicateToString);
 
             if(datum.Category == "Attribute")
             {
@@ -254,9 +295,66 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             {
                 professionBuilder.Append(datum.Type + "\n");
             }
+            else if (datum.Category == "DirectedStatus")
+            {
+                directedStatusBuilder.Append(predicateToString + "\n");
+            }
+            else if (datum.Category == "Network")
+            {
+                networkBuilder.Append(predicateToString + "\n");
+            }
+            else if (datum.Category == "NonActionableRelationship")
+            {
+                nonActionableRelationshipBuilder.Append(predicateToString + "\n");
+            }
+            else if (datum.Category == "Relationship")
+            {
+                relationshipBuilder.Append(predicateToString + "\n");
+            }
+            else if (datum.Category == "SocialRecordLabel")
+            {
+                socialRecordLabelBuilder.Append(predicateToString + "\n");
+            }
+            else if (datum.Category == "Status")
+            {
+                statusBuilder.Append(predicateToString + "\n");
+            }
         }
-
-        
-
     }
+
+    public void getCharacterHistory(string objectName)
+    {
+        Predicate searchPredicate = new Predicate();
+        searchPredicate.First = objectName;
+
+        List<List<Predicate>> socialRecordDataByTimestep = data.ensemble.getSocialRecordCopy();
+
+        int timestep = 0;
+
+        foreach (List<Predicate> predicatesForTimestep in socialRecordDataByTimestep)
+        {
+            List<Predicate> characterData = predicatesForTimestep.FindAll(predicate => predicate.First == objectName).ToList();
+            historyBuilder.Append("\nTimestep " + timestep.ToString() + ": " + "\n\n");
+
+            foreach (Predicate datum in characterData)
+            {
+                string[] predicateDebug = new string[] { datum.First, datum.Second, datum.Category, datum.Type };
+                string predicateToString = string.Format("First: {0}, Second: {1}, Category: {2}, Type: {3}", predicateDebug);
+
+                historyBuilder.Append(predicateToString + "\n");
+            }
+        }
+    }
+
+    public void getCharacterActions(string objectName)
+    {
+        List<Action> actions = data.ensemble.getAllActions();
+
+        foreach (Action action in actions)
+        {
+            string[] actionDebug = new string[] { action.Name, action.DisplayName };
+            Debug.LogFormat("Action Name: {0}, Action DisplayName: {1}", actionDebug);
+        }
+    }
+
 }
