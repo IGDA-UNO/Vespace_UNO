@@ -32,6 +32,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     //public string objectName;
     public EnsembleData data;
+    public EnsemblePlayer player;
 
     public GameObject characterMenu;
     public GameObject attributesMenu;
@@ -45,6 +46,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject socialRecordLabelMenu;
     public GameObject statusMenu;
     public GameObject historyMenu;
+    public GameObject actionsMenu;
 
     public StringBuilder attributesBuilder;
     public StringBuilder traitsBuilder;
@@ -57,6 +59,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public StringBuilder socialRecordLabelBuilder;
     public StringBuilder statusBuilder;
     public StringBuilder historyBuilder;
+    public StringBuilder actionsBuilder;
+
+    public PROUVE_OmekaPad prouve;
 
     void Start()
     {
@@ -81,6 +86,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         socialRecordLabelBuilder = new StringBuilder();
         statusBuilder = new StringBuilder();
         historyBuilder = new StringBuilder();
+        actionsBuilder = new StringBuilder();
     }
 
     public void DisplayMain()
@@ -99,6 +105,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyUI.SetActive(false);
             historyActiveUI = false;
         }
+        prouve.closePad();
     }
 
     public void DisplayActions()
@@ -118,6 +125,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyActiveUI = false;
 
             FindObjectsGetStrings();
+
+            actionsMenu = GameObject.Find("ActionsList");
+            actionsMenu.GetComponent<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
         }
         
     }
@@ -139,6 +149,20 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyActiveUI = false;
 
             FindObjectsGetStrings();
+
+            directedStatusMenu = GameObject.Find("DirectedStatusList");
+            networkMenu = GameObject.Find("NetworkList");
+            nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
+            relationshipMenu = GameObject.Find("RelationshipList");
+            socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
+            statusMenu = GameObject.Find("StatusList");
+
+            directedStatusMenu.GetComponent<UnityEngine.UI.Text>().text = directedStatusBuilder.ToString();
+            networkMenu.GetComponent<UnityEngine.UI.Text>().text = networkBuilder.ToString();
+            nonActionableRelationshipMenu.GetComponent<UnityEngine.UI.Text>().text = nonActionableRelationshipBuilder.ToString();
+            relationshipMenu.GetComponent<UnityEngine.UI.Text>().text = relationshipBuilder.ToString();
+            socialRecordLabelMenu.GetComponent<UnityEngine.UI.Text>().text = socialRecordLabelBuilder.ToString();
+            statusMenu.GetComponent<UnityEngine.UI.Text>().text = statusBuilder.ToString();
         }
     }
     public void DisplayHistory()
@@ -186,23 +210,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         traitsMenu = GameObject.Find("TraitsList");
         clothingMenu = GameObject.Find("TraitClothingList");
         professionMenu = GameObject.Find("ProfessionList");
-        directedStatusMenu = GameObject.Find("DirectedStatusList");
-        networkMenu = GameObject.Find("NetworkList");
-        nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
-        relationshipMenu = GameObject.Find("RelationshipList");
-        socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
-        statusMenu = GameObject.Find("StatusList");
 
         attributesMenu.GetComponent<UnityEngine.UI.Text>().text = attributesBuilder.ToString();
         traitsMenu.GetComponent<UnityEngine.UI.Text>().text = traitsBuilder.ToString();
         clothingMenu.GetComponent<UnityEngine.UI.Text>().text = clothingBuilder.ToString();
         professionMenu.GetComponent<UnityEngine.UI.Text>().text = professionBuilder.ToString();
-        directedStatusMenu.GetComponent<UnityEngine.UI.Text>().text = directedStatusBuilder.ToString();
-        networkMenu.GetComponent<UnityEngine.UI.Text>().text = networkBuilder.ToString();
-        nonActionableRelationshipMenu.GetComponent<UnityEngine.UI.Text>().text = nonActionableRelationshipBuilder.ToString();
-        relationshipMenu.GetComponent<UnityEngine.UI.Text>().text = relationshipBuilder.ToString();
-        socialRecordLabelMenu.GetComponent<UnityEngine.UI.Text>().text = socialRecordLabelBuilder.ToString();
-        statusMenu.GetComponent<UnityEngine.UI.Text>().text = statusBuilder.ToString();
     }
 
     private void Orientation()
@@ -237,6 +249,19 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             //The object is an Ensemble object
             Orientation();
             DisplayMain();
+
+            attributesBuilder.Clear();
+            traitsBuilder.Clear();
+            clothingBuilder.Clear();
+            professionBuilder.Clear();
+            directedStatusBuilder.Clear();
+            networkBuilder.Clear();
+            nonActionableRelationshipBuilder.Clear();
+            relationshipBuilder.Clear();
+            socialRecordLabelBuilder.Clear();
+            statusBuilder.Clear();
+            historyBuilder.Clear();
+            actionsBuilder.Clear();
 
             characterMenu = GameObject.Find("Character_Name");
             characterMenu.GetComponent<UnityEngine.UI.Text>().text = ensemble.name;
@@ -350,10 +375,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         List<Action> actions = data.ensemble.getAllActions();
 
-        foreach (Action action in actions)
+        foreach(Action action in actions)
         {
-            string[] actionDebug = new string[] { action.Name, action.DisplayName };
-            Debug.LogFormat("Action Name: {0}, Action DisplayName: {1}", actionDebug);
+            actionsBuilder.Append(action.Name + "\n");
         }
     }
 

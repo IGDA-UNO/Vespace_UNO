@@ -71,6 +71,7 @@ public class PROUVE_OmekaPad : MonoBehaviour
 
     public void Display() {
         omekaPad.SetActive(true) ; 
+
     }
     
     public void closePad() {

@@ -35,6 +35,7 @@ public class EnsembleData : MonoBehaviour
         foreach (string character in characters)
         {
             Debug.Log(character);
+            ensemble.setCharacterOnstage(character);
         }
     }
 
