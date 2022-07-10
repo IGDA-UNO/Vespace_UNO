@@ -53,7 +53,9 @@ public class PROUVE_OmekaPad : MonoBehaviour
     private float fullSizeImageMaxWidth = 1400 ; 
     private float fullSizeImageMaxHeight = 1000 ; 
 
-    private bool proModeActivated = false ; 
+    private bool proModeActivated = false ;
+
+    public ENSEMBLE_UIHandler ensemble;
 
     //Initialization : 
 
@@ -70,7 +72,8 @@ public class PROUVE_OmekaPad : MonoBehaviour
     //Self interface control :
 
     public void Display() {
-        omekaPad.SetActive(true) ; 
+        omekaPad.SetActive(true) ;
+        ensemble.CloseMenu();
 
     }
     
