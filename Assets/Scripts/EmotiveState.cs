@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EmotiveState : MonoBehaviour
 {
-    public Transform credibility;
-    public Transform emulation;
-    public Transform curiosity;
+    public Transform yes;
+    public Transform available;
+
     public Transform affinity;
-    public Transform esteem;
-    public Transform allie;
-    public Transform rival;
+   
+    public Transform no;
+
+    public bool isAvailable;
+
+    public int howRed = 255;
 
     void OnAwake()
     {
@@ -19,23 +22,30 @@ public class EmotiveState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        credibility = gameObject.transform.GetChild(0);
-        emulation = gameObject.transform.GetChild(1);
-        curiosity = gameObject.transform.GetChild(2);
-        affinity = gameObject.transform.GetChild(3);
-        esteem = gameObject.transform.GetChild(4);
-        allie = gameObject.transform.GetChild(5);
-        rival = gameObject.transform.GetChild(6);
+        available = gameObject.transform.GetChild(0);
+        yes = available.transform.GetChild(0);
+        no = available.transform.GetChild(1);
+
+        affinity = gameObject.transform.GetChild(1);
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        credibility.GetComponent<SpriteRenderer>().color = Color.red;
-        emulation.GetComponent<SpriteRenderer>().color = Color.green;
-        curiosity.GetComponent<SpriteRenderer>().color = Color.blue;
-        affinity.GetComponent<SpriteRenderer>().color = Color.yellow;
-        esteem.GetComponent<SpriteRenderer>().color = Color.magenta;
+        
+        affinity.GetComponent<SpriteRenderer>().color = new Color(howRed,0,0);
+
+        if (isAvailable)
+        {
+            yes.gameObject.SetActive(true);
+            no.gameObject.SetActive(false);
+        }
+        else
+        {
+            yes.gameObject.SetActive(false);
+            no.gameObject.SetActive(true);
+        }
 
     }
 }

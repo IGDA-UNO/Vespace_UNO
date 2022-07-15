@@ -63,6 +63,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public PROUVE_OmekaPad prouve;
 
+    private Cast cast = new Cast { "Male Noble", "Female Noble", "Servant", "Stranger", "Ticket Taker" };
+
     void Start()
     {
         mainActiveUI = false;
@@ -373,9 +375,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void getCharacterActions(string objectName)
     {
-        List<Action> actions = data.ensemble.getAllActions();
+        VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
+        List<Action> actions = data.ensemble.getActions("Male Noble", objectName, volitionInterface, cast, 999, 999, 999);
 
-        foreach(Action action in actions)
+        foreach (Action action in actions)
         {
             actionsBuilder.Append(action.Name + "\n");
         }

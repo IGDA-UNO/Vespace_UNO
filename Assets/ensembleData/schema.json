@@ -2,201 +2,60 @@
 	"schema": [
 		{
 			"actionable": true,
-			"category": "Network",
+			"category": "network",
 			"defaultValue": 50,
 			"directionType": "directed",
 			"isBoolean": false,
 			"maxValue": 100,
 			"minValue": 1,
 			"types": [
-				"Affinity",
-				"Emulation",
-				"Credibility",
-				"Curiosity / Attention"
+				"credibility",
+				"emulation",
+				"curiosity",
+				"affinity"
 			]
 		},
 		{
 			"actionable": true,
-			"category": "Relationship",
+			"category": "relationship",
+			"defaultValue": false,
 			"directionType": "reciprocal",
 			"isBoolean": true,
 			"types": [
-				"Rivals",
-				"Esteem",
-				"Ally"
+				"ally",
+				"esteem",
+				"rival"
 			]
 		},
 		{
 			"actionable": false,
-			"category": "Trait",
+			"category": "role",
+			"defaultValue": false,
 			"directionType": "undirected",
 			"isBoolean": true,
 			"types": [
-				"child ",
-				"old",
-				"provincial ",
-				"foreigner",
-				"rich",
-				"poor",
-				"Devout",
-				"Beautiful",
-				"Indiscreet / Loose lipped",
-				"Impudent",
-				"Mocking",
-				"Hypocritical",
-				"Indifferent / Unflappable",
-				"honest",
-				"Modest",
-				"Charming",
-				"Credulous",
-				"Generous",
-				"Deceptive",
-				"Clumsy / Awkward",
-				"Talkative",
-				"Shy",
-				"Ambitious",
-				"Male",
-				"Female",
-				"Médisant",
-				"Greedy",
-				"Cold / Distant",
-				"Penetrating",
-				"Trustworthy",
-				"Flirtatious / Seductive",
-				"Intimidating / Imposing",
-				"Disdainful",
-				"Virtuous",
-				"Vain",
-				"Glorieux",
-				"Unctuous",
-				"Bonne physionomie / has a trustworthy face",
-				"Kind",
-				"Eccentric",
-				"Young / youthful",
-				"Boorish",
-				"Well-known",
-				"joker",
-				"Inconstant / volage",
-				"Intelligent"
+				"ticket taker",
+				"stranger",
+				"acquaintance",
+				"servant",
+				"player",
+				"male",
+				"female",
+				"noble"
 			]
 		},
 		{
 			"actionable": false,
-			"category": "DirectedStatus",
-			"directionType": "directed",
-			"isBoolean": true,
-			"types": [
-				"Hates",
-				"Jealous Of",
-				"Financially Dependent On",
-				"Offended By",
-				"Esteems",
-				"Trusts",
-				"Cares for",
-				"Owes a favor to",
-				"Ridicules",
-				"Intimidates",
-				"suspicious of",
-				"Resentful of",
-				"Threatened by"
-			]
-		},
-		{
-			"actionable": false,
-			"category": "SocialRecordLabel",
-			"directionType": "directed",
-			"isBoolean": true,
-			"types": [
-				"Embarrassing Event",
-				"caught in a lie",
-				"Failed bribery attempt",
-				"Scandalous",
-				"Sexual Harassment",
-				"Flirted with / made a pass at",
-				"did harm to / punished "
-			]
-		},
-		{
-			"actionable": false,
-			"category": "Status",
+			"category": "status",
+			"defaultValue": false,
 			"directionType": "undirected",
 			"isBoolean": true,
 			"types": [
-				"Happy",
-				"Feeling socially connected",
-				"Embarrassed",
-				"Amused",
-				"inebriated",
-				"Grateful",
-				"Upset",
-				"Tired / fatigued",
-				"Flattered",
-				"Gobsmacked"
-			]
-		},
-		{
-			"actionable": false,
-			"category": "Attribute",
-			"defaultValue": 50,
-			"directionType": "undirected",
-			"isBoolean": false,
-			"maxValue": 100,
-			"minValue": 1,
-			"types": [
-				"Social Standing",
-				"Attractiveness / Charisma",
-				"self-assuredness",
-				"Sensitiveness / Sensibilité",
-				"Sophistication",
-				"Cunningness",
-				"Theater knowledge",
-				"Nosy / Curious",
-				"Appropriate behavior"
-			]
-		},
-		{
-			"actionable": false,
-			"category": "TraitConditionProfession",
-			"directionType": "undirected",
-			"isBoolean": true,
-			"types": [
-				"Marionettist",
-				"Compère",
-				"Theatre personnel",
-				"Clergy",
-				"Soldier",
-				"Noble",
-				"Bourgeois",
-				"Merchant",
-				"Military Officer",
-				"Domestique / Servant",
-				"Prostitute",
-				"Author",
-				"Pickpocket"
-			]
-		},
-		{
-			"actionable": false,
-			"category": "TraitClothing",
-			"directionType": "undirected",
-			"isBoolean": true,
-			"types": [
-				"Wearing a sword",
-				"en livrée",
-				"Elegantly dressed",
-				"Poorly dressed"
-			]
-		},
-		{
-			"actionable": false,
-			"category": "NonActionableRelationship",
-			"directionType": "reciprocal",
-			"isBoolean": true,
-			"types": [
-				"Married",
-				"Friends",
-				"Lovers",
-				"Strangers"
+				"has theatre access",
+				"has ticket",
+				"thrown out",
+				"gave ticket",
+				"received mark"
 			]
 		}
 	]
