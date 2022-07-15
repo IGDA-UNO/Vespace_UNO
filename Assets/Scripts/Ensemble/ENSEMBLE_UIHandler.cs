@@ -376,11 +376,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void getCharacterActions(string objectName)
     {
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
-        List<Action> actions = data.ensemble.getActions("Male Noble", objectName, volitionInterface, cast, 999, 999, 999);
+        List<Action> actions = data.ensemble.getActions("Male Noble", "Ticket Taker", volitionInterface, cast, 999, 999, 999);
 
         foreach (Action action in actions)
         {
             actionsBuilder.Append(action.Name + "\n");
+            Debug.Log("action: " + action.Name);
         }
     }
 
