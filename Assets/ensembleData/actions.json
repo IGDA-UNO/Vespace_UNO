@@ -59,6 +59,126 @@
 					"first": "initiator",
 					"value": true
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker appreciates your courtesy."
+					}
+				]
+			]
+		},
+		{
+			"name": "flirty greeting to ticket taker",
+			"displayName": "flirty greeting to ticket taker",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker is intrigued by your forwardness."
+					}
+				]
+			]
+		},
+		{
+			"name": "ask a question: \"is this bienfait's theatre?\"",
+			"displayName": "ask a question: \"is this bienfait's theatre?\"",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "+"
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "\"Yes, it is\" she responds, curious that a patron would concern themselves over the owner."
+					}
+				]
 			]
 		},
 		{
@@ -121,6 +241,14 @@
 					"first": "initiator",
 					"value": true
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker regards your coldness unkindly."
+					}
+				]
 			]
 		},
 		{
@@ -197,6 +325,14 @@
 					"first": "initiator",
 					"value": true
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker regards your coldness unkindly and scowls back -- you have made a powerful enemy this day!"
+					}
+				]
 			]
 		},
 		{
@@ -261,6 +397,158 @@
 					"first": "initiator",
 					"value": true
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker smiles back."
+					}
+				]
+			]
+		},
+		{
+			"name": "smile and offer a compliment",
+			"displayName": "smile and offer a compliment",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker blushes."
+					}
+				]
+			]
+		},
+		{
+			"name": "do not smile",
+			"displayName": "do not smile",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker responds with a frown of her own."
+					}
+				]
+			]
+		},
+		{
+			"name": "receive mark",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"say thank you",
+				"ask what is showing today",
+				"ask if x is here today",
+				"ask if the theatre owner is here today",
+				"say nothing upon receiving mark"
 			]
 		},
 		{
@@ -321,6 +609,294 @@
 					"first": "initiator",
 					"value": true
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker nods her head and gestures to enter the theatre."
+					}
+				]
+			]
+		},
+		{
+			"name": "ask what is showing today",
+			"displayName": "ask what is showing today",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 20,
+					"operator": "+"
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker looks at you quizzicaly. \"You purchased a ticket but did not know the show? How curious!\""
+					}
+				]
+			]
+		},
+		{
+			"name": "ask if x is here today",
+			"displayName": "ask if x is here today",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker looks at you quizzically."
+					}
+				]
+			]
+		},
+		{
+			"name": "ask if the theatre owner is here today",
+			"displayName": "ask if the theatre owner is here today",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker looks at you quizzically."
+					}
+				]
+			]
+		},
+		{
+			"name": "say nothing upon receiving mark",
+			"displayName": "say nothing upon receiving mark",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "gave ticket",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "received mark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 10,
+					"operator": "-"
+				},
+				{
+					"category": "status",
+					"type": "has theatre access",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker frowns at the rude gesture."
+					}
+				]
 			]
 		},
 		{
@@ -761,78 +1337,6 @@
 			]
 		},
 		{
-			"name": "receive mark",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"say thank you",
-				"ask what is showing today",
-				"ask if x is here today",
-				"ask if the theatre owner is here today",
-				"say nothing upon receiving mark"
-			]
-		},
-		{
-			"name": "ask if x is here today",
-			"displayName": "ask if x is here today",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
 			"name": "credibility-down",
 			"intent": {
 				"category": "network",
@@ -843,8 +1347,7 @@
 			},
 			"conditions": [],
 			"influenceRules": [],
-			"leadsTo": [
-			]
+			"leadsTo": []
 		},
 		{
 			"name": "emulation-up",
@@ -873,230 +1376,6 @@
 			"leadsTo": []
 		},
 		{
-			"name": "flirty greeting to ticket taker",
-			"displayName": "flirty greeting to ticket taker",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "ask a question: \"is this bienfait's theatre?\"",
-			"displayName": "ask a question: \"is this bienfait's theatre?\"",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "ask what is showing today",
-			"displayName": "ask what is showing today",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "responder",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "ask if the theatre owner is here today",
-			"displayName": "ask if the theatre owner is here today",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
 			"name": "curiosity-up",
 			"intent": {
 				"category": "network",
@@ -1107,70 +1386,7 @@
 			},
 			"conditions": [],
 			"influenceRules": [],
-			"leadsTo": [
-			]
-		},
-		{
-			"name": "do not smile",
-			"displayName": "do not smile",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": true
-				}
-			]
+			"leadsTo": []
 		},
 		{
 			"name": "curiosity-down",
@@ -1183,62 +1399,7 @@
 			},
 			"conditions": [],
 			"influenceRules": [],
-			"leadsTo": [
-			]
-		},
-		{
-			"name": "smile and offer a compliment",
-			"displayName": "smile and offer a compliment",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": true
-				}
-			]
+			"leadsTo": []
 		},
 		{
 			"name": "bribe ticket taker",
@@ -1447,7 +1608,14 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"hello old friend! (male noble)","hello old friend! (female noble)","hello old friend! (servant)", "Hello esteemed person I've never met before! (noble)","Hello esteemed person I've never met before! (servant)","Hello, have we met before?","Hello, I love this play, I've seen it four times! (female noble)","Hello, I love this play, I've seen it four times! (males)"
+				"hello old friend! (male noble)",
+				"hello old friend! (female noble)",
+				"hello old friend! (servant)",
+				"hello esteemed person i've never met before! (noble)",
+				"hello esteemed person i've never met before! (servant)",
+				"hello, have we met before?",
+				"hello, i love this play, i've seen it four times! (female noble)",
+				"hello, i love this play, i've seen it four times! (males)"
 			]
 		},
 		{
@@ -1619,8 +1787,8 @@
 			]
 		},
 		{
-			"name": "Hello esteemed person I've never met before! (noble)",
-			"displayName": "Hello esteemed person I've never met before! (noble)",
+			"name": "hello esteemed person i've never met before! (noble)",
+			"displayName": "hello esteemed person i've never met before! (noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1662,8 +1830,8 @@
 			]
 		},
 		{
-			"name": "Hello esteemed person I've never met before! (servant)",
-			"displayName": "Hello esteemed person I've never met before! (servant)",
+			"name": "hello esteemed person i've never met before! (servant)",
+			"displayName": "hello esteemed person i've never met before! (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1698,53 +1866,8 @@
 			]
 		},
 		{
-			"name": "Hello, do you know what play this is?",
-			"displayName": "Hello, do you know what play this is?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				}
-			]
-		},
-		{
-			"name": "Hello, have we met before?",
-			"displayName": "Hello, have we met before?",
+			"name": "hello, have we met before?",
+			"displayName": "hello, have we met before?",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1788,8 +1911,8 @@
 			]
 		},
 		{
-			"name": "Hello, I love this play, I've seen it four times! (female noble)",
-			"displayName": "Hello, I love this play, I've seen it four times! (female noble)",
+			"name": "hello, i love this play, i've seen it four times! (female noble)",
+			"displayName": "hello, i love this play, i've seen it four times! (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1853,8 +1976,8 @@
 			]
 		},
 		{
-			"name": "Hello, I love this play, I've seen it four times! (males)",
-			"displayName": "Hello, I love this play, I've seen it four times! (males)",
+			"name": "hello, i love this play, i've seen it four times! (males)",
+			"displayName": "hello, i love this play, i've seen it four times! (males)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1910,66 +2033,6 @@
 			"leadsTo": [
 				"bribe ticket taker",
 				"greetstranger"
-			]
-		},
-		{
-			"name": "say nothing upon receiving mark",
-			"displayName": "say nothing upon receiving mark",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "gave ticket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "received mark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "status",
-					"type": "has theatre access",
-					"first": "initiator",
-					"value": true
-				}
 			]
 		},
 		{
