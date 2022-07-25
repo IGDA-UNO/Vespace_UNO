@@ -51,6 +51,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject statusMenu;
     public GameObject historyMenu;
     public GameObject actionsMenu;
+    public Transform actionsMenuImageZone;
+    public GameObject prefabButton;
 
     public StringBuilder attributesBuilder;
     public StringBuilder traitsBuilder;
@@ -64,6 +66,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public StringBuilder statusBuilder;
     public StringBuilder historyBuilder;
     public StringBuilder actionsBuilder;
+
+    List<GameObject> actionButtonRefs = new List<GameObject>();
+    private bool exitClick;
 
     public PROUVE_OmekaPad prouve;
 
@@ -93,6 +98,21 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         statusBuilder = new StringBuilder();
         historyBuilder = new StringBuilder();
         actionsBuilder = new StringBuilder();
+
+        actionsMenu = GameObject.Find("ActionsMenu");
+        actionsMenuImageZone = actionsMenu.transform.Find("MainView/ImageZone");
+        directedStatusMenu = GameObject.Find("DirectedStatusList");
+        networkMenu = GameObject.Find("NetworkList");
+        nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
+        relationshipMenu = GameObject.Find("RelationshipList");
+        socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
+        statusMenu = GameObject.Find("StatusList");
+        historyMenu = GameObject.Find("HistoryList");
+        attributesMenu = GameObject.Find("AttributesList");
+        traitsMenu = GameObject.Find("TraitsList");
+        clothingMenu = GameObject.Find("TraitClothingList");
+        professionMenu = GameObject.Find("ProfessionList");
+        characterMenu = GameObject.Find("Character_Name");
     }
 
     public void DisplayMain()
@@ -131,9 +151,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyActiveUI = false;
 
             FindObjectsGetStrings();
-
-            actionsMenu = GameObject.Find("ActionsList");
-            actionsMenu.GetComponent<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
+            
+            //actionsMenu.GetComponent<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
         }
         
     }
@@ -155,13 +174,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyActiveUI = false;
 
             FindObjectsGetStrings();
-
-            directedStatusMenu = GameObject.Find("DirectedStatusList");
-            networkMenu = GameObject.Find("NetworkList");
-            nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
-            relationshipMenu = GameObject.Find("RelationshipList");
-            socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
-            statusMenu = GameObject.Find("StatusList");
 
             directedStatusMenu.GetComponent<UnityEngine.UI.Text>().text = directedStatusBuilder.ToString();
             networkMenu.GetComponent<UnityEngine.UI.Text>().text = networkBuilder.ToString();
@@ -189,7 +201,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             FindObjectsGetStrings();
 
-            historyMenu = GameObject.Find("HistoryList");
             historyMenu.GetComponent<UnityEngine.UI.Text>().text = historyBuilder.ToString();
         }
     }
@@ -208,15 +219,16 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         historyUI.SetActive(false);
         historyActiveUI = false;
+
+        foreach(GameObject bt in actionButtonRefs) {
+            Destroy(bt);
+        }
+
+        actionButtonRefs.Clear();
     }
 
     private void FindObjectsGetStrings()
     {
-        attributesMenu = GameObject.Find("AttributesList");
-        traitsMenu = GameObject.Find("TraitsList");
-        clothingMenu = GameObject.Find("TraitClothingList");
-        professionMenu = GameObject.Find("ProfessionList");
-
         attributesMenu.GetComponent<UnityEngine.UI.Text>().text = attributesBuilder.ToString();
         traitsMenu.GetComponent<UnityEngine.UI.Text>().text = traitsBuilder.ToString();
         clothingMenu.GetComponent<UnityEngine.UI.Text>().text = clothingBuilder.ToString();
@@ -249,6 +261,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     //LaserPointer functions overload:
     public void PointerClick(object sender, PointerEventArgs e)
     {
+   
         EnsembleObject ensemble = e.target.GetComponent<EnsembleObject>();
         if (ensemble != null)
         {
@@ -269,7 +282,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyBuilder.Clear();
             actionsBuilder.Clear();
 
-            characterMenu = GameObject.Find("Character_Name");
             characterMenu.GetComponent<UnityEngine.UI.Text>().text = ensemble.name;
 
             getCharacterData(ensemble.name);
@@ -381,15 +393,40 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
         List<Action> actions = data.ensemble.getActions("Male Noble", objectName, volitionInterface, cast, 999, 999, 999);
-
+        
+        float x = .135f;
+        float y = 0;
+        float z = 5602.218f;
+        
         foreach (Action action in actions)
-        {
-            actionsBuilder.Append(action.Name + "\n");
+        {   
+            // actionsBuilder.Append(action.Name + "\n");
             Debug.Log("action: " + action.Name);
 
-            
-        }
+            GameObject goButton = (GameObject)Instantiate(prefabButton);
+            goButton.transform.SetParent(actionsMenuImageZone, false);
 
+            
+            goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
+            goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
+            y -= 0.15f;
+
+            //buttonPosition.y -= 0.1f;
+            //goButton.transform.localScale = new Vector3(1, 1, 1);
+
+            Button tempButton = goButton.GetComponent<Button>();
+            tempButton.GetComponentInChildren<Text>().text = action.Name;
+            tempButton.onClick.AddListener(() => TakeAction(action));
+
+           actionButtonRefs.Add(goButton);
+        }
+    }
+
+    private void TakeAction(Action action)
+    {
+        Debug.Log("taking action: " + action.Name);
+        data.ensemble.takeAction(action);
+        CloseMenu();
     }
 
 }
