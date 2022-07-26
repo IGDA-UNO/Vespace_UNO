@@ -100,7 +100,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         actionsBuilder = new StringBuilder();
 
         actionsMenu = GameObject.Find("ActionsMenu");
-        actionsMenuImageZone = actionsMenu.transform.Find("MainView/ImageZone");
+        actionsMenuImageZone = actionsMenu.transform.Find("MainView/ScrollViewActions/Viewport/Content/ImageZone");
         directedStatusMenu = GameObject.Find("DirectedStatusList");
         networkMenu = GameObject.Find("NetworkList");
         nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
@@ -394,13 +394,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
         List<Action> actions = data.ensemble.getActions("Male Noble", objectName, volitionInterface, cast, 999, 999, 999);
         
-        float x = .135f;
-        float y = 0;
+        float x = 0;
+        float y = -0.05f;
         float z = 5602.218f;
         
         foreach (Action action in actions)
         {   
-            // actionsBuilder.Append(action.Name + "\n");
             Debug.Log("action: " + action.Name);
 
             GameObject goButton = (GameObject)Instantiate(prefabButton);
@@ -410,9 +409,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
             goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
             y -= 0.15f;
-
-            //buttonPosition.y -= 0.1f;
-            //goButton.transform.localScale = new Vector3(1, 1, 1);
 
             Button tempButton = goButton.GetComponent<Button>();
             tempButton.GetComponentInChildren<Text>().text = action.Name;
@@ -426,6 +422,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         Debug.Log("taking action: " + action.Name);
         data.ensemble.takeAction(action);
+
+        if (action.Performance != null) {
+            foreach(List<Performance> performanceQueue in action.Performance) {
+                foreach(Performance p in performanceQueue) {
+                    if (p.Type == "dialogue" && p.Text != null) {
+                        Debug.Log("action response: " + p.Text);
+                    }
+                }
+            }
+        }
+
         CloseMenu();
     }
 
