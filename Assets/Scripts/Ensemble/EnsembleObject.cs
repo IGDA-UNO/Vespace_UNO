@@ -45,9 +45,7 @@ public class EnsembleObject : MonoBehaviour
 
     void OnMouseDown()
     {
-        handler.DisplayMain();
-        Debug.Log("Mouse down");
-        
+        handler.clickOnObject(gameObject.name, gameObject.transform.position);
     }
 
     void Update()

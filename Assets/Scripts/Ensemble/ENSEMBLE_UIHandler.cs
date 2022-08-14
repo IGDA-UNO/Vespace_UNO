@@ -67,6 +67,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public StringBuilder historyBuilder;
     public StringBuilder actionsBuilder;
 
+    public GameObject fallBackCamera ; 
+
     List<GameObject> actionButtonRefs = new List<GameObject>();
     private bool exitClick;
 
@@ -235,7 +237,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         professionMenu.GetComponent<UnityEngine.UI.Text>().text = professionBuilder.ToString();
     }
 
-    private void Orientation()
+    public void Orientation()
     {
         ensembleUI.transform.SetParent(leftHand.transform);
         ensembleUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
@@ -434,6 +436,53 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         CloseMenu();
+    }
+
+    public void clickOnObject(string objectName, Vector3 position)  
+    {
+        Debug.Log("Mouse down objectName: " + objectName);
+        Debug.Log("position: " + position);
+
+        DisplayMain();
+
+        ensembleUI.transform.SetParent(fallBackCamera.transform);
+        ensembleUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+        ensembleUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+        ensembleUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+
+        actionsUI.transform.SetParent(fallBackCamera.transform);
+        actionsUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+        actionsUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+        actionsUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+
+        attributesUI.transform.SetParent(fallBackCamera.transform);
+        attributesUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+        attributesUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+        attributesUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+
+        historyUI.transform.SetParent(fallBackCamera.transform);
+        historyUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+        historyUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+        historyUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+
+        attributesBuilder.Clear();
+        traitsBuilder.Clear();
+        clothingBuilder.Clear();
+        professionBuilder.Clear();
+        directedStatusBuilder.Clear();
+        networkBuilder.Clear();
+        nonActionableRelationshipBuilder.Clear();
+        relationshipBuilder.Clear();
+        socialRecordLabelBuilder.Clear();
+        statusBuilder.Clear();
+        historyBuilder.Clear();
+        actionsBuilder.Clear();
+
+        characterMenu.GetComponent<UnityEngine.UI.Text>().text = objectName;
+
+        getCharacterData(objectName);
+        getCharacterHistory(objectName);
+        getCharacterActions(objectName);
     }
 
 }
