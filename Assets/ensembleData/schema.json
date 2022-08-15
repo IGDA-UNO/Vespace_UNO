@@ -46,16 +46,14 @@
 		},
 		{
 			"actionable": false,
-			"category": "status",
-			"defaultValue": false,
+			"category": "progress",
+			"defaultValue": 0,
 			"directionType": "undirected",
-			"isBoolean": true,
+			"isBoolean": false,
+			"maxValue": 100,
+			"minValue": 0,
 			"types": [
-				"has theatre access",
-				"has ticket",
-				"thrown out",
-				"gave ticket",
-				"received mark"
+				"progress"
 			]
 		}
 	]
