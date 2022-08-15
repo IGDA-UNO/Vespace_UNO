@@ -3,20 +3,32 @@
 		"Ticket Taker": {
 			"name": "Ticket Taker"
 		},
-		"Stranger": {
-			"name": "Stranger"
+		"Female Servant Stranger": {
+			"name": "Female Servant Stranger"
 		},
-		"Acquaintance": {
-			"name": "Acquaintance"
+		"Male Noble Stranger": {
+			"name": "Male Noble Stranger"
 		},
-		"Male Noble": {
-			"name": "Male Noble"
+		"Female Noble Stranger": {
+			"name": "Female Noble Stranger"
 		},
-		"Female Noble": {
-			"name": "Female Noble"
+		"Male Servant Acquaintance": {
+			"name": "Male Servant Acquaintance"
 		},
-		"Servant": {
-			"name": "Servant"
+		"Male Noble Acquaintance": {
+			"name": "Male Noble Acquaintance"
+		},
+		"Female Noble Acquaintance": {
+			"name": "Female Noble Acquaintance"
+		},
+		"Male Noble Player": {
+			"name": "Male Noble Player"
+		},
+		"Female Noble Player": {
+			"name": "Female Noble Player"
+		},
+		"Servant Player": {
+			"name": "Servant Player"
 		}
 	}
 }

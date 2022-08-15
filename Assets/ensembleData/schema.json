@@ -47,13 +47,31 @@
 		{
 			"actionable": false,
 			"category": "progress",
-			"defaultValue": 0,
+			"defaultValue": false,
 			"directionType": "undirected",
-			"isBoolean": false,
-			"maxValue": 100,
-			"minValue": 0,
+			"isBoolean": true,
 			"types": [
-				"progress"
+				"Start",
+				"HasTicket",
+				"GaveTicket",
+				"HasMark",
+				"GreetedStranger",
+				"AskStrangerQuestion",
+				"AskStrangerFavor",
+				"OfferStrangerBribe",
+				"GiveStrangerCommand",
+				"StompAndWhistle",
+				"TellALieAcquaintance",
+				"AcquainctanceSecondInteraction",
+				"AskAcquaintanceFavor",
+				"AskAcquaintanceDistraction",
+				"AskAcquaintanceInfo",
+				"BerateAcquaintance",
+				"NearStageInteraction",
+				"OfferARefreshment",
+				"SuccessfulDistraction",
+				"BackstageAccess",
+				"ThrownOut"
 			]
 		}
 	]

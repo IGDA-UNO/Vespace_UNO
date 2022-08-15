@@ -19,142 +19,595 @@
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Stranger",
-					"second": "Male Noble"
+					"first": "Female Servant Stranger",
+					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Stranger",
-					"second": "Female Noble"
+					"first": "Female Servant Stranger",
+					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Stranger",
-					"second": "Servant"
+					"first": "Female Servant Stranger",
+					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Stranger",
-					"second": "Male Noble"
+					"first": "Female Servant Stranger",
+					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Stranger",
-					"second": "Female Noble"
+					"first": "Female Servant Stranger",
+					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Stranger",
-					"second": "Servant"
+					"first": "Female Servant Stranger",
+					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Stranger",
-					"second": "Male Noble"
+					"first": "Female Servant Stranger",
+					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Stranger",
-					"second": "Female Noble"
+					"first": "Female Servant Stranger",
+					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Stranger",
-					"second": "Servant"
+					"first": "Female Servant Stranger",
+					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "stranger",
 					"value": true,
-					"first": "Stranger"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": false,
-					"first": "Stranger"
-				},
-				{
-					"category": "role",
-					"type": "acquaintance",
-					"value": true,
-					"first": "Acquaintance"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": false,
-					"first": "Acquaintance"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": true,
-					"first": "Male Noble"
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"value": true,
-					"first": "Male Noble"
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"value": true,
-					"first": "Male Noble"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": true,
-					"first": "Female Noble"
+					"first": "Female Servant Stranger"
 				},
 				{
 					"category": "role",
 					"type": "female",
 					"value": true,
-					"first": "Female Noble"
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"value": true,
-					"first": "Female Noble"
+					"first": "Female Servant Stranger"
 				},
 				{
 					"category": "role",
 					"type": "servant",
 					"value": true,
-					"first": "Servant"
+					"first": "Female Servant Stranger"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Female Servant Stranger"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Noble Stranger",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Noble Stranger",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Noble Stranger",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Noble Stranger",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Noble Stranger",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Noble Stranger",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Noble Stranger",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Noble Stranger",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Noble Stranger",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Male Noble Stranger"
 				},
 				{
 					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Servant"
+					"first": "Male Noble Stranger"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Male Noble Stranger"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Male Noble Stranger"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Female Noble Stranger",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Female Noble Stranger",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Female Noble Stranger",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Female Noble Stranger",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Female Noble Stranger",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Female Noble Stranger",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Female Noble Stranger",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Female Noble Stranger",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Female Noble Stranger",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Female Noble Stranger"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Female Noble Stranger"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Female Noble Stranger"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Female Noble Stranger"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Servant Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Servant Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Servant Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Servant Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Servant Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Servant Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Servant Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Servant Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Servant Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Male Servant Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Male Servant Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Male Servant Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Male Servant Acquaintance"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Noble Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Noble Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Male Noble Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Noble Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Noble Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Male Noble Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Noble Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Noble Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Male Noble Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Male Noble Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Male Noble Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Male Noble Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Male Noble Acquaintance"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Female Noble Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Female Noble Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Female Noble Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Female Noble Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Female Noble Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Female Noble Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Female Noble Acquaintance",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Female Noble Acquaintance",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Female Noble Acquaintance",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Female Noble Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Female Noble Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Female Noble Acquaintance"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Female Noble Acquaintance"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": true,
-					"first": "Servant"
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"value": true,
+					"first": "Servant Player"
 				}
 			]
 		}

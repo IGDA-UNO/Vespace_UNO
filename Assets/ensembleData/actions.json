@@ -13,11 +13,11 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"greet ticket taker",
 				"ingratiate ticket taker",
 				"bribe ticket taker",
 				"threaten ticket taker",
 				"ignore ticket taker",
-				"greet ticket taker with ticket",
 				"give ticket",
 				"receive mark",
 				"lie to ticket taker",
@@ -32,6 +32,18 @@
 				"berate acquaintance",
 				"ask acquaintance for information",
 				"thank acquaintance"
+			]
+		},
+		{
+			"name": "greet ticket taker",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"polite greeting to ticket taker",
+				"flirty greeting to ticket taker",
+				"ask a question: \"is this bienfait's theatre?\"",
+				"say nothing to ticket taker initially (male)",
+				"say nothing to ticket taker initially (female)"
 			]
 		},
 		{
@@ -78,25 +90,13 @@
 			]
 		},
 		{
-			"name": "greet ticket taker with ticket",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"polite greeting to ticket taker",
-				"flirty greeting to ticket taker",
-				"ask a question: \"is this bienfait's theatre?\"",
-				"say nothing to ticket taker initially (male)",
-				"say nothing to ticket taker initially (female)"
-			]
-		},
-		{
 			"name": "give ticket",
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"smile but say nothing",
-				"smile and offer a compliment",
-				"do not smile"
+				"Give ticket and smile but say nothing",
+				"Give ticket and smile and offer a compliment",
+				"Give ticket and do not smile"
 			]
 		},
 		{
@@ -104,11 +104,11 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"say thank you",
-				"ask what is showing today",
-				"ask if x is here today",
-				"ask if the theatre owner is here today",
-				"say nothing upon receiving mark"
+				"Receive mark and say thank you",
+				"Receive mark and ask what is showing today",
+				"Receive mark and ask if x is here today",
+				"Receive mark and ask if the theatre owner is here today",
+				"Receive mark and say nothing upon receiving mark"
 			]
 		},
 		{
@@ -150,12 +150,7 @@
 				"Ask for a favor: Can you help me get backstage? *maleNobleVersion*",
 				"Ask for a favor: Could you hold this package?",
 				"Ask for a favor: What do you say we whistle and stomp? *femaleNobleYesStomp*",
-				"Ask for a favor: What do you say we whistle and stomp? *femaleNobleNoStomp*",
-				"Ask for a favor: What do you say we whistle and stomp? *malesYesStomp*",
-				"Ask for a favor: What do you say we whistle and stomp? *malesNoStomp*",
-				"Ask for a favor: Would you draw attention while I sneak backstage? *maleNobleVersion*",
-				"Ask for a favor: Would you draw attention while I sneak backstage? *femaleNobleVersion*",
-				"Ask for a favor: Would you draw attention while I sneak backstage? *servantVersion*"
+				"Ask for a favor: What do you say we whistle and stomp? *femaleNobleNoStomp*"
 			]
 		},
 		{
@@ -171,8 +166,7 @@
 				"Ask a question: Have you ever participated in a claque? *servantVersion*",
 				"Ask a question: Have you ever participated in a claque? *femaleNobleVersion*",
 				"Ask a question: Have you ever participated in a claque? *maleNobleVersion*",
-				"Ask a question: Do you understand what's going on in this play *servantVersion*",
-				"Ask a question: Do you understand what's going on in this play  *nobleVersion*"
+				"Ask a question: Do you understand what's going on in this play *servantVersion*"
 			]
 		},
 		{
@@ -208,6 +202,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Can I ask you for a favor?",
 				"Can you help me get backstage? (esteemed male noble)",
 				"Can you help me get backstage? (unesteemed male noble)",
 				"Can you help me get backstage? (esteemed female noble)",
@@ -232,16 +227,15 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Can I ask you for help?",
 				"Would you yell and distract everyone with rude insults while I sneak backstage? (esteemed male noble)",
 				"Would you yell and distract everyone with rude insults while I sneak backstage? (unesteemed male noble)",
-				"Would you yell and distract everyone with rude insults while I sneak backstage? (esteemed female noble)",
-				"Would you yell and distract everyone with rude insults while I sneak backstage? (unesteemed female noble)",
+				"Would you yell and distract everyone with rude insults while I sneak backstage? (female noble)",
 				"Would you yell and distract everyone with rude insults while I sneak backstage? (esteemed servant)",
 				"Would you yell and distract everyone with rude insults while I sneak backstage? (unesteemed servant)",
 				"Whistle and stomp with me after the next joke! (esteemed male noble)",
 				"Whistle and stomp with me after the next joke! (unesteemed male noble)",
-				"Whistle and stomp with me after the next joke! (esteemed female noble)",
-				"Whistle and stomp with me after the next joke! (unesteemed female noble)",
+				"Whistle and stomp with me after the next joke! (female noble)",
 				"Whistle and stomp with me after the next joke! (esteemed servant)",
 				"Whistle and stomp with me after the next joke! (unesteemed servant)"
 			]
@@ -262,6 +256,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Do as I say at once!",
 				"You don't question me, you obey, rascal! Now do as I say!",
 				"You don't question me, you obey, rascal! Now do as I say! (male noble)"
 			]
@@ -271,6 +266,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Can I ask you for information?",
 				"Do you know the owner of this theatre? (allied male noble to noble)",
 				"Do you know the owner of this theatre? (allied female noble to noble)",
 				"Do you know the owner of this theatre? (allied servant to noble)",
@@ -310,9 +306,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 1
+					"value": true
 				}
 			],
 			"effects": [
@@ -326,9 +322,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -360,9 +362,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 1
+					"value": true
 				}
 			],
 			"effects": [
@@ -376,9 +378,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -410,9 +418,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 1
+					"value": true
 				}
 			],
 			"effects": [
@@ -426,9 +434,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -466,9 +480,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 1
+					"value": true
 				}
 			],
 			"effects": [
@@ -490,9 +504,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -530,9 +550,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 1
+					"value": true
 				}
 			],
 			"effects": [
@@ -568,9 +588,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -583,8 +609,8 @@
 			]
 		},
 		{
-			"name": "smile but say nothing",
-			"displayName": "smile but say nothing",
+			"name": "Give ticket and smile but say nothing",
+			"displayName": "Give ticket and smile but say nothing",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -602,9 +628,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
 				}
 			],
 			"effects": [
@@ -618,9 +644,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -633,8 +665,8 @@
 			]
 		},
 		{
-			"name": "smile and offer a compliment",
-			"displayName": "smile and offer a compliment",
+			"name": "Give ticket and smile and offer a compliment",
+			"displayName": "Give ticket and smile and offer a compliment",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -652,9 +684,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
 				}
 			],
 			"effects": [
@@ -668,9 +700,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -683,8 +721,8 @@
 			]
 		},
 		{
-			"name": "do not smile",
-			"displayName": "do not smile",
+			"name": "Give ticket and do not smile",
+			"displayName": "Give ticket and do not smile",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -702,9 +740,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 2
+					"value": true
 				}
 			],
 			"effects": [
@@ -726,9 +764,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -741,8 +785,8 @@
 			]
 		},
 		{
-			"name": "say thank you",
-			"displayName": "say thank you",
+			"name": "Receive mark and say thank you",
+			"displayName": "Receive mark and say thank you",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -760,9 +804,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
 				}
 			],
 			"effects": [
@@ -776,9 +820,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GaveTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -791,8 +841,8 @@
 			]
 		},
 		{
-			"name": "ask what is showing today",
-			"displayName": "ask what is showing today",
+			"name": "Receive mark and ask what is showing today",
+			"displayName": "Receive mark and ask what is showing today",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -810,9 +860,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
 				}
 			],
 			"effects": [
@@ -826,9 +876,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GaveTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -841,8 +897,8 @@
 			]
 		},
 		{
-			"name": "ask if x is here today",
-			"displayName": "ask if x is here today",
+			"name": "Receive mark and ask if x is here today",
+			"displayName": "Receive mark and ask if x is here today",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -860,9 +916,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
 				}
 			],
 			"effects": [
@@ -876,9 +932,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GaveTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -891,8 +953,8 @@
 			]
 		},
 		{
-			"name": "Ask if the theatre owner is here today.",
-			"displayName": "Ask if the theatre owner is here today.",
+			"name": "Receive mark and ask if the theatre owner is here today",
+			"displayName": "Receive mark and ask if the theatre owner is here today",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -910,9 +972,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
 				}
 			],
 			"effects": [
@@ -934,9 +996,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GaveTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -949,8 +1017,8 @@
 			]
 		},
 		{
-			"name": "say nothing upon receiving mark",
-			"displayName": "say nothing upon receiving mark",
+			"name": "Receive mark and say nothing upon receiving mark",
+			"displayName": "Receive mark and say nothing upon receiving mark",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -968,9 +1036,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GaveTicket",
 					"first": "initiator",
-					"value": 3
+					"value": true
 				}
 			],
 			"effects": [
@@ -984,9 +1052,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GaveTicket",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -1024,9 +1098,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1055,9 +1129,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1087,9 +1167,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1118,9 +1198,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1150,9 +1236,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1166,9 +1252,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
 				}
 			]
 		},
@@ -1198,9 +1284,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1214,9 +1300,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1252,9 +1344,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1275,9 +1367,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1313,9 +1411,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1336,9 +1434,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1374,9 +1478,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1397,9 +1501,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1423,9 +1533,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1447,9 +1557,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1479,9 +1595,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1518,9 +1634,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1550,9 +1672,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1589,9 +1711,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1615,9 +1743,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1653,9 +1781,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1685,9 +1819,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1709,9 +1843,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1741,9 +1881,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1765,9 +1905,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1791,9 +1937,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1830,9 +1976,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1856,9 +2008,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1887,9 +2039,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1919,9 +2077,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -1951,9 +2109,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -1983,9 +2147,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -2022,9 +2186,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -2048,9 +2218,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -2063,9 +2233,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -2089,9 +2265,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -2112,9 +2288,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -2144,9 +2326,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -2175,9 +2357,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -2207,9 +2395,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -2230,9 +2418,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasTicket",
 					"first": "initiator",
-					"value": 1
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -2256,9 +2450,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "Start",
 					"first": "initiator",
-					"value": 0
+					"value": true
 				}
 			],
 			"effects": [
@@ -2280,9 +2474,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "ThrownOut",
 					"first": "initiator",
-					"value": 100
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
 				}
 			]
 		},
@@ -2306,9 +2506,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2355,9 +2555,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2404,9 +2604,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2441,9 +2641,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2498,9 +2698,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2570,9 +2770,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2636,9 +2836,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2679,9 +2879,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2708,9 +2908,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2738,9 +2938,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2790,9 +2990,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2840,9 +3040,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2897,9 +3097,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -2941,9 +3141,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -3006,9 +3206,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -3071,9 +3271,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -3128,9 +3328,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -3179,9 +3379,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -3251,9 +3451,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			],
 			"effects": [
@@ -3283,9 +3483,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3315,9 +3515,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3339,9 +3539,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				},
 				{
 					"category": "network",
@@ -3373,9 +3573,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3405,9 +3605,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3431,9 +3631,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3454,9 +3654,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3480,9 +3680,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3496,9 +3696,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3516,9 +3716,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3547,9 +3747,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3567,9 +3767,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3598,9 +3798,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3630,9 +3830,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3669,9 +3869,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3695,9 +3895,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
 				}
 			],
 			"effects": [
@@ -3719,9 +3919,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "GreetedStranger",
 					"first": "initiator",
-					"value": 5
+					"value": true
 				}
 			]
 		},
@@ -3751,9 +3951,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3780,6 +3986,12 @@
 					"second": "initiator",
 					"value": 1,
 					"operator": "+"
+				},				
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -3809,9 +4021,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3822,6 +4040,12 @@
 					"second": "initiator",
 					"value": 1,
 					"operator": "+"
+				},				
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -3851,9 +4075,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3864,6 +4094,12 @@
 					"second": "initiator",
 					"value": 5,
 					"operator": "+"
+				},				
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -3893,9 +4129,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3906,6 +4148,12 @@
 					"second": "initiator",
 					"value": 2,
 					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -3935,9 +4183,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3948,6 +4202,12 @@
 					"second": "initiator",
 					"value": 2,
 					"operator": "+"
+				},				
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -3977,9 +4237,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3990,6 +4256,12 @@
 					"second": "initiator",
 					"value": 2,
 					"operator": "+"
+				},				
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -4019,17 +4291,23 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
 				},
 				{
 					"category": "network",
@@ -4045,6 +4323,12 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},				
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -4074,17 +4358,23 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
 				},
 				{
 					"category": "network",
@@ -4129,17 +4419,23 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
 				},
 				{
 					"category": "network",
@@ -4184,9 +4480,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4205,6 +4507,12 @@
 					"second": "initiator",
 					"value": 4,
 					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -4234,9 +4542,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4262,6 +4576,12 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -4291,9 +4611,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4312,6 +4638,12 @@
 					"second": "initiator",
 					"value": 4,
 					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
 				}
 			]
 		},
@@ -4335,9 +4667,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4379,9 +4717,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "HasMark",
 					"first": "initiator",
-					"value": 4
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4419,6 +4763,42 @@
 			]
 		},
 		{
+			"name": "Can I ask you for a favor?",
+			"displayName": "Can I ask you for a favor?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Sure, what do you seek?"
+					}
+				]
+			]
+		},
+		{
 			"name": "Can you help me get backstage? (esteemed male noble)",
 			"displayName": "Can you help me get backstage? (esteemed male noble)",
 			"influenceRules": [],
@@ -4444,9 +4824,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4459,9 +4839,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4499,9 +4885,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4514,9 +4900,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BerateAcquaintance",
 					"first": "initiator",
-					"value": 17
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4554,9 +4946,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4569,9 +4961,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4609,9 +5007,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4624,9 +5022,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4664,9 +5068,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4679,9 +5083,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4719,9 +5129,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4734,9 +5144,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4774,9 +5190,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4789,9 +5205,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4829,9 +5251,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4844,9 +5266,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4884,9 +5312,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4907,9 +5335,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -4947,9 +5381,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -4970,9 +5404,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5010,9 +5450,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5025,9 +5465,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5065,9 +5511,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5080,9 +5526,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5126,17 +5578,23 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5180,9 +5638,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5195,9 +5653,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5241,9 +5705,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5256,9 +5720,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BerateAcquaintance",
 					"first": "initiator",
-					"value": 17
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5302,9 +5772,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5317,9 +5787,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5363,9 +5839,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5378,9 +5854,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5424,9 +5906,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5446,9 +5928,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5492,9 +5980,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5514,9 +6002,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5524,6 +6018,42 @@
 					{
 						"type": "dialogue",
 						"text": "Do you know to whom you are speaking? Go away, and leave me in peace!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Can I ask you for help?",
+			"displayName": "Can I ask you for help?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Sure, what do you seek?"
 					}
 				]
 			]
@@ -5554,9 +6084,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5576,9 +6106,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "SuccessfulDistraction",
 					"first": "initiator",
-					"value": 20
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5616,9 +6152,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5638,9 +6174,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5678,17 +6220,23 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5726,9 +6274,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5748,9 +6296,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "SuccessfulDistraction",
 					"first": "initiator",
-					"value": 20
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5788,9 +6342,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5810,9 +6364,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5850,9 +6410,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5872,9 +6432,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "SuccessfulDistraction",
 					"first": "initiator",
-					"value": 20
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5912,9 +6478,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -5934,9 +6500,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -5974,17 +6546,23 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -6022,9 +6600,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -6044,9 +6622,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "SuccessfulDistraction",
 					"first": "initiator",
-					"value": 20
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -6084,9 +6668,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
-					"value": 15
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -6106,9 +6690,15 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -6146,9 +6736,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -6161,9 +6751,9 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6201,9 +6791,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -6216,9 +6806,9 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6256,9 +6846,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -6271,9 +6861,9 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6311,9 +6901,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				},
 				{
 					"category": "relationship",
@@ -6326,9 +6916,9 @@
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
 				}
 			],
 			"performance": [
@@ -6336,6 +6926,36 @@
 					{
 						"type": "dialogue",
 						"text": "Don't think you can buy me off with an orange."
+					}
+				]
+			]
+		},
+		{
+			"name": "Do as I say at once!",
+			"displayName": "Do as I say at once!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Excuse me?"
 					}
 				]
 			]
@@ -6354,17 +6974,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BerateAcquaintance",
 					"first": "initiator",
-					"value": 17
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
 				}
 			],
 			"performance": [
@@ -6408,17 +7028,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BerateAcquaintance",
 					"first": "initiator",
-					"value": 17
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6456,17 +7076,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6504,17 +7124,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6558,17 +7178,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6612,17 +7232,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BackstageAccess",
 					"first": "initiator",
-					"value": 21
+					"value": true
 				}
 			],
 			"performance": [
@@ -6630,6 +7250,36 @@
 					{
 						"type": "dialogue",
 						"text": "OK!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Can I ask you for information?",
+			"displayName": "Can I ask you for information?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Sure, what do you seek?"
 					}
 				]
 			]
@@ -6673,17 +7323,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				}
 			],
 			"performance": [
@@ -6734,17 +7384,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				}
 			],
 			"performance": [
@@ -6795,17 +7445,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "OfferARefreshment",
 					"first": "initiator",
-					"value": 19
+					"value": true
 				}
 			],
 			"performance": [
@@ -6856,17 +7506,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "BerateAcquaintance",
 					"first": "initiator",
-					"value": 17
+					"value": true
 				}
 			],
 			"performance": [
@@ -6917,17 +7567,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
-					"value": 14
+					"value": true
 				}
 			],
 			"performance": [
@@ -6978,17 +7628,17 @@
 				},
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "NearStageInteraction",
 					"first": "initiator",
-					"value": 18
+					"value": true
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "progress",
+					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
-					"value": 13
+					"value": true
 				}
 			],
 			"performance": [
