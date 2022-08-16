@@ -30,13 +30,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Color hit_color;
     public Color miss_color;
 
-    //public string objectName;
     public EnsembleData data;
     public EnsemblePlayer player;
+    public GameObject character;
 
     public Button currentActionButton;
     public Button[] actionButtons;
-    
 
     public GameObject characterMenu;
     public GameObject attributesMenu;
@@ -67,7 +66,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public StringBuilder historyBuilder;
     public StringBuilder actionsBuilder;
 
-    public GameObject fallBackCamera ; 
+    public GameObject fallBackCamera; 
 
     List<GameObject> actionButtonRefs = new List<GameObject>();
     private bool exitClick;
@@ -413,8 +412,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         
         foreach (Action action in actions)
         {   
-            Debug.Log("action: " + action.Name);
-
             GameObject goButton = (GameObject)Instantiate(prefabButton);
             goButton.transform.SetParent(actionsMenuImageZone, false);
 
@@ -425,35 +422,44 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             Button tempButton = goButton.GetComponent<Button>();
             tempButton.GetComponentInChildren<Text>().text = action.Name;
-            tempButton.onClick.AddListener(() => TakeAction(action));
+            tempButton.onClick.AddListener(() => TakeAction(objectName, action));
 
            actionButtonRefs.Add(goButton);
         }
     }
 
-    private void TakeAction(Action action)
+    private void TakeAction(string objectName, Action action)
     {
-        Debug.Log("taking action: " + action.Name);
         data.ensemble.takeAction(action);
+
+        string dialogueResponse = "";
 
         if (action.Performance != null) {
             foreach(List<Performance> performanceQueue in action.Performance) {
                 foreach(Performance p in performanceQueue) {
                     if (p.Type == "dialogue" && p.Text != null) {
-                        Debug.Log("action response: " + p.Text);
+                        dialogueResponse = p.Text;
                     }
                 }
             }
         }
 
         CloseMenu();
+        StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
+    }
+
+    private IEnumerator<object> DisplayDialogue(string characterName, string dialogue)
+    {
+        character = GameObject.Find(characterName);
+        character.GetComponentInChildren<Text>().text = dialogue;
+
+        yield return new WaitForSeconds(5);
+
+        character.GetComponentInChildren<Text>().text = "";
     }
 
     public void clickOnObject(string objectName, Vector3 position)  
     {
-        Debug.Log("Mouse down objectName: " + objectName);
-        Debug.Log("position: " + position);
-
         DisplayMain();
 
         ensembleUI.transform.SetParent(fallBackCamera.transform);

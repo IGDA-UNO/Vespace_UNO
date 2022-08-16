@@ -61,6 +61,7 @@
 				"OfferStrangerBribe",
 				"GiveStrangerCommand",
 				"StompAndWhistle",
+				"TellTheTruthAcquaintance",
 				"TellALieAcquaintance",
 				"AcquainctanceSecondInteraction",
 				"AskAcquaintanceFavor",

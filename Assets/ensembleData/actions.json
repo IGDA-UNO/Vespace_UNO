@@ -174,6 +174,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Tell the truth to your acquaintance",
 				"Hello old friend! (male noble)",
 				"Hello old friend! (female noble)",
 				"Hello old friend! (servant)",
@@ -190,6 +191,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Lie to your acquaintance",
 				"You remember the last time, right? Want to help me make some trouble again? (male noble)",
 				"You remember the last time, right? Want to help me make some trouble again? (female noble)",
 				"You remember the last time, right? Want to help me make some trouble again? (servant)",
@@ -257,8 +259,9 @@
 			"influenceRules": [],
 			"leadsTo": [
 				"Do as I say at once!",
-				"You don't question me, you obey, rascal! Now do as I say!",
-				"You don't question me, you obey, rascal! Now do as I say! (male noble)"
+				"You don't question me, you obey, rascal! Now do as I say! (male noble)",
+				"You don't question me, you obey, rascal! Now do as I say! (female noble)",
+				"You don't question me, you obey, rascal! Now do as I say! (servant)"
 			]
 		},
 		{
@@ -1139,6 +1142,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker hands you a ticket."
+					}
+				]
 			]
 		},
 		{
@@ -1208,6 +1219,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1256,6 +1275,14 @@
 					"first": "initiator",
 					"value": true
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker hands you a ticket."
+					}
+				]
 			]
 		},
 		{
@@ -1310,6 +1337,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1377,6 +1412,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1444,6 +1487,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1511,6 +1562,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1567,6 +1626,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker accepts your gesture."
+					}
+				]
 			]
 		},
 		{
@@ -1644,6 +1711,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker accepts your very generous gesture."
+					}
+				]
 			]
 		},
 		{
@@ -1721,6 +1796,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker accepts your very generous gesture."
+					}
+				]
 			]
 		},
 		{
@@ -1791,6 +1874,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1853,6 +1944,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker frowns but hands you a ticket."
+					}
+				]
 			]
 		},
 		{
@@ -1915,6 +2014,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker frowns and gently begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -1986,6 +2093,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -2049,6 +2164,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -2119,6 +2242,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -2196,6 +2327,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -2243,6 +2382,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -2298,6 +2445,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker appreciates your courtesy and hands you a ticket."
+					}
+				]
 			]
 		},
 		{
@@ -2367,6 +2522,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker appreciates your courtesy and hands you a ticket."
+					}
+				]
 			]
 		},
 		{
@@ -2428,6 +2591,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker appreciates your courtesy and hands you a ticket."
+					}
+				]
 			]
 		},
 		{
@@ -2484,6 +2655,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker begins to escort you from the theatre."
+					}
+				]
 			]
 		},
 		{
@@ -3926,6 +4105,78 @@
 			]
 		},
 		{
+			"name": "Tell the truth to your acquaintance",
+			"displayName": "Tell the truth to your acquaintance",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "HasMark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I beg your pardon?"
+					}
+				]
+			]
+		},
+		{
 			"name": "Hello old friend! (male noble)",
 			"displayName": "Hello old friend! (male noble)",
 			"influenceRules": [],
@@ -3951,15 +4202,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -3992,7 +4237,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Why hello there my good sir!"
+					}
+				]
 			]
 		},
 		{
@@ -4021,15 +4280,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4046,7 +4299,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Why hello there my good lady!"
+					}
+				]
 			]
 		},
 		{
@@ -4075,15 +4342,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4100,7 +4361,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Why hello there!"
+					}
+				]
 			]
 		},
 		{
@@ -4129,15 +4404,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4154,7 +4423,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I thought you looked familiar!"
+					}
+				]
 			]
 		},
 		{
@@ -4183,15 +4466,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4208,7 +4485,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I thought you looked familiar!"
+					}
+				]
 			]
 		},
 		{
@@ -4237,15 +4528,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4262,7 +4547,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I thought you looked familiar!"
+					}
+				]
 			]
 		},
 		{
@@ -4291,15 +4590,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4329,7 +4622,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You are quite rude my good sir!"
+					}
+				]
 			]
 		},
 		{
@@ -4358,15 +4665,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4390,7 +4691,21 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You are quite rude my dear lady!"
+					}
+				]
 			]
 		},
 		{
@@ -4419,15 +4734,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4451,7 +4760,93 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Why you impertinent scoundrel!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Lie to your acquaintance",
+			"displayName": "Lie to your acquaintance",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "HasMark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceDistraction",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskAcquaintanceFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Yes, what is it?"
+					}
+				]
 			]
 		},
 		{
@@ -4480,15 +4875,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4513,7 +4902,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Tell me more..."
+					}
+				]
 			]
 		},
 		{
@@ -4542,15 +4945,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4582,7 +4979,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Tell me more..."
+					}
+				]
 			]
 		},
 		{
@@ -4611,15 +5022,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4644,7 +5049,21 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Tell me more..."
+					}
+				]
 			]
 		},
 		{
@@ -4667,15 +5086,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4694,7 +5107,21 @@
 					"second": "initiator",
 					"value": 1,
 					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I can't say I can recall the last time..."
+					}
+				]
 			]
 		},
 		{
@@ -4717,15 +5144,9 @@
 				},
 				{
 					"category": "progress",
-					"type": "HasMark",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": false
 				}
 			],
 			"effects": [
@@ -4759,7 +5180,21 @@
 					"second": "initiator",
 					"value": 2,
 					"operator": "-"
+				},
+				{
+					"category": "progress",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I can't say I can recall the last time..."
+					}
+				]
 			]
 		},
 		{
@@ -4779,6 +5214,12 @@
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4787,6 +5228,12 @@
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -6039,6 +6486,12 @@
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -6047,13 +6500,19 @@
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "Sure, what do you seek?"
+						"text": "Sure, what do you need?"
 					}
 				]
 			]
@@ -6941,6 +7400,12 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -6949,6 +7414,12 @@
 					"type": "BerateAcquaintance",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -6956,42 +7427,6 @@
 					{
 						"type": "dialogue",
 						"text": "Excuse me?"
-					}
-				]
-			]
-		},
-		{
-			"name": "You don't question me, you obey, rascal! Now do as I say!",
-			"displayName": "You don't question me, you obey, rascal! Now do as I say!",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "acquaintance",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BerateAcquaintance",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "AcquaintanceSecondInteraction",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "I most certainly will not! Begone, you knave!"
 					}
 				]
 			]
@@ -7046,6 +7481,102 @@
 					{
 						"type": "dialogue",
 						"text": "My goodness sir! You are quite rude, but I shall do as you command..."
+					}
+				]
+			]
+		},
+				{
+			"name": "You don't question me, you obey, rascal! Now do as I say! (female noble)",
+			"displayName": "You don't question me, you obey, rascal! Now do as I say! (female noble)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Despite your rather rude insistence, madame, I am afraid I cannot do as you have requested!"
+					}
+				]
+			]
+		},
+		{
+			"name": "You don't question me, you obey, rascal! Now do as I say! (servant)",
+			"displayName": "You don't question me, you obey, rascal! Now do as I say! (servant)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I most certainly will not! Begone, you knave!"
 					}
 				]
 			]
@@ -7265,6 +7796,12 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -7273,6 +7810,12 @@
 					"type": "NearStageInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
