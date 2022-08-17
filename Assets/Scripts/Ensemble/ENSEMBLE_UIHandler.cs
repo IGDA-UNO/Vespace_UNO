@@ -448,10 +448,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     Debug.Log("Got mark!");
                 }
 
-                if (e.Type == "HasMark" && e.Value is bool && e.Value is true) {
-                    Debug.Log("Got mark!");
-                }
-
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
                     Debug.Log("Stomping and whistling!");
                 }
