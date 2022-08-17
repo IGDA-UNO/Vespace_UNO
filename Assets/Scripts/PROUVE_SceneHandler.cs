@@ -71,8 +71,8 @@ public class PROUVE_SceneHandler : MonoBehaviour
     void Start()
     {
         //Initializing actions and events
-        actionBoolean = SteamVR_Actions._default.GrabGrip ;
-        laserPointer.color = miss_color ; 
+        actionBoolean = SteamVR_Actions._default.GrabGrip;
+        laserPointer.color = miss_color; 
         laserPointer.PointerIn += PointerInside; 
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick; 

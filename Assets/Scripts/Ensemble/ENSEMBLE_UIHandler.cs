@@ -418,7 +418,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             
             goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
             goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
-            y -= 0.15f;
+            y -= 0.1f;
 
             Button tempButton = goButton.GetComponent<Button>();
             tempButton.GetComponentInChildren<Text>().text = action.Name;
