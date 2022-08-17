@@ -434,6 +434,46 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         string dialogueResponse = "";
 
+        if (action.Effects != null) {
+            foreach(Effect e in action.Effects) {
+                if (e.Type == "HasTicket" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Got ticket!");
+                }
+                
+                if (e.Type == "GaveTicket" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Gave ticket!");
+                }
+
+                if (e.Type == "HasMark" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Got mark!");
+                }
+
+                if (e.Type == "HasMark" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Got mark!");
+                }
+
+                if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Stomping and whistling!");
+                }
+
+                if (e.Type == "NearStageInteraction" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Near stage interaction!");
+                }
+
+                if (e.Type == "SuccessfulDistraction" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Successful distraction!");
+                }
+
+                if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Got backstage access!");
+                }
+
+                if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
+                    Debug.Log("Got thrown out!");
+                }
+            }
+        }
+
         if (action.Performance != null) {
             foreach(List<Performance> performanceQueue in action.Performance) {
                 foreach(Performance p in performanceQueue) {
@@ -450,6 +490,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private IEnumerator<object> DisplayDialogue(string characterName, string dialogue)
     {
+        Debug.Log("DisplayDialogue characterName: " + characterName);
+        Debug.Log("DisplayDialogue dialogue: " + dialogue);
+
         character = GameObject.Find(characterName);
         character.GetComponentInChildren<Text>().text = dialogue;
 
