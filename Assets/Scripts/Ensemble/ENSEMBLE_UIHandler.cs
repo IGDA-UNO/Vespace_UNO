@@ -404,7 +404,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void getCharacterActions(string objectName)
     {
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
-        List<Action> actions = data.ensemble.getActions("Male Noble Player", objectName, volitionInterface, cast, 999, 999, 999);
+        List<Action> actions = data.ensemble.getActions(EnsemblePlayer.GetSelectedCharacter(), objectName, volitionInterface, cast, 999, 999, 999);
         
         float x = 0;
         float y = -0.05f;
