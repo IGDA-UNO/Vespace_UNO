@@ -17,10 +17,6 @@ public class CharacterSelection : MonoBehaviour
         //Initialize all interface references needed to display information
         //Initialisation de toutes les références à l'interface nécessaires pour l'affichage des informations
         characterSelectionMenu = GameObject.Find("CharacterSelection");
-
-        //Find out if playerCamera is currently null?
-        //If it is, set the player camera to be the fallback camera?
-
     }
 
     // Start is called before the first frame update

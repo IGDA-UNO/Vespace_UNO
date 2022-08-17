@@ -13,7 +13,7 @@ public class EnsemblePlayer : MonoBehaviour
     // "Male Noble Player"
     // "Female Noble Player"
     // "Servant Player" 
-    private static string selectedCharacter;
+    private static string selectedCharacter = "NONE";
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,11 @@ public class EnsemblePlayer : MonoBehaviour
     }
 
     public static string GetSelectedCharacter(){
+        //if we ever try to get a character when it hasn't been set yet, by default set the character
+        //to be the male noble.
+        if(selectedCharacter == "NONE"){
+            SetSelectedCharacter(MALE_NOBLE);
+        }
         return selectedCharacter;
     }
 }
