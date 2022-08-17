@@ -1160,6 +1160,11 @@ PrefabInstance:
       objectReference: {fileID: 840550561}
     - target: {fileID: 3796942365579653639, guid: 87b80bdbeb2978147923f24209ba86c9,
         type: 3}
+      propertyPath: mainSceneName
+      value: CharacterSelectScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3796942365579653639, guid: 87b80bdbeb2978147923f24209ba86c9,
+        type: 3}
       propertyPath: hapticVibration.actionPath
       value: /actions/default/out/Haptic
       objectReference: {fileID: 0}

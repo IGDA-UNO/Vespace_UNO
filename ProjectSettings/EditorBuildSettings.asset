@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Theater.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelectScreen.unity
+    guid: 774e54670319b5e44a6dd2509681409e
+  - enabled: 1
+    path: Assets/Scenes/Theatre_june.unity
+    guid: ff63474b35175334094530a1a4ea43af
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 8757aa43bf7e07e4e8e7dc11b257d17e,
       type: 2}
