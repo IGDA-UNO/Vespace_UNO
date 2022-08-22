@@ -39,11 +39,11 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"polite greeting to ticket taker",
-				"flirty greeting to ticket taker",
-				"ask a question: \"is this bienfait's theatre?\"",
-				"say nothing to ticket taker initially (male)",
-				"say nothing to ticket taker initially (female)"
+				"Politely greet the ticket taker",
+				"Flirt with the ticket taker",
+				"Is this Bienfait's theatre?",
+				"Say nothing to ticket taker initially (male)",
+				"Say nothing to ticket taker initially (female)"
 			]
 		},
 		{
@@ -51,10 +51,10 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"ingratiate with excessive politeness",
-				"offer flattery and compliments (male)",
-				"offer flattery and compliments (female)",
-				"be honest: admit you don't have a ticket and ask to be let in as a favor"
+				"Ingratiate with excessive politeness",
+				"Offer flattery and compliments (male)",
+				"Offer flattery and compliments (female)",
+				"Be honest: Admit you don't have a ticket and ask to be let in as a favor"
 			]
 		},
 		{
@@ -62,9 +62,9 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"offer a little money",
-				"offer a lot of money (noble)",
-				"offer a lot of money (servant)"
+				"Offer a little money",
+				"Offer a lot of money (noble)",
+				"Offer a lot of money (servant)"
 			]
 		},
 		{
@@ -72,10 +72,10 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"threaten to have the ticket taker fired if she doesn't let you in",
-				"state that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
-				"state that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
-				"threaten to make a scene and interrupt the performance"
+				"Threaten to have the ticket taker fired if she doesn't let you in",
+				"State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
+				"State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
+				"Threaten to make a scene and interrupt the performance"
 			]
 		},
 		{
@@ -83,10 +83,10 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"try to sneak past",
-				"simply ignore her and walk by",
-				"simply ignore her and walk by (servant)",
-				"push her out of the way"
+				"Try to sneak past",
+				"Simply ignore her and walk by",
+				"Simply ignore her and walk by (servant)",
+				"Push her out of the way"
 			]
 		},
 		{
@@ -116,13 +116,13 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"lie and say that your servant has your ticket inside the theatre",
-				"lie and say that your master has your ticket inside the theatre",
-				"lie and say that you're a guest of the owner (noble)",
-				"lie and say that you're a guest of the owner (servant)",
-				"lie and say that you're an artist invited to work here next week (male noble)",
-				"lie and say that you're an artist invited to work here next week (female noble)",
-				"lie and say that you're an artist invited to work here next week (servant)"
+				"Lie and say that your servant has your ticket inside the theatre",
+				"Lie and say that your master has your ticket inside the theatre",
+				"Lie and say that you're a guest of the owner (noble)",
+				"Lie and say that you're a guest of the owner (servant)",
+				"Lie and say that you're an artist invited to work here next week (male noble)",
+				"Lie and say that you're an artist invited to work here next week (female noble)",
+				"Lie and say that you're an artist invited to work here next week (servant)"
 			]
 		},
 		{
@@ -130,9 +130,9 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"hello old friend! (male noble)",
-				"hello old friend! (female noble)",
-				"hello old friend! (servant)", 
+				"Hello there, old friend! (male noble)",
+				"Hello there, old friend! (female noble)",
+				"Hello there, old friend! (servant)", 
 				"Hello esteemed person I've never met before! (noble)",
 				"Hello esteemed person I've never met before! (servant)",
 				"Hello, have we met before?",
@@ -145,12 +145,13 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Ask for a favor: Can you help me get backstage? *servantVersion*",
-				"Ask for a favor: Can you help me get backstage? *femaleNobleVersion*",
-				"Ask for a favor: Can you help me get backstage? *maleNobleVersion*",
-				"Ask for a favor: Could you hold this package?",
-				"Ask for a favor: What do you say we whistle and stomp? *femaleNobleYesStomp*",
-				"Ask for a favor: What do you say we whistle and stomp? *femaleNobleNoStomp*"
+				"I know we've only just met, but can I ask you for a favor?",
+				"Can you help me get backstage? *servantVersion*",
+				"Can you help me get backstage? *femaleNobleVersion*",
+				"Can you help me get backstage? *maleNobleVersion*",
+				"Could you hold this package?",
+				"What do you say we whistle and stomp? *femaleNobleYesStomp*",
+				"What do you say we whistle and stomp? *femaleNobleNoStomp*"
 			]
 		},
 		{
@@ -158,15 +159,52 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Ask a question: Have you been to this theatre before?",
-				"Ask a question: How many people do you think are backstage",
-				"Ask a question: Are there are a lot of nobles here *servantVersion*",
-				"Ask a question: Are there are a lot of nobles here *maleNobleVersion*",
-				"Ask a question: Are there are a lot of nobles here *femaleNobleVersion*",
-				"Ask a question: Have you ever participated in a claque? *servantVersion*",
-				"Ask a question: Have you ever participated in a claque? *femaleNobleVersion*",
-				"Ask a question: Have you ever participated in a claque? *maleNobleVersion*",
-				"Ask a question: Do you understand what's going on in this play *servantVersion*"
+				"I know we've only just met, but can I ask you a question?",
+				"Have you been to this theatre before?",
+				"How many people do you think are backstage?",
+				"Are there a lot of nobles here? *servantVersion*",
+				"Are there a lot of nobles here? *maleNobleVersion*",
+				"Are there a lot of nobles here? *femaleNobleVersion*",
+				"Have you ever participated in a claque? *servantVersion*",
+				"Have you ever participated in a claque? *femaleNobleVersion*",
+				"Have you ever participated in a claque? *maleNobleVersion*",
+				"Do you understand what's going on in this play? *servantVersion*"
+			]
+		},
+		{
+			"name": "bribe a stranger",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"I may have something for you...",
+				"If you help me out, I'll give you this juicy orange. *maleNobleVersion*",
+				"If you help me out, I'll give you this juicy orange. *femaleNobleVersion*",
+				"If you help me out, I'll give you this juicy orange. *servantVersion*",
+				"If you help me out, I'll give you 6 sous. *maleNobleVersion*",
+				"If you help me out, I'll give you 6 sous. *femaleNobleVersion*",
+				"If you help me out, I'll give you 6 sous. *servantVersion*",
+				"After I get what I need, I'll meet you outside with this gold Louis d'or *maleNobleVersion*",
+				"After I get what I need, I'll meet you outside with this gold Louis d'or *femaleNobleVersion*",
+				"After I get what I need, I'll meet you outside with this gold Louis d'or *servantVersion*",
+				"If you help me, I'll see to it that your fortune is assured for the rest of your life *maleNobleVersion*",
+				"If you help me, I'll see to it that your fortune is assured for the rest of your life *femaleNobleVersion*",
+				"If you help me, I'll see to it that your fortune is assured for the rest of your life *servantVersion*"
+			]
+		},
+		{
+			"name": "give stranger a command",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"I know we've only just met, but I have an urgent request for you.",
+				"When I go to the edge of the stage, start yelling to draw everyone's attention. *nonAllyVersion*",
+				"When I go to the edge of the stage, start yelling to draw everyone's attention. *maleNobleVersion*",
+				"When I go to the edge of the stage, start yelling to draw everyone's attention. *femaleNobleVersion*",
+				"When I go to the edge of the stage, start yelling to draw everyone's attention. *servantVersion*",
+				"Get those audience members away from the edge of the stage. *nonAllyVersion*",
+				"Get those audience members away from the edge of the stage. *maleNobleVersion*",
+				"Get those audience members away from the edge of the stage. *femaleNobleVersion*",
+				"Get those audience members away from the edge of the stage. *servantVersion*"
 			]
 		},
 		{
@@ -290,8 +328,8 @@
 			]
 		},
 		{
-			"name": "polite greeting to ticket taker",
-			"displayName": "polite greeting to ticket taker",
+			"name": "Politely greet the ticket taker",
+			"displayName": "Politely greet the ticket taker",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -346,8 +384,8 @@
 			]
 		},
 		{
-			"name": "flirty greeting to ticket taker",
-			"displayName": "flirty greeting to ticket taker",
+			"name": "Flirt with the ticket taker",
+			"displayName": "Flirt with the ticket taker",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -402,8 +440,8 @@
 			]
 		},
 		{
-			"name": "ask a question: \"is this bienfait's theatre?\"",
-			"displayName": "ask a question: \"is this bienfait's theatre?\"",
+			"name": "Is this Bienfait's theatre?",
+			"displayName": "Is this Bienfait's theatre?",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -458,8 +496,8 @@
 			]
 		},
 		{
-			"name": "say nothing to ticket taker initially (male)",
-			"displayName": "say nothing to ticket taker initially (male)",
+			"name": "Say nothing to ticket taker initially (male)",
+			"displayName": "Say nothing to ticket taker initially (male)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -528,8 +566,8 @@
 			]
 		},
 		{
-			"name": "say nothing to ticket taker initially (female)",
-			"displayName": "say nothing to ticket taker initially (female)",
+			"name": "Say nothing to ticket taker initially (female)",
+			"displayName": "Say nothing to ticket taker initially (female)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1076,8 +1114,8 @@
 			]
 		},
 		{
-			"name": "lie and say that your servant has your ticket inside the theatre",
-			"displayName": "lie and say that your servant has your ticket inside the theatre",
+			"name": "Lie and say that your servant has your ticket inside the theatre",
+			"displayName": "Lie and say that your servant has your ticket inside the theatre",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1153,8 +1191,8 @@
 			]
 		},
 		{
-			"name": "lie and say that your master has your ticket inside the theatre",
-			"displayName": "lie and say that your master has your ticket inside the theatre",
+			"name": "Lie and say that your master has your ticket inside the theatre",
+			"displayName": "Lie and say that your master has your ticket inside the theatre",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1230,8 +1268,8 @@
 			]
 		},
 		{
-			"name": "lie and say that you're a guest of the owner (noble)",
-			"displayName": "lie and say that you're a guest of the owner (noble)",
+			"name": "Lie and say that you're a guest of the owner (noble)",
+			"displayName": "Lie and say that you're a guest of the owner (noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1286,8 +1324,8 @@
 			]
 		},
 		{
-			"name": "lie and say that you're a guest of the owner (servant)",
-			"displayName": "lie and say that you're a guest of the owner (servant)",
+			"name": "Lie and say that you're a guest of the owner (servant)",
+			"displayName": "Lie and say that you're a guest of the owner (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1348,8 +1386,8 @@
 			]
 		},
 		{
-			"name": "lie and say that you're an artist invited to work here next week (male noble)",
-			"displayName": "lie and say that you're an artist invited to work here next week (male noble)",
+			"name": "Lie and say that you're an artist invited to work here next week (male noble)",
+			"displayName": "Lie and say that you're an artist invited to work here next week (male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1423,8 +1461,8 @@
 			]
 		},
 		{
-			"name": "lie and say that you're an artist invited to work here next week (female noble)",
-			"displayName": "lie and say that you're an artist invited to work here next week (female noble)",
+			"name": "Lie and say that you're an artist invited to work here next week (female noble)",
+			"displayName": "Lie and say that you're an artist invited to work here next week (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1498,8 +1536,8 @@
 			]
 		},
 		{
-			"name": "lie and say that you're an artist invited to work here next week (servant)",
-			"displayName": "lie and say that you're an artist invited to work here next week (servant)",
+			"name": "Lie and say that you're an artist invited to work here next week (servant)",
+			"displayName": "Lie and say that you're an artist invited to work here next week (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1573,8 +1611,8 @@
 			]
 		},
 		{
-			"name": "offer a little money",
-			"displayName": "offer a little money",
+			"name": "Offer a little money",
+			"displayName": "Offer a little money",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1637,8 +1675,8 @@
 			]
 		},
 		{
-			"name": "offer a lot of money (noble)",
-			"displayName": "offer a lot of money (noble)",
+			"name": "Offer a lot of money (noble)",
+			"displayName": "Offer a lot of money (noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1722,8 +1760,8 @@
 			]
 		},
 		{
-			"name": "offer a lot of money (servant)",
-			"displayName": "offer a lot of money (servant)",
+			"name": "Offer a lot of money (servant)",
+			"displayName": "Offer a lot of money (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1807,8 +1845,8 @@
 			]
 		},
 		{
-			"name": "threaten to have the ticket taker fired if she doesn't let you in",
-			"displayName": "threaten to have the ticket taker fired if she doesn't let you in",
+			"name": "Threaten to have the ticket taker fired if she doesn't let you in",
+			"displayName": "Threaten to have the ticket taker fired if she doesn't let you in",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1885,8 +1923,8 @@
 			]
 		},
 		{
-			"name": "state that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
-			"displayName": "state that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
+			"name": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
+			"displayName": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1955,8 +1993,8 @@
 			]
 		},
 		{
-			"name": "state that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
-			"displayName": "state that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
+			"name": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
+			"displayName": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2025,8 +2063,8 @@
 			]
 		},
 		{
-			"name": "threaten to make a scene and interrupt the performance",
-			"displayName": "threaten to make a scene and interrupt the performance",
+			"name": "Threaten to make a scene and interrupt the performance",
+			"displayName": "Threaten to make a scene and interrupt the performance",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2104,8 +2142,8 @@
 			]
 		},
 		{
-			"name": "try to sneak past",
-			"displayName": "try to sneak past",
+			"name": "Try to sneak past",
+			"displayName": "Try to sneak past",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2175,8 +2213,8 @@
 			]
 		},
 		{
-			"name": "simply ignore her and walk by",
-			"displayName": "simply ignore her and walk by",
+			"name": "Simply ignore her and walk by",
+			"displayName": "Simply ignore her and walk by",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2253,8 +2291,8 @@
 			]
 		},
 		{
-			"name": "simply ignore her and walk by (servant)",
-			"displayName": "simply ignore her and walk by (servant)",
+			"name": "Simply ignore her and walk by (servant)",
+			"displayName": "Simply ignore her and walk by (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2338,8 +2376,8 @@
 			]
 		},
 		{
-			"name": "push her out of the way",
-			"displayName": "push her out of the way",
+			"name": "Push her out of the way",
+			"displayName": "Push her out of the way",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2393,8 +2431,8 @@
 			]
 		},
 		{
-			"name": "ingratiate with excessive politeness",
-			"displayName": "ingratiate with excessive politeness",
+			"name": "Ingratiate with excessive politeness",
+			"displayName": "Ingratiate with excessive politeness",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2456,8 +2494,8 @@
 			]
 		},
 		{
-			"name": "offer flattery and compliments (male)",
-			"displayName": "offer flattery and compliments (male)",
+			"name": "Offer flattery and compliments (male)",
+			"displayName": "Offer flattery and compliments (male)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2533,8 +2571,8 @@
 			]
 		},
 		{
-			"name": "offer flattery and compliments (female)",
-			"displayName": "offer flattery and compliments (female)",
+			"name": "Offer flattery and compliments (female)",
+			"displayName": "Offer flattery and compliments (female)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2602,8 +2640,8 @@
 			]
 		},
 		{
-			"name": "be honest: admit you don't have a ticket and ask to be let in as a favor",
-			"displayName": "be honest: admit you don't have a ticket and ask to be let in as a favor",
+			"name": "Be honest: Admit you don't have a ticket and ask to be let in as a favor",
+			"displayName": "Be honest: Admit you don't have a ticket and ask to be let in as a favor",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2666,947 +2704,8 @@
 			]
 		},
 		{
-			"name": "Ask for a favor: Can you help me get backstage? *servantVersion*",
-			"displayName": "Ask for a favor: Can you help me get backstage? *servantVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: Can you help me get backstage? *femaleNobleVersion*",
-			"displayName": "Ask for a favor: Can you help me get backstage? *femaleNobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 3,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: Can you help me get backstage? *maleNobleVersion*",
-			"displayName": "Ask for a favor: Can you help me get backstage? *maleNobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: Could you hold this package?",
-			"displayName": "Ask for a favor: Could you hold this package?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: What do you say we whistle and stomp? *femaleNobleYesStomp*",
-			"displayName": "Ask for a favor: What do you say we whistle and stomp? *femaleNobleYesStomp*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 4,
-					"operator": ">"
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 3,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: What do you say we whistle and stomp? *femaleNobleNoStomp*",
-			"displayName": "Ask for a favor: What do you say we whistle and stomp? *femaleNobleNoStomp*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 5,
-					"operator": "<"
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 3,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: What do you say we whistle and stomp? *maleYesStomp*",
-			"displayName": "Ask for a favor: What do you say we whistle and stomp? *maleYesStomp*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 4,
-					"operator": ">"
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "Ask for a favor: What do you say we whistle and stomp? *maleNoStomp*",
-			"displayName": "Ask for a favor: What do you say we whistle and stomp? *maleNoStomp*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 5,
-					"operator": "<"
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Have you been to this theatre before?",
-			"displayName": "Ask a question: Have you been to this theatre before?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				}
-			]
-		},
-		{
-			"name": "Ask a question: How many people do you think are backstage",
-			"displayName": "Ask a question: How many people do you think are backstage",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Are there are a lot of nobles here *servantVersion*",
-			"displayName": "Ask a question: Are there are a lot of nobles here *servantVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Are there are a lot of nobles here *maleNobleVersion*",
-			"displayName": "Ask a question: Are there are a lot of nobles here *maleNobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Are there are a lot of nobles here *femaleNobleVersion*",
-			"displayName": "Ask a question: Are there are a lot of nobles here *femaleNobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Have you ever participated in a claque? *servantVersion*",
-			"displayName": "Ask a question: Have you ever participated in a claque? *servantVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Have you ever participated in a claque? *femaleNobleVersion*",
-			"displayName": "Ask a question: Have you ever participated in a claque? *femaleNobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 5,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 5,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Have you ever participated in a claque? *maleNobleVersion*",
-			"displayName": "Ask a question: Have you ever participated in a claque? *maleNobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Do you understand what's going on in this play *servantVersion*",
-			"displayName": "Ask a question: Do you understand what's going on in this play *servantVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "Ask a question: Do you understand what's going on in this play *nobleVersion*",
-			"displayName": "Ask a question: Do you understand what's going on in this play *nobleVersion*",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				}
-			]
-		},
-		{
-			"name": "hello old friend! (male noble)",
-			"displayName": "hello old friend! (male noble)",
+			"name": "Hello there, old friend! (male noble)",
+			"displayName": "Hello there, old friend! (male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -3630,9 +2729,15 @@
 				},
 				{
 					"category": "progress",
-					"type": "GreetedStranger",
+					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3669,8 +2774,8 @@
 			]
 		},
 		{
-			"name": "hello old friend! (female noble)",
-			"displayName": "hello old friend! (female noble)",
+			"name": "Hello there, old friend! (female noble)",
+			"displayName": "Hello there, old friend! (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -3697,6 +2802,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3733,8 +2844,8 @@
 			]
 		},
 		{
-			"name": "hello old friend! (servant)",
-			"displayName": "hello old friend! (servant)",
+			"name": "Hello there, old friend! (servant)",
+			"displayName": "Hello there, old friend! (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -3755,6 +2866,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3813,6 +2930,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3862,6 +2985,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3898,6 +3027,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -3949,6 +3084,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4012,6 +3153,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4077,6 +3224,12 @@
 					"type": "HasMark",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4101,6 +3254,2748 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				}
+			]
+		},
+		{
+			"name": "I know we've only just met, but can I ask you for a favor?",
+			"displayName": "I know we've only just met, but can I ask you for a favor?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "Can you help me get backstage? *servantVersion*",
+			"displayName": "Can you help me get backstage? *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Can you help me get backstage? *femaleNobleVersion*",
+			"displayName": "Can you help me get backstage? *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Can you help me get backstage? *maleNobleVersion*",
+			"displayName": "Can you help me get backstage? *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Could you hold this package?",
+			"displayName": "Could you hold this package?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "What do you say we whistle and stomp? *femaleNobleYesStomp*",
+			"displayName": "What do you say we whistle and stomp? *femaleNobleYesStomp*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 4,
+					"operator": ">"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "StompAndWhistle",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "What do you say we whistle and stomp? *femaleNobleNoStomp*",
+			"displayName": "What do you say we whistle and stomp? *femaleNobleNoStomp*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "<"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "What do you say we whistle and stomp? *maleYesStomp*",
+			"displayName": "What do you say we whistle and stomp? *maleYesStomp*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 4,
+					"operator": ">"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "StompAndWhistle",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "What do you say we whistle and stomp? *maleNoStomp*",
+			"displayName": "What do you say we whistle and stomp? *maleNoStomp*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "<"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "I know we've only just met, but can I ask you a question?",
+			"displayName": "I know we've only just met, but can I ask you a question?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "Have you been to this theatre before?",
+			"displayName": "Have you been to this theatre before?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "How many people do you think are backstage?",
+			"displayName": "How many people do you think are backstage?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Are there a lot of nobles here? *servantVersion*",
+			"displayName": "Are there a lot of nobles here? *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Are there a lot of nobles here? *maleNobleVersion*",
+			"displayName": "Are there a lot of nobles here? *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Are there a lot of nobles here? *femaleNobleVersion*",
+			"displayName": "Are there a lot of nobles here? *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Have you ever participated in a claque? *servantVersion*",
+			"displayName": "Have you ever participated in a claque? *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Have you ever participated in a claque? *femaleNobleVersion*",
+			"displayName": "Have you ever participated in a claque? *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Have you ever participated in a claque? *maleNobleVersion*",
+			"displayName": "Have you ever participated in a claque? *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Do you understand what's going on in this play? *servantVersion*",
+			"displayName": "Do you understand what's going on in this play? *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Do you understand what's going on in this play? *nobleVersion*",
+			"displayName": "Do you understand what's going on in this play? *nobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "I may have something for you...",
+			"displayName": "I may have something for you...",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "If you help me out, I'll give you this juicy orange. *maleNobleVersion*",
+			"displayName": "If you help me out, I'll give you this juicy orange. *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me out, I'll give you this juicy orange. *femaleNobleVersion*",
+			"displayName": "If you help me out, I'll give you this juicy orange. *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me out, I'll give you this juicy orange. *servantVersion*",
+			"displayName": "If you help me out, I'll give you this juicy orange. *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me out, I'll give you 6 sous. *maleNobleVersion*",
+			"displayName": "If you help me out, I'll give you 6 sous. *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me out, I'll give you 6 sous. *femaleNobleVersion*",
+			"displayName": "If you help me out, I'll give you 6 sous. *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me out, I'll give you 6 sous. *servantVersion*",
+			"displayName": "If you help me out, I'll give you 6 sous. *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "After I get what I need, I'll meet you outside with this gold Louis d'or *maleNobleVersion*",
+			"displayName": "After I get what I need, I'll meet you outside with this gold Louis d'or *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "After I get what I need, I'll meet you outside with this gold Louis d'or *femaleNobleVersion*",
+			"displayName": "After I get what I need, I'll meet you outside with this gold Louis d'or *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "After I get what I need, I'll meet you outside with this gold Louis d'or *servantVersion*",
+			"displayName": "After I get what I need, I'll meet you outside with this gold Louis d'or *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me, I'll see to it that your fortune is assured for the rest of your life *maleNobleVersion*",
+			"displayName": "If you help me, I'll see to it that your fortune is assured for the rest of your life *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me, I'll see to it that your fortune is assured for the rest of your life *femaleNobleVersion*",
+			"displayName": "If you help me, I'll see to it that your fortune is assured for the rest of your life *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "If you help me, I'll see to it that your fortune is assured for the rest of your life *servantVersion*",
+			"displayName": "If you help me, I'll see to it that your fortune is assured for the rest of your life *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 5,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "I know we've only just met, but I have an urgent request for you.",
+			"displayName": "I know we've only just met, but I have an urgent request for you.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "OfferStrangerBribe",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "When I go to the edge of the stage, start yelling to draw everyone's attention. *nonAllyVersion*",
+			"displayName": "When I go to the edge of the stage, start yelling to draw everyone's attention. *nonAllyVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "When I go to the edge of the stage, start yelling to draw everyone's attention. *maleNobleVersion*",
+			"displayName": "When I go to the edge of the stage, start yelling to draw everyone's attention. *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "SuccessfulDistraction",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "When I go to the edge of the stage, start yelling to draw everyone's attention. *femaleNobleVersion*",
+			"displayName": "When I go to the edge of the stage, start yelling to draw everyone's attention. *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "When I go to the edge of the stage, start yelling to draw everyone's attention. *servantVersion*",
+			"displayName": "When I go to the edge of the stage, start yelling to draw everyone's attention. *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "Get those audience members away from the edge of the stage. *nonAllyVersion*",
+			"displayName": "Get those audience members away from the edge of the stage. *nonAllyVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Get those audience members away from the edge of the stage. *maleNobleVersion*",
+			"displayName": "Get those audience members away from the edge of the stage. *maleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "progress",
+					"type": "SuccessfulDistraction",
+					"first": "initiator",
+					"value": true
+				}
+			]
+		},
+		{
+			"name": "Get those audience members away from the edge of the stage. *femaleNobleVersion*",
+			"displayName": "Get those audience members away from the edge of the stage. *femaleNobleVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 3,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "Get those audience members away from the edge of the stage. *servantVersion*",
+			"displayName": "Get those audience members away from the edge of the stage. *servantVersion*",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
 				}
 			]
 		},
