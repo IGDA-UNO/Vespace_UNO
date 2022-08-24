@@ -14,6 +14,13 @@ public class HUD : MonoBehaviour
     public Texture NoblemanTexture;
     public Texture NoblewomanTexture;
     public Texture ServantTexture;
+    public Text CurrentObjectiveText;
+
+    public static int questProgress; // = POSSESS_TICKET; //start off assuming you possess a ticket? 
+
+    public static int POSSESS_TICKET = 0;
+    public static int HANDED_TICKET_TO_TICKET_TAKER = 1;
+    public static int RECEIVED_MARK = 2;
 
     void Awake(){
         //Initialize all interface references needed to display information
@@ -47,12 +54,20 @@ public class HUD : MonoBehaviour
             playerCamera = fallBackCamera;
         }
         placeHud();
+
+        //Update the hud's text based on quest objective
+        CurrentObjectiveText.text = GetObjectiveText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("space key was pressed");
+            CurrentObjectiveText.text = GetObjectiveText();
+            HUD.questProgress++;
+        }
     }
 
     public void placeHud()
@@ -60,5 +75,26 @@ public class HUD : MonoBehaviour
         HUDObject.transform.rotation = playerCamera.transform.rotation;
         HUDObject.transform.SetParent(playerCamera.transform);
         HUDObject.transform.localPosition = new Vector3(-0.25f, 0.22f, 0.5f);
+    }
+
+    private string GetObjectiveText(){
+        if(HUD.questProgress == HUD.POSSESS_TICKET ){
+            return "Hand your ticket to the ticket taker!";
+        }
+        else if (HUD.questProgress == HUD.HANDED_TICKET_TO_TICKET_TAKER)
+        {
+            return "Receive your mark so you may enter the theatre";
+        }
+        else if (HUD.questProgress == HUD.RECEIVED_MARK)
+        {
+            return "Enter the theatre, and find someone to help you backstage!";
+        }
+
+        return "Unknown objective!";
+    }
+
+    public void UpdateQuestProgress(int newQuestStep){
+        questProgress = newQuestStep;
+        CurrentObjectiveText.text = GetObjectiveText();
     }
 }

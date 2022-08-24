@@ -73,6 +73,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public PROUVE_OmekaPad prouve;
 
+    public HUD hud;
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -437,14 +439,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         if (action.Effects != null) {
             foreach(Effect e in action.Effects) {
                 if (e.Type == "HasTicket" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.POSSESS_TICKET);
+ 
                     Debug.Log("Got ticket!");
                 }
                 
                 if (e.Type == "GaveTicket" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.HANDED_TICKET_TO_TICKET_TAKER);
                     Debug.Log("Gave ticket!");
                 }
 
                 if (e.Type == "HasMark" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.RECEIVED_MARK);
                     Debug.Log("Got mark!");
                 }
 
