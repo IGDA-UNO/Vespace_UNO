@@ -75,6 +75,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public HUD hud;
 
+    public GameObject dialogueHUD;
+    public Camera playerCamera;
+    public Text CharacterNameText;
+    public Text DialogueText;
+
+    public Vector3 dialogueOffset = new Vector3(-0.03f, -0.03f, 0.5f);
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -490,17 +497,28 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
     }
 
+    public void placeDialogueHud()
+    {
+        dialogueHUD.transform.rotation = playerCamera.transform.rotation;
+        dialogueHUD.transform.SetParent(playerCamera.transform);
+        dialogueHUD.transform.localPosition = dialogueOffset;
+    }
+
     private IEnumerator<object> DisplayDialogue(string characterName, string dialogue)
     {
+        dialogueHUD.SetActive(true);
+
         Debug.Log("DisplayDialogue characterName: " + characterName);
         Debug.Log("DisplayDialogue dialogue: " + dialogue);
 
-        character = GameObject.Find(characterName);
-        character.GetComponentInChildren<Text>().text = dialogue;
+        placeDialogueHud();
 
-        yield return new WaitForSeconds(5);
+        CharacterNameText.text = characterName;
+        DialogueText.text = dialogue;
 
-        character.GetComponentInChildren<Text>().text = "";
+        yield return new WaitForSeconds(10);
+
+        dialogueHUD.SetActive(false);
     }
 
     public void clickOnObject(string objectName, Vector3 position)  

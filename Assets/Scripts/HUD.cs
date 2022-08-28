@@ -74,7 +74,7 @@ public class HUD : MonoBehaviour
     {
         HUDObject.transform.rotation = playerCamera.transform.rotation;
         HUDObject.transform.SetParent(playerCamera.transform);
-        HUDObject.transform.localPosition = new Vector3(-0.25f, 0.22f, 0.5f);
+        HUDObject.transform.localPosition = new Vector3(-0.06f, 0.1f, 0.5f);
     }
 
     private string GetObjectiveText(){
