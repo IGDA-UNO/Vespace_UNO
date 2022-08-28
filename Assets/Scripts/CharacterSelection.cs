@@ -10,7 +10,7 @@ public class CharacterSelection : MonoBehaviour
     public Camera fallBackCamera;
     private GameObject characterSelectionMenu;
     public GameObject SteamVRObjects;
-    private string actOneScene = "Theatre_june";
+    private string actOneScene = "Theatre_late_august";
 
     void Awake()
     {
