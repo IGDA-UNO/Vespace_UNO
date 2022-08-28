@@ -6,26 +6,32 @@ using UnityEngine.AI;
 public class NPCNavMesh : MonoBehaviour
 {
     [SerializeField] private Transform followTransform;
-    public Transform[] viewingTransforms;
-    public Transform[] taken = new Transform[9];
+    
     public Transform myViewingTransform;
+    public Transform candidateViewingTransform;
     public bool spotTaken;
     public bool isServant;
 
     private NavMeshAgent navMeshAgent;
 
+    public ViewingPositionsManager vpm;
+
     void Start()
     {
-        SetViewingTransforms();
-
+        
         navMeshAgent = GetComponent<NavMeshAgent>();
-
-        FindMySpot();   
+        myViewingTransform = null;
+        candidateViewingTransform = null;
+        FindMySpot();
     }
+
+
+
 
     // Update is called once per frame
     private void Update()
     {
+       
         if (isServant && followTransform != null)
         {
             navMeshAgent.destination = followTransform.position;
@@ -36,44 +42,43 @@ public class NPCNavMesh : MonoBehaviour
         }
     }
 
-    public Transform RandomizeViewingPositions()
-    {
-        int i = 0;
-        int randIndex = Random.Range(0, viewingTransforms.Length);
-
-        while (taken[i] != null)
-        {
-            if (i < viewingTransforms.Length - 1)
-            {
-                taken[i] = viewingTransforms[randIndex];
-                i++;
-            }
-        }
-
-        return viewingTransforms[randIndex];
-    }
-
-    private void SetViewingTransforms()
-    {
-        viewingTransforms[0] = GameObject.Find("Position (1)").transform;
-        viewingTransforms[1] = GameObject.Find("Position (2)").transform;
-        viewingTransforms[2] = GameObject.Find("Position (3)").transform;
-        viewingTransforms[3] = GameObject.Find("Position (4)").transform;
-        viewingTransforms[4] = GameObject.Find("Position (5)").transform;
-        viewingTransforms[5] = GameObject.Find("Position (6)").transform;
-        viewingTransforms[6] = GameObject.Find("Position (7)").transform;
-        viewingTransforms[7] = GameObject.Find("Position (8)").transform;
-        viewingTransforms[8] = GameObject.Find("Position (9)").transform;
-
-    }
-
     private void FindMySpot()
     {
-        if (!spotTaken)
-        {
-            myViewingTransform = RandomizeViewingPositions();
-        }
+       // candidateViewingTransform = vpm.RandomizeViewingPositions();
 
-        spotTaken = true;
+        while (myViewingTransform == null)
+        {
+            candidateViewingTransform = vpm.RandomizeViewingPositions();
+            if (candidateViewingTransform != vpm.taken[0] &&
+                candidateViewingTransform != vpm.taken[1] &&
+                candidateViewingTransform != vpm.taken[2] &&
+                candidateViewingTransform != vpm.taken[3] &&
+                candidateViewingTransform != vpm.taken[4] &&
+                candidateViewingTransform != vpm.taken[5] &&
+                candidateViewingTransform != vpm.taken[6] &&
+                candidateViewingTransform != vpm.taken[7] &&
+                candidateViewingTransform != vpm.taken[8])
+            {
+                myViewingTransform = candidateViewingTransform;
+            }
+            else
+            {
+                myViewingTransform = null;
+            }
+        }
+    }
+
+    public Transform SendMySpot()
+    {
+        if (myViewingTransform != null)
+        {
+            return myViewingTransform;
+        }
+        else
+        {
+            return null;
+        }
+        
+
     }
 }
