@@ -31,7 +31,10 @@
 				"offer acquaintance a refreshment",
 				"berate acquaintance",
 				"ask acquaintance for information",
-				"thank acquaintance"
+				"thank acquaintance",
+				"last interactee confront unseen player",
+				"last interactee confront seen player",
+				"ticket taker confront player"
 			]
 		},
 		{
@@ -328,6 +331,55 @@
 				"Thank you, you've been such a great help. Now please, I must get backstage, it's urgent! (female noble)",
 				"Thank you, and please trust that in helping me, you are truly helping my master - your generosity will not be forgotten! (servant to noble)",
 				"I can't thank you enough - count on me for whatever you need, anytime! (servant to servant)"
+			]
+		},
+		{
+			"name": "last interactee confront unseen player",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"Hello again! What was so interesting backstage, if I might inquire?",
+				"You again! What were you up to back there anyway?",
+				"Hello again my lady - whatever could you have been doing in that filthy backstage?",
+				"So she emerges after all - what an unladylike place to be!",
+				"Well well, I didn’t think I’d see you come back from there!",
+				"There he is! Look! The crook who robbed the backstage!"
+			]
+		},
+		{
+			"name": "last interactee confront seen player",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"Hello again! We all saw you sneaking about back there, what could you possibly be looking for?",
+				"There he is, the cretin who was walking around backstage!",
+				"Hello again my lady - you made quite an impression on the audience this evening!",
+				"Stop, stop! This lady has disrupted the spectacle, she must refund all of us our ticket prices! Refund! Refund!",
+				"Do you know that we could all see you up there onstage? People are a little upset.",
+				"Grab him and throw him out - this crook has been bothering the audience and interrupting the show, get him out of here!"
+			]
+		},
+		{
+			"name": "ticket taker confront player",
+			"conditions": [],
+			"influenceRules": [],
+			"leadsTo": [
+				"Farewell, my Lord, please return soon!",
+				"Don’t trust that person, milord - here, exit this way!",
+				"No fighting in here! Please leave at once!",
+				"What’s the meaning of this! Please leave at once, you’re disturbing the spectacle!",
+				"Farewell, my Lady, please return soon!",
+				"Is everything well, milady? The exit is this way, if you wish to leave.",
+				"My Lady! This is shocking behavior! Please, for everyone’s sake, leave at once!",
+				"My Lady, what is the meaning of this scandalous behavior? Please return what you have taken and leave at once!",
+				"A Lady alone at the spectacle, and who sneaks backstage during the show? You must not care much for your reputation!",
+				"Look what you’ve done! Give me back what you took, and leave - and never come back!!",
+				"You there, what’s going on? Hand over what you have and get out of here before I call the police!",
+				"Good day, sir!",
+				"You there, what’s going on? Were you just backstage? Get out of here before I call the poilice!",
+				"What is the meaning of this violence! Seize those men!",
+				"You there! Stop! What is this? Police! Police! Thief!",
+				"You there, what’s going on? I don’t know what you’re up to, but you better leave before I have to call someone to throw you out!"
 			]
 		},
 		{
@@ -10738,6 +10790,1370 @@
 					{
 						"type": "dialogue",
 						"text": "Please spare me your impertinent questions!"
+					}
+				]
+			]
+		},
+
+
+
+
+		{
+			"name": "Hello again! What was so interesting backstage, if I might inquire?",
+			"displayName": "Hello again! What was so interesting backstage, if I might inquire?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "All I can say is that it’s an urgent matter, and you must now help me leave - clear a passage for me!"
+					},
+					{
+						"type": "dialogue",
+						"text": "There was something that I needed to verify, but it’s not important. Can you help me leave without drawing any more attention?"
+					},
+					{
+						"type": "dialogue",
+						"text": "Silence fool! Now I will take my leave."
+					}
+				]
+			]
+		},
+		{
+			"name": "You again! What were you up to back there anyway?",
+			"displayName": "You again! What were you up to back there anyway?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "How dare you ask me what I was doing - out of my way!"
+					},
+					{
+						"type": "dialogue",
+						"text": "I’m sorry about before, but my business here is confidential. Will you help me get out of this crowd!"
+					},
+					{
+						"type": "dialogue",
+						"text": "We don’t really know each other, do we? I have nothing more to say to you."
+					}
+				]
+			]
+		},
+		{
+			"name": "Hello again my lady - whatever could you have been doing in that filthy backstage?",
+			"displayName": "Hello again my lady - whatever could you have been doing in that filthy backstage?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I can’t thank you enough for your help, and I’m afraid I must ask it of you again - I need to leave this theatre immediately!"
+					},
+					{
+						"type": "dialogue",
+						"text": "I really can’t disclose the nature of my query, but I implore you to trust me - please help me leave at once!"
+					},
+					{
+						"type": "dialogue",
+						"text": "I don’t wish to talk about this, ever; please don’t mention my presence here to anyone."
+					}
+				]
+			]
+		},
+		{
+			"name": "So she emerges after all - what an unladylike place to be!",
+			"displayName": "So she emerges after all - what an unladylike place to be!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You must help get these people away from me, so that I may leave unmolested!"
+					},
+					{
+						"type": "dialogue",
+						"text": "I am so sorry if I offended you, although I hardly thought that possible."
+					},
+					{
+						"type": "dialogue",
+						"text": "Silence fool, and clear me a passage so that I may leave!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Well well, I didn’t think I’d see you come back from there!",
+			"displayName": "Well well, I didn’t think I’d see you come back from there!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Thank you friend! Now if you can help me get out of this theatre, I’ll really owe you one!"
+					},
+					{
+						"type": "dialogue",
+						"text": "My Master’s work is almost completed, will you help me leave?"
+					},
+					{
+						"type": "dialogue",
+						"text": "Shh! Don’t speak, fool, just get me out of here!"
+					}
+				]
+			]
+		},
+		{
+			"name": "There he is! Look! The crook who robbed the backstage!",
+			"displayName": "There he is! Look! The crook who robbed the backstage!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": false
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I’m the crook?! You’re the crook - this (man/woman) just attempted to rob me! Help!"
+					},
+					{
+						"type": "dialogue",
+						"text": "Silence, fool, or I will have my master’s men beat you!"
+					},
+					{
+						"type": "dialogue",
+						"text": "Please, I am so sorry that we didn’t get along before, but I really need your help leaving the theatre now!"
+					}
+				]
+			]
+		},
+
+
+		
+
+		{
+			"name": "Hello again! We all saw you sneaking about back there, what could you possibly be looking for?",
+			"displayName": "Hello again! We all saw you sneaking about back there, what could you possibly be looking for?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I was seen? Then I really need your help getting out of here!"
+					},
+					{
+						"type": "dialogue",
+						"text": "Shh! I can’t say, but you’ll be handsomely rewarded if you can help me escape this theatre."
+					},
+					{
+						"type": "dialogue",
+						"text": "Silence fool! Now I will take my leave."
+					}
+				]
+			]
+		},
+		{
+			"name": "There he is, the cretin who was walking around backstage!",
+			"displayName": "There he is, the cretin who was walking around backstage!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "How dare you address me in this way; normally I would challenge you on the field of honor, but you don’t seem the type."
+					},
+					{
+						"type": "dialogue",
+						"text": "You must help me leave; I will make it worth your while!"
+					},
+					{
+						"type": "dialogue",
+						"text": "You will pay for this insolence - I must go now, but I shall not forget this!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Hello again my lady - you made quite an impression on the audience this evening!",
+			"displayName": "Hello again my lady - you made quite an impression on the audience this evening!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I am distraught by this indiscretion, and beg you to help me leave this theatre immediately!"
+					},
+					{
+						"type": "dialogue",
+						"text": "I must leave now, and you must help me - clear a passage that I might leave unmolested!"
+					},
+					{
+						"type": "dialogue",
+						"text": "I don’t wish to talk about this, ever; please don’t mention my presence here to anyone."
+					}
+				]
+			]
+		},
+		{
+			"name": "Stop, stop! This lady has disrupted the spectacle, she must refund all of us our ticket prices! Refund! Refund!",
+			"displayName": "Stop, stop! This lady has disrupted the spectacle, she must refund all of us our ticket prices! Refund! Refund!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!"
+					},
+					{
+						"type": "dialogue",
+						"text": "What are you talking about?! This is a lie, a terrible lie!"
+					},
+					{
+						"type": "dialogue",
+						"text": "Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Do you know that we could all see you up there onstage? People are a little upset.",
+			"displayName": "Do you know that we could all see you up there onstage? People are a little upset.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Thank you friend! Now if you can help me get out of this theatre, I’ll forever be in your debt!"
+					},
+					{
+						"type": "dialogue",
+						"text": "My Master’s work is almost completed, will you help me leave?"
+					},
+					{
+						"type": "dialogue",
+						"text": "Shh! Don’t speak, fool, just get me out of here!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Grab him and throw him out - this crook has been bothering the audience and interrupting the show, get him out of here!",
+			"displayName": "Grab him and throw him out - this crook has been bothering the audience and interrupting the show, get him out of here!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I’m the criminal?! You’re the criminal - this (man/woman) just attempted to rob me! Help!"
+					},
+					{
+						"type": "dialogue",
+						"text": "Silence, fool, or I will have my master’s men beat you!"
+					},
+					{
+						"type": "dialogue",
+						"text": "Please, I am so sorry that we didn’t get along before, but I really need your help leaving the theatre now!"
+					}
+				]
+			]
+		},
+
+		
+
+		
+		{
+			"name": "Farewell, my Lord, please return soon!",
+			"displayName": "Farewell, my Lord, please return soon!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": ""
+					}
+				]
+			]
+		},
+		{
+			"name": "Don’t trust that person, milord - here, exit this way!",
+			"displayName": "Don’t trust that person, milord - here, exit this way!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": ""
+					}
+				]
+			]
+		},
+		{
+			"name": "No fighting in here! Please leave at once!",
+			"displayName": "No fighting in here! Please leave at once!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": ""
+					}
+				]
+			]
+		},
+		{
+			"name": "What’s the meaning of this! Please leave at once, you’re disturbing the spectacle!",
+			"displayName": "What’s the meaning of this! Please leave at once, you’re disturbing the spectacle!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You leave the the theatre and continue with the rest of your day unmolested. Life is easier for male nobles in ancien régime France - congratulations on a lucky birth!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Farewell, my Lady, please return soon!",
+			"displayName": "Farewell, my Lady, please return soon!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": ""
+					}
+				]
+			]
+		},
+		{
+			"name": "Is everything well, milady? The exit is this way, if you wish to leave.",
+			"displayName": "Is everything well, milady? The exit is this way, if you wish to leave.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You leave the theatre and continue with the rest of your day, having successfully leveraged your social status and navigated the minefield of traps laid for women of all status in ancien régime France - congratulations!"
+					}
+				]
+			]
+		},
+		{
+			"name": "My Lady! This is shocking behavior! Please, for everyone’s sake, leave at once!",
+			"displayName": "My Lady! This is shocking behavior! Please, for everyone’s sake, leave at once!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You are allowed to leave, but the scandal of your behavior in public becomes fodder for public rumor for weeks, and you must leave Paris for the remainder of the social season. The restrictions on female comportment in ancien régime France are unforgiving, even for the nobility!"
+					}
+				]
+			]
+		},
+		{
+			"name": "My Lady, what is the meaning of this scandalous behavior? Please return what you have taken and leave at once!",
+			"displayName": "My Lady, what is the meaning of this scandalous behavior? Please return what you have taken and leave at once!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": ""
+					}
+				]
+			]
+		},
+		{
+			"name": "A Lady alone at the spectacle, and who sneaks backstage during the show? You must not care much for your reputation!",
+			"displayName": "A Lady alone at the spectacle, and who sneaks backstage during the show? You must not care much for your reputation!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": ""
+					}
+				]
+			]
+		},
+		{
+			"name": "Look what you’ve done! Give me back what you took, and leave - and never come back!!",
+			"displayName": "Look what you’ve done! Give me back what you took, and leave - and never come back!!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You must return the plans you took, and leave the theatre to the sounds of heckling and laughter from the crowd. Despite your rank, you have committed sins against decorum that will not soon be absolved, and the ridicule of this moment will cling to your reputation for years to come. The restrictions on female comportment in ancien régime France are unforgiving, even for the nobility!"
+					}
+				]
+			]
+		},
+		{
+			"name": "You there, what’s going on? Hand over what you have and get out of here before I call the police!",
+			"displayName": "You there, what’s going on? Hand over what you have and get out of here before I call the police!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You must return the plans you took, and slink out of the theatre somewhat ashamed. It’s hard to get away with things when you don’t have status or money! But along with that lack of power, you are less concerned about your reputation and the abstract ideas of honor. At least you got to go to the theatre (sort of) - if your master doesn’t fire you for failing in your mission, you might even call it a good day!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Good day, sir!",
+			"displayName": "Good day, sir!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You exit the theatre and bring the plans to your master, who is very pleased and rewards you with a Louis d’or. Servants often draw their social status from that of their employers - and by the same token, can bring unwanted attention to a noble house by their bad conduct, especially if they are dressed in a recognizable uniform (livrée). But this was a good day!"
+					}
+				]
+			]
+		},
+		{
+			"name": "You there, what’s going on? Were you just backstage? Get out of here before I call the poilice!",
+			"displayName": "You there, what’s going on? Were you just backstage? Get out of here before I call the poilice!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You slink out of the theatre somewhat ashamed, but you managed to keep the plans! While you lack social power, you ahve the advanateg of relative invisibility - servants attract little attention, although their clothing can cause trouble. In the uniform of a particular noble house - en livrée - servants may be given greater deference, but their conduct also reflects on the master. Today it worked in your favor - you will surely be rewarded!"
+					}
+				]
+			]
+		},
+		{
+			"name": "What is the meaning of this violence! Seize those men!",
+			"displayName": "What is the meaning of this violence! Seize those men!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "The ticket taker, wary of what looks like an impending fight, draws attention to you and your interlocutor; The crowd separates you, and the plans are stripped from your person before you are thrown out onto the street. If your master hears about this, you’ll surely be fired, but at least you didn’t end up in jail!"
+					}
+				]
+			]
+		},
+		{
+			"name": "You there! Stop! What is this? Police! Police! Thief!",
+			"displayName": "You there! Stop! What is this? Police! Police! Thief!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You are followed out of the theatre by the ticket taker, and eventually two police archers come to ask questions and examine the item you took from backstage. You are brought to jail and your master is contacted; while he frees you, he also releases you from service. You must now either find a new service position in Paris, or return to your village in Poitou. Life in the city in the eighteenth century can be merciless for the poor, and there is less chance of starvation back home than unprotected in the big city."
+					}
+				]
+			]
+		},
+		{
+			"name": "You there, what’s going on? I don’t know what you’re up to, but you better leave before I have to call someone to throw you out!",
+			"displayName": "You there, what’s going on? I don’t know what you’re up to, but you better leave before I have to call someone to throw you out!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
+			"effects": [],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "You are allowed to leave the theatre with the plans. What luck! Despite causing a scandal, you are considered of too little importance to really pursue, and run striaght to your master with the plans - which he immediately burns, before giving you a Louis d’or and firing you. You possess compromising information, and your master promises to have you severely beaten should you ever be seen in Paris again. Sometimes there’s just nothing you can do - in many instances, nobles can abuse commoners (especially their servants) with impunity, and you are now effectively an outcast from the capital."
 					}
 				]
 			]

@@ -72,7 +72,10 @@
 				"OfferARefreshment",
 				"SuccessfulDistraction",
 				"BackstageAccess",
-				"ThrownOut"
+				"LastPositiveInteraction",
+				"LastNegativeInteraction",
+				"ThrownOut",
+				"SeenBackstage"
 			]
 		}
 	]
