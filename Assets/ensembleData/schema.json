@@ -52,6 +52,7 @@
 			"isBoolean": true,
 			"types": [
 				"Start",
+				"GreetTicketTaker",
 				"IngratiateTicketTaker",
 				"BribeTicketTaker",
 				"LieTicketTaker",
@@ -80,7 +81,9 @@
 				"LastPositiveInteraction",
 				"LastNegativeInteraction",
 				"ThrownOut",
-				"SeenBackstage"
+				"SeenBackstage",
+				"FinalInteraction",
+				"GameCompleted"
 			]
 		}
 	]

@@ -42,6 +42,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Greet ticket taker",
 				"Politely greet the ticket taker",
 				"Flirt with the ticket taker",
 				"Is this Bienfait's theatre?",
@@ -388,8 +389,8 @@
 			]
 		},
 		{
-			"name": "Politely greet the ticket taker",
-			"displayName": "Politely greet the ticket taker",
+			"name": "Greet ticket taker",
+			"displayName": "Greet ticket taker",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -414,6 +415,54 @@
 			],
 			"effects": [
 				{
+					"category": "progress",
+					"type": "GreetTicketTaker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Hello there, good evening!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Politely greet the ticket taker",
+			"displayName": "Politely greet the ticket taker",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetTicketTaker",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
 					"category": "network",
 					"type": "credibility",
 					"first": "responder",
@@ -429,7 +478,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -463,7 +512,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -485,7 +534,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -519,7 +568,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -541,7 +590,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -581,7 +630,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -611,7 +660,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -651,7 +700,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -695,7 +744,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1199,6 +1248,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Sorry, can you repeat that?"
+					}
+				]
 			]
 		},
 		{
@@ -1730,6 +1787,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Excuse me, do you have something for me?"
+					}
+				]
 			]
 		},
 		{
@@ -1992,6 +2057,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Pardon, what was that?"
+					}
+				]
 			]
 		},
 		{
@@ -2317,6 +2390,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Are you here to see the play?"
+					}
+				]
 			]
 		},
 		{
@@ -2634,6 +2715,14 @@
 					"first": "initiator",
 					"value": false
 				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Welcome, good evening!"
+					}
+				]
 			]
 		},
 		{
@@ -8410,6 +8499,12 @@
 				},
 				{
 					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
 					"value": false
@@ -8467,6 +8562,12 @@
 					"category": "progress",
 					"type": "BackstageAccess",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
 					"value": true
 				},
 				{
@@ -9965,6 +10066,12 @@
 					"type": "BackstageAccess",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10020,6 +10127,12 @@
 					"type": "BackstageAccess",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10074,6 +10187,12 @@
 					"category": "progress",
 					"type": "BackstageAccess",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
 					"value": true
 				}
 			],
@@ -10226,6 +10345,12 @@
 					"type": "BackstageAccess",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10370,6 +10495,12 @@
 					"type": "BackstageAccess",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10417,6 +10548,12 @@
 					"category": "progress",
 					"type": "BackstageAccess",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
 					"value": true
 				}
 			],
@@ -10472,6 +10609,12 @@
 					"type": "BackstageAccess",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10525,6 +10668,12 @@
 					"category": "progress",
 					"type": "BackstageAccess",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
 					"value": true
 				}
 			],
@@ -10956,37 +11105,44 @@
 			"isAccept": true,
 			"conditions": [
 				{
-					"category": "progress",
-					"type": "LastPositiveInteraction",
+					"category": "role",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "SeenBackstage",
-					"first": "responder",
+					"first": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11011,37 +11167,44 @@
 			"isAccept": true,
 			"conditions": [
 				{
-					"category": "progress",
-					"type": "LastNegativeInteraction",
+					"category": "role",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "SeenBackstage",
-					"first": "responder",
+					"first": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11096,7 +11259,14 @@
 					"value": false
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11151,7 +11321,14 @@
 					"value": false
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11200,7 +11377,14 @@
 					"value": false
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11249,7 +11433,14 @@
 					"value": false
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11308,7 +11499,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11363,7 +11561,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11418,7 +11623,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11473,7 +11685,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11522,7 +11741,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11571,7 +11797,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11630,7 +11863,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11677,7 +11917,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11724,7 +11971,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11771,7 +12025,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11818,7 +12079,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11865,7 +12133,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11912,7 +12187,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -11959,7 +12241,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12006,7 +12295,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12053,7 +12349,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12094,7 +12397,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12135,7 +12445,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12176,7 +12493,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12217,7 +12541,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12258,7 +12589,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{
@@ -12299,7 +12637,14 @@
 					"value": true
 				}
 			],
-			"effects": [],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GameCompleted",
+					"first": "responder",
+					"value": true
+				}
+			],
 			"performance": [
 				[
 					{

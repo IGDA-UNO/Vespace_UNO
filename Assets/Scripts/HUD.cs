@@ -18,9 +18,13 @@ public class HUD : MonoBehaviour
 
     public static int questProgress; // = POSSESS_TICKET; //start off assuming you possess a ticket? 
 
-    public static int POSSESS_TICKET = 0;
-    public static int HANDED_TICKET_TO_TICKET_TAKER = 1;
-    public static int RECEIVED_MARK = 2;
+    public static int NO_TICKET = 0;
+    public static int POSSESS_TICKET = 1;
+    public static int HANDED_TICKET_TO_TICKET_TAKER = 2;
+    public static int RECEIVED_MARK = 3;
+    public static int BACKSTAGE_ACCESS = 4;
+    public static int POSSESS_PLANS = 5;
+    public static int THROWN_OUT = 999;
 
     void Awake(){
         //Initialize all interface references needed to display information
@@ -78,16 +82,31 @@ public class HUD : MonoBehaviour
     }
 
     private string GetObjectiveText(){
-        if(HUD.questProgress == HUD.POSSESS_TICKET ){
+        if(HUD.questProgress == HUD.NO_TICKET){
+            return "Get a ticket from the ticket taker!";
+        }
+        else if(HUD.questProgress == HUD.POSSESS_TICKET){
             return "Hand your ticket to the ticket taker!";
         }
         else if (HUD.questProgress == HUD.HANDED_TICKET_TO_TICKET_TAKER)
         {
-            return "Receive your mark so you may enter the theatre";
+            return "Receive your mark so you may enter the theatre!";
         }
         else if (HUD.questProgress == HUD.RECEIVED_MARK)
         {
             return "Enter the theatre, and find someone to help you backstage!";
+        }
+        else if (HUD.questProgress == HUD.BACKSTAGE_ACCESS)
+        {
+            return "The crowd is distracted! Head backstage through the curtains!";
+        }
+        else if (HUD.questProgress == HUD.POSSESS_PLANS)
+        {
+            return "You have the plans! Leave backstage and speak to the last person you spoke to!";
+        }
+        else if (HUD.questProgress == HUD.THROWN_OUT)
+        {
+            return "You've been thrown out of the theater!";
         }
 
         return "Unknown objective!";
@@ -96,5 +115,9 @@ public class HUD : MonoBehaviour
     public void UpdateQuestProgress(int newQuestStep){
         questProgress = newQuestStep;
         CurrentObjectiveText.text = GetObjectiveText();
+    }
+
+    public int GetQuestProgress(){
+        return HUD.questProgress;
     }
 }

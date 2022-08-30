@@ -66,8 +66,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public StringBuilder historyBuilder;
     public StringBuilder actionsBuilder;
 
-    public GameObject fallBackCamera; 
-
     List<GameObject> actionButtonRefs = new List<GameObject>();
     private bool exitClick;
 
@@ -77,6 +75,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public GameObject dialogueHUD;
     public Camera playerCamera;
+    public Camera fallBackCamera;
+    public GameObject SteamVRObjects;
     public Text CharacterNameText;
     public Text DialogueText;
 
@@ -97,6 +97,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     void Start()
     {
+        hud.UpdateQuestProgress(HUD.NO_TICKET);
+
+        if (!SteamVRObjects.activeSelf)
+        {
+            playerCamera = fallBackCamera;
+        }
+
         mainActiveUI = false;
         actionsActiveUI = false;
         attributesActiveUI = false;
@@ -282,32 +289,37 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     //LaserPointer functions overload:
     public void PointerClick(object sender, PointerEventArgs e)
     {
-   
         EnsembleObject ensemble = e.target.GetComponent<EnsembleObject>();
+
         if (ensemble != null)
         {
             //The object is an Ensemble object
-            Orientation();
-            DisplayMain();
 
-            attributesBuilder.Clear();
-            traitsBuilder.Clear();
-            clothingBuilder.Clear();
-            professionBuilder.Clear();
-            directedStatusBuilder.Clear();
-            networkBuilder.Clear();
-            nonActionableRelationshipBuilder.Clear();
-            relationshipBuilder.Clear();
-            socialRecordLabelBuilder.Clear();
-            statusBuilder.Clear();
-            historyBuilder.Clear();
-            actionsBuilder.Clear();
+            if (ensemble.name == "TheatrePlans") {
+                OpenPlans();
+            } else {
+                Orientation();
+                DisplayMain();
 
-            characterMenu.GetComponent<UnityEngine.UI.Text>().text = ensemble.name;
+                attributesBuilder.Clear();
+                traitsBuilder.Clear();
+                clothingBuilder.Clear();
+                professionBuilder.Clear();
+                directedStatusBuilder.Clear();
+                networkBuilder.Clear();
+                nonActionableRelationshipBuilder.Clear();
+                relationshipBuilder.Clear();
+                socialRecordLabelBuilder.Clear();
+                statusBuilder.Clear();
+                historyBuilder.Clear();
+                actionsBuilder.Clear();
 
-            getCharacterData(ensemble.name);
-            getCharacterHistory(ensemble.name);
-            getCharacterActions(ensemble.name);
+                characterMenu.GetComponent<UnityEngine.UI.Text>().text = ensemble.name;
+
+                getCharacterData(ensemble.name);
+                getCharacterHistory(ensemble.name);
+                getCharacterActions(ensemble.name);
+            }
         }
         if (e.target.gameObject.layer == 5)
         {
@@ -412,8 +424,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void getCharacterActions(string objectName)
     {
+        string initiator = EnsemblePlayer.GetSelectedCharacter();
+        string responder = objectName;
+
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
-        List<Action> actions = data.ensemble.getActions(EnsemblePlayer.GetSelectedCharacter(), objectName, volitionInterface, cast, 999, 999, 999);
+        List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+
+        if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+            foreach(Action a in actions) {
+                Debug.Log("action: " + a.ToString());
+            }
+        }
         
         float x = 0;
         float y = -0.05f;
@@ -431,7 +452,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             Button tempButton = goButton.GetComponent<Button>();
             tempButton.GetComponentInChildren<Text>().text = action.Name;
-            tempButton.onClick.AddListener(() => TakeAction(objectName, action));
+            tempButton.onClick.AddListener(() => TakeAction(initiator, action));
 
            actionButtonRefs.Add(goButton);
         }
@@ -447,7 +468,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             foreach(Effect e in action.Effects) {
                 if (e.Type == "HasTicket" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.POSSESS_TICKET);
- 
                     Debug.Log("Got ticket!");
                 }
                 
@@ -474,11 +494,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 }
 
                 if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                     Debug.Log("Got backstage access!");
                 }
 
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.THROWN_OUT);
                     Debug.Log("Got thrown out!");
+                    StartCoroutine(GameOver());
                 }
             }
         }
@@ -495,6 +518,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         CloseMenu();
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
+    }
+
+    private IEnumerator<object> GameOver()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Intro");
     }
 
     public void placeDialogueHud()
@@ -521,48 +550,57 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         dialogueHUD.SetActive(false);
     }
 
+    public void OpenPlans()
+    {
+        hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
+    }
+
     public void clickOnObject(string objectName, Vector3 position)  
     {
-        DisplayMain();
+        if (objectName == "TheatrePlans") {
+            OpenPlans();
+        } else {
+            DisplayMain();
 
-        ensembleUI.transform.SetParent(fallBackCamera.transform);
-        ensembleUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
-        ensembleUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
-        ensembleUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+            ensembleUI.transform.SetParent(fallBackCamera.transform);
+            ensembleUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+            ensembleUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+            ensembleUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
 
-        actionsUI.transform.SetParent(fallBackCamera.transform);
-        actionsUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
-        actionsUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
-        actionsUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+            actionsUI.transform.SetParent(fallBackCamera.transform);
+            actionsUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+            actionsUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+            actionsUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
 
-        attributesUI.transform.SetParent(fallBackCamera.transform);
-        attributesUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
-        attributesUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
-        attributesUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+            attributesUI.transform.SetParent(fallBackCamera.transform);
+            attributesUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+            attributesUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+            attributesUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
 
-        historyUI.transform.SetParent(fallBackCamera.transform);
-        historyUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
-        historyUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
-        historyUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
+            historyUI.transform.SetParent(fallBackCamera.transform);
+            historyUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+            historyUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+            historyUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
 
-        attributesBuilder.Clear();
-        traitsBuilder.Clear();
-        clothingBuilder.Clear();
-        professionBuilder.Clear();
-        directedStatusBuilder.Clear();
-        networkBuilder.Clear();
-        nonActionableRelationshipBuilder.Clear();
-        relationshipBuilder.Clear();
-        socialRecordLabelBuilder.Clear();
-        statusBuilder.Clear();
-        historyBuilder.Clear();
-        actionsBuilder.Clear();
+            attributesBuilder.Clear();
+            traitsBuilder.Clear();
+            clothingBuilder.Clear();
+            professionBuilder.Clear();
+            directedStatusBuilder.Clear();
+            networkBuilder.Clear();
+            nonActionableRelationshipBuilder.Clear();
+            relationshipBuilder.Clear();
+            socialRecordLabelBuilder.Clear();
+            statusBuilder.Clear();
+            historyBuilder.Clear();
+            actionsBuilder.Clear();
 
-        characterMenu.GetComponent<UnityEngine.UI.Text>().text = objectName;
+            characterMenu.GetComponent<UnityEngine.UI.Text>().text = objectName;
 
-        getCharacterData(objectName);
-        getCharacterHistory(objectName);
-        getCharacterActions(objectName);
+            getCharacterData(objectName);
+            getCharacterHistory(objectName);
+            getCharacterActions(objectName);
+        }
     }
 
 }
