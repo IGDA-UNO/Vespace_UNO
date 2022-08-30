@@ -52,6 +52,11 @@
 			"isBoolean": true,
 			"types": [
 				"Start",
+				"IngratiateTicketTaker",
+				"BribeTicketTaker",
+				"LieTicketTaker",
+				"ThreatenTicketTaker",
+				"IgnoreTicketTaker",
 				"HasTicket",
 				"GaveTicket",
 				"HasMark",

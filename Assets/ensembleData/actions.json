@@ -54,6 +54,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Attempt ingratiation",
 				"Ingratiate with excessive politeness",
 				"Offer flattery and compliments (male)",
 				"Offer flattery and compliments (female)",
@@ -65,6 +66,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Offer money (if you have it)",
 				"Offer a little money",
 				"Offer a lot of money (noble)",
 				"Offer a lot of money (servant)"
@@ -75,6 +77,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Offer a threat",
 				"Threaten to have the ticket taker fired if she doesn't let you in",
 				"State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
 				"State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
@@ -86,6 +89,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Ignore the ticket taker",
 				"Try to sneak past",
 				"Simply ignore her and walk by",
 				"Simply ignore her and walk by (servant)",
@@ -119,6 +123,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
+				"Tell a lie",
 				"Lie and say that your servant has your ticket inside the theatre",
 				"Lie and say that your master has your ticket inside the theatre",
 				"Lie and say that you're a guest of the owner (noble)",
@@ -1169,6 +1174,34 @@
 			]
 		},
 		{
+			"name": "Tell a lie",
+			"displayName": "Tell a lie",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LieTicketTaker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
+				}
+			]
+		},
+		{
 			"name": "Lie and say that your servant has your ticket inside the theatre",
 			"displayName": "Lie and say that your servant has your ticket inside the theatre",
 			"influenceRules": [],
@@ -1194,7 +1227,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1231,7 +1264,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1271,7 +1304,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1308,7 +1341,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1348,7 +1381,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1367,6 +1400,12 @@
 					"type": "HasTicket",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LieTicketTaker",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -1404,7 +1443,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1426,7 +1465,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1472,7 +1511,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1501,7 +1540,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1547,7 +1586,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1576,7 +1615,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1622,7 +1661,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1651,7 +1690,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "LieTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1663,6 +1702,34 @@
 						"text": "The ticket taker begins to escort you from the theatre."
 					}
 				]
+			]
+		},
+		{
+			"name": "Offer money (if you have it)",
+			"displayName": "Offer money (if you have it)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "BribeTicketTaker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
+				}
 			]
 		},
 		{
@@ -1685,7 +1752,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "BribeTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1715,7 +1782,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "BribeTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1755,7 +1822,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "BribeTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1800,7 +1867,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "BribeTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1840,7 +1907,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "BribeTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1885,7 +1952,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "BribeTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -1897,6 +1964,34 @@
 						"text": "The ticket taker accepts your very generous gesture."
 					}
 				]
+			]
+		},
+		{
+			"name": "Offer a threat",
+			"displayName": "Offer a threat",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "ThreatenTicketTaker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
+				}
 			]
 		},
 		{
@@ -1919,7 +2014,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -1963,7 +2058,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2003,7 +2098,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2033,7 +2128,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2073,7 +2168,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2103,7 +2198,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2137,7 +2232,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2182,7 +2277,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "ThreatenTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2194,6 +2289,34 @@
 						"text": "The ticket taker begins to escort you from the theatre."
 					}
 				]
+			]
+		},
+		{
+			"name": "Ignore the ticket taker",
+			"displayName": "Ignore the ticket taker",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "IgnoreTicketTaker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
+				}
 			]
 		},
 		{
@@ -2216,7 +2339,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2253,7 +2376,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2293,7 +2416,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2331,7 +2454,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2371,7 +2494,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2416,7 +2539,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2450,7 +2573,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2471,7 +2594,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IgnoreTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2483,6 +2606,34 @@
 						"text": "The ticket taker begins to escort you from the theatre."
 					}
 				]
+			]
+		},
+		{
+			"name": "Attempt ingratiation",
+			"displayName": "Attempt ingratiation",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "IngratiateTicketTaker",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "Start",
+					"first": "initiator",
+					"value": false
+				}
 			]
 		},
 		{
@@ -2505,7 +2656,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2534,7 +2685,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2574,7 +2725,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2611,7 +2762,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2651,7 +2802,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2680,7 +2831,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
@@ -2714,7 +2865,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": true
 				}
@@ -2744,7 +2895,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "IngratiateTicketTaker",
 					"first": "initiator",
 					"value": false
 				}
