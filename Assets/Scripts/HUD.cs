@@ -24,6 +24,8 @@ public class HUD : MonoBehaviour
     public static int RECEIVED_MARK = 3;
     public static int BACKSTAGE_ACCESS = 4;
     public static int POSSESS_PLANS = 5;
+    public static int FINAL_INTERACTION = 6;
+    public static int GAME_COMPLETED = 7;
     public static int THROWN_OUT = 999;
 
     void Awake(){
@@ -103,6 +105,14 @@ public class HUD : MonoBehaviour
         else if (HUD.questProgress == HUD.POSSESS_PLANS)
         {
             return "You have the plans! Leave backstage and speak to the last person you spoke to!";
+        }
+        else if (HUD.questProgress == HUD.FINAL_INTERACTION)
+        {
+            return "Now go and speak to the ticket taker!";
+        }
+        else if (HUD.questProgress == HUD.GAME_COMPLETED)
+        {
+            return "Game completed!";
         }
         else if (HUD.questProgress == HUD.THROWN_OUT)
         {

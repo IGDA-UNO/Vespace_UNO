@@ -431,8 +431,38 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
 
         if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
-            foreach(Action a in actions) {
-                Debug.Log("action: " + a.ToString());
+            bool finalInteraction = false;
+
+            foreach (Action action in actions) {
+                if (action.Name == "unseen male noble positive interaction" ||
+                    action.Name == "unseen male noble negative interaction" ||
+                    action.Name == "unseen female noble positive interaction" ||
+                    action.Name == "unseen female noble negative interaction" ||
+                    action.Name == "unseen servant positive interaction" ||
+                    action.Name == "unseen servant negative interaction" ||
+                    action.Name == "seen male noble positive interaction" ||
+                    action.Name == "seen male noble negative interaction" ||
+                    action.Name == "seen female noble positive interaction" ||
+                    action.Name == "seen female noble negative interaction" ||
+                    action.Name == "seen servant positive interaction" ||
+                    action.Name == "seen servant negative interaction"
+                ) {
+                    finalInteraction = true;
+                }
+            }
+
+            if (finalInteraction == true) {
+                Debug.Log("found last interaction: " + actions[0].Name);
+                TakeAction(initiator, actions[0]);
+                volitionInterface = data.ensemble.calculateVolition(cast);
+                actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+            }
+        } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
+            if (objectName == "Ticket Taker") {
+                if (actions.Count > 0) {
+                    Debug.Log("found last ticket taker interaction: " + actions[0].Name);
+                    TakeAction(initiator, actions[0]);
+                }
             }
         }
         
@@ -496,6 +526,16 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                     Debug.Log("Got backstage access!");
+                }
+
+                if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.FINAL_INTERACTION);
+                    Debug.Log("Completed final interaction!");
+                }
+
+                if (e.Type == "GameCompleted" && e.Value is bool && e.Value is true) {
+                    hud.UpdateQuestProgress(HUD.GAME_COMPLETED);
+                    Debug.Log("Completed game!");
                 }
 
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {

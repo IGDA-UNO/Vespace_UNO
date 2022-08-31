@@ -4467,6 +4467,12 @@
 			"conditions": [
 				{
 					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
 					"type": "stranger",
 					"first": "responder",
 					"value": true
@@ -6990,6 +6996,18 @@
 			"isAccept": true,
 			"conditions": [
 				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "progress",
 					"type": "HasMark",
 					"first": "initiator",
@@ -7035,6 +7053,18 @@
 					"category": "progress",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
 					"value": false
 				}
 			],
@@ -7663,6 +7693,18 @@
 			"isAccept": true,
 			"conditions": [
 				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "progress",
 					"type": "HasMark",
 					"first": "initiator",
@@ -7708,6 +7750,18 @@
 					"category": "progress",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
 					"value": false
 				}
 			],
@@ -8082,6 +8136,18 @@
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
 				{
 					"category": "progress",
 					"type": "AcquaintanceSecondInteraction",
@@ -9367,6 +9433,18 @@
 			"isAccept": true,
 			"conditions": [
 				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "progress",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
@@ -10389,6 +10467,12 @@
 					"type": "LastNegativeInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10437,6 +10521,12 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10485,6 +10575,12 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BerateAcquaintance",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10539,6 +10635,12 @@
 					"type": "LastPositiveInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10593,6 +10695,12 @@
 					"type": "LastPositiveInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10653,6 +10761,12 @@
 					"type": "LastPositiveInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10713,6 +10827,12 @@
 					"type": "LastPositiveInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10730,6 +10850,18 @@
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
 				{
 					"category": "progress",
 					"type": "AcquaintanceSecondInteraction",
@@ -10816,6 +10948,12 @@
 					"type": "OfferARefreshment",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10877,6 +11015,12 @@
 					"type": "OfferARefreshment",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10938,6 +11082,12 @@
 					"type": "OfferARefreshment",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -10999,6 +11149,12 @@
 					"type": "BerateAcquaintance",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -11060,6 +11216,12 @@
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -11121,6 +11283,12 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "NearStageInteraction",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -11307,7 +11475,8 @@
 					"type": "FinalInteraction",
 					"first": "initiator",
 					"value": true
-				},				{
+				},				
+				{
 					"category": "progress",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
@@ -11562,7 +11731,7 @@
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
