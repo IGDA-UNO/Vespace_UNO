@@ -344,12 +344,30 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Hello again! What was so interesting backstage, if I might inquire?",
-				"You again! What were you up to back there anyway?",
-				"Hello again my lady - whatever could you have been doing in that filthy backstage?",
-				"So she emerges after all - what an unladylike place to be!",
-				"Well well, I didn’t think I’d see you come back from there!",
-				"There he is! Look! The crook who robbed the backstage!"
+				"unseen male noble positive interaction",
+				"All I can say is that it's an urgent matter, and you must now help me leave - clear a passage for me!",
+				"There was something that I needed to verify, but it's not important. Can you help me leave without drawing any more attention?",
+				"Silence fool! Now I will take my leave.",
+				"unseen male noble negative interaction",
+				"How dare you ask me what I was doing - out of my way!",
+				"I'm sorry about before, but my business here is confidential. Will you help me get out of this crowd!",
+				"We don't really know each other, do we? I have nothing more to say to you.",
+				"unseen female noble positive interaction",
+				"I can't thank you enough for your help, and I'm afraid I must ask it of you again - I need to leave this theatre immediately!",
+				"I really can't disclose the nature of my query, but I implore you to trust me - please help me leave at once!",
+				"I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+				"unseen female noble negative interaction",
+				"You must help get these people away from me, so that I may leave unmolested!",
+				"I am so sorry if I offended you, although I hardly thought that possible.",
+				"Silence fool, and clear me a passage so that I may leave!",
+				"unseen servant positive interaction",
+				"Thank you friend! Now if you can help me get out of this theatre, I'll really owe you one!",
+				"My Master's work is almost completed, will you help me leave?",
+				"Shh! Don't speak, fool, just get me out of here!",
+				"unseen servant negative interaction",
+				"I'm the crook?! You're the crook - this one just attempted to rob me! Help!",
+				"Silence, fool, or I will have my master's men beat you!",
+				"Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!"
 			]
 		},
 		{
@@ -357,12 +375,32 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Hello again! We all saw you sneaking about back there, what could you possibly be looking for?",
-				"There he is, the cretin who was walking around backstage!",
-				"Hello again my lady - you made quite an impression on the audience this evening!",
-				"Stop, stop! This lady has disrupted the spectacle, she must refund all of us our ticket prices! Refund! Refund!",
-				"Do you know that we could all see you up there onstage? People are a little upset.",
-				"Grab him and throw him out - this crook has been bothering the audience and interrupting the show, get him out of here!"
+				"seen male noble positive interaction",
+				"I was seen? Then I really need your help getting out of here!",
+				"Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (noble interlocutor)",
+				"Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (non-noble interlocutor)",
+				"Silence fool! Now I will take my leave.",
+				"seen male noble negative interaction",
+				"How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (noble interlocutor)",
+				"How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (non-noble interlocutor)",
+				"You must help me leave; I will make it worth your while!",
+				"You will pay for this insolence - I must go now, but I shall not forget this!",
+				"seen female noble positive interaction",
+				"I am distraught by this indiscretion, and beg you to help me leave this theatre immediately!",
+				"I must leave now, and you must help me - clear a passage that I might leave unmolested!",
+				"I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+				"seen female noble negative interaction",
+				"Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!",
+				"What are you talking about?! This is a lie, a terrible lie!",
+				"Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!",
+				"seen servant positive interaction",
+				"Thank you friend! Now if you can help me get out of this theatre, I'll forever be in your debt!",
+				"My Master's work is almost completed, will you help me leave?",
+				"Shh! Don't speak, fool, just get me out of here!",
+				"seen servant negative interaction",
+				"I'm the criminal?! You're the criminal - this one just attempted to rob me! Help!",
+				"Silence, fool, or I will have my master's men beat you!",
+				"Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!"
 			]
 		},
 		{
@@ -371,21 +409,21 @@
 			"influenceRules": [],
 			"leadsTo": [
 				"Farewell, my Lord, please return soon!",
-				"Don’t trust that person, milord - here, exit this way!",
+				"Don't trust that person, milord - here, exit this way!",
 				"No fighting in here! Please leave at once!",
-				"What’s the meaning of this! Please leave at once, you’re disturbing the spectacle!",
+				"What's the meaning of this! Please leave at once, you're disturbing the spectacle!",
 				"Farewell, my Lady, please return soon!",
 				"Is everything well, milady? The exit is this way, if you wish to leave.",
-				"My Lady! This is shocking behavior! Please, for everyone’s sake, leave at once!",
+				"My Lady! This is shocking behavior! Please, for everyone's sake, leave at once!",
 				"My Lady, what is the meaning of this scandalous behavior? Please return what you have taken and leave at once!",
 				"A Lady alone at the spectacle, and who sneaks backstage during the show? You must not care much for your reputation!",
-				"Look what you’ve done! Give me back what you took, and leave - and never come back!!",
-				"You there, what’s going on? Hand over what you have and get out of here before I call the police!",
+				"Look what you've done! Give me back what you took, and leave - and never come back!!",
+				"You there, what's going on? Hand over what you have and get out of here before I call the police!",
 				"Good day, sir!",
-				"You there, what’s going on? Were you just backstage? Get out of here before I call the poilice!",
+				"You there, what's going on? Were you just backstage? Get out of here before I call the poilice!",
 				"What is the meaning of this violence! Seize those men!",
 				"You there! Stop! What is this? Police! Police! Thief!",
-				"You there, what’s going on? I don’t know what you’re up to, but you better leave before I have to call someone to throw you out!"
+				"You there, what's going on? I don't know what you're up to, but you better leave before I have to call someone to throw you out!"
 			]
 		},
 		{
@@ -11094,13 +11132,9 @@
 				]
 			]
 		},
-
-
-
-
 		{
-			"name": "Hello again! What was so interesting backstage, if I might inquire?",
-			"displayName": "Hello again! What was so interesting backstage, if I might inquire?",
+			"name": "unseen male noble positive interaction",
+			"displayName": "unseen male noble positive interaction",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -11133,13 +11167,19 @@
 					"type": "LastPositiveInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11147,22 +11187,211 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "All I can say is that it’s an urgent matter, and you must now help me leave - clear a passage for me!"
-					},
-					{
-						"type": "dialogue",
-						"text": "There was something that I needed to verify, but it’s not important. Can you help me leave without drawing any more attention?"
-					},
-					{
-						"type": "dialogue",
-						"text": "Silence fool! Now I will take my leave."
+						"text": "Hello again! What was so interesting backstage, if I might inquire?"
 					}
 				]
 			]
 		},
 		{
-			"name": "You again! What were you up to back there anyway?",
-			"displayName": "You again! What were you up to back there anyway?",
+			"name": "All I can say is that it's an urgent matter, and you must now help me leave - clear a passage for me!",
+			"displayName": "All I can say is that it's an urgent matter, and you must now help me leave - clear a passage for me!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Here, follow me - out of the way please, out of the way!"
+					}
+				]
+			]
+		},
+		{
+			"name": "There was something that I needed to verify, but it's not important. Can you help me leave without drawing any more attention?",
+			"displayName": "There was something that I needed to verify, but it's not important. Can you help me leave without drawing any more attention?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Here, follow me - out of the way please, out of the way!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Silence fool! Now I will take my leave.",
+			"displayName": "Silence fool! Now I will take my leave.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Well! I suppose you can find the door just as easily as I can."
+					}
+				]
+			]
+		},
+		{
+			"name": "unseen male noble negative interaction",
+			"displayName": "unseen male noble negative interaction",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -11195,13 +11424,19 @@
 					"type": "LastNegativeInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"effects": [
 				{
 					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11209,293 +11444,51 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "How dare you ask me what I was doing - out of my way!"
-					},
-					{
-						"type": "dialogue",
-						"text": "I’m sorry about before, but my business here is confidential. Will you help me get out of this crowd!"
-					},
-					{
-						"type": "dialogue",
-						"text": "We don’t really know each other, do we? I have nothing more to say to you."
+						"text": "You again! What were you up to back there anyway?"
 					}
 				]
 			]
 		},
 		{
-			"name": "Hello again my lady - whatever could you have been doing in that filthy backstage?",
-			"displayName": "Hello again my lady - whatever could you have been doing in that filthy backstage?",
+			"name": "How dare you ask me what I was doing - out of my way!",
+			"displayName": "How dare you ask me what I was doing - out of my way!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
-				{
-					"category": "progress",
-					"type": "LastPositiveInteraction",
-					"first": "initiator",
-					"value": true
-				},
 				{
 					"category": "role",
 					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "I can’t thank you enough for your help, and I’m afraid I must ask it of you again - I need to leave this theatre immediately!"
-					},
-					{
-						"type": "dialogue",
-						"text": "I really can’t disclose the nature of my query, but I implore you to trust me - please help me leave at once!"
-					},
-					{
-						"type": "dialogue",
-						"text": "I don’t wish to talk about this, ever; please don’t mention my presence here to anyone."
-					}
-				]
-			]
-		},
-		{
-			"name": "So she emerges after all - what an unladylike place to be!",
-			"displayName": "So she emerges after all - what an unladylike place to be!",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "LastNegativeInteraction",
 					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "You must help get these people away from me, so that I may leave unmolested!"
-					},
-					{
-						"type": "dialogue",
-						"text": "I am so sorry if I offended you, although I hardly thought that possible."
-					},
-					{
-						"type": "dialogue",
-						"text": "Silence fool, and clear me a passage so that I may leave!"
-					}
-				]
-			]
-		},
-		{
-			"name": "Well well, I didn’t think I’d see you come back from there!",
-			"displayName": "Well well, I didn’t think I’d see you come back from there!",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "LastPositiveInteraction",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Thank you friend! Now if you can help me get out of this theatre, I’ll really owe you one!"
-					},
-					{
-						"type": "dialogue",
-						"text": "My Master’s work is almost completed, will you help me leave?"
-					},
-					{
-						"type": "dialogue",
-						"text": "Shh! Don’t speak, fool, just get me out of here!"
-					}
-				]
-			]
-		},
-		{
-			"name": "There he is! Look! The crook who robbed the backstage!",
-			"displayName": "There he is! Look! The crook who robbed the backstage!",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "LastNegativeInteraction",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "I’m the crook?! You’re the crook - this (man/woman) just attempted to rob me! Help!"
-					},
-					{
-						"type": "dialogue",
-						"text": "Silence, fool, or I will have my master’s men beat you!"
-					},
-					{
-						"type": "dialogue",
-						"text": "Please, I am so sorry that we didn’t get along before, but I really need your help leaving the theatre now!"
-					}
-				]
-			]
-		},
-
-
-		
-
-		{
-			"name": "Hello again! We all saw you sneaking about back there, what could you possibly be looking for?",
-			"displayName": "Hello again! We all saw you sneaking about back there, what could you possibly be looking for?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "LastPositiveInteraction",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "responder",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
 					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11503,61 +11496,65 @@
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "I was seen? Then I really need your help getting out of here!"
-					},
-					{
-						"type": "dialogue",
-						"text": "Shh! I can’t say, but you’ll be handsomely rewarded if you can help me escape this theatre."
-					},
-					{
-						"type": "dialogue",
-						"text": "Silence fool! Now I will take my leave."
+						"text": "Good riddance, you blowhard - take your distractions back to the Opera, and leave us to enjoy ourselves at the Fair!"
 					}
 				]
 			]
 		},
 		{
-			"name": "There he is, the cretin who was walking around backstage!",
-			"displayName": "There he is, the cretin who was walking around backstage!",
+			"name": "I'm sorry about before, but my business here is confidential. Will you help me get out of this crowd!",
+			"displayName": "I'm sorry about before, but my business here is confidential. Will you help me get out of this crowd!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
-					"category": "progress",
-					"type": "LastNegativeInteraction",
-					"first": "initiator",
-					"value": true
-				},
-				{
 					"category": "role",
 					"type": "noble",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
 					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11567,34 +11564,1484 @@
 					"type": "FinalInteraction",
 					"first": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "How dare you address me in this way; normally I would challenge you on the field of honor, but you don’t seem the type."
-					},
-					{
-						"type": "dialogue",
-						"text": "You must help me leave; I will make it worth your while!"
-					},
-					{
-						"type": "dialogue",
-						"text": "You will pay for this insolence - I must go now, but I shall not forget this!"
+						"text": "Well! I suppose you can find the door just as easily as I can."
 					}
 				]
 			]
 		},
 		{
-			"name": "Hello again my lady - you made quite an impression on the audience this evening!",
-			"displayName": "Hello again my lady - you made quite an impression on the audience this evening!",
+			"name": "We don't really know each other, do we? I have nothing more to say to you.",
+			"displayName": "We don't really know each other, do we? I have nothing more to say to you.",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Good riddance, you blowhard - take your distractions back to the Opera, and leave us to enjoy ourselves at the Fair!"
+					}
+				]
+			]
+		},
+		{
+			"name": "unseen female noble positive interaction",
+			"displayName": "unseen female noble positive interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
 					"category": "progress",
 					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Hello again my lady - whatever could you have been doing in that filthy backstage?"
+					}
+				]
+			]
+		},
+		{
+			"name": "I can't thank you enough for your help, and I'm afraid I must ask it of you again - I need to leave this theatre immediately!",
+			"displayName": "I can't thank you enough for your help, and I'm afraid I must ask it of you again - I need to leave this theatre immediately!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Milady, I will escort you from this place at once!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I really can't disclose the nature of my query, but I implore you to trust me - please help me leave at once!",
+			"displayName": "I really can't disclose the nature of my query, but I implore you to trust me - please help me leave at once!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "This all seems quite improper to me - I surely don't want to be involved!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+			"displayName": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "This all seems quite improper to me - I surely don't want to be involved!"
+					}
+				]
+			]
+		},
+		{
+			"name": "unseen female noble negative interaction",
+			"displayName": "unseen female noble negative interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "So she emerges after all - what an unladylike place to be!"
+					}
+				]
+			]
+		},
+		{
+			"name": "You must help get these people away from me, so that I may leave unmolested!",
+			"displayName": "You must help get these people away from me, so that I may leave unmolested!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "This all seems quite improper to me - I surely don't want to be involved!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I am so sorry if I offended you, although I hardly thought that possible.",
+			"displayName": "I am so sorry if I offended you, although I hardly thought that possible.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "What effrontery! I should like to see you leave, but I shall never help you!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Silence fool, and clear me a passage so that I may leave!",
+			"displayName": "Silence fool, and clear me a passage so that I may leave!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "What effrontery! I should like to see you leave, but I shall never help you!"
+					}
+				]
+			]
+		},
+		{
+			"name": "unseen servant positive interaction",
+			"displayName": "unseen servant positive interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Well well, I didn't think I'd see you come back from there!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Thank you friend! Now if you can help me get out of this theatre, I'll really owe you one!",
+			"displayName": "Thank you friend! Now if you can help me get out of this theatre, I'll really owe you one!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Shh! Follow me."
+					}
+				]
+			]
+		},
+		{
+			"name": "My Master's work is almost completed, will you help me leave?",
+			"displayName": "My Master's work is almost completed, will you help me leave?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I don't know, this seems like it's getting risky! You go, and I'll follow later."
+					}
+				]
+			]
+		},
+		{
+			"name": "Shh! Don't speak, fool, just get me out of here!",
+			"displayName": "Shh! Don't speak, fool, just get me out of here!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Ha! Talk to me like that again and I promise you'll soon feel the back of my hand!"
+					}
+				]
+			]
+		},
+		{
+			"name": "unseen servant negative interaction",
+			"displayName": "unseen servant negative interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "There he is! Look! The crook who robbed the backstage!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I'm the crook?! You're the crook - this one just attempted to rob me! Help!",
+			"displayName": "I'm the crook?! You're the crook - this one just attempted to rob me! Help!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Stop! Thief! Stop that thief!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Silence, fool, or I will have my master's men beat you!",
+			"displayName": "Silence, fool, or I will have my master's men beat you!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Ha! Talk to me like that again and I promise you'll soon feel the back of my hand!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
+			"displayName": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Well maybe you should have thought of that before!"
+					}
+				]
+			]
+		},
+		{
+			"name": "seen male noble positive interaction",
+			"displayName": "seen male noble positive interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Hello again! We all saw you sneaking about back there. What could you possibly be looking for?"
+					}
+				]
+			]
+		},
+		{
+			"name": "I was seen? Then I really need your help getting out of here!",
+			"displayName": "I was seen? Then I really need your help getting out of here!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Well! I suppose you can find the door just as easily as I can."
+					}
+				]
+			]
+		},
+		{
+			"name": "Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (noble interlocutor)",
+			"displayName": "Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (noble interlocutor)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Well! I suppose you can find the door just as easily as I can."
+					}
+				]
+			]
+		},
+		{
+			"name": "Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (non-noble interlocutor)",
+			"displayName": "Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (non-noble interlocutor)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Here, follow me - out of the way please, out of the way!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Silence fool! Now I will take my leave.",
+			"displayName": "Silence fool! Now I will take my leave.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Good riddance, you blowhard - take your distractions back to the Opera, and leave us to enjoy ourselves at the Fair!"
+					}
+				]
+			]
+		},
+		{
+			"name": "seen male noble negative interaction",
+			"displayName": "seen male noble negative interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "There he is, the cretin who was walking around backstage!"
+					}
+				]
+			]
+		},
+		{
+			"name": "How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (noble interlocutor)",
+			"displayName": "How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (noble interlocutor)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
 					"first": "initiator",
 					"value": true
 				},
@@ -11605,21 +13052,15 @@
 					"value": true
 				},
 				{
-					"category": "role",
-					"type": "female",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
+					"category": "progress",
+					"type": "LastNegativeInteraction",
 					"first": "responder",
 					"value": true
 				},
 				{
 					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11627,36 +13068,52 @@
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "I am distraught by this indiscretion, and beg you to help me leave this theatre immediately!"
-					},
-					{
-						"type": "dialogue",
-						"text": "I must leave now, and you must help me - clear a passage that I might leave unmolested!"
-					},
-					{
-						"type": "dialogue",
-						"text": "I don’t wish to talk about this, ever; please don’t mention my presence here to anyone."
+						"text": "Do you impugn my honor? Shall we settle this with witnesses at dawn tomorrow sir?"
 					}
 				]
 			]
 		},
 		{
-			"name": "Stop, stop! This lady has disrupted the spectacle, she must refund all of us our ticket prices! Refund! Refund!",
-			"displayName": "Stop, stop! This lady has disrupted the spectacle, she must refund all of us our ticket prices! Refund! Refund!",
+			"name": "How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (non-noble interlocutor)",
+			"displayName": "How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (non-noble interlocutor)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
 					"category": "progress",
-					"type": "LastNegativeInteraction",
+					"type": "SeenBackstage",
 					"first": "initiator",
 					"value": true
 				},
@@ -11667,21 +13124,15 @@
 					"value": true
 				},
 				{
-					"category": "role",
-					"type": "female",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
+					"category": "progress",
+					"type": "LastNegativeInteraction",
 					"first": "responder",
 					"value": true
 				},
 				{
 					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11689,111 +13140,65 @@
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!"
-					},
-					{
-						"type": "dialogue",
-						"text": "What are you talking about?! This is a lie, a terrible lie!"
-					},
-					{
-						"type": "dialogue",
-						"text": "Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!"
+						"text": "Ha, that's rich - after all, you're the one who's been sneaking around backstage at a marionette theatre!"
 					}
 				]
 			]
 		},
 		{
-			"name": "Do you know that we could all see you up there onstage? People are a little upset.",
-			"displayName": "Do you know that we could all see you up there onstage? People are a little upset.",
+			"name": "You must help me leave; I will make it worth your while!",
+			"displayName": "You must help me leave; I will make it worth your while!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
-					"category": "progress",
-					"type": "LastPositiveInteraction",
+					"category": "role",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
+					"type": "male",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "SeenBackstage",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Thank you friend! Now if you can help me get out of this theatre, I’ll forever be in your debt!"
-					},
-					{
-						"type": "dialogue",
-						"text": "My Master’s work is almost completed, will you help me leave?"
-					},
-					{
-						"type": "dialogue",
-						"text": "Shh! Don’t speak, fool, just get me out of here!"
-					}
-				]
-			]
-		},
-		{
-			"name": "Grab him and throw him out - this crook has been bothering the audience and interrupting the show, get him out of here!",
-			"displayName": "Grab him and throw him out - this crook has been bothering the audience and interrupting the show, get him out of here!",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
+				},
 				{
 					"category": "progress",
 					"type": "LastNegativeInteraction",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
 					"first": "responder",
 					"value": true
 				},
 				{
 					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "responder",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11801,7 +13206,139 @@
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "What effrontery! I should like to see you leave, but I shall never help you!"
+					}
+				]
+			]
+		},
+		{
+			"name": "You will pay for this insolence - I must go now, but I shall not forget this!",
+			"displayName": "You will pay for this insolence - I must go now, but I shall not forget this!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
 					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Good riddance, you blowhard - take your distractions back to the Opera, and leave us to enjoy ourselves at the Fair!"
+					}
+				]
+			]
+		},
+		{
+			"name": "seen female noble positive interaction",
+			"displayName": "seen female noble positive interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11809,23 +13346,935 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "I’m the criminal?! You’re the criminal - this (man/woman) just attempted to rob me! Help!"
-					},
-					{
-						"type": "dialogue",
-						"text": "Silence, fool, or I will have my master’s men beat you!"
-					},
-					{
-						"type": "dialogue",
-						"text": "Please, I am so sorry that we didn’t get along before, but I really need your help leaving the theatre now!"
+						"text": "Hello again my lady - you made quite an impression on the audience this evening!"
 					}
 				]
 			]
 		},
-
-		
-
-		
+		{
+			"name": "I am distraught by this indiscretion, and beg you to help me leave this theatre immediately!",
+			"displayName": "I am distraught by this indiscretion, and beg you to help me leave this theatre immediately!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "This all seems quite improper to me - I surely don't want to be involved!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I must leave now, and you must help me - clear a passage that I might leave unmolested!",
+			"displayName": "I must leave now, and you must help me - clear a passage that I might leave unmolested!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "What effrontery! I should like to see you leave, but I shall never help you!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+			"displayName": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "If you don't want people to talk about you, don't go sneaking about backstage at the Fair - but don't blame me!"
+					}
+				]
+			]
+		},
+		{
+			"name": "seen female noble negative interaction",
+			"displayName": "seen female noble negative interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Stop, stop! This lady has disrupted the spectacle! She must refund all of our ticket prices! Refund! Refund!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!",
+			"displayName": "Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Ha, that's rich - after all, you're the one who's been sneaking around backstage at a marionette theatre!"
+					}
+				]
+			]
+		},
+		{
+			"name": "What are you talking about?! This is a lie, a terrible lie!",
+			"displayName": "What are you talking about?! This is a lie, a terrible lie!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "[The crowd chants] Refund! Refund!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!",
+			"displayName": "Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "This all seems quite improper to me - I surely don't want to be involved!"
+					}
+				]
+			]
+		},
+		{
+			"name": "seen servant positive interaction",
+			"displayName": "seen servant positive interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Do you know that we could all see you up there onstage? People are a little upset."
+					}
+				]
+			]
+		},
+		{
+			"name": "Thank you friend! Now if you can help me get out of this theatre, I'll forever be in your debt!",
+			"displayName": "Thank you friend! Now if you can help me get out of this theatre, I'll forever be in your debt!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "What effrontery! I should like to see you leave, but I shall never help you!"
+					}
+				]
+			]
+		},
+		{
+			"name": "My Master's work is almost completed, will you help me leave?",
+			"displayName": "My Master's work is almost completed, will you help me leave?",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "This all seems quite improper to me - I surely don't want to be involved!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Shh! Don't speak, fool, just get me out of here!",
+			"displayName": "Shh! Don't speak, fool, just get me out of here!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastPositiveInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Ha! Talk to me like that again and I promise you'll soon feel the back of my hand!"
+					}
+				]
+			]
+		},
+		{
+			"name": "seen servant negative interaction",
+			"displayName": "seen servant negative interaction",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Grab him and throw him out - this crook has been bothering the audience and interrupting the show. Get him out of here!"
+					}
+				]
+			]
+		},
+		{
+			"name": "I'm the criminal?! You're the criminal - this one just attempted to rob me! Help!",
+			"displayName": "I'm the criminal?! You're the criminal - this one just attempted to rob me! Help!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Stop! Thief! Stop that thief!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Silence, fool, or I will have my master's men beat you!",
+			"displayName": "Silence, fool, or I will have my master's men beat you!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Ha! Talk to me like that again and I promise you'll soon feel the back of my hand!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
+			"displayName": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastNegativeInteraction",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "LastInteractionResponse",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Well maybe you should have thought of that before!"
+					}
+				]
+			]
+		},
 		{
 			"name": "Farewell, my Lord, please return soon!",
 			"displayName": "Farewell, my Lord, please return soon!",
@@ -11834,31 +14283,31 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -11867,7 +14316,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11881,38 +14330,38 @@
 			]
 		},
 		{
-			"name": "Don’t trust that person, milord - here, exit this way!",
-			"displayName": "Don’t trust that person, milord - here, exit this way!",
+			"name": "Don't trust that person, milord - here, exit this way!",
+			"displayName": "Don't trust that person, milord - here, exit this way!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -11921,7 +14370,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11942,31 +14391,31 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -11975,7 +14424,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -11989,38 +14438,38 @@
 			]
 		},
 		{
-			"name": "What’s the meaning of this! Please leave at once, you’re disturbing the spectacle!",
-			"displayName": "What’s the meaning of this! Please leave at once, you’re disturbing the spectacle!",
+			"name": "What's the meaning of this! Please leave at once, you're disturbing the spectacle!",
+			"displayName": "What's the meaning of this! Please leave at once, you're disturbing the spectacle!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "male",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12029,7 +14478,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12050,31 +14499,31 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "female",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12083,7 +14532,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12104,31 +14553,31 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "female",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12137,7 +14586,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12151,38 +14600,38 @@
 			]
 		},
 		{
-			"name": "My Lady! This is shocking behavior! Please, for everyone’s sake, leave at once!",
-			"displayName": "My Lady! This is shocking behavior! Please, for everyone’s sake, leave at once!",
+			"name": "My Lady! This is shocking behavior! Please, for everyone's sake, leave at once!",
+			"displayName": "My Lady! This is shocking behavior! Please, for everyone's sake, leave at once!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "female",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12191,7 +14640,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12212,31 +14661,31 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "female",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12245,7 +14694,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12266,31 +14715,31 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "female",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12299,7 +14748,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12313,38 +14762,38 @@
 			]
 		},
 		{
-			"name": "Look what you’ve done! Give me back what you took, and leave - and never come back!!",
-			"displayName": "Look what you’ve done! Give me back what you took, and leave - and never come back!!",
+			"name": "Look what you've done! Give me back what you took, and leave - and never come back!!",
+			"displayName": "Look what you've done! Give me back what you took, and leave - and never come back!!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "noble",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "female",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12353,7 +14802,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12367,32 +14816,32 @@
 			]
 		},
 		{
-			"name": "You there, what’s going on? Hand over what you have and get out of here before I call the police!",
-			"displayName": "You there, what’s going on? Hand over what you have and get out of here before I call the police!",
+			"name": "You there, what's going on? Hand over what you have and get out of here before I call the police!",
+			"displayName": "You there, what's going on? Hand over what you have and get out of here before I call the police!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "servant",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12401,7 +14850,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12409,7 +14858,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "You must return the plans you took, and slink out of the theatre somewhat ashamed. It’s hard to get away with things when you don’t have status or money! But along with that lack of power, you are less concerned about your reputation and the abstract ideas of honor. At least you got to go to the theatre (sort of) - if your master doesn’t fire you for failing in your mission, you might even call it a good day!"
+						"text": "You must return the plans you took, and slink out of the theatre somewhat ashamed. It's hard to get away with things when you don't have status or money! But along with that lack of power, you are less concerned about your reputation and the abstract ideas of honor. At least you got to go to the theatre (sort of) - if your master doesn't fire you for failing in your mission, you might even call it a good day!"
 					}
 				]
 			]
@@ -12422,25 +14871,25 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "servant",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12449,7 +14898,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12457,38 +14906,38 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "You exit the theatre and bring the plans to your master, who is very pleased and rewards you with a Louis d’or. Servants often draw their social status from that of their employers - and by the same token, can bring unwanted attention to a noble house by their bad conduct, especially if they are dressed in a recognizable uniform (livrée). But this was a good day!"
+						"text": "You exit the theatre and bring the plans to your master, who is very pleased and rewards you with a Louis d'or. Servants often draw their social status from that of their employers - and by the same token, can bring unwanted attention to a noble house by their bad conduct, especially if they are dressed in a recognizable uniform (livrée). But this was a good day!"
 					}
 				]
 			]
 		},
 		{
-			"name": "You there, what’s going on? Were you just backstage? Get out of here before I call the poilice!",
-			"displayName": "You there, what’s going on? Were you just backstage? Get out of here before I call the poilice!",
+			"name": "You there, what's going on? Were you just backstage? Get out of here before I call the poilice!",
+			"displayName": "You there, what's going on? Were you just backstage? Get out of here before I call the poilice!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "servant",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12497,7 +14946,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12518,25 +14967,25 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "servant",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12545,7 +14994,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12553,7 +15002,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "The ticket taker, wary of what looks like an impending fight, draws attention to you and your interlocutor; The crowd separates you, and the plans are stripped from your person before you are thrown out onto the street. If your master hears about this, you’ll surely be fired, but at least you didn’t end up in jail!"
+						"text": "The ticket taker, wary of what looks like an impending fight, draws attention to you and your interlocutor; The crowd separates you, and the plans are stripped from your person before you are thrown out onto the street. If your master hears about this, you'll surely be fired, but at least you didn't end up in jail!"
 					}
 				]
 			]
@@ -12566,25 +15015,25 @@
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "servant",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12593,7 +15042,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12607,32 +15056,32 @@
 			]
 		},
 		{
-			"name": "You there, what’s going on? I don’t know what you’re up to, but you better leave before I have to call someone to throw you out!",
-			"displayName": "You there, what’s going on? I don’t know what you’re up to, but you better leave before I have to call someone to throw you out!",
+			"name": "You there, what's going on? I don't know what you're up to, but you better leave before I have to call someone to throw you out!",
+			"displayName": "You there, what's going on? I don't know what you're up to, but you better leave before I have to call someone to throw you out!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "ticket taker",
+					"type": "servant",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "role",
-					"type": "servant",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
 					"type": "player",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
 					"type": "FinalInteraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "ticket taker",
 					"first": "responder",
 					"value": true
 				}
@@ -12641,7 +15090,7 @@
 				{
 					"category": "progress",
 					"type": "GameCompleted",
-					"first": "responder",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -12649,7 +15098,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "You are allowed to leave the theatre with the plans. What luck! Despite causing a scandal, you are considered of too little importance to really pursue, and run striaght to your master with the plans - which he immediately burns, before giving you a Louis d’or and firing you. You possess compromising information, and your master promises to have you severely beaten should you ever be seen in Paris again. Sometimes there’s just nothing you can do - in many instances, nobles can abuse commoners (especially their servants) with impunity, and you are now effectively an outcast from the capital."
+						"text": "You are allowed to leave the theatre with the plans. What luck! Despite causing a scandal, you are considered of too little importance to really pursue, and run striaght to your master with the plans - which he immediately burns, before giving you a Louis d'or and firing you. You possess compromising information, and your master promises to have you severely beaten should you ever be seen in Paris again. Sometimes there's just nothing you can do - in many instances, nobles can abuse commoners (especially their servants) with impunity, and you are now effectively an outcast from the capital."
 					}
 				]
 			]

@@ -80,6 +80,7 @@
 				"BackstageAccess",
 				"LastPositiveInteraction",
 				"LastNegativeInteraction",
+				"LastInteractionResponse",
 				"ThrownOut",
 				"SeenBackstage",
 				"FinalInteraction",
