@@ -557,7 +557,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "HasTicket",
 					"value": true,
 					"first": "Male Noble Player"
 				},
@@ -581,7 +581,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "HasTicket",
 					"value": true,
 					"first": "Female Noble Player"
 				},
@@ -605,7 +605,7 @@
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "HasTicket",
 					"value": true,
 					"first": "Servant Player"
 				}

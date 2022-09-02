@@ -13,15 +13,9 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"greet ticket taker",
-				"ingratiate ticket taker",
-				"bribe ticket taker",
-				"threaten ticket taker",
-				"ignore ticket taker",
 				"give ticket",
 				"receive mark",
-				"lie to ticket taker",
-				"greet stranger",
+				"greet a stranger",
 				"ask stranger for a favor",
 				"ask stranger a question",
 				"greet acquaintance",
@@ -35,66 +29,6 @@
 				"last interactee confront unseen player",
 				"last interactee confront seen player",
 				"ticket taker confront player"
-			]
-		},
-		{
-			"name": "greet ticket taker",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"Greet ticket taker",
-				"Politely greet the ticket taker",
-				"Flirt with the ticket taker",
-				"Is this Bienfait's theatre?",
-				"Say nothing to ticket taker initially (male)",
-				"Say nothing to ticket taker initially (female)"
-			]
-		},
-		{
-			"name": "ingratiate ticket taker",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"Attempt ingratiation",
-				"Ingratiate with excessive politeness",
-				"Offer flattery and compliments (male)",
-				"Offer flattery and compliments (female)",
-				"Be honest: Admit you don't have a ticket and ask to be let in as a favor"
-			]
-		},
-		{
-			"name": "bribe ticket taker",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"Offer money (if you have it)",
-				"Offer a little money",
-				"Offer a lot of money (noble)",
-				"Offer a lot of money (servant)"
-			]
-		},
-		{
-			"name": "threaten ticket taker",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"Offer a threat",
-				"Threaten to have the ticket taker fired if she doesn't let you in",
-				"State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
-				"State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
-				"Threaten to make a scene and interrupt the performance"
-			]
-		},
-		{
-			"name": "ignore ticket taker",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
-				"Ignore the ticket taker",
-				"Try to sneak past",
-				"Simply ignore her and walk by",
-				"Simply ignore her and walk by (servant)",
-				"Push her out of the way"
 			]
 		},
 		{
@@ -120,31 +54,16 @@
 			]
 		},
 		{
-			"name": "lie to ticket taker",
+			"name": "greet a stranger",
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Tell a lie",
-				"Lie and say that your servant has your ticket inside the theatre",
-				"Lie and say that your master has your ticket inside the theatre",
-				"Lie and say that you're a guest of the owner (noble)",
-				"Lie and say that you're a guest of the owner (servant)",
-				"Lie and say that you're an artist invited to work here next week (male noble)",
-				"Lie and say that you're an artist invited to work here next week (female noble)",
-				"Lie and say that you're an artist invited to work here next week (servant)"
-			]
-		},
-		{
-			"name": "greet stranger",
-			"conditions": [],
-			"influenceRules": [],
-			"leadsTo": [
+				"Greet stranger",
 				"Hello there, old friend! (male noble)",
 				"Hello there, old friend! (female noble)",
 				"Hello there, old friend! (servant)", 
 				"Hello esteemed person I've never met before! (noble)",
 				"Hello esteemed person I've never met before! (servant)",
-				"Hello, have we met before?",
 				"Hello, I love this play, I've seen it four times! (female noble)",
 				"Hello, I love this play, I've seen it four times! (males)"
 			]
@@ -224,7 +143,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Tell the truth to your acquaintance",
+				"Be straightforward with your acquaintance",
 				"Hello old friend! (male noble)",
 				"Hello old friend! (female noble)",
 				"Hello old friend! (servant)",
@@ -241,7 +160,7 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Lie to your acquaintance",
+				"Try to trick your acquaintance",
 				"You remember the last time, right? Want to help me make some trouble again? (male noble)",
 				"You remember the last time, right? Want to help me make some trouble again? (female noble)",
 				"You remember the last time, right? Want to help me make some trouble again? (servant)",
@@ -424,376 +343,6 @@
 				"What is the meaning of this violence! Seize those men!",
 				"You there! Stop! What is this? Police! Police! Thief!",
 				"You there, what's going on? I don't know what you're up to, but you better leave before I have to call someone to throw you out!"
-			]
-		},
-		{
-			"name": "Greet ticket taker",
-			"displayName": "Greet ticket taker",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Hello there, good evening!"
-					}
-				]
-			]
-		},
-		{
-			"name": "Politely greet the ticket taker",
-			"displayName": "Politely greet the ticket taker",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker appreciates your courtesy."
-					}
-				]
-			]
-		},
-		{
-			"name": "Flirt with the ticket taker",
-			"displayName": "Flirt with the ticket taker",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker is intrigued by your forwardness."
-					}
-				]
-			]
-		},
-		{
-			"name": "Is this Bienfait's theatre?",
-			"displayName": "Is this Bienfait's theatre?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "\"Yes, it is\" she responds, curious that a patron would concern themselves over the owner."
-					}
-				]
-			]
-		},
-		{
-			"name": "Say nothing to ticket taker initially (male)",
-			"displayName": "Say nothing to ticket taker initially (male)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker regards your coldness unkindly."
-					}
-				]
-			]
-		},
-		{
-			"name": "Say nothing to ticket taker initially (female)",
-			"displayName": "Say nothing to ticket taker initially (female)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "rival",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker regards your coldness unkindly and scowls back -- you have made a powerful enemy this day!"
-					}
-				]
 			]
 		},
 		{
@@ -1261,1777 +810,61 @@
 			]
 		},
 		{
-			"name": "Tell a lie",
-			"displayName": "Tell a lie",
+			"name": "Greet stranger",
+			"displayName": "Greet stranger",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
 					"value": true
-				}
-			],
-			"effects": [
+				},
 				{
 					"category": "progress",
-					"type": "LieTicketTaker",
+					"type": "HasMark",
 					"first": "initiator",
 					"value": true
 				},
 				{
 					"category": "progress",
-					"type": "Start",
+					"type": "GreetStranger",
 					"first": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerQuestion",
+					"first": "initiator",
+					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "Sorry, can you repeat that?"
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that your servant has your ticket inside the theatre",
-			"displayName": "Lie and say that your servant has your ticket inside the theatre",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker hands you a ticket."
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that your master has your ticket inside the theatre",
-			"displayName": "Lie and say that your master has your ticket inside the theatre",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that you're a guest of the owner (noble)",
-			"displayName": "Lie and say that you're a guest of the owner (noble)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker hands you a ticket."
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that you're a guest of the owner (servant)",
-			"displayName": "Lie and say that you're a guest of the owner (servant)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that you're an artist invited to work here next week (male noble)",
-			"displayName": "Lie and say that you're an artist invited to work here next week (male noble)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that you're an artist invited to work here next week (female noble)",
-			"displayName": "Lie and say that you're an artist invited to work here next week (female noble)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 30,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Lie and say that you're an artist invited to work here next week (servant)",
-			"displayName": "Lie and say that you're an artist invited to work here next week (servant)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "LieTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer money (if you have it)",
-			"displayName": "Offer money (if you have it)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Excuse me, do you have something for me?"
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer a little money",
-			"displayName": "Offer a little money",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker accepts your gesture."
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer a lot of money (noble)",
-			"displayName": "Offer a lot of money (noble)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker accepts your very generous gesture."
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer a lot of money (servant)",
-			"displayName": "Offer a lot of money (servant)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 30,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "BribeTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker accepts your very generous gesture."
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer a threat",
-			"displayName": "Offer a threat",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Pardon, what was that?"
-					}
-				]
-			]
-		},
-		{
-			"name": "Threaten to have the ticket taker fired if she doesn't let you in",
-			"displayName": "Threaten to have the ticket taker fired if she doesn't let you in",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 30,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 30,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "relationship",
-					"type": "rival",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
-			"displayName": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (noble)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker frowns but hands you a ticket."
-					}
-				]
-			]
-		},
-		{
-			"name": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
-			"displayName": "State that you are friends with the theatre owner, who will be upset to hear that you have not been allowed in (servant)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker frowns and gently begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Threaten to make a scene and interrupt the performance",
-			"displayName": "Threaten to make a scene and interrupt the performance",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "rival",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThreatenTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Ignore the ticket taker",
-			"displayName": "Ignore the ticket taker",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Are you here to see the play?"
-					}
-				]
-			]
-		},
-		{
-			"name": "Try to sneak past",
-			"displayName": "Try to sneak past",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Simply ignore her and walk by",
-			"displayName": "Simply ignore her and walk by",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Simply ignore her and walk by (servant)",
-			"displayName": "Simply ignore her and walk by (servant)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Push her out of the way",
-			"displayName": "Push her out of the way",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "rival",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IgnoreTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
-					}
-				]
-			]
-		},
-		{
-			"name": "Attempt ingratiation",
-			"displayName": "Attempt ingratiation",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "Start",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Welcome, good evening!"
-					}
-				]
-			]
-		},
-		{
-			"name": "Ingratiate with excessive politeness",
-			"displayName": "Ingratiate with excessive politeness",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker appreciates your courtesy and hands you a ticket."
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer flattery and compliments (male)",
-			"displayName": "Offer flattery and compliments (male)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker appreciates your courtesy and hands you a ticket."
-					}
-				]
-			]
-		},
-		{
-			"name": "Offer flattery and compliments (female)",
-			"displayName": "Offer flattery and compliments (female)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 20,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker appreciates your courtesy and hands you a ticket."
-					}
-				]
-			]
-		},
-		{
-			"name": "Be honest: Admit you don't have a ticket and ask to be let in as a favor",
-			"displayName": "Be honest: Admit you don't have a ticket and ask to be let in as a favor",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "ThrownOut",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "IngratiateTicketTaker",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker begins to escort you from the theatre."
+						"text": "Good evening!"
 					}
 				]
 			]
@@ -3068,6 +901,12 @@
 				},
 				{
 					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": false
@@ -3103,6 +942,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -3146,6 +991,12 @@
 				},
 				{
 					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": false
@@ -3181,6 +1032,12 @@
 					"second": "initiator",
 					"value": 1,
 					"operator": "-"
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -3213,6 +1070,12 @@
 				{
 					"category": "progress",
 					"type": "HasMark",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
 					"first": "initiator",
 					"value": true
 				},
@@ -3253,6 +1116,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -3290,6 +1159,12 @@
 				},
 				{
 					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": false
@@ -3316,6 +1191,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -3353,6 +1234,12 @@
 				},
 				{
 					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": false
@@ -3372,6 +1259,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -3379,136 +1272,6 @@
 					{
 						"type": "dialogue",
 						"text": "And you are?"
-					}
-				]
-			]
-		},
-		{
-			"name": "Hello, do you know what play this is?",
-			"displayName": "Hello, do you know what play this is?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasMark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "You've come to see a play and don't know what it is?"
-					}
-				]
-			]
-		},
-		{
-			"name": "Hello, have we met before?",
-			"displayName": "Hello, have we met before?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "HasMark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Why, I don't believe I have."
 					}
 				]
 			]
@@ -3545,6 +1308,12 @@
 				},
 				{
 					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": false
@@ -3587,6 +1356,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -3627,6 +1402,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"effects": [
@@ -3651,6 +1432,12 @@
 					"type": "GreetedStranger",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "GreetStranger",
+					"first": "initiator",
+					"value": false
 				}
 			],
 			"performance": [
@@ -6990,8 +4777,8 @@
 			]
 		},
 		{
-			"name": "Tell the truth to your acquaintance",
-			"displayName": "Tell the truth to your acquaintance",
+			"name": "Be straightforward with your acquaintance",
+			"displayName": "Be straightforward with your acquaintance",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -7080,7 +4867,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "I beg your pardon?"
+						"text": "Oh, it's you!"
 					}
 				]
 			]
@@ -7687,8 +5474,8 @@
 			]
 		},
 		{
-			"name": "Lie to your acquaintance",
-			"displayName": "Lie to your acquaintance",
+			"name": "Try to trick your acquaintance",
+			"displayName": "Try to trick your acquaintance",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [

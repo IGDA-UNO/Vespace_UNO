@@ -453,15 +453,15 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             if (finalInteraction == true) {
                 Debug.Log("found last interaction: " + actions[0].Name);
-                TakeAction(initiator, actions[0]);
+                TakeAction(objectName, actions[0]);
                 volitionInterface = data.ensemble.calculateVolition(cast);
                 actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
             }
         } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
             if (objectName == "Ticket Taker") {
                 if (actions.Count > 0) {
-                    Debug.Log("found last ticket taker interaction: " + actions[0].Name);
-                    TakeAction(initiator, actions[0]);
+                    CloseMenu();
+                    StartCoroutine(ShowFinalText(objectName, actions[0]));
                 }
             }
         }
@@ -482,10 +482,32 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             Button tempButton = goButton.GetComponent<Button>();
             tempButton.GetComponentInChildren<Text>().text = action.Name;
-            tempButton.onClick.AddListener(() => TakeAction(initiator, action));
+            tempButton.onClick.AddListener(() => TakeAction(objectName, action));
 
            actionButtonRefs.Add(goButton);
         }
+    }
+
+    private IEnumerator<object> ShowFinalText(string objectName, Action action)
+    {
+        StartCoroutine(DisplayDialogue(objectName, action.Name));
+        yield return new WaitForSeconds(10);
+        TakeAction(objectName, action);
+    }
+
+    private string getDialogueResponse(Action action) 
+    {
+        string dialogueResponse = "";
+        if (action != null && action.Performance != null) {
+            foreach(List<Performance> performanceQueue in action.Performance) {
+                foreach(Performance p in performanceQueue) {
+                    if (p.Type == "dialogue" && p.Text != null) {
+                        dialogueResponse = p.Text;
+                    }
+                }
+            }
+        }
+        return dialogueResponse;
     }
 
     private void TakeAction(string objectName, Action action)
@@ -546,15 +568,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
         }
 
-        if (action.Performance != null) {
-            foreach(List<Performance> performanceQueue in action.Performance) {
-                foreach(Performance p in performanceQueue) {
-                    if (p.Type == "dialogue" && p.Text != null) {
-                        dialogueResponse = p.Text;
-                    }
-                }
-            }
-        }
+        dialogueResponse = getDialogueResponse(action);
 
         CloseMenu();
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
