@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HoverHighlight_1
+  m_Name: HoverHighlight_Yes
   m_Shader: {fileID: 4800000, guid: 0c1cf10ea69e60e4f9eb8955749f88ec, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -82,5 +82,5 @@ Material:
     - _node_2507: {r: 0.6421389, g: 0.7807802, b: 0.78676474, a: 0}
     - _node_8174: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _node_8282: {r: 1, g: 1, b: 1, a: 1}
-    - g_vOutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - g_vOutlineColor: {r: 0.57924527, g: 1, b: 0.5881263, a: 1}
   m_BuildTextureStacks: []

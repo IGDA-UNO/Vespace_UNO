@@ -8,11 +8,6 @@ public class EmotiveHandler : MonoBehaviour
     public GameObject[] characters;
     public GameObject closestCharacter;
 
-    void Update()
-    {
-        
-    }
-
     public GameObject FindClosest()
     {
 
@@ -41,11 +36,13 @@ public class EmotiveHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //if the object collides with the gazee collider and it has the "Emotive" tag,
+        //the tag changes to indicate the object is in the player's "SightLine"
         if (other.gameObject.tag == "Emotive" )
         {
             other.gameObject.tag = "SightLine";
         }
-
+        //if the object is in the "Sightline" and it is the closest object to the player
         if(other.gameObject.tag == "SightLine" && other.gameObject == FindClosest())
         {
            /* MeshRenderer emotive;
@@ -54,17 +51,13 @@ public class EmotiveHandler : MonoBehaviour
             Debug.Log("enabled");*/
 
             other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-            other.gameObject.transform.GetChild(1).gameObject.SetActive(true);
-            other.gameObject.transform.GetChild(2).gameObject.SetActive(true);
-            other.gameObject.transform.GetChild(3).gameObject.SetActive(true);
-            other.gameObject.transform.GetChild(4).gameObject.SetActive(true);
-            other.gameObject.transform.GetChild(5).gameObject.SetActive(true);
-            other.gameObject.transform.GetChild(6).gameObject.SetActive(true);
+ 
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        //if the object is no longer in the "Sightline" go back to the default state
         if (other.gameObject.tag == "SightLine")
         {
             other.gameObject.tag = "Emotive";
@@ -78,13 +71,6 @@ public class EmotiveHandler : MonoBehaviour
             Debug.Log("disabled");*/
 
             other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            other.gameObject.transform.GetChild(1).gameObject.SetActive(false);
-            other.gameObject.transform.GetChild(2).gameObject.SetActive(false);
-            other.gameObject.transform.GetChild(3).gameObject.SetActive(false);
-            other.gameObject.transform.GetChild(4).gameObject.SetActive(false);
-            other.gameObject.transform.GetChild(5).gameObject.SetActive(false);
-            other.gameObject.transform.GetChild(6).gameObject.SetActive(false);
-
         }
     }
 }
