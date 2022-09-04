@@ -8,7 +8,8 @@ public class PROUVE_introduction : MonoBehaviour
 {
     public GameObject firstCanvas ; 
     public GameObject secondCanvas ; 
-    public GameObject thirdCanvas ; 
+    public GameObject thirdCanvas ;
+    public GameObject fourthCanvas;
     public GameObject demoCube ;
     public InputField userName ; 
     public PROUVE_SceneHandler sceneHandler ;
@@ -40,7 +41,13 @@ public class PROUVE_introduction : MonoBehaviour
         thirdCanvas.SetActive(true) ; 
     }
 
-    public void closeThirdCanvas() {
+    public void closeThirdCanvas()
+    {
+        thirdCanvas.SetActive(false);     
+        fourthCanvas.SetActive(true);
+    }
+
+    public void closeFourthCanvas() {
         thirdCanvas.SetActive(false) ; 
     }
 
