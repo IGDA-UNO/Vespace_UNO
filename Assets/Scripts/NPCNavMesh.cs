@@ -30,5 +30,7 @@ public class NPCNavMesh : MonoBehaviour
         {
             navMeshAgent.destination = myViewingTransform.position;
         }
+       
+        
     }
 }
