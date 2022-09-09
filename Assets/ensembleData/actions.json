@@ -828,35 +828,40 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -900,15 +905,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -938,15 +945,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -990,15 +999,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1020,9 +1031,10 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -1034,9 +1046,10 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1074,15 +1087,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1112,15 +1127,17 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1158,15 +1175,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1187,15 +1206,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1233,15 +1254,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1255,15 +1278,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1307,15 +1332,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1352,15 +1379,17 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1398,15 +1427,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1428,15 +1459,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1462,47 +1495,54 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -1528,9 +1568,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1544,15 +1585,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1578,9 +1621,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1610,15 +1654,17 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1650,9 +1696,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1674,15 +1721,17 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1720,9 +1769,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1751,15 +1801,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1797,9 +1849,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1821,15 +1874,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1861,9 +1916,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1900,15 +1956,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1946,9 +2004,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -1985,15 +2044,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2031,9 +2092,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2062,15 +2124,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2108,9 +2172,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2139,15 +2204,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2179,9 +2246,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2225,15 +2293,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2265,47 +2335,54 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -2344,9 +2421,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2367,15 +2445,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2414,9 +2494,10 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2437,15 +2518,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2490,9 +2573,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2513,15 +2597,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2566,9 +2652,10 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2589,15 +2676,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2642,9 +2731,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2665,15 +2755,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2718,9 +2810,10 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2741,15 +2834,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2775,9 +2870,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2798,15 +2894,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2852,9 +2950,10 @@
 					"operator": ">"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2890,15 +2989,17 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "StompAndWhistle",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2944,9 +3045,10 @@
 					"operator": "<"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -2982,15 +3084,17 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3030,9 +3134,10 @@
 					"operator": ">"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3045,15 +3150,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "StompAndWhistle",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3093,9 +3200,10 @@
 					"operator": "<"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3108,15 +3216,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3142,47 +3252,54 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -3220,9 +3337,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3251,15 +3369,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3297,9 +3417,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3328,15 +3449,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3368,9 +3491,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3391,15 +3515,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3437,9 +3563,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3460,15 +3587,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3506,9 +3635,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3537,15 +3667,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3577,9 +3709,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3607,15 +3740,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3653,9 +3788,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3699,15 +3835,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3745,9 +3883,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3791,15 +3930,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3831,9 +3972,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3877,15 +4019,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3923,9 +4067,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -3969,15 +4114,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4015,9 +4162,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4053,15 +4201,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4093,9 +4243,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4139,15 +4290,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4173,47 +4326,54 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferStrangerBribe",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GreetedStranger",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -4239,9 +4399,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4294,9 +4455,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4380,9 +4542,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4454,9 +4617,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4514,9 +4678,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4569,9 +4734,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4655,9 +4821,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4729,9 +4896,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "GiveStrangerCommand",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -4801,65 +4969,75 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4897,9 +5075,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4929,15 +5108,17 @@
 					"operator": "+"
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -4975,9 +5156,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4991,15 +5173,17 @@
 					"operator": "+"
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5037,9 +5221,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5053,15 +5238,17 @@
 					"operator": "+"
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5099,9 +5286,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5115,15 +5303,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5161,9 +5351,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5177,15 +5368,17 @@
 					"operator": "+"
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5223,9 +5416,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5239,15 +5433,17 @@
 					"operator": "+"
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5285,17 +5481,19 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -5314,15 +5512,17 @@
 					"value": false
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5360,17 +5560,19 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -5389,9 +5591,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5429,17 +5632,19 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -5458,9 +5663,10 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5498,65 +5704,75 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5594,9 +5810,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5618,15 +5835,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5664,9 +5883,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5695,15 +5915,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5741,9 +5963,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5765,15 +5988,17 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5805,9 +6030,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5829,9 +6055,10 @@
 					"operator": "+"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5863,9 +6090,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5902,9 +6130,10 @@
 					"operator": "-"
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "TellALieAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -5936,35 +6165,40 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6002,9 +6236,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6017,15 +6252,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6063,9 +6300,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6078,15 +6316,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6124,9 +6364,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6139,15 +6380,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6185,9 +6428,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6200,15 +6444,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6246,9 +6492,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6261,15 +6508,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6307,9 +6556,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6322,15 +6572,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6368,9 +6620,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6389,15 +6642,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6435,9 +6690,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6456,15 +6712,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6502,9 +6760,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6525,15 +6784,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6571,9 +6832,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6594,15 +6856,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6640,9 +6904,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6655,15 +6920,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6701,9 +6968,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6716,15 +6984,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6768,23 +7038,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6828,9 +7101,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6843,15 +7117,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6895,9 +7171,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6910,15 +7187,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -6962,9 +7241,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -6977,15 +7257,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7029,9 +7311,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7044,15 +7327,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7096,9 +7381,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7118,15 +7404,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7170,9 +7458,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7192,15 +7481,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7232,35 +7523,40 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7298,9 +7594,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7326,9 +7623,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7366,9 +7664,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7388,15 +7687,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7434,23 +7735,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7488,9 +7792,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7516,9 +7821,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7556,9 +7862,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7578,15 +7885,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7624,9 +7933,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7652,9 +7962,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7692,9 +8003,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7714,15 +8026,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7760,23 +8074,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7814,9 +8131,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7842,9 +8160,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7882,9 +8201,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7904,15 +8224,17 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -7950,9 +8272,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -7971,9 +8294,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8011,9 +8335,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8032,9 +8357,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8072,9 +8398,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8093,9 +8420,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8133,9 +8461,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8148,9 +8477,10 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8170,29 +8500,33 @@
 			"isAccept": true,
 			"conditions": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -8236,9 +8570,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8250,16 +8585,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8284,9 +8629,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8304,16 +8650,26 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8338,9 +8694,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8358,16 +8715,26 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8404,9 +8771,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8418,16 +8786,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8464,9 +8842,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8478,16 +8857,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8530,9 +8919,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8544,16 +8934,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8596,9 +8996,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -8610,16 +9011,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversationround",
+					"type": "round",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
 				}
 			],
 			"performance": [
@@ -8650,29 +9061,33 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -8723,23 +9138,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -8790,23 +9208,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -8857,23 +9278,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "OfferARefreshment",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -8924,23 +9348,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "BerateAcquaintance",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -8991,23 +9418,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AskAcquaintanceFavor",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9058,23 +9488,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "NearStageInteraction",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9118,23 +9551,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9178,15 +9614,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9198,9 +9636,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9244,15 +9683,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9264,9 +9705,10 @@
 					"value": true
 				},				
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9310,15 +9752,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9330,9 +9774,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9376,23 +9821,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9436,15 +9884,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9456,9 +9906,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9502,15 +9953,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9522,9 +9975,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9568,15 +10022,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9588,9 +10044,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9634,23 +10091,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9694,15 +10154,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9714,9 +10176,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9760,15 +10223,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9780,9 +10245,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9826,15 +10292,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9846,9 +10314,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -9892,23 +10361,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9952,15 +10424,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9972,9 +10446,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10018,15 +10493,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10038,9 +10515,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10084,15 +10562,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10104,9 +10584,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10144,23 +10625,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10198,15 +10682,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10218,9 +10704,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10258,15 +10745,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10278,9 +10767,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10318,15 +10808,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10338,9 +10830,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10378,23 +10871,26 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10432,15 +10928,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10452,9 +10950,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10492,15 +10991,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10512,9 +11013,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10552,15 +11054,17 @@
 					"value": false
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10572,9 +11076,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10618,23 +11123,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10678,15 +11186,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10698,9 +11208,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10744,15 +11255,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10764,9 +11277,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10810,15 +11324,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10830,9 +11346,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10876,15 +11393,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -10896,9 +11415,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -10942,23 +11462,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11008,15 +11531,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11028,9 +11553,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11080,15 +11606,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11100,9 +11628,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11146,15 +11675,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11166,9 +11697,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11212,15 +11744,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11232,9 +11766,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11278,23 +11813,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11338,15 +11876,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11358,9 +11898,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11404,15 +11945,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11424,9 +11967,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11470,15 +12014,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11490,9 +12036,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11536,23 +12083,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11596,15 +12146,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11616,9 +12168,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11662,15 +12215,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11682,9 +12237,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11728,15 +12284,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11748,9 +12306,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11788,23 +12347,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11842,15 +12404,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11862,9 +12426,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11902,15 +12467,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11922,9 +12489,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -11962,15 +12530,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastPositiveInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -11982,9 +12552,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -12022,23 +12593,26 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
 			"effects": [
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -12076,15 +12650,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -12096,9 +12672,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -12136,15 +12713,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -12156,9 +12735,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],
@@ -12196,15 +12776,17 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastNegativeInteraction",
-					"first": "responder",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -12216,9 +12798,10 @@
 					"value": true
 				},
 				{
-					"category": "progress",
+					"category": "conversation",
 					"type": "LastInteractionResponse",
 					"first": "initiator",
+					"second": "responder",
 					"value": false
 				}
 			],

@@ -35,6 +35,7 @@
 			"isBoolean": true,
 			"types": [
 				"ticket taker",
+				"bouncer",
 				"stranger",
 				"acquaintance",
 				"servant",
@@ -54,6 +55,33 @@
 				"HasTicket",
 				"GaveTicket",
 				"HasMark",
+				"SuccessfulDistraction",
+				"BackstageAccess",
+				"ThrownOut",
+				"SeenBackstage",
+				"FinalInteraction",
+				"GameCompleted"
+			]
+		},
+		{
+			"actionable": true,
+			"category": "conversationround",
+			"defaultValue": 0,
+			"directionType": "directed",
+			"isBoolean": false,
+			"maxValue": 2,
+			"minValue": 0,
+			"types": [
+				"round"
+			]
+		},
+		{
+			"actionable": false,
+			"category": "conversation",
+			"defaultValue": false,
+			"directionType": "directed",
+			"isBoolean": true,
+			"types": [
 				"GreetStranger",
 				"GreetedStranger",
 				"AskStrangerQuestion",
@@ -63,22 +91,18 @@
 				"StompAndWhistle",
 				"TellTheTruthAcquaintance",
 				"TellALieAcquaintance",
-				"AcquainctanceSecondInteraction",
+				"AcquaintanceSecondInteraction",
 				"AskAcquaintanceFavor",
 				"AskAcquaintanceDistraction",
 				"AskAcquaintanceInfo",
 				"BerateAcquaintance",
 				"NearStageInteraction",
 				"OfferARefreshment",
-				"SuccessfulDistraction",
-				"BackstageAccess",
 				"LastPositiveInteraction",
 				"LastNegativeInteraction",
 				"LastInteractionResponse",
-				"ThrownOut",
-				"SeenBackstage",
-				"FinalInteraction",
-				"GameCompleted"
+				"CompletedConversationNegative",
+				"CompletedConversationPositive"
 			]
 		}
 	]

@@ -5,609 +5,1798 @@
 			"data": [
 				{
 					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+
+
+				{
+					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+
+				
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"value": true,
+					"first": "Servant Player"
+				},
+
+
+				{
+					"category": "role",
 					"type": "ticket taker",
 					"value": true,
-					"first": "Ticket Taker"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Ticket Taker"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
+
+
+				{
+					"category": "role",
+					"type": "bouncer",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Bruno Dufort, semainier"
+				},
+
+
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Servant Stranger",
+					"first": "Monsieur d'Ain d'Ygeste",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "stranger",
 					"value": true,
-					"first": "Female Servant Stranger"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
 				{
 					"category": "role",
-					"type": "female",
+					"type": "male",
 					"value": true,
-					"first": "Female Servant Stranger"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
 				{
 					"category": "role",
-					"type": "servant",
+					"type": "noble",
 					"value": true,
-					"first": "Female Servant Stranger"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Female Servant Stranger"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
+
+
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Noble Stranger",
+					"first": "Monsieur d'Hautainville",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "stranger",
 					"value": true,
-					"first": "Male Noble Stranger"
+					"first": "Monsieur d'Hautainville"
 				},
 				{
 					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Male Noble Stranger"
+					"first": "Monsieur d'Hautainville"
 				},
 				{
 					"category": "role",
 					"type": "noble",
 					"value": true,
-					"first": "Male Noble Stranger"
+					"first": "Monsieur d'Hautainville"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Male Noble Stranger"
+					"first": "Monsieur d'Hautainville"
 				},
+
+
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Noble Stranger",
+					"first": "Monsieur de Gentilly",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur de Gentilly"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur des Trois-Landes"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Issy",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Issy",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Issy",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Issy",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Issy",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Issy",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Issy",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Issy",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Issy",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "stranger",
 					"value": true,
-					"first": "Female Noble Stranger"
+					"first": "Monsieur d'Issy"
 				},
 				{
 					"category": "role",
-					"type": "female",
+					"type": "male",
 					"value": true,
-					"first": "Female Noble Stranger"
+					"first": "Monsieur d'Issy"
 				},
 				{
 					"category": "role",
 					"type": "noble",
 					"value": true,
-					"first": "Female Noble Stranger"
+					"first": "Monsieur d'Issy"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Female Noble Stranger"
+					"first": "Monsieur d'Issy"
 				},
+
+
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Servant Acquaintance",
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Chérubin",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Chérubin",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Chérubin",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Chérubin",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Chérubin",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Chérubin",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Chérubin",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "acquaintance",
 					"value": true,
-					"first": "Male Servant Acquaintance"
+					"first": "Chérubin"
 				},
 				{
 					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Male Servant Acquaintance"
+					"first": "Chérubin"
 				},
 				{
 					"category": "role",
 					"type": "servant",
 					"value": true,
-					"first": "Male Servant Acquaintance"
+					"first": "Chérubin"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Male Servant Acquaintance"
+					"first": "Chérubin"
 				},
+
+
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Male Noble Acquaintance",
+					"first": "Madame de Cher-sur-Tendre",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "acquaintance",
 					"value": true,
-					"first": "Male Noble Acquaintance"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
 					"category": "role",
-					"type": "male",
+					"type": "female",
 					"value": true,
-					"first": "Male Noble Acquaintance"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
 					"category": "role",
 					"type": "noble",
 					"value": true,
-					"first": "Male Noble Acquaintance"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Male Noble Acquaintance"
+					"first": "Madame de Cher-sur-Tendre"
 				},
+
+
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Female Noble Acquaintance",
+					"first": "Mademoiselle Eloïse de Hauteclaire",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "acquaintance",
 					"value": true,
-					"first": "Female Noble Acquaintance"
+					"first": "Mademoiselle Eloïse de Hauteclaire"
 				},
 				{
 					"category": "role",
 					"type": "female",
 					"value": true,
-					"first": "Female Noble Acquaintance"
+					"first": "Mademoiselle Eloïse de Hauteclaire"
 				},
 				{
 					"category": "role",
 					"type": "noble",
 					"value": true,
-					"first": "Female Noble Acquaintance"
+					"first": "Mademoiselle Eloïse de Hauteclaire"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Female Noble Acquaintance"
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Ninon",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Ninon",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Ninon",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Ninon",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Ninon",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Ninon",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Ninon",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Ninon",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Ninon",
+					"second": "Servant Player"
 				},
 				{
 					"category": "role",
-					"type": "player",
+					"type": "stranger",
 					"value": true,
-					"first": "Male Noble Player"
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"value": true,
-					"first": "Male Noble Player"
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"value": true,
-					"first": "Male Noble Player"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"value": true,
-					"first": "Male Noble Player"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": true,
-					"first": "Female Noble Player"
+					"first": "Ninon"
 				},
 				{
 					"category": "role",
 					"type": "female",
 					"value": true,
-					"first": "Female Noble Player"
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"value": true,
-					"first": "Female Noble Player"
-				},
-				{
-					"category": "progress",
-					"type": "HasTicket",
-					"value": true,
-					"first": "Female Noble Player"
+					"first": "Ninon"
 				},
 				{
 					"category": "role",
 					"type": "servant",
 					"value": true,
-					"first": "Servant Player"
+					"first": "Ninon"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Ninon"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Toinette",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Toinette",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Toinette",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Toinette",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Toinette",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Toinette",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Toinette"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Fruit-seller / la Fruitière"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Cellist",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Cellist",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Cellist",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Cellist",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Cellist",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Cellist",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Cellist",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Cellist",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Cellist",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Cellist"
 				},
 				{
 					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Servant Player"
+					"first": "Cellist"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Cellist"
 				},
 				{
 					"category": "role",
 					"type": "player",
-					"value": true,
-					"first": "Servant Player"
+					"value": false,
+					"first": "Cellist"
+				},
+
+				
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "L'Animateur",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "progress",
-					"type": "HasTicket",
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "L'Animateur",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "L'Animateur",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "L'Animateur",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "L'Animateur",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "L'Animateur",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "L'Animateur",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "L'Animateur",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "L'Animateur",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
 					"value": true,
-					"first": "Servant Player"
+					"first": "L'Animateur"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "L'Animateur"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "L'Animateur"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "L'Animateur"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fanon la Poche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fanon la Poche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fanon la Poche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fanon la Poche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fanon la Poche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fanon la Poche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fanon la Poche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fanon la Poche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fanon la Poche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Fanon la Poche"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Henriette Lavocat",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Henriette Lavocat",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Henriette Lavocat",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Henriette Lavocat",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Henriette Lavocat",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Henriette Lavocat",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Henriette Lavocat",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Henriette Lavocat",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Henriette Lavocat",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Henriette Lavocat"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Jeannot la Panse",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Jeannot la Panse",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Jeannot la Panse",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Jeannot la Panse",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Jeannot la Panse",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Jeannot la Panse",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Jeannot la Panse",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Jeannot la Panse",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Jeannot la Panse",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Jeannot la Panse"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Perso 2",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Perso 2",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Perso 2",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Perso 2",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Perso 2",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Perso 2",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Perso 2",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Perso 2",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Perso 2",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Perso 2"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Perso 2"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Perso 2"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Perso 2"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Seated Female Noble",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Seated Female Noble",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Seated Female Noble",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Seated Female Noble",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Seated Female Noble",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Seated Female Noble",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Seated Female Noble",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Seated Female Noble",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Seated Female Noble",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Seated Female Noble"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Seated Female Noble"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Seated Female Noble"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Seated Female Noble"
 				}
 			]
 		}

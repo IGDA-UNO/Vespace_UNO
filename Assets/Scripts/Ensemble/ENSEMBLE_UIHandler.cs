@@ -79,20 +79,57 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject SteamVRObjects;
     public Text CharacterNameText;
     public Text DialogueText;
+    public GameObject dialogueIcon;
 
     public Vector3 dialogueOffset = new Vector3(-0.03f, -0.03f, 0.5f);
+
+    public Texture MarieCatherineBienfait;
+    public Texture BrunoDufort;
+    public Texture MonsieurdAindYgeste;
+    public Texture MonsieurdHautainville;
+    public Texture MonsieurdeGentilly;
+    public Texture MonsieurdesTroisLandes;
+    public Texture MonsieurdIssy;
+    public Texture MadamedeBlaselEveque;
+    public Texture Cherubin;
+    public Texture MadamedeChersurTendre;
+    public Texture MademoiselleEloisedeHauteclaire;
+    public Texture Ninon;
+    public Texture Toinette;
+    public Texture LaFruitiere;
+    public Texture Cellist;
+    public Texture Lanimateur;
+    public Texture FanchonLaPoche;
+    public Texture HenrietteLavocat;
+    public Texture JeannotLaPanse;
+    public Texture Perso2;
+    public Texture SeatedFemaleNoble;
 
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
         "Servant Player", 
-        "Female Servant Stranger", 
-        "Male Noble Stranger", 
-        "Female Noble Stranger", 
-        "Male Servant Acquaintance", 
-        "Male Noble Acquaintance", 
-        "Female Noble Acquaintance", 
-        "Ticket Taker" 
+		"Marie-Catherine Bienfait, ticket taker",
+		"Bruno Dufort, semainier",
+		"Monsieur d'Ain d'Ygeste",
+		"Monsieur d'Hautainville",
+		"Monsieur de Gentilly",
+		"Monsieur des Trois-Landes",
+		"Monsieur d'Issy",
+		"Madame de Blasé-l'Evêque",
+		"Chérubin",
+		"Madame de Cher-sur-Tendre",
+		"Mademoiselle Eloïse de Hauteclaire",
+		"Ninon",
+		"Toinette",
+		"Fruit-seller / la Fruitière",
+		"Cellist",
+		"L'Animateur",
+		"Fanon la Poche",
+		"Henriette Lavocat",
+		"Jeannot la Panse",
+		"Perso 2",
+		"Seated Female Noble"
     };
 
     void Start()
@@ -427,10 +464,16 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
 
+        Debug.Log("getCharacterActions: " + initiator);
+        Debug.Log("getCharacterActions: " + objectName);
+
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
         List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
 
-        if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+        if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
+            CloseMenu();
+            StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
+        } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
             bool finalInteraction = false;
 
             foreach (Action action in actions) {
@@ -469,22 +512,30 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         float x = 0;
         float y = -0.05f;
         float z = 5602.218f;
-        
-        foreach (Action action in actions)
-        {   
-            GameObject goButton = (GameObject)Instantiate(prefabButton);
-            goButton.transform.SetParent(actionsMenuImageZone, false);
 
-            
-            goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
-            goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
-            y -= 0.1f;
+        Debug.Log("actions: " + actions);
 
-            Button tempButton = goButton.GetComponent<Button>();
-            tempButton.GetComponentInChildren<Text>().text = action.Name;
-            tempButton.onClick.AddListener(() => TakeAction(objectName, action));
+        if (actions.Count > 0) {
+            foreach (Action action in actions)
+            {   
+                Debug.Log("action: " + action);
+                GameObject goButton = (GameObject)Instantiate(prefabButton);
+                goButton.transform.SetParent(actionsMenuImageZone, false);
 
-           actionButtonRefs.Add(goButton);
+                
+                goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
+                goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
+                y -= 0.1f;
+
+                Button tempButton = goButton.GetComponent<Button>();
+                tempButton.GetComponentInChildren<Text>().text = action.Name;
+                tempButton.onClick.AddListener(() => TakeAction(objectName, action));
+
+                actionButtonRefs.Add(goButton);
+            }
+        } else {
+            CloseMenu();
+            StartCoroutine(DisplayDialogue(objectName, "This person seems busy or uninterested in talking to you."));
         }
     }
 
@@ -580,6 +631,53 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    public void setDialogueHudImage(string characterName)
+    {
+        if (characterName == "Marie-Catherine Bienfait, ticket taker") {
+            dialogueIcon.GetComponent<RawImage>().texture = MarieCatherineBienfait;
+        } else if (characterName == "Bruno Dufort, semainier") {
+            dialogueIcon.GetComponent<RawImage>().texture = BrunoDufort;
+        } else if (characterName == "Monsieur d'Ain d'Ygeste") {
+            dialogueIcon.GetComponent<RawImage>().texture = MonsieurdAindYgeste;
+        } else if (characterName == "Monsieur d'Hautainville") {
+            dialogueIcon.GetComponent<RawImage>().texture = MonsieurdHautainville;
+        } else if (characterName == "Monsieur de Gentilly") {
+            dialogueIcon.GetComponent<RawImage>().texture = MonsieurdeGentilly;
+        } else if (characterName == "Monsieur des Trois-Landes") {
+            dialogueIcon.GetComponent<RawImage>().texture = MonsieurdesTroisLandes;
+        } else if (characterName == "Monsieur d'Issy") {
+            dialogueIcon.GetComponent<RawImage>().texture = MonsieurdIssy;
+        } else if (characterName == "Madame de Blasé-l'Evêque") {
+            dialogueIcon.GetComponent<RawImage>().texture = MadamedeBlaselEveque;
+        } else if (characterName == "Chérubin") {
+            dialogueIcon.GetComponent<RawImage>().texture = Cherubin;
+        } else if (characterName == "Madame de Cher-sur-Tendre") {
+            dialogueIcon.GetComponent<RawImage>().texture = MadamedeChersurTendre;
+        } else if (characterName == "Mademoiselle Eloïse de Hauteclaire") {
+            dialogueIcon.GetComponent<RawImage>().texture = MademoiselleEloisedeHauteclaire;
+        } else if (characterName == "Ninon") {
+            dialogueIcon.GetComponent<RawImage>().texture = Ninon;
+        } else if (characterName == "Toinette") {
+            dialogueIcon.GetComponent<RawImage>().texture = Toinette;
+        } else if (characterName == "Fruit-seller / la Fruitière") {
+            dialogueIcon.GetComponent<RawImage>().texture = LaFruitiere;
+        } else if (characterName == "Cellist") {
+            dialogueIcon.GetComponent<RawImage>().texture = Cellist;
+        } else if (characterName == "L'Animateur") {
+            dialogueIcon.GetComponent<RawImage>().texture = Lanimateur;
+        } else if (characterName == "Fanchon la Poche") {
+            dialogueIcon.GetComponent<RawImage>().texture = FanchonLaPoche;
+        } else if (characterName == "Henriette Lavocat") {
+            dialogueIcon.GetComponent<RawImage>().texture = HenrietteLavocat;
+        } else if (characterName == "Jeannot la Panse") {
+            dialogueIcon.GetComponent<RawImage>().texture = JeannotLaPanse;
+        } else if (characterName == "Perso 2") {
+            dialogueIcon.GetComponent<RawImage>().texture = Perso2;
+        } else if (characterName == "Seated Female Noble") {
+            dialogueIcon.GetComponent<RawImage>().texture = SeatedFemaleNoble;
+        }
+    }
+
     public void placeDialogueHud()
     {
         dialogueHUD.transform.rotation = playerCamera.transform.rotation;
@@ -594,6 +692,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         Debug.Log("DisplayDialogue characterName: " + characterName);
         Debug.Log("DisplayDialogue dialogue: " + dialogue);
 
+        setDialogueHudImage(characterName);
         placeDialogueHud();
 
         CharacterNameText.text = characterName;

@@ -1,26 +1,5 @@
 {
 	"cast": {
-		"Ticket Taker": {
-			"name": "Ticket Taker"
-		},
-		"Female Servant Stranger": {
-			"name": "Female Servant Stranger"
-		},
-		"Male Noble Stranger": {
-			"name": "Male Noble Stranger"
-		},
-		"Female Noble Stranger": {
-			"name": "Female Noble Stranger"
-		},
-		"Male Servant Acquaintance": {
-			"name": "Male Servant Acquaintance"
-		},
-		"Male Noble Acquaintance": {
-			"name": "Male Noble Acquaintance"
-		},
-		"Female Noble Acquaintance": {
-			"name": "Female Noble Acquaintance"
-		},
 		"Male Noble Player": {
 			"name": "Male Noble Player"
 		},
@@ -29,6 +8,69 @@
 		},
 		"Servant Player": {
 			"name": "Servant Player"
+		},
+		"Marie-Catherine Bienfait, ticket taker": {
+			"name": "Marie-Catherine Bienfait, ticket taker"
+		},
+		"Bruno Dufort, semainier": {
+			"name": "Bruno Dufort, semainier"
+		},
+		"Monsieur d'Ain d'Ygeste": {
+			"name": "Monsieur d'Ain d'Ygeste"
+		},
+		"Monsieur d'Hautainville": {
+			"name": "Monsieur d'Hautainville"
+		},
+		"Monsieur de Gentilly": {
+			"name": "Monsieur de Gentilly"
+		},
+		"Monsieur des Trois-Landes": {
+			"name": "Monsieur des Trois-Landes"
+		},
+		"Monsieur d'Issy": {
+			"name": "Monsieur d'Issy"
+		},
+		"Madame de Blasé-l'Evêque": {
+			"name": "Madame de Blasé-l'Evêque"
+		},
+		"Chérubin": {
+			"name": "Chérubin"
+		},
+		"Madame de Cher-sur-Tendre": {
+			"name": "Madame de Cher-sur-Tendre"
+		},
+		"Mademoiselle Eloïse de Hauteclaire": {
+			"name": "Mademoiselle Eloïse de Hauteclaire"
+		},
+		"Ninon": {
+			"name": "Ninon"
+		},
+		"Toinette": {
+			"name": "Toinette"
+		},
+		"Fruit-seller / la Fruitière": {
+			"name": "Fruit-seller / la Fruitière"
+		},
+		"Cellist": {
+			"name": "Cellist"
+		},
+		"L'Animateur": {
+			"name": "L'Animateur"
+		},
+		"Fanon la Poche": {
+			"name": "Fanon la Poche"
+		},
+		"Henriette Lavocat": {
+			"name": "Henriette Lavocat"
+		},
+		"Jeannot la Panse": {
+			"name": "Jeannot la Panse"
+		},
+		"Perso 2": {
+			"name": "Perso 2"
+		},
+		"Seated Female Noble": {
+			"name": "Seated Female Noble"
 		}
 	}
 }
