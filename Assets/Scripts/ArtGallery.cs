@@ -72,6 +72,7 @@ public class ArtGallery : MonoBehaviour
 
     public void FinishedButtonPushed(){
         Debug.Log("Finished button pushed!");
+        gameObject.SetActive(false);
     }
 
     private void UpdatePlanToDisplay(){

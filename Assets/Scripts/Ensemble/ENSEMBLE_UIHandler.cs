@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 using Valve.VR.Extras;
 using Valve.VR;
 using Ensemble;
@@ -72,6 +73,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public PROUVE_OmekaPad prouve;
 
     public HUD hud;
+    public ArtGallery artGallery;
 
     public GameObject dialogueHUD;
     public Camera playerCamera;
@@ -82,6 +84,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject dialogueIcon;
 
     public Vector3 dialogueOffset = new Vector3(-0.03f, -0.03f, 0.5f);
+
+    public VideoPlayer marionetteVideoFront;
+    public VideoPlayer marionetteVideoBack;
 
     public Texture MarieCatherineBienfait;
     public Texture BrunoDufort;
@@ -143,7 +148,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         //Turn off the play on start...
         GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(false);
+        GameObject.Find("Marionettes").transform.Find("Marionette Video Back").gameObject.SetActive(false);
 
+        //Testing jumping to specific places in the video...
+        //marionetteVideoBack.frame = 4000;
+        //Debug.Log("Total frames of back video: " + marionetteVideoBack.frameCount);
 
         mainActiveUI = false;
         actionsActiveUI = false;
@@ -713,6 +722,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void OpenPlans()
     {
         hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
+        Debug.Log("***PLANS CLICKED****");
+        artGallery.gameObject.SetActive(true);
     }
 
     public void clickOnObject(string objectName, Vector3 position)  
