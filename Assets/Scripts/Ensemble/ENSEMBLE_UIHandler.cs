@@ -141,6 +141,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             playerCamera = fallBackCamera;
         }
 
+        //Turn off the play on start...
+        GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(false);
+
+
         mainActiveUI = false;
         actionsActiveUI = false;
         attributesActiveUI = false;
@@ -582,6 +586,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 if (e.Type == "HasMark" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.RECEIVED_MARK);
                     Debug.Log("Got mark!");
+
+                    //start the show -- not sure if this is where people start taking their seats?
+                    GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
                 }
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
