@@ -110,6 +110,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Texture Perso2;
     public Texture SeatedFemaleNoble;
 
+    public string finalInterlocutor;
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -509,16 +511,25 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             if (finalInteraction == true) {
                 Debug.Log("found last interaction: " + actions[0].Name);
+                finalInterlocutor = objectName;
+
                 TakeAction(objectName, actions[0]);
                 volitionInterface = data.ensemble.calculateVolition(cast);
                 actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
             }
         } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
-            if (objectName == "Ticket Taker") {
+            if (objectName == "Marie-Catherine Bienfait, ticket taker") {
                 if (actions.Count > 0) {
                     CloseMenu();
                     StartCoroutine(ShowFinalText(objectName, actions[0]));
                 }
+            } else if (objectName == finalInterlocutor) {
+                CloseMenu();
+                StartCoroutine(DisplayDialogue(objectName, "Shouldn't you be on your way out by now?"));
+            } else {
+                CloseMenu();
+                StartCoroutine(DisplayDialogue(objectName, "Stop, thief!"));
+                StartCoroutine(GameOver());
             }
         }
         
@@ -532,6 +543,15 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             foreach (Action action in actions)
             {   
                 Debug.Log("action: " + action);
+                
+                string actionName = action.Name;
+
+                if (actionName.Contains("(") && actionName.Contains(")")) {
+                    int parensStart = actionName.LastIndexOf("(");
+                    int parensEnd = actionName.LastIndexOf(")") + 1;
+                    actionName = actionName.Remove(parensStart, parensEnd - parensStart);
+                }
+
                 GameObject goButton = (GameObject)Instantiate(prefabButton);
                 goButton.transform.SetParent(actionsMenuImageZone, false);
 
@@ -541,7 +561,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 y -= 0.1f;
 
                 Button tempButton = goButton.GetComponent<Button>();
-                tempButton.GetComponentInChildren<Text>().text = action.Name;
+                tempButton.GetComponentInChildren<Text>().text = actionName;
                 tempButton.onClick.AddListener(() => TakeAction(objectName, action));
 
                 actionButtonRefs.Add(goButton);
