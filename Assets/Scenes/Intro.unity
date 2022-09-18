@@ -1396,6 +1396,44 @@ MonoBehaviour:
   demoCube: {fileID: 2003706375}
   userName: {fileID: 376449449}
   sceneHandler: {fileID: 396811139}
+  textIndex: 0
+  welcomeCanvasText: {fileID: 594495218}
+  introText1: "This virtual reality playable experience is one of the primary research
+    outputs of a five-year collaborative research project involving scholars in literature,
+    theatre, history, architecture, and computer science, primarily sponsored by
+    the National Endowment for the Humanities Digital Humanities Advancement Grants
+    HAA-255998-17 (Phase I) and HAA-266501-19 (Phase II). Don\u2019t forget to visit
+    our project webpage, vespace.cs.uno.edu, to learn more about the people and ideas
+    behind this experience!"
+  introText2: "In this experience, you will have the opportunity to choose between
+    three different characters \u2013 a male noble, a female noble, and a male servant
+    \u2013 and to embark on a mission to steal the plans for a new theatre to be
+    built at the Foire Saint-Germain, which have been poorly hidden backstage at
+    Bienfait\u2019s marionette theatre! In order to accomplish this goal, you will
+    have to: enter the theatre; try to convince someone to help you get backstage;
+    obtain the plans; and then leave the theatre without attracting too much notice."
+  introText3: "The virtual environment is modeled on a miniature painting that decorates
+    the top of a jeweled snuffbox, currently in the collection of the Metropolitan
+    Museum in New York.You can examine this source in this introductory space, and
+    find more information about our process of transforming this 3cm x 6cm retrospective
+    depiction of a now-lost performance space into the setting for an immersive playable
+    experience in the articles on the VESPACE website. The characters in the space
+    are all derived from period artworks, and are intended to represent a selection
+    of the different social types one might meet at an eighteenth-century Fair theatre,
+    which was one of the most socially mixed public environments of Ancien R\xE9gime
+    France."
+  introText4: This sensory-immersive environment, and the interactions with non-player
+    characters(NPCs) are also one way that our research team has attempted to present
+    high-level scholarship in an accessible, engaging, non-print format.To that end,
+    there are objects throughout the space that link to a database of explanatory
+    materials, allowing this sensory experience to serve as the platform for further
+    exploration of eighteenth-century French public culture.
+  introText5: "This phase of the VESPACE project represents a proof-of-concept for
+    many of our experimental ambitions for re-thinking historically-oriented scholarship
+    for the twenty-first century.We hope you enjoy this experience, which represents
+    the work of dozens of scholars across the US and Europe.We would be delighted
+    to hear from you with feedback or suggestions \u2013 please contact us through
+    our website, vespace.cs.uno.org \u2013 and enjoy the game!"
 --- !u!1 &405661748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,8 +2012,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 396811140}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: closeFirstCanvas
+        m_TargetAssemblyTypeName: PROUVE_introduction, Assembly-CSharp
+        m_MethodName: advanceIntroText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2099,34 +2137,7 @@ MonoBehaviour:
     the National Endowment for the Humanities Digital Humanities Advancement Grants
     HAA-255998-17 (Phase I) and HAA-266501-19 (Phase II). Don\u2019t forget to visit
     our project webpage, vespace.cs.uno.edu, to learn more about the people and ideas
-    behind this experience!\r\n\r\nIn this experience, you will have the opportunity
-    to choose between three different characters \u2013 a male noble, a female noble,
-    and a male servant \u2013 and to embark on a mission to steal the plans for a
-    new theatre to be built at the Foire Saint-Germain, which have been poorly hidden
-    backstage at Bienfait\u2019s marionette theatre! In order to accomplish this
-    goal, you will have to: enter the theatre; try to convince someone to help you
-    get backstage; obtain the plans; and then leave the theatre without attracting
-    too much notice.\r\n\r\nThe virtual environment is modeled on a miniature painting
-    that decorates the top of a jeweled snuffbox, currently in the collection of
-    the Metropolitan Museum in New York. You can examine this source in this introductory
-    space, and find more information about our process of transforming this 3cm x
-    6cm retrospective depiction of a now-lost performance space into the setting
-    for an immersive playable experience in the articles on the VESPACE website.
-    The characters in the space are all derived from period artworks, and are intended
-    to represent a selection of the different social types one might meet at an eighteenth-century
-    Fair theatre, which was one of the most socially mixed public environments of
-    Ancien R\xE9gime France.\r\n\r\nThis sensory-immersive environment, and the interactions
-    with non-player characters (NPCs) are also one way that our research team has
-    attempted to present high-level scholarship in an accessible, engaging, non-print
-    format. To that end, there are objects throughout the space that link to a database
-    of explanatory materials, allowing this sensory experience to serve as the platform
-    for further exploration of eighteenth-century French public culture.\r\n\r\nThis
-    phase of the VESPACE project represents a proof-of-concept for many of our experimental
-    ambitions for re-thinking historically-oriented scholarship for the twenty-first
-    century. We hope you enjoy this experience, which represents the work of dozens
-    of scholars across the US and Europe. We would be delighted to hear from you
-    with feedback or suggestions \u2013 please contact us through our website, vespace.cs.uno.org
-    \u2013 and enjoy the game!"
+    behind this experience!\r"
 --- !u!222 &594495219
 CanvasRenderer:
   m_ObjectHideFlags: 0
