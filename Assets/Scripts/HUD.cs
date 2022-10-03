@@ -85,14 +85,14 @@ public class HUD : MonoBehaviour
 
     private string GetObjectiveText(){
         if(HUD.questProgress == HUD.NO_TICKET){
-            return "Get a ticket from the ticket taker!";
+            return "Give your ticket to the ticket taker!";
         }
         else if(HUD.questProgress == HUD.POSSESS_TICKET){
             return "Hand your ticket to the ticket taker!";
         }
         else if (HUD.questProgress == HUD.HANDED_TICKET_TO_TICKET_TAKER)
         {
-            return "Receive your mark so you may enter the theatre!";
+            return "Speak to the ticket taker again to receive your mark!";
         }
         else if (HUD.questProgress == HUD.RECEIVED_MARK)
         {

@@ -82,6 +82,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public ArtGallery artGallery;
 
     public GameObject dialogueHUD;
+    public GameObject resultsPanel;
     public Camera playerCamera;
     public Camera fallBackCamera;
     public GameObject SteamVRObjects;
@@ -90,6 +91,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject dialogueIcon;
 
     public Vector3 dialogueOffset = new Vector3(-0.03f, -0.03f, 0.5f);
+    public Vector3 resultsOffset = new Vector3(-0.03f, -0.03f, 0.5f);
 
     public VideoPlayer marionetteVideoFront;
     public VideoPlayer marionetteVideoBack;
@@ -117,6 +119,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Texture SeatedFemaleNoble;
 
     public string finalInterlocutor;
+
+    private List<Action> gameActions = new List<Action>();
 
     private Cast cast = new Cast { 
         "Male Noble Player", 
@@ -420,7 +424,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                 getCharacterData(ensemble.name);
                 getCharacterHistory(ensemble.name);
-                getCharacterActions(ensemble.name);
+                getCharacterActions(ensemble.name, false);
             }
         }
         if (e.target.gameObject.layer == 5)
@@ -525,27 +529,30 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     public void getCharacterOmeka(string objectName){
-        Debug.Log("Getting Omeka data for " + objectName);
+        // Debug.Log("Getting Omeka data for " + objectName);
         GameObject characterInQuestion = GameObject.Find(objectName);
         currentOmekaIDOfClickedCharacter = characterInQuestion.GetComponent<EnsembleObject>().omekaDatabaseID;
-        Debug.Log("Their database id is: " + currentOmekaIDOfClickedCharacter);
+        // Debug.Log("Their database id is: " + currentOmekaIDOfClickedCharacter);
         currentPositionOfClickedCharacter = characterInQuestion.transform.position;
     }
 
-    public void getCharacterActions(string objectName)
+    public void getCharacterActions(string objectName, bool suppressResponse)
     {
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
 
-        Debug.Log("getCharacterActions: " + initiator);
-        Debug.Log("getCharacterActions: " + objectName);
+        // Debug.Log("getCharacterActions: " + initiator);
+        // Debug.Log("getCharacterActions: " + objectName);
 
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
         List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
 
         if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
             CloseMenu();
-            StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
+
+            if (!suppressResponse) {
+                StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
+            }
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
             bool finalInteraction = false;
 
@@ -568,7 +575,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
 
             if (finalInteraction == true) {
-                Debug.Log("found last interaction: " + actions[0].Name);
+                // Debug.Log("found last interaction: " + actions[0].Name);
                 finalInterlocutor = objectName;
 
                 TakeAction(objectName, actions[0]);
@@ -579,7 +586,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             if (objectName == "Marie-Catherine Bienfait, ticket taker") {
                 if (actions.Count > 0) {
                     CloseMenu();
-                    StartCoroutine(ShowFinalText(objectName, actions[0]));
+                    ShowFinalText(objectName, actions[0]);
                 }
             } else if (objectName == finalInterlocutor) {
                 CloseMenu();
@@ -595,12 +602,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         float y = -0.05f;
         float z = 5602.218f;
 
-        Debug.Log("actions: " + actions);
+        // Debug.Log("actions: " + actions);
 
         if (actions.Count > 0) {
             foreach (Action action in actions)
             {   
-                Debug.Log("action: " + action);
+                // Debug.Log("action: " + action);
                 
                 string actionName = action.Name;
 
@@ -626,15 +633,42 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
         } else {
             CloseMenu();
-            StartCoroutine(DisplayDialogue(objectName, "This person seems busy or uninterested in talking to you."));
+            if (!suppressResponse) {
+                StartCoroutine(DisplayDialogue(objectName, "This person seems busy or uninterested in talking to you."));
+            }
         }
     }
 
-    private IEnumerator<object> ShowFinalText(string objectName, Action action)
+    private void HandleFinalResults(string title, string results)
     {
+        actionsBuilder.Clear();
+        actionsBuilder.Append(title + "\n\n");
+
+        if (title == "Game Log" && results != "")
+        {
+            actionsBuilder.Append(results + "\n\n");
+        }
+
+        foreach(Action act in gameActions)
+        {
+            actionsBuilder.Append(act.ToString() + "\n");
+        }
+
+        resultsPanel.transform.rotation = playerCamera.transform.rotation;
+        resultsPanel.transform.SetParent(playerCamera.transform);
+        resultsPanel.transform.localPosition = resultsOffset;
+
+        resultsPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
+    }
+
+    private void ShowFinalText(string objectName, Action action)
+    {
+        Debug.Log("ShowFinalText");
         StartCoroutine(DisplayDialogue(objectName, action.Name));
-        yield return new WaitForSeconds(10);
-        TakeAction(objectName, action);
+        string finalResult = getDialogueResponse(action);
+        data.ensemble.takeAction(action);
+        hud.UpdateQuestProgress(HUD.GAME_COMPLETED);
+        HandleFinalResults("Results", finalResult);
     }
 
     private string getDialogueResponse(Action action) 
@@ -655,6 +689,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private void TakeAction(string objectName, Action action)
     {
         data.ensemble.takeAction(action);
+        gameActions.Add(action);
 
         string dialogueResponse = "";
 
@@ -700,11 +735,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     Debug.Log("Completed final interaction!");
                 }
 
-                if (e.Type == "GameCompleted" && e.Value is bool && e.Value is true) {
-                    hud.UpdateQuestProgress(HUD.GAME_COMPLETED);
-                    Debug.Log("Completed game!");
-                }
-
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.THROWN_OUT);
                     Debug.Log("Got thrown out!");
@@ -716,6 +746,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         dialogueResponse = getDialogueResponse(action);
 
         CloseMenu();
+        DisplayActions();
+        getCharacterActions(objectName, true);
+
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
     }
 
@@ -723,6 +756,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Intro");
+        HandleFinalResults("Game Over", "");
     }
 
     public void setDialogueHudImage(string characterName)
@@ -853,7 +887,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             getCharacterData(objectName);
             getCharacterHistory(objectName);
-            getCharacterActions(objectName);
+            getCharacterActions(objectName, false);
             getCharacterOmeka(objectName);
         }
     }
