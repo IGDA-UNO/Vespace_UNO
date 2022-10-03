@@ -12,6 +12,7 @@ public class EnsembleObject : MonoBehaviour
     private Vector3 thisCenter;
     private ENSEMBLE_UIHandler handler;
     public string currentName;
+    public int omekaDatabaseID;
 
     public void drawLineFromObject(GameObject targetObject, float duration)
     {

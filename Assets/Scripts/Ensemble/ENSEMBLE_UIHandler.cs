@@ -25,6 +25,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject historyUI;
     public bool historyActiveUI;
 
+    public GameObject omekaUI;
+    public bool omekaActiveUI;
+
     public GameObject leftHand;
 
     public SteamVR_LaserPointer laserPointer;
@@ -50,6 +53,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject socialRecordLabelMenu;
     public GameObject statusMenu;
     public GameObject historyMenu;
+    public GameObject omekaMenu;
     public GameObject actionsMenu;
     public Transform actionsMenuImageZone;
     public GameObject prefabButton;
@@ -66,6 +70,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public StringBuilder statusBuilder;
     public StringBuilder historyBuilder;
     public StringBuilder actionsBuilder;
+    private int currentOmekaIDOfClickedCharacter;
+    private Vector3 currentPositionOfClickedCharacter;
 
     List<GameObject> actionButtonRefs = new List<GameObject>();
     private bool exitClick;
@@ -160,6 +166,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         actionsActiveUI = false;
         attributesActiveUI = false;
         historyActiveUI = false;
+        omekaActiveUI = false;
 
         laserPointer.color = miss_color;
         laserPointer.PointerIn += PointerInside;
@@ -189,6 +196,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         statusMenu = GameObject.Find("StatusList");
         historyMenu = GameObject.Find("HistoryList");
         attributesMenu = GameObject.Find("AttributesList");
+        omekaMenu = GameObject.Find("OmekaList");
         traitsMenu = GameObject.Find("TraitsList");
         clothingMenu = GameObject.Find("TraitClothingList");
         professionMenu = GameObject.Find("ProfessionList");
@@ -210,6 +218,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             historyUI.SetActive(false);
             historyActiveUI = false;
+
+            omekaUI.SetActive(false);
+            omekaActiveUI = false;
         }
         prouve.closePad();
     }
@@ -229,6 +240,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             historyUI.SetActive(false);
             historyActiveUI = false;
+
+            omekaUI.SetActive(false);
+            omekaActiveUI = false;
 
             FindObjectsGetStrings();
             
@@ -252,6 +266,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             historyUI.SetActive(false);
             historyActiveUI = false;
+
+            omekaUI.SetActive(false);
+            omekaActiveUI = false;
 
             FindObjectsGetStrings();
 
@@ -279,9 +296,34 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyUI.SetActive(true);
             historyActiveUI = true;
 
+            omekaUI.SetActive(false);
+            omekaActiveUI = false;
+
             FindObjectsGetStrings();
 
             historyMenu.GetComponent<UnityEngine.UI.Text>().text = historyBuilder.ToString();
+        }
+    }
+
+    public void DisplayOmeka()
+    {
+        if (!omekaActiveUI)
+        {
+            ensembleUI.SetActive(false);
+            mainActiveUI = false;
+
+            actionsUI.SetActive(false);
+            actionsActiveUI = false;
+
+            attributesUI.SetActive(false);
+            attributesActiveUI = false;
+
+            historyUI.SetActive(false);
+            historyActiveUI = false;
+
+
+            //make use of existing prouve system!
+            GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().clickOnObject(currentOmekaIDOfClickedCharacter, currentPositionOfClickedCharacter);
         }
     }
 
@@ -299,6 +341,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         historyUI.SetActive(false);
         historyActiveUI = false;
+
+        omekaUI.SetActive(false);
+        omekaActiveUI = false;
 
         foreach(GameObject bt in actionButtonRefs) {
             Destroy(bt);
@@ -336,6 +381,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         historyUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
         historyUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
         historyUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
+
+        omekaUI.transform.SetParent(leftHand.transform);
+        omekaUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
+        omekaUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        omekaUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
     }
 
     //LaserPointer functions overload:
@@ -472,6 +522,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 historyBuilder.Append(predicateToString + "\n");
             }
         }
+    }
+
+    public void getCharacterOmeka(string objectName){
+        Debug.Log("Getting Omeka data for " + objectName);
+        GameObject characterInQuestion = GameObject.Find(objectName);
+        currentOmekaIDOfClickedCharacter = characterInQuestion.GetComponent<EnsembleObject>().omekaDatabaseID;
+        Debug.Log("Their database id is: " + currentOmekaIDOfClickedCharacter);
+        currentPositionOfClickedCharacter = characterInQuestion.transform.position;
     }
 
     public void getCharacterActions(string objectName)
@@ -773,6 +831,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             historyUI.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
             historyUI.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
 
+            omekaUI.transform.SetParent(fallBackCamera.transform);
+            omekaUI.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+            omekaUI.transform.localPosition = new Vector3(0.0f, 0.0f, 0.5f);
+            omekaUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
+
             attributesBuilder.Clear();
             traitsBuilder.Clear();
             clothingBuilder.Clear();
@@ -791,6 +854,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             getCharacterData(objectName);
             getCharacterHistory(objectName);
             getCharacterActions(objectName);
+            getCharacterOmeka(objectName);
         }
     }
 
