@@ -51,7 +51,6 @@ public class EmotiveHandler : MonoBehaviour
             Debug.Log("enabled");*/
 
             other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
- 
         }
     }
 
