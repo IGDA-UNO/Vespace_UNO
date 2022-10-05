@@ -2,6 +2,7 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -639,6 +640,27 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
     }
 
+    private IEnumerator<object> postRequest(string url, string json)
+    {
+        var uwr = new UnityWebRequest(url, "POST");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        uwr.uploadHandler = (UploadHandler)new UploadHandlerRaw(jsonToSend);
+        uwr.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        uwr.SetRequestHeader("Content-Type", "application/json");
+
+        //Send the request then wait here until it returns
+        yield return uwr.SendWebRequest();
+
+        if (uwr.isNetworkError)
+        {
+            Debug.Log("Error While Sending: " + uwr.error);
+        }
+        else
+        {
+            Debug.Log("Received: " + uwr.downloadHandler.text);
+        }
+    }
+
     private void HandleFinalResults(string title, string results)
     {
         actionsBuilder.Clear();
@@ -659,6 +681,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         resultsPanel.transform.localPosition = resultsOffset;
 
         resultsPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
+
+        StartCoroutine(postRequest("http://ensemble-tool.herokuapp.com", "{\"game\": \"VESPACE\", \"data\": \"test\"}"));
     }
 
     private void ShowFinalText(string objectName, Action action)
