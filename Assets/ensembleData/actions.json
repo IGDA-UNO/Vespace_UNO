@@ -48,7 +48,6 @@
 			"leadsTo": [
 				"Receive mark and say thank you",
 				"Receive mark and ask what is showing today",
-				"Receive mark and ask if x is here today",
 				"Receive mark and ask if the theatre owner is here today",
 				"Receive mark and say nothing upon receiving mark"
 			]
@@ -629,62 +628,6 @@
 					{
 						"type": "dialogue",
 						"text": "The ticket taker looks at you quizzicaly. \"You purchased a ticket but did not know the show? How curious!\""
-					}
-				]
-			]
-		},
-		{
-			"name": "Receive mark and ask if x is here today",
-			"displayName": "Receive mark and ask if x is here today",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "ticket taker",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GaveTicket",
-					"first": "initiator",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 10,
-					"operator": "-"
-				},
-				{
-					"category": "progress",
-					"type": "HasMark",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "GaveTicket",
-					"first": "initiator",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "The ticket taker looks at you quizzically."
 					}
 				]
 			]
