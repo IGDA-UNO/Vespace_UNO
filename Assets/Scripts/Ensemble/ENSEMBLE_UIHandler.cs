@@ -734,7 +734,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     Debug.Log("Got mark!");
 
                     //start the show -- not sure if this is where people start taking their seats?
-                    GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
+                    //GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
+                    marionetteVideoFront.gameObject.SetActive(true);
+                    SuperTitles.StartTimer();
                 }
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {

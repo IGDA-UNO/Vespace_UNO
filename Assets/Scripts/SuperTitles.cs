@@ -23,8 +23,8 @@ public class SuperTitles : MonoBehaviour
         }
     }
 
-    float currentTimeElapsed;
-    bool timerStarted;
+    public float currentTimeElapsed;
+    public static bool timerStarted;
     public Text textField;
     List<SuperTitleHelper> linesOfDialogue = new List <SuperTitleHelper>();
     SuperTitleHelper currentLine;
@@ -34,7 +34,8 @@ public class SuperTitles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        linesOfDialogue.Add(new SuperTitleHelper(0f, 0f, "I've got the floor!"));
+        linesOfDialogue.Add(new SuperTitleHelper(0f, 0f, ""));
+        linesOfDialogue.Add(new SuperTitleHelper(0f, .1f, "I've got the floor!"));
         linesOfDialogue.Add(new SuperTitleHelper(0f, 10f, "Cupid decided to critique all the theatres last week, \n and I in turn will do the same..."));
         linesOfDialogue.Add(new SuperTitleHelper(0f, 23f, "Polichinelle's theatre is the noblest of the Fair, \n and that's a fact!"));
         linesOfDialogue.Add(new SuperTitleHelper(0f, 29f, "The rope dancers shut their trap, they did well \n to keep quiet. The Opéra-Comique blabbered \n on and on, and he should have just shut up."));
@@ -73,7 +74,6 @@ public class SuperTitles : MonoBehaviour
         nextLine = linesOfDialogue[nextLineIndex];
         timerStarted = false;   
         currentTimeElapsed = 0f;
-        StartTimer();
 
     }
 
@@ -92,9 +92,12 @@ public class SuperTitles : MonoBehaviour
             AdvanceDialogue();
         }
 
+        /*
+        //Useful for testing but we probably don't want this all the time.
         if(Input.GetKeyDown(KeyCode.N)){
             AdvanceDialogue();
         }
+        */
     }
 
     private void AdvanceDialogue(){
@@ -106,7 +109,7 @@ public class SuperTitles : MonoBehaviour
         }
     }
 
-    public void StartTimer(){
+    public static void StartTimer(){
         timerStarted = true;
     }
 
