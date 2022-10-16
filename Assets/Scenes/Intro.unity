@@ -2333,28 +2333,31 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Now that you know how to interact with characters and objects in the virtual
-    environment, here are a few important tips for moving around in this system.
+  m_Text: 'Here are a few important tips for moving around.
 
+    
 
-    You
-    can move through the space in two ways. The first is simply to walk, as you would
-    in the real world. A blue grid will appear to indicate the limits of the space
-    in which you can move. Beyond that, watch out! There may be real world obstacles
-    that you could run into - like tables, chairs or other (real) people.
+    You can
+    move through the space in two ways. The first is simply to <color=yellow><b>walk
+    as you would in the real world.</b></color> When you see a <color=blue><b>blue
+    grid</b></color>, this indicates the limits of the space in which you can move.
+    <color=yellow><b>Beyond that, watch out!</b></color> There may be real world
+    obstacles that you could run into - like tables, chairs or other (real) people.
 
+    
 
-    When
-    you want to visit a part of the virtual space beyond this fence, you must "teleport."
+    To
+    visit a space beyond this fence, you must <color=yellow><b>teleport</b></color>.
     This means that you will jump from one spot to another within the virtual space.
-    To do this, press the top of the Touchpad or Joystick to display a curved beam.
-    When the curve changes to green, a ground area shows the location where you will
-    teleport. When you see a green beam, release the touchpad to telepot to this
-    new location.
+    To do this, <color=yellow><b>press the top of the touchpad or joystick</b></color>
+    to display a curved beam. When <color=green><b>the curve changes to green, release
+    the touchpad</b></color> to teleport to this new location.
 
+    
 
-    Press Next, and practice exploring in this room before you
-    teleport to the eighteenth-century theatre at the end of the corridor.'
+    Press
+    Next to practice moving in this room. Then, <color=yellow><b>teleport to the
+    eighteenth-century theatre at the end of the corridor!</b></color>'
 --- !u!222 &683449992
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4399,15 +4402,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "This first scene is designed to familiarize the player with the tools
-    of virtual reality. \t\t\t\t\t\t\t\t\t\n\t\t\t\t\nThe VESPACE playable experience
-    is set in a restituted eighteenth-century Fair theatre. To play the game, you
-    will need to move around the virtual space, and interact with non-player characters
-    (NPCs) in a socially appropriate way.\n\nRight Controller Trigger -> Character/Menu
-    Selection\nLeft Controller                -> Menu Position when active\nLeft-Right
-    Grip               -> Main Menu \nTouchpad-Joystick         -> Teleport\n\nPoint
-    the right hand controller at the Next button and pull the Trigger to get some
-    practice navigating this virtual space.\n\n\n "
+  m_Text: "This first scene is designed to familiarize players with the virtual reality
+    interface as it is used in VESPACE. \u2002\t\t\t\t\t\t\t\n\t\t\t\t\nThe VESPACE
+    playable experience is set in a restituted eighteenth-century Fair theatre. To
+    play the game, you will need to <color=yellow><b>move around</b></color> the
+    virtual space, and <color=yellow><b>interact</b></color> with non-player characters
+    (NPCs) in a socially appropriate way.\n\nUse the <color=yellow><b>right-hand
+    controller trigger</b></color> to Select a character to interact with or a menu
+    item.\r\n\r\n<color=yellow><b>Menus</b></color> containing dialogue and action
+    choices appear above the left-hand controller.\r\n\r\nTo <color=yellow><b>teleport</b></color>
+    to a different place in the theatre, use the <color=yellow><b>touchpad or joystick.</b>\r</color>\n\r\nTo
+    bring up the <color=yellow><b>Main Menu</b></color>, click the <b>grip button</b>
+    on either controller\r\n\r\nPoint the <color=yellow><b>right-hand controller</b></color>
+    at the <color=yellow><b>Next</b></color> button and <color=yellow><b>pull the
+    trigger</b></color> to practice navigating this virtual space!\n\n\n "
 --- !u!222 &1459759606
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4995,16 +5003,46 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "The right-hand controller is used for selecting objects in the space.\n\nThe
-    laser beam from the right-hand controller turns blue when pointing to an interactive
-    object.\n\nIf you wish to interact with another character in the space, point
-    your right-hand controller at the character.  When you pull the Trigger, an information
-    panel appears over your left-hand controller. You can then navigate within this
-    window by using the right-hand controller to select the tone and content of your
-    interaction.\r\n\r\nThis system of object selection also works for obtaining
-    more information about graphic objects in the space when playing in Explore Mode.\r\n\r\nDisplay
-    the information panel for the object on the right, navigate inside it, and close
-    it.\r\n\r\nThen, press \"next\".\n\n "
+  m_Text: 'The <color=yellow><b>right-hand controller</b></color> is used for <color=yellow><b>selecting
+    objects</b></color> in the space.
+
+    
+
+    The <color=yellow><b>laser beam</b></color>
+    from the right-hand controller <color=blue><b>turns blue</b></color> when pointing
+    to an interactive object.
+
+    
+
+    <color=yellow><b>To interact</b></color>
+    with another character in the space, <color=yellow><b>turn your head to look
+    at the character</b></color> until a halo appears over their head. A <color=red><b>red
+    halo</b></color> indicates someone who is busy or doesn''t want to talk to you.
+    A <color=green><b>green halo</b></color> indicates a character ready to interact!
+
+    
+
+    Point
+    your <color=yellow><b>right-hand controller</b></color> at the character and
+    <color=yellow><b>pull the trigger</b></color>. An information panel appears over
+    your left-hand controller. You can then navigate within this window by using
+    the right-hand controller to select the tone and content of your interaction.
+
+    
+
+    This
+    system also works for obtaining more information about graphic objects in the
+    space.
+
+    
+
+    <color=yellow><b>Try it!</b></color> Display the information
+    panel for the object on the right, navigate inside it, and close it.
+
+    
+
+    Then,
+    press "next".'
 --- !u!222 &1673194609
 CanvasRenderer:
   m_ObjectHideFlags: 0
