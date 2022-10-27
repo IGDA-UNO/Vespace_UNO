@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR.Extras;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class ArtGallery : MonoBehaviour
 {
@@ -12,6 +15,9 @@ public class ArtGallery : MonoBehaviour
     public Camera playerCamera;
     public Text filenameText;
     public Camera fallBackCamera;
+    public Player player;
+    public GameObject backstageLeft;
+
     int galleryIndex = 0;
 
     public List<Texture> theatreImages = new List<Texture>();
@@ -70,7 +76,21 @@ public class ArtGallery : MonoBehaviour
         UpdatePlanToDisplay();
     }
 
+    public void SetPlayer(Player p)
+    {
+        player = p;
+    }
+
+    private IEnumerator<object> TransportReturnToTheater()
+    {
+        SteamVR_Fade.Start(Color.clear, 0);
+        yield return new WaitForSeconds(3);
+        player.transform.position = new Vector3(backstageLeft.transform.position.x - 1, backstageLeft.transform.position.y, backstageLeft.transform.position.z);
+		SteamVR_Fade.Start(Color.black, 7);
+    }
+
     public void FinishedButtonPushed(){
+        StartCoroutine(TransportReturnToTheater());
         Debug.Log("Finished button pushed!");
         gameObject.SetActive(false);
     }

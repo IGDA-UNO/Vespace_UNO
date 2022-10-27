@@ -93,6 +93,30 @@
 					"value": false,
 					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
+				{
+					"category": "trait",
+					"type": "agreeable",
+					"value": true,
+					"first": "Marie-Catherine Bienfait, ticket taker"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Marie-Catherine Bienfait, ticket taker"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Marie-Catherine Bienfait, ticket taker"
+				},
+				{
+					"category": "trait",
+					"type": "outgoing",
+					"value": true,
+					"first": "Marie-Catherine Bienfait, ticket taker"
+				},
 
 
 				{
@@ -107,6 +131,30 @@
 					"value": false,
 					"first": "Bruno Dufort, semainier"
 				},
+				{
+					"category": "trait",
+					"type": "unfriendly",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+				{
+					"category": "trait",
+					"type": "aggressive",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+				{
+					"category": "trait",
+					"type": "unsophisticated",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
 
 
 				{
@@ -196,6 +244,30 @@
 					"value": false,
 					"first": "Monsieur d'Ain d'Ygeste"
 				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "unfriendly",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
 
 
 				{
@@ -283,6 +355,36 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "very disdainful",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "difficult to get along with",
+					"value": true,
 					"first": "Monsieur d'Hautainville"
 				},
 
@@ -374,6 +476,36 @@
 					"value": false,
 					"first": "Monsieur de Gentilly"
 				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "very friendly",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "helpful",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "refined",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
 
 
 				{
@@ -463,6 +595,42 @@
 					"value": false,
 					"first": "Monsieur des Trois-Landes"
 				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "violent",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "braggart",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "either a great friend or an implacable enemy",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
 
 
 				{
@@ -550,6 +718,36 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "educated",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "refined",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "somewhat sneaky",
+					"value": true,
 					"first": "Monsieur d'Issy"
 				},
 
@@ -639,6 +837,36 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "supercilious",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "devout",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "not prone to seduction",
+					"value": true,
 					"first": "Madame de Blasé-l'Evêque"
 				},
 
@@ -730,6 +958,66 @@
 					"value": false,
 					"first": "Chérubin"
 				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "witty",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "clever",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "charming",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "very friendly",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "seductive",
+					"value": true,
+					"first": "Chérubin"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Chérubin"
+				},
 
 
 				{
@@ -819,6 +1107,36 @@
 					"value": false,
 					"first": "Madame de Cher-sur-Tendre"
 				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
+				{
+					"category": "trait",
+					"type": "amorous",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
+				{
+					"category": "trait",
+					"type": "looking for love",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
 
 
 				{
@@ -906,6 +1224,42 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "very haughty",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "very disdainful",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "not rich",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "not friendly",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "seductive",
+					"value": true,
 					"first": "Mademoiselle Eloïse de Hauteclaire"
 				},
 
@@ -997,6 +1351,48 @@
 					"value": false,
 					"first": "Ninon"
 				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "not well educated",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "fearful",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "easily intimidated",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Ninon"
+				},
 
 
 				{
@@ -1084,6 +1480,42 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "clever",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "deceptive",
+					"value": true,
 					"first": "Toinette"
 				},
 
@@ -1173,6 +1605,36 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "wants to sell fruit",
+					"value": true,
 					"first": "Fruit-seller / la Fruitière"
 				},
 
@@ -1262,6 +1724,42 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "not sociable",
+					"value": true,
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "haughty",
+					"value": true,
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
 					"first": "Cellist"
 				},
 
@@ -1353,6 +1851,12 @@
 					"value": false,
 					"first": "L'Animateur"
 				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "L'Animateur"
+				},
 
 
 				{
@@ -1440,6 +1944,36 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "very friendly",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "easy to get along with",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "dishonest",
+					"value": true,
+					"first": "Fanon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "thief",
+					"value": true,
 					"first": "Fanon la Poche"
 				},
 
@@ -1531,6 +2065,36 @@
 					"value": false,
 					"first": "Henriette Lavocat"
 				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "amorous",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "helpful",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
 
 
 				{
@@ -1618,6 +2182,12 @@
 					"category": "role",
 					"type": "player",
 					"value": false,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
 					"first": "Jeannot la Panse"
 				},
 

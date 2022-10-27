@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using Valve.VR.Extras;
 using Valve.VR;
+using Valve.VR.InteractionSystem;
 using Ensemble;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public EnsembleData data;
     public EnsemblePlayer player;
+    public Player playerObject;
     public GameObject character;
 
     public Button currentActionButton;
@@ -118,6 +120,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Texture JeannotLaPanse;
     public Texture Perso2;
     public Texture SeatedFemaleNoble;
+
+    public AudioSource whistleAudioSource;
+    public AudioSource stompAudioSource;
+
+    public GameObject backstageRight;
 
     public string finalInterlocutor;
 
@@ -463,45 +470,50 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             string predicateToString = string.Format("First: {0}, Second: {1}, Category: {2}, Type: {3}", predicateDebug);
             //Debug.Log(predicateToString);
 
-            if(datum.Category == "Attribute")
-            {
-                attributesBuilder.Append(datum.Type + "\n");
-            }else if (datum.Category == "Trait")
+            if (datum.Category == "trait")
             {
                 traitsBuilder.Append(datum.Type + "\n");
             }
-            else if (datum.Category == "TraitClothing")
-            {
-                clothingBuilder.Append(datum.Type + "\n");
-            }
-            else if (datum.Category == "TraitConditionProfession")
-            {
-                professionBuilder.Append(datum.Type + "\n");
-            }
-            else if (datum.Category == "DirectedStatus")
-            {
-                directedStatusBuilder.Append(predicateToString + "\n");
-            }
-            else if (datum.Category == "Network")
-            {
-                networkBuilder.Append(predicateToString + "\n");
-            }
-            else if (datum.Category == "NonActionableRelationship")
-            {
-                nonActionableRelationshipBuilder.Append(predicateToString + "\n");
-            }
-            else if (datum.Category == "Relationship")
-            {
-                relationshipBuilder.Append(predicateToString + "\n");
-            }
-            else if (datum.Category == "SocialRecordLabel")
-            {
-                socialRecordLabelBuilder.Append(predicateToString + "\n");
-            }
-            else if (datum.Category == "Status")
-            {
-                statusBuilder.Append(predicateToString + "\n");
-            }
+
+            // if(datum.Category == "Attribute")
+            // {
+            //     attributesBuilder.Append(datum.Type + "\n");
+            // }else if (datum.Category == "Trait")
+            // {
+            //     traitsBuilder.Append(datum.Type + "\n");
+            // }
+            // else if (datum.Category == "TraitClothing")
+            // {
+            //     clothingBuilder.Append(datum.Type + "\n");
+            // }
+            // else if (datum.Category == "TraitConditionProfession")
+            // {
+            //     professionBuilder.Append(datum.Type + "\n");
+            // }
+            // else if (datum.Category == "DirectedStatus")
+            // {
+            //     directedStatusBuilder.Append(predicateToString + "\n");
+            // }
+            // else if (datum.Category == "Network")
+            // {
+            //     networkBuilder.Append(predicateToString + "\n");
+            // }
+            // else if (datum.Category == "NonActionableRelationship")
+            // {
+            //     nonActionableRelationshipBuilder.Append(predicateToString + "\n");
+            // }
+            // else if (datum.Category == "Relationship")
+            // {
+            //     relationshipBuilder.Append(predicateToString + "\n");
+            // }
+            // else if (datum.Category == "SocialRecordLabel")
+            // {
+            //     socialRecordLabelBuilder.Append(predicateToString + "\n");
+            // }
+            // else if (datum.Category == "Status")
+            // {
+            //     statusBuilder.Append(predicateToString + "\n");
+            // }
         }
     }
 
@@ -671,10 +683,23 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             actionsBuilder.Append(results + "\n\n");
         }
 
+        StringBuilder resultsJsonBuilder = new StringBuilder();
+        resultsJsonBuilder.Append("{\"actions\":[");
+        int i = 1;
+
         foreach(Action act in gameActions)
         {
-            actionsBuilder.Append(act.ToString() + "\n");
+            actionsBuilder.Append(i.ToString() + ": " + act.Name.ToString() + "\n");
+            resultsJsonBuilder.Append("{ \"name\": \"" + act.Name.ToString() + "\"}");
+
+            if (i < gameActions.Count) {
+                resultsJsonBuilder.Append(",");
+            }
+
+            i++;
         }
+
+        resultsJsonBuilder.Append("]}");
 
         resultsPanel.transform.rotation = playerCamera.transform.rotation;
         resultsPanel.transform.SetParent(playerCamera.transform);
@@ -682,7 +707,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         resultsPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
 
-        StartCoroutine(postRequest("http://ensemble-tool.herokuapp.com", "{\"game\": \"VESPACE\", \"data\": \"test\"}"));
+        Debug.Log(resultsJsonBuilder.ToString());
+
+        // List<List<Predicate>> socialRecordDataByTimestep = data.ensemble.getSocialRecordCopy();
+
+        StartCoroutine(postRequest("http://ensemble-tool.herokuapp.com/gamelog", resultsJsonBuilder.ToString()));
     }
 
     private void ShowFinalText(string objectName, Action action)
@@ -709,6 +738,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
         return dialogueResponse;
     }
+
+    // private IEnumerator<object> TransportHeadBackstage()
+    // {
+    //     SteamVR_Fade.Start(Color.clear, 0);
+    //     yield return new WaitForSeconds(3);
+    //     float step = 10.0f * Time.deltaTime;
+    //     playerObject.transform.position = backstageRight.transform.position;
+    //     playerObject.transform.position = Vector2.MoveTowards(playerObject.transform.position, backstageRight.transform.position, step);
+    //     playerObject.transform.position = new Vector3(-2f, 0f, 2.5f);
+	// 	SteamVR_Fade.Start(Color.black, 7);
+    // }
 
     private void TakeAction(string objectName, Action action)
     {
@@ -741,6 +781,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
                     Debug.Log("Stomping and whistling!");
+                    GameObject characterInQuestion = GameObject.Find(objectName);
+                    Animator anim = characterInQuestion.GetComponent<Animator>();
+
+                    if (anim != null) {
+                        anim.SetTrigger("Active");
+                        whistleAudioSource.Play();
+                        stompAudioSource.Play();
+                    }
                 }
 
                 if (e.Type == "NearStageInteraction" && e.Value is bool && e.Value is true) {
@@ -754,6 +802,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                     Debug.Log("Got backstage access!");
+                    // StartCoroutine(TransportHeadBackstage());
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
@@ -862,6 +911,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
         Debug.Log("***PLANS CLICKED****");
         artGallery.gameObject.SetActive(true);
+        artGallery.SetPlayer(playerObject);
     }
 
     public void clickOnObject(string objectName, Vector3 position)  

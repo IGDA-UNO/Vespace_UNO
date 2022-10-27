@@ -100,7 +100,7 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.BACKSTAGE_ACCESS)
         {
-            return "The crowd is distracted! Head backstage through the curtains!";
+            return "You've managed to evade the audience's watch! Now grab the plans from backstage!";
         }
         else if (HUD.questProgress == HUD.POSSESS_PLANS)
         {
