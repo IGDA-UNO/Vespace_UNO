@@ -124,6 +124,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public AudioSource whistleAudioSource;
     public AudioSource stompAudioSource;
 
+    public bool displayingDialogue = false;
+
     public GameObject backstageRight;
 
     public string finalInterlocutor;
@@ -901,9 +903,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         CharacterNameText.text = characterName;
         DialogueText.text = dialogue;
 
-        yield return new WaitForSeconds(10);
-
-        dialogueHUD.SetActive(false);
+        if (displayingDialogue == false) {
+            displayingDialogue = true;
+            yield return new WaitForSeconds(10);
+            dialogueHUD.SetActive(false);
+            displayingDialogue = false;
+        }
     }
 
     public void OpenPlans()
