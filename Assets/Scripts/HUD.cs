@@ -100,11 +100,11 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.BACKSTAGE_ACCESS)
         {
-            return "You've managed to evade the audience's watch! Now grab the plans from backstage!";
+            return "You've evaded the audience's watch, now find the plans backstage!";
         }
         else if (HUD.questProgress == HUD.POSSESS_PLANS)
         {
-            return "You have the plans! Leave backstage and speak to the last person you spoke to!";
+            return "You have the plans! Now speak to the last person you spoke to!";
         }
         else if (HUD.questProgress == HUD.FINAL_INTERACTION)
         {

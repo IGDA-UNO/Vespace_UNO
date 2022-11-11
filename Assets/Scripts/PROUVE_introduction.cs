@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
+using TMPro;
 
 public class PROUVE_introduction : MonoBehaviour
 {
@@ -16,8 +17,9 @@ public class PROUVE_introduction : MonoBehaviour
 
     public int textIndex = 0;
 
-    public Text welcomeCanvasText;
-    public string introText1 = "This virtual reality playable experience is one of the primary research outputs of a five-year collaborative research project involving scholars in literature, theatre, history, architecture, and computer science, primarily sponsored by the National Endowment for the Humanities Digital Humanities Advancement Grants HAA-255998-17 (Phase I) and HAA-266501-19 (Phase II). Don’t forget to visit our project webpage, vespace.cs.uno.edu, to learn more about the people and ideas behind this experience!";
+    private const string VespaceUrl = "https://vespace.cs.uno.edu/";
+    public TextMeshProUGUI welcomeCanvasText;
+    public string introText1 = "This virtual reality playable experience is one of the primary research outputs of a five-year collaborative research project involving scholars in literature, theatre, history, architecture, and computer science, primarily sponsored by the National Endowment for the Humanities Digital Humanities Advancement Grants HAA-255998-17 (Phase I) and HAA-266501-19 (Phase II). Don’t forget to visit our project webpage, <link=\"VespaceLink\">vespace.cs.uno.edu</link>, to learn more about the people and ideas behind this experience!";
     public string introText2 = "In this experience, you will have the opportunity to choose between three different characters – a male noble, a female noble, and a male servant – and to embark on a mission to steal the plans for a new theatre to be built at the Foire Saint-Germain, which have been poorly hidden backstage at Bienfait’s marionette theatre! In order to accomplish this goal, you will have to: enter the theatre; try to convince someone to help you get backstage; obtain the plans; and then leave the theatre without attracting too much notice.";
     public string introText3 = "The virtual environment is modeled on a miniature painting that decorates the top of a jeweled snuffbox, currently in the collection of the Metropolitan Museum in New York.You can examine this source in this introductory space, and find more information about our process of transforming this 3cm x 6cm retrospective depiction of a now-lost performance space into the setting for an immersive playable experience in the articles on the VESPACE website. The characters in the space are all derived from period artworks, and are intended to represent a selection of the different social types one might meet at an eighteenth-century Fair theatre, which was one of the most socially mixed public environments of Ancien Régime France.";
     public string introText4 = "This sensory-immersive environment, and the interactions with non-player characters(NPCs) are also one way that our research team has attempted to present high-level scholarship in an accessible, engaging, non-print format.To that end, there are objects throughout the space that link to a database of explanatory materials, allowing this sensory experience to serve as the platform for further exploration of eighteenth-century French public culture.";

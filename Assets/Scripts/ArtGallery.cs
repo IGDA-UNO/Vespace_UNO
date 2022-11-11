@@ -13,7 +13,6 @@ public class ArtGallery : MonoBehaviour
     public GameObject SteamVRObjects;
     public GameObject planImage;
     public Camera playerCamera;
-    public Text filenameText;
     public Camera fallBackCamera;
     public Player player;
     public GameObject backstageLeft;
@@ -98,6 +97,5 @@ public class ArtGallery : MonoBehaviour
     private void UpdatePlanToDisplay(){
         planImage.GetComponent<RawImage>().texture = theatreImages[galleryIndex];
         Debug.Log("Now showcasing: " + theatreImages[galleryIndex].name);
-        filenameText.text = theatreImages[galleryIndex].name;
     }
 }

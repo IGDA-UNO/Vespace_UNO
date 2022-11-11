@@ -741,16 +741,21 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         return dialogueResponse;
     }
 
-    // private IEnumerator<object> TransportHeadBackstage()
-    // {
-    //     SteamVR_Fade.Start(Color.clear, 0);
-    //     yield return new WaitForSeconds(3);
-    //     float step = 10.0f * Time.deltaTime;
-    //     playerObject.transform.position = backstageRight.transform.position;
-    //     playerObject.transform.position = Vector2.MoveTowards(playerObject.transform.position, backstageRight.transform.position, step);
-    //     playerObject.transform.position = new Vector3(-2f, 0f, 2.5f);
-	// 	SteamVR_Fade.Start(Color.black, 7);
-    // }
+    private IEnumerator<object> TransportHeadBackstage()
+    {
+        SteamVR_Fade.Start(Color.clear, 0);
+        yield return new WaitForSeconds(3);
+        playerObject.transform.position = new Vector3(4f, 0f, 2f);
+		SteamVR_Fade.Start(Color.black, 7);
+    }
+
+    private IEnumerator<object> TransportReturnToCrowd()
+    {
+        SteamVR_Fade.Start(Color.clear, 0);
+        yield return new WaitForSeconds(3);
+        playerObject.transform.position = new Vector3(3f, 0f, 2f);
+		SteamVR_Fade.Start(Color.black, 7);
+    }
 
     private void TakeAction(string objectName, Action action)
     {
@@ -804,7 +809,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                     Debug.Log("Got backstage access!");
-                    // StartCoroutine(TransportHeadBackstage());
+                    StartCoroutine(TransportHeadBackstage());
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
@@ -917,6 +922,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         Debug.Log("***PLANS CLICKED****");
         artGallery.gameObject.SetActive(true);
         artGallery.SetPlayer(playerObject);
+        StartCoroutine(TransportReturnToCrowd());
     }
 
     public void clickOnObject(string objectName, Vector3 position)  
