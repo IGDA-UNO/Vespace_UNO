@@ -16,7 +16,7 @@ public class ViewingPositionsManager : MonoBehaviour
 
     public void PositionAssigner()
     {
-        foreach ( GameObject character in charactersList){
+        foreach (GameObject character in charactersList) {
             
             int currentSpot = Random.Range(0, viewingTransformsList.Count);
             character.GetComponent<NPCNavMesh>().myViewingTransform = viewingTransformsList[currentSpot];

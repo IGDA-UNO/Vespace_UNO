@@ -743,18 +743,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private IEnumerator<object> TransportHeadBackstage()
     {
-        SteamVR_Fade.Start(Color.clear, 0);
+        SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(4f, 0f, 2f);
-		SteamVR_Fade.Start(Color.black, 7);
-    }
-
-    private IEnumerator<object> TransportReturnToCrowd()
-    {
-        SteamVR_Fade.Start(Color.clear, 0);
-        yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(3f, 0f, 2f);
-		SteamVR_Fade.Start(Color.black, 7);
+        playerObject.transform.position = new Vector3(4f, 1.015f, 2f);
+        SteamVR_Fade.Start(Color.clear, 10);
     }
 
     private void TakeAction(string objectName, Action action)
@@ -922,7 +914,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         Debug.Log("***PLANS CLICKED****");
         artGallery.gameObject.SetActive(true);
         artGallery.SetPlayer(playerObject);
-        StartCoroutine(TransportReturnToCrowd());
     }
 
     public void clickOnObject(string objectName, Vector3 position)  
