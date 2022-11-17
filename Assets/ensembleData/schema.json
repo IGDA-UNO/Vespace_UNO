@@ -125,14 +125,12 @@
 		},
 		{
 			"actionable": true,
-			"category": "conversationround",
-			"defaultValue": 0,
-			"directionType": "directed",
-			"isBoolean": false,
-			"maxValue": 2,
-			"minValue": 0,
+			"category": "secondconversation",
+			"defaultValue": false,
+			"directionType": "undirected",
+			"isBoolean": true,
 			"types": [
-				"round"
+				"secondround"
 			]
 		},
 		{
@@ -161,8 +159,10 @@
 				"AskAcquaintanceInfo",
 				"AskedAcquaintanceInfo",
 				"BerateAcquaintance",
+				"BeratedAcquaintance",
 				"NearStageInteraction",
 				"OfferARefreshment",
+				"OfferedARefreshment",
 				"LastPositiveInteraction",
 				"LastNegativeInteraction",
 				"LastInteractionResponse",

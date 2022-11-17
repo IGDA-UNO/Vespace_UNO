@@ -142,16 +142,16 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Be straightforward with your acquaintance",
+				"Greet your acquaintance",
 				"Hello old friend! (male noble)",
 				"Hello old friend! (female noble)",
 				"Hello old friend! (servant)",
 				"I recognize you from Versailles! (male noble)",
-				"I recognize you from the Salon of Mme. X! (female noble)",
+				"I recognize you from the Salon of Mme. de Villiers! (female noble)",
 				"I recognize you from the gargote in my neighborhood! (servant)",
-				"I know you, keep your distance from me! (male noble)",
-				"I know you, keep your distance from me! (female noble)",
-				"I know you, keep your distance from me! (servant)"
+				"You! I'm surprised the theatre would let in such a scoundrel... (male noble)",
+				"You! I'm surprised the theatre would let in such a scoundrel... (female noble)",
+				"You! I'm surprised the theatre would let in such a scoundrel... (servant)"
 			]
 		},
 		{
@@ -215,10 +215,13 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Here, let me buy you an orange. Don't ask me any more questions. You know very well I can't answer them! (allied male noble)",
-				"Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and not oblige me to recount the humiliation... (allied female noble)",
-				"Here, let me buy you an orange. To be honest, it' my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
-				"Here, let me buy you an orange. To be honest, it' my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (unallied servant)"
+				"Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
+				"I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
+				"Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
+				"I insist that you take this orange and respect a noble woman's privacy. (unallied female noble)",
+				"Please take this orange and respect a noble woman's privacy. (unallied female noble)",
+				"Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
+				"Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (unallied servant)"
 			]
 		},
 		{
@@ -238,12 +241,14 @@
 			"influenceRules": [],
 			"leadsTo": [
 				"Can I ask you for information?",
+				"Do you know the owner of this theatre? (noble to servant)",
 				"Do you know the owner of this theatre? (allied male noble to noble)",
 				"Do you know the owner of this theatre? (allied female noble to noble)",
 				"Do you know the owner of this theatre? (allied servant to noble)",
 				"Do you know the owner of this theatre? (unallied male noble to noble)",
 				"Do you know the owner of this theatre? (unallied female noble to noble)",
-				"Do you know the owner of this theatre? (unallied servant to noble)"
+				"Do you know the owner of this theatre? (unallied servant to noble)",
+				"Do you know the owner of this theatre? (servant to servant)"
 			]
 		},
 		{
@@ -2203,13 +2208,6 @@
 					"operator": "+"
 				},
 				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
 					"category": "conversation",
 					"type": "AskStrangerQuestion",
 					"first": "initiator",
@@ -2282,13 +2280,6 @@
 					"second": "initiator",
 					"value": 1,
 					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
 				},
 				{
 					"category": "network",
@@ -2465,13 +2456,6 @@
 					"operator": "-"
 				},
 				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
 					"category": "conversation",
 					"type": "AskStrangerFavor",
 					"first": "initiator",
@@ -2543,13 +2527,6 @@
 					"second": "initiator",
 					"value": 1,
 					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
 				},
 				{
 					"category": "conversation",
@@ -5049,8 +5026,8 @@
 			]
 		},
 		{
-			"name": "Be straightforward with your acquaintance",
-			"displayName": "Be straightforward with your acquaintance",
+			"name": "Greet your acquaintance",
+			"displayName": "Greet your acquaintance",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -5141,6 +5118,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
@@ -5156,7 +5140,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "Oh, it's you!"
+						"text": "Oh, hello there!"
 					}
 				]
 			]
@@ -5438,8 +5422,8 @@
 			]
 		},
 		{
-			"name": "I recognize you from the Salon of Mme. X! (female noble)",
-			"displayName": "I recognize you from the Salon of Mme. X! (female noble)",
+			"name": "I recognize you from the Salon of Mme. de Villiers! (female noble)",
+			"displayName": "I recognize you from the Salon of Mme. de Villiers! (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -5568,8 +5552,8 @@
 			]
 		},
 		{
-			"name": "I know you, keep your distance from me! (male noble)",
-			"displayName": "I know you, keep your distance from me! (male noble)",
+			"name": "You! I'm surprised the theatre would let in such a scoundrel... (male noble)",
+			"displayName": "You! I'm surprised the theatre would let in such a scoundrel... (male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -5647,8 +5631,8 @@
 			]
 		},
 		{
-			"name": "I know you, keep your distance from me! (female noble)",
-			"displayName": "I know you, keep your distance from me! (female noble)",
+			"name": "You! I'm surprised the theatre would let in such a scoundrel... (female noble)",
+			"displayName": "You! I'm surprised the theatre would let in such a scoundrel... (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -5719,8 +5703,8 @@
 			]
 		},
 		{
-			"name": "I know you, keep your distance from me! (servant)",
-			"displayName": "I know you, keep your distance from me! (servant)",
+			"name": "You! I'm surprised the theatre would let in such a scoundrel... (servant)",
+			"displayName": "You! I'm surprised the theatre would let in such a scoundrel... (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -5791,6 +5775,155 @@
 			]
 		},
 		{
+			"name": "My word, it's been ages since I've seen you. (male)",
+			"displayName": "My word, it's been ages since I've seen you. (male)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "conversation",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "conversation",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I can't say I can recall the last time..."
+					}
+				]
+			]
+		},
+		{
+			"name": "My word, it's been ages since I've seen you. (female)",
+			"displayName": "My word, it's been ages since I've seen you. (female)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "conversation",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "network",
+					"type": "affinity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "+"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 2,
+					"operator": "-"
+				},
+				{
+					"category": "conversation",
+					"type": "TellTheTruthAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I can't say I can recall the last time..."
+					}
+				]
+			]
+		},
+		{
 			"name": "Try to trick your acquaintance",
 			"displayName": "Try to trick your acquaintance",
 			"influenceRules": [],
@@ -5819,7 +5952,7 @@
 					"type": "AcquaintanceSecondInteraction",
 					"first": "initiator",
 					"second": "responder",
-					"value": false
+					"value": true
 				},
 				{
 					"category": "conversation",
@@ -5880,6 +6013,13 @@
 				{
 					"category": "conversation",
 					"type": "LastNegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -6130,141 +6270,6 @@
 			]
 		},
 		{
-			"name": "My word, it's been ages since I've seen you. (male)",
-			"displayName": "My word, it's been ages since I've seen you. (male)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "acquaintance",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "TellALieAcquaintance",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "conversation",
-					"type": "TellALieAcquaintance",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "I can't say I can recall the last time..."
-					}
-				]
-			]
-		},
-		{
-			"name": "My word, it's been ages since I've seen you. (female)",
-			"displayName": "My word, it's been ages since I've seen you. (female)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "acquaintance",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "TellALieAcquaintance",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "-"
-				},
-				{
-					"category": "conversation",
-					"type": "TellALieAcquaintance",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "I can't say I can recall the last time..."
-					}
-				]
-			]
-		},
-		{
 			"name": "Can I ask you for a favor?",
 			"displayName": "Can I ask you for a favor?",
 			"influenceRules": [],
@@ -6306,6 +6311,13 @@
 				{
 					"category": "conversation",
 					"type": "NearStageInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -7807,6 +7819,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
@@ -8583,14 +8602,14 @@
 			]
 		},
 		{
-			"name": "Here, let me buy you an orange. Don't ask me any more questions. You know very well I can't answer them! (allied male noble)",
-			"displayName": "Here, let me buy you an orange. Don't ask me any more questions. You know very well I can't answer them! (allied male noble)",
+			"name": "Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
+			"displayName": "Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
-					"type": "servant",
+					"type": "noble",
 					"first": "initiator",
 					"value": true
 				},
@@ -8614,6 +8633,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -8634,20 +8660,104 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "OK!"
+						"text": "Indeed, you have a friend here! My lips are sealed..."
 					}
 				]
 			]
 		},
 		{
-			"name": "Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and not oblige me to recount the humiliation... (allied female noble)",
-			"displayName": "Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and not oblige me to recount the humiliation... (allied female noble)",
+			"name": "I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
+			"displayName": "I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "There is some shady business here, but I will look the other way for now."
+					}
+				]
+			]
+		},
+		{
+			"name": "Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
+			"displayName": "Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -8677,6 +8787,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -8697,20 +8814,193 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "OK!"
+						"text": "This is odd behavior for a lady, but I will stay silent on the matter..."
 					}
 				]
 			]
 		},
 		{
-			"name": "Here, let me buy you an orange. To be honest, it' my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
-			"displayName": "Here, let me buy you an orange. To be honest, it' my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
+			"name": "I insist that you take this orange and respect a noble woman's privacy. (unallied female noble)",
+			"displayName": "I insist that you take this orange and respect a noble woman's privacy. (unallied female noble)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": false
+				}
+			],
+			"effects": [
+				{
+					"category": "conversation",
+					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "I'm sorry my lady, but I simply cannot ignore such suspicious behavior."
+					}
+				]
+			]
+		},
+		{
+			"name": "Please take this orange and respect a noble woman's privacy. (unallied female noble)",
+			"displayName": "Please take this orange and respect a noble woman's privacy. (unallied female noble)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "LastPositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "There is some shady business here, but I will look the other way for now."
+					}
+				]
+			]
+		},
+		{
+			"name": "Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
+			"displayName": "Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -8740,6 +9030,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -8760,20 +9057,27 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "OK!"
+						"text": "If your master commands it, I am sure his aims are just!"
 					}
 				]
 			]
 		},
 		{
-			"name": "Here, let me buy you an orange. To be honest, it' my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (unallied servant)",
-			"displayName": "Here, let me buy you an orange. To be honest, it' my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (unallied servant)",
+			"name": "Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (unallied servant)",
+			"displayName": "Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (unallied servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -8801,6 +9105,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				},
 				{
 					"category": "relationship",
@@ -8814,6 +9125,19 @@
 				{
 					"category": "conversation",
 					"type": "AcquaintanceSecondInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "OfferedARefreshment",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8844,6 +9168,20 @@
 				{
 					"category": "conversation",
 					"type": "NearStageInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "BeratedAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "TellALieAcquaintance",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -8934,12 +9272,17 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "conversation",
+					"type": "BeratedAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -8999,12 +9342,17 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "conversation",
+					"type": "BeratedAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -9064,12 +9412,17 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "conversation",
+					"type": "BeratedAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -9135,12 +9488,10 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -9206,12 +9557,10 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -9283,12 +9632,10 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -9360,12 +9707,10 @@
 					"value": false
 				},
 				{
-					"category": "conversationround",
-					"type": "round",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "+"
+					"category": "secondconversation",
+					"type": "secondround",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -9415,6 +9760,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
@@ -9438,6 +9790,70 @@
 					{
 						"type": "dialogue",
 						"text": "Sure, what do you seek?"
+					}
+				]
+			]
+		},
+		{
+			"name": "Do you know the owner of this theatre? (noble to servant)",
+			"displayName": "Do you know the owner of this theatre? (noble to servant)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "AskAcquaintanceInfo",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "AskAcquaintanceInfo",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "AskedAcquaintanceInfo",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "No, but I am sure he could not be hard to find, for a person of status such as yourself."
 					}
 				]
 			]
@@ -9721,7 +10137,7 @@
 			"effects": [
 				{
 					"category": "conversation",
-					"type": "BerateAcquaintance",
+					"type": "OfferARefreshment",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9798,7 +10214,7 @@
 			"effects": [
 				{
 					"category": "conversation",
-					"type": "AskAcquaintanceFavor",
+					"type": "OfferARefreshment",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9875,7 +10291,7 @@
 			"effects": [
 				{
 					"category": "conversation",
-					"type": "AcquaintanceSecondInteraction",
+					"type": "OfferARefreshment",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9900,6 +10316,70 @@
 					{
 						"type": "dialogue",
 						"text": "Please spare me your impertinent questions!"
+					}
+				]
+			]
+		},
+		{
+			"name": "Do you know the owner of this theatre? (servant to servant)",
+			"displayName": "Do you know the owner of this theatre? (servant to servant)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "AskAcquaintanceInfo",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "conversation",
+					"type": "OfferARefreshment",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "AskAcquaintanceInfo",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "AskedAcquaintanceInfo",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "No, and would he be willing to speak with servants such as ourselves?"
 					}
 				]
 			]

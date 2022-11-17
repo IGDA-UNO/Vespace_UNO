@@ -1397,7 +1397,7 @@ MonoBehaviour:
   userName: {fileID: 376449449}
   sceneHandler: {fileID: 396811139}
   textIndex: 0
-  welcomeCanvasText: {fileID: 594495218}
+  welcomeCanvasText: {fileID: 1549406320}
   introText1: "This virtual reality playable experience is one of the primary research
     outputs of a five-year collaborative research project involving scholars in literature,
     theatre, history, architecture, and computer science, primarily sponsored by
@@ -1947,7 +1947,7 @@ RectTransform:
   m_Children:
   - {fileID: 938865250}
   m_Father: {fileID: 2006724335}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2060,91 +2060,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576984471}
-  m_CullTransparentMesh: 0
---- !u!1 &594495216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 594495217}
-  - component: {fileID: 594495219}
-  - component: {fileID: 594495218}
-  m_Layer: 5
-  m_Name: Text (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &594495217
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594495216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2006724335}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35, y: -370}
-  m_SizeDelta: {x: 1500, y: 1225}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &594495218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594495216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 70
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "This virtual reality playable experience is one of the primary research
-    outputs of a five-year collaborative research project involving scholars in literature,
-    theatre, history, architecture, and computer science, primarily sponsored by
-    the National Endowment for the Humanities Digital Humanities Advancement Grants
-    HAA-255998-17 (Phase I) and HAA-266501-19 (Phase II). Don\u2019t forget to visit
-    our project webpage, vespace.cs.uno.edu, to learn more about the people and ideas
-    behind this experience!\r"
---- !u!222 &594495219
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594495216}
   m_CullTransparentMesh: 0
 --- !u!1 &603955840
 GameObject:
@@ -2335,29 +2250,29 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Here are a few important tips for moving around.
 
-    
 
-    You can
-    move through the space in two ways. The first is simply to <color=yellow><b>walk
-    as you would in the real world.</b></color> When you see a <color=blue><b>blue
-    grid</b></color>, this indicates the limits of the space in which you can move.
-    <color=yellow><b>Beyond that, watch out!</b></color> There may be real world
-    obstacles that you could run into - like tables, chairs or other (real) people.
 
-    
+    You can move through
+    the space in two ways. The first is simply to <color=yellow><b>walk as you would
+    in the real world.</b></color> When you see a <color=blue><b>blue grid</b></color>,
+    this indicates the limits of the space in which you can move. <color=yellow><b>Beyond
+    that, watch out!</b></color> There may be real world obstacles that you could
+    run into - like tables, chairs or other (real) people.
 
-    To
-    visit a space beyond this fence, you must <color=yellow><b>teleport</b></color>.
-    This means that you will jump from one spot to another within the virtual space.
-    To do this, <color=yellow><b>press the top of the touchpad or joystick</b></color>
-    to display a curved beam. When <color=green><b>the curve changes to green, release
-    the touchpad</b></color> to teleport to this new location.
 
-    
 
-    Press
-    Next to practice moving in this room. Then, <color=yellow><b>teleport to the
-    eighteenth-century theatre at the end of the corridor!</b></color>'
+    To visit a space
+    beyond this fence, you must <color=yellow><b>teleport</b></color>. This means
+    that you will jump from one spot to another within the virtual space. To do this,
+    <color=yellow><b>press the top of the touchpad or joystick</b></color> to display
+    a curved beam. When <color=green><b>the curve changes to green, release the touchpad</b></color>
+    to teleport to this new location.
+
+
+
+    Press Next to practice moving in this
+    room. Then, <color=yellow><b>teleport to the eighteenth-century theatre at the
+    end of the corridor!</b></color>'
 --- !u!222 &683449992
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4503,6 +4418,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496356629}
   m_CullTransparentMesh: 0
+--- !u!1 &1549406318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549406319}
+  - component: {fileID: 1549406321}
+  - component: {fileID: 1549406320}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1549406319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549406318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2006724335}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1600, y: 600}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1549406320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549406318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1549406321
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549406318}
+  m_CullTransparentMesh: 1
 --- !u!1 &1552781277
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,21 +5055,21 @@ MonoBehaviour:
   m_Text: 'The <color=yellow><b>right-hand controller</b></color> is used for <color=yellow><b>selecting
     objects</b></color> in the space.
 
-    
+
 
     The <color=yellow><b>laser beam</b></color>
     from the right-hand controller <color=blue><b>turns blue</b></color> when pointing
     to an interactive object.
 
-    
 
-    <color=yellow><b>To interact</b></color>
-    with another character in the space, <color=yellow><b>turn your head to look
-    at the character</b></color> until a halo appears over their head. A <color=red><b>red
+
+    <color=yellow><b>To interact</b></color> with
+    another character in the space, <color=yellow><b>turn your head to look at the
+    character</b></color> until a halo appears over their head. A <color=red><b>red
     halo</b></color> indicates someone who is busy or doesn''t want to talk to you.
     A <color=green><b>green halo</b></color> indicates a character ready to interact!
 
-    
+
 
     Point
     your <color=yellow><b>right-hand controller</b></color> at the character and
@@ -5028,21 +5077,21 @@ MonoBehaviour:
     your left-hand controller. You can then navigate within this window by using
     the right-hand controller to select the tone and content of your interaction.
 
-    
+
 
     This
     system also works for obtaining more information about graphic objects in the
     space.
 
-    
 
-    <color=yellow><b>Try it!</b></color> Display the information
-    panel for the object on the right, navigate inside it, and close it.
 
-    
+    <color=yellow><b>Try it!</b></color> Display the information panel
+    for the object on the right, navigate inside it, and close it.
 
-    Then,
-    press "next".'
+
+
+    Then, press
+    "next".'
 --- !u!222 &1673194609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6075,7 +6124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2006724330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6171,7 +6220,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -6188,8 +6237,8 @@ RectTransform:
   m_Children:
   - {fileID: 828230175}
   - {fileID: 1496356630}
-  - {fileID: 594495217}
   - {fileID: 576984472}
+  - {fileID: 1549406319}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

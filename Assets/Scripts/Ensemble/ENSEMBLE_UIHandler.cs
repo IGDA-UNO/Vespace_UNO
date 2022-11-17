@@ -159,6 +159,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 		"Seated Female Noble"
     };
 
+    public Dictionary<string, bool> characterAvailable = new Dictionary<string, bool>();
+
     void Start()
     {
         hud.UpdateQuestProgress(HUD.NO_TICKET);
@@ -215,6 +217,27 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         clothingMenu = GameObject.Find("TraitClothingList");
         professionMenu = GameObject.Find("ProfessionList");
         characterMenu = GameObject.Find("Character_Name");
+
+        foreach (string character in cast) {
+            characterAvailable.Add(character, false);
+        }
+
+        //StartCoroutine(SetCharacterAvailability());
+    }
+
+    private IEnumerator<object> SetCharacterAvailability()
+    {
+        yield return new WaitForSeconds(5);
+
+        foreach (string character in cast) {
+            string initiator = EnsemblePlayer.GetSelectedCharacter();
+            string responder = character;
+
+            VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
+            List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+
+            characterAvailable[character] = actions.Count > 0;
+        }
     }
 
     public void DisplayMain()
@@ -562,7 +585,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
         List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
 
-        if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
+        if (objectName == "Cellist") {
+            CloseMenu();
+            StartCoroutine(DisplayDialogue(objectName, "The cellist is busy playing."));
+        } else if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
             CloseMenu();
 
             if (!suppressResponse) {
@@ -824,6 +850,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         getCharacterActions(objectName, true);
 
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
+        //StartCoroutine(SetCharacterAvailability());
     }
 
     private IEnumerator<object> GameOver()

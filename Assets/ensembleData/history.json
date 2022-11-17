@@ -1018,6 +1018,13 @@
 					"value": true,
 					"first": "Chérubin"
 				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
 
 
 				{
