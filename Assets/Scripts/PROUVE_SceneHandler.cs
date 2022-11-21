@@ -34,6 +34,7 @@ public class PROUVE_SceneHandler : MonoBehaviour
     private int demoPlayerID = 0 ; 
     private bool allowRestart ; 
     private bool proModeActive = false ;
+    private bool permitProMode;
     private int interfaceMode = 2 ; // 0: interface fixée à la caméra ; 1: interface fixée à l'objet ; 2: interface fixée au controlleur gauche 
     private float interfaceHeight = 1.5f; 
 
@@ -78,6 +79,7 @@ public class PROUVE_SceneHandler : MonoBehaviour
         laserPointer.PointerClick += PointerClick; 
         interfaceController.SwipeHorizontal += SwipingHorizontal; 
         interfaceController.SwipeVertical += SwipingVertical ; 
+        permitProMode = false;
         if(CurrentLanguage != "fra" && CurrentLanguage != "eng") {
             CurrentLanguage = "fra";
         }
@@ -114,7 +116,7 @@ public class PROUVE_SceneHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(actionBoolean.stateDown) {
+        if(actionBoolean.stateDown && permitProMode) {
             if(!mainMenu.activeSelf) {
                 invokeMainMenu() ; 
             } else {
