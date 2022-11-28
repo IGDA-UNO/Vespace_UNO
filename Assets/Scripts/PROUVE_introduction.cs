@@ -155,7 +155,6 @@ public class PROUVE_introduction : MonoBehaviour
         saveUserName(userName.text) ; 
         firstCanvas.SetActive(false) ; 
         secondCanvas.SetActive(true) ; 
-        demoCube.SetActive(true) ; 
         sceneHandler.setAllowRestart(true) ; 
     }
 
@@ -168,7 +167,7 @@ public class PROUVE_introduction : MonoBehaviour
 
     public void closeSecondCanvas() {
         secondCanvas.SetActive(false) ; 
-        demoCube.SetActive(false) ;
+        demoCube.SetActive(true) ;
         thirdCanvas.SetActive(true) ; 
     }
 
@@ -176,11 +175,12 @@ public class PROUVE_introduction : MonoBehaviour
     {
         thirdCanvas.SetActive(false);
         secondCanvas.SetActive(true);
-        demoCube.SetActive(true);
+        demoCube.SetActive(false);
     }
 
     public void closeThirdCanvas()
     {
+        demoCube.SetActive(false); 
         thirdCanvas.SetActive(false);     
         fourthCanvas.SetActive(true);
     }
