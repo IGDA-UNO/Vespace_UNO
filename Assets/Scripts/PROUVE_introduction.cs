@@ -17,6 +17,8 @@ public class PROUVE_introduction : MonoBehaviour
 
     public Text IntroCanvasTitleText;
 
+    public Button SkipIntroductionButton;
+
     public Button IntroCanvasPrevButton;
     public Button ControlCanvasPrevButton;
     public Button ObjectCanvasPrevButton;
@@ -122,6 +124,15 @@ public class PROUVE_introduction : MonoBehaviour
         {
             IntroCanvasNextButtonText.text = "Next";
         }
+    }
+
+    public void skipIntroduction(){
+        textIndex = 0;
+        firstCanvas.SetActive(false); 
+        secondCanvas.SetActive(false); 
+        thirdCanvas.SetActive(false); 
+        demoCube.SetActive(false);
+        fourthCanvas.SetActive(false);
     }
 
     public void closeFirstCanvas() {
