@@ -17,6 +17,8 @@ public class PROUVE_introduction : MonoBehaviour
 
     public Text IntroCanvasTitleText;
 
+    public GameObject snuffBoxImage;
+
     public Button SkipIntroductionButton;
 
     public Button IntroCanvasPrevButton;
@@ -96,6 +98,13 @@ public class PROUVE_introduction : MonoBehaviour
             welcomeCanvasText.text = introTextList[textIndex];
             IntroCanvasTitleText.text = titleTextList[textIndex];
         }
+
+        if(textIndex == 2){
+            snuffBoxImage.SetActive(true);
+        }
+        else{
+            snuffBoxImage.SetActive(false);
+        }
     }
 
     public void retreatIntroText()
@@ -123,6 +132,13 @@ public class PROUVE_introduction : MonoBehaviour
         else
         {
             IntroCanvasNextButtonText.text = "Next";
+        }
+
+        if(textIndex == 2){
+            snuffBoxImage.SetActive(true);
+        }
+        else{
+            snuffBoxImage.SetActive(false);
         }
     }
 
