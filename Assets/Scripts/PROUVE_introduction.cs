@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using UnityEngine.XR; 
 using TMPro;
 
 public class PROUVE_introduction : MonoBehaviour
@@ -81,6 +82,29 @@ public class PROUVE_introduction : MonoBehaviour
 
     public void advanceIntroText(){
         textIndex++;
+
+
+        //***testing printing things out to identify input device
+        Debug.Log(SystemInfo.deviceModel);
+        Debug.Log("operatingSystem: " + SystemInfo.operatingSystem);
+        Debug.Log("deviceModel: " + SystemInfo.deviceModel);
+        Debug.Log("deviceName: " + SystemInfo.deviceName);
+        Debug.Log("deviceType: " + SystemInfo.deviceType);
+        Debug.Log("platform: " + Application.platform);
+
+        var devices = new List<InputDevice>();
+        InputDevices.GetDevices(devices) ;
+        foreach (var device in devices)
+        {
+            Debug.Log("Device connected: " +device.name);
+        }
+
+        if (SystemInfo.deviceName == "Oculus Quest 2"){
+            Debug.Log("we detected speciifcally oculus quest 2");
+            //DoNeededCode(); // Standalone Quest 2
+        }
+    //*****end testing printing things out to identify input device.
+
         IntroCanvasPrevButton.gameObject.SetActive(true);
 
         //update the 'next' button text.
