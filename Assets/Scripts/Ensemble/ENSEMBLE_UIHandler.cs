@@ -86,6 +86,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public GameObject dialogueHUD;
     public GameObject resultsPanel;
+    public GameObject progressPanel;
     public Camera playerCamera;
     public Camera fallBackCamera;
     public GameObject SteamVRObjects;
@@ -131,6 +132,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public string finalInterlocutor;
 
     private List<Action> gameActions = new List<Action>();
+
+    private bool initiatedProgressPanel = false;
 
     private Cast cast = new Cast { 
         "Male Noble Player", 
@@ -387,6 +390,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         actionButtonRefs.Clear();
+    }
+
+    public void CloseProgress()
+    {
+        progressPanel.SetActive(false);
+        hud.replaceHud();
+
+        if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
+            StartCoroutine(TransportHeadBackstage());
+        } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+            StartCoroutine(TransportReturnToTheater());
+        }
     }
 
     private void FindObjectsGetStrings()
@@ -701,6 +716,21 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
     }
 
+    private IEnumerator<object> ShowFinalResults(string actions, string results)
+    {
+        yield return new WaitForSeconds(10);
+        dialogueHUD.SetActive(true);
+        hud.removeHud();
+
+        resultsPanel.SetActive(true);
+        resultsPanel.transform.rotation = playerCamera.transform.rotation;
+        resultsPanel.transform.SetParent(playerCamera.transform);
+        resultsPanel.transform.localPosition = resultsOffset;
+        resultsPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = actions;
+
+        StartCoroutine(postRequest("http://ensemble-tool.herokuapp.com/gamelog", results));
+    }
+
     private void HandleFinalResults(string title, string results)
     {
         actionsBuilder.Clear();
@@ -729,17 +759,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         resultsJsonBuilder.Append("]}");
 
-        resultsPanel.transform.rotation = playerCamera.transform.rotation;
-        resultsPanel.transform.SetParent(playerCamera.transform);
-        resultsPanel.transform.localPosition = resultsOffset;
-
-        resultsPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = actionsBuilder.ToString();
-
         Debug.Log(resultsJsonBuilder.ToString());
 
         // List<List<Predicate>> socialRecordDataByTimestep = data.ensemble.getSocialRecordCopy();
 
-        StartCoroutine(postRequest("http://ensemble-tool.herokuapp.com/gamelog", resultsJsonBuilder.ToString()));
+        StartCoroutine(ShowFinalResults(actionsBuilder.ToString(), resultsJsonBuilder.ToString()));
     }
 
     private void ShowFinalText(string objectName, Action action)
@@ -775,6 +799,36 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         SteamVR_Fade.Start(Color.clear, 10);
     }
 
+    private IEnumerator<object> TransportReturnToTheater()
+    {
+        // vm.PositionAssigner();
+        // GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+        // lastInterlocutor.transform.position = new Vector3(2.5f, 0f, 2f);
+
+        SteamVR_Fade.Start(Color.black, 10);
+        yield return new WaitForSeconds(3);
+        playerObject.transform.position = new Vector3(3f, 0f, 2f);
+		SteamVR_Fade.Start(Color.clear, 10);
+    }
+
+    public IEnumerator<object> ShowProgress(int delay, string progressText)
+    {
+        yield return new WaitForSeconds(delay);
+
+        dialogueHUD.SetActive(false);
+        hud.removeHud();
+        artGallery.gameObject.SetActive(false);
+
+        if (!initiatedProgressPanel) {
+            progressPanel.transform.rotation = playerCamera.transform.rotation;
+            progressPanel.transform.SetParent(playerCamera.transform);
+            progressPanel.transform.localPosition = resultsOffset;
+        }
+
+        progressPanel.SetActive(true);
+        progressPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = progressText;
+    }
+
     private void TakeAction(string objectName, Action action)
     {
         data.ensemble.takeAction(action);
@@ -802,6 +856,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
                     marionetteVideoFront.gameObject.SetActive(true);
                     SuperTitles.StartTimer();
+
+                    StartCoroutine(ShowProgress(3, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
                 }
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
@@ -827,7 +883,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                     Debug.Log("Got backstage access!");
-                    StartCoroutine(TransportHeadBackstage());
+                    StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {

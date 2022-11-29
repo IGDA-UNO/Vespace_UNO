@@ -83,6 +83,16 @@ public class HUD : MonoBehaviour
         HUDObject.transform.localPosition = new Vector3(-0.06f, 0.1f, 0.5f);
     }
 
+    public void removeHud()
+    {
+        HUDObject.SetActive(false);
+    }
+
+    public void replaceHud()
+    {
+        HUDObject.SetActive(true);
+    }
+
     private string GetObjectiveText(){
         if(HUD.questProgress == HUD.NO_TICKET){
             return "Give your ticket to the ticket taker!";

@@ -12,7 +12,7 @@ public class PROUVE_introduction : MonoBehaviour
     public GameObject secondCanvas ; 
     public GameObject thirdCanvas ;
     public GameObject fourthCanvas;
-    public GameObject demoCube ;
+    public GameObject demoNPC ;
     public InputField userName ; 
     public PROUVE_SceneHandler sceneHandler ;
 
@@ -54,7 +54,7 @@ public class PROUVE_introduction : MonoBehaviour
         sceneHandler = GetComponent<PROUVE_SceneHandler>() ; 
         firstCanvas.SetActive(true) ; 
         secondCanvas.SetActive(false) ; 
-        demoCube.SetActive(false) ;
+        demoNPC.SetActive(false) ;
         thirdCanvas.SetActive(false) ;  
         sceneHandler.setAllowRestart(false) ; 
         userName.ActivateInputField();
@@ -64,13 +64,13 @@ public class PROUVE_introduction : MonoBehaviour
         introTextList.Add("This virtual reality playable experience is one of the primary research outputs of a five-year collaborative research project involving scholars in literature, theatre, history, architecture, and computer science, primarily sponsored by the National Endowment for the Humanities Digital Humanities Advancement Grants HAA-255998-17 (Phase I) and HAA-266501-19 (Phase II). Don’t forget to visit our project webpage, <link=\"VespaceLink\">vespace.cs.uno.edu</link>, to learn more about the people and ideas behind this experience!");
         titleTextList.Add("Welcome to VESPACE!");
 
-        introTextList.Add("In this experience, you will have the opportunity to choose between three different characters – a male noble, a female noble, and a male servant – and to embark on a mission to steal the plans for a new theatre to be built at the Foire Saint-Germain, which have been poorly hidden backstage at Bienfait’s marionette theatre! In order to accomplish this goal, you will have to: <br><indent=15%>enter the theatre</indent> <br><indent=15%>try to convince someone to help you get backstage</indent> <br><indent=15%>obtain the plans</indent> <br><indent=15%>and then leave the theatre without attracting too much notice.</indent>");
+        introTextList.Add("In this experience, you will have the opportunity to choose between three different characters – a male noble, a female noble, and a male servant – and to embark on a mission to steal the plans for a new theatre to be built at the Foire Saint-Germain, which have been poorly hidden backstage at Bienfait’s marionette theatre! In order to accomplish this goal, you will need to complete the following tasks: <br><indent=15%>1. Enter the theatre</indent> <br><indent=15%>2. Try to convince someone to help you get backstage</indent> <br><indent=15%>3. Obtain the plans</indent> <br><indent=15%>4. Leave the theatre without attracting too much notice</indent>");
         titleTextList.Add("Game Objective");
 
         introTextList.Add("The virtual environment is modeled on a miniature painting that decorates the top of a jeweled snuffbox, currently in the collection of the Metropolitan Museum in New York. You can examine this source in this introductory space, and find more information about our process of transforming this 3cm x 6cm retrospective depiction of a now-lost performance space into the setting for an immersive playable experience in the articles on the VESPACE website. The characters in the space are all derived from period artworks, and are intended to represent a selection of the different social types one might meet at an eighteenth-century Fair theatre, which was one of the most socially mixed public environments of Ancien Régime France.");
         titleTextList.Add("Historical Context");
         
-        introTextList.Add("This sensory-immersive environment, and the interactions with non-player characters(NPCs) are also one way that our research team has attempted to present high-level scholarship in an accessible, engaging, non-print format. To that end, there are objects throughout the space that link to a database of explanatory materials, allowing this sensory experience to serve as the platform for further exploration of eighteenth-century French public culture.");
+        introTextList.Add("This sensory-immersive environment, and the interactions with non-player characters (NPCs) are also one way that our research team has attempted to present high-level scholarship in an accessible, engaging, non-print format. To that end, there are objects throughout the space that link to a database of explanatory materials, allowing this sensory experience to serve as the platform for further exploration of eighteenth-century French public culture.");
         titleTextList.Add("Objects and NPCs");
         
         introTextList.Add("This phase of the VESPACE project represents a proof-of-concept for many of our experimental ambitions for re-thinking historically-oriented scholarship for the twenty-first century. We hope you enjoy this experience, which represents the work of dozens of scholars across the US and Europe. We would be delighted to hear from you with feedback or suggestions – please contact us through our website, vespace.cs.uno.org – and enjoy the game!");
@@ -171,7 +171,7 @@ public class PROUVE_introduction : MonoBehaviour
         firstCanvas.SetActive(false); 
         secondCanvas.SetActive(false); 
         thirdCanvas.SetActive(false); 
-        demoCube.SetActive(false);
+        demoNPC.SetActive(false);
         fourthCanvas.SetActive(false);
     }
 
@@ -185,13 +185,13 @@ public class PROUVE_introduction : MonoBehaviour
     public void returnToFirstCanvas() {
         secondCanvas.SetActive(false);
         firstCanvas.SetActive(true);
-        demoCube.SetActive(false);
+        demoNPC.SetActive(false);
         retreatIntroText();
     }
 
     public void closeSecondCanvas() {
         secondCanvas.SetActive(false) ; 
-        demoCube.SetActive(true) ;
+        demoNPC.SetActive(true) ;
         thirdCanvas.SetActive(true) ; 
     }
 
@@ -199,12 +199,12 @@ public class PROUVE_introduction : MonoBehaviour
     {
         thirdCanvas.SetActive(false);
         secondCanvas.SetActive(true);
-        demoCube.SetActive(false);
+        demoNPC.SetActive(false);
     }
 
     public void closeThirdCanvas()
     {
-        demoCube.SetActive(false); 
+        demoNPC.SetActive(false); 
         thirdCanvas.SetActive(false);     
         fourthCanvas.SetActive(true);
     }

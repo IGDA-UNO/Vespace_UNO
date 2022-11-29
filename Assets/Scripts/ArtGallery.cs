@@ -83,21 +83,9 @@ public class ArtGallery : MonoBehaviour
         player = p;
     }
 
-    private IEnumerator<object> TransportReturnToTheater()
-    {
-        SteamVR_Fade.Start(Color.black, 10);
-        yield return new WaitForSeconds(3);
-        player.transform.position = new Vector3(3f, 0f, 2f);
-		SteamVR_Fade.Start(Color.clear, 10);
-    }
-
     public void FinishedButtonPushed(){
-        StartCoroutine(TransportReturnToTheater());
-        // vm.PositionAssigner();
-        // GameObject lastInterlocutor = GameObject.Find(ensembleUI.finalInterlocutor);
-        // lastInterlocutor.transform.position = new Vector3(2.5f, 0f, 2f);
         Debug.Log("Finished button pushed!");
-        gameObject.SetActive(false);
+        StartCoroutine(ensembleUI.ShowProgress(1, "You have the plans! Now you will return to the theatre. Seek out the last person you spoke to, in order to negotiate an escape."));
     }
 
     private void UpdatePlanToDisplay(){
