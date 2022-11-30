@@ -231,8 +231,8 @@
 			"leadsTo": [
 				"Do as I say at once!",
 				"You don't question me, you obey, rascal! Now do as I say! (male noble)",
-				"You don't question me, you obey, rascal! Now do as I say! (female noble)",
-				"You don't question me, you obey, rascal! Now do as I say! (servant)"
+				"Surely you cannot deny a lady in need? Please help me with this task! (female noble)",
+				"Please, I implore you, you must help me with this task! (servant)"
 			]
 		},
 		{
@@ -1483,6 +1483,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
@@ -1965,13 +1979,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "I'm not looking for trouble."
+						"text": "Surely you must be joking! I'm not looking for trouble."
 					}
 				]
 			]
@@ -2386,6 +2407,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
@@ -2545,6 +2580,13 @@
 				{
 					"category": "conversation",
 					"type": "AskedStrangerFavor",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3163,13 +3205,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "I'm not looking for trouble!"
+						"text": "What an odd thing for a lady to ask! I'm not looking for trouble."
 					}
 				]
 			]
@@ -3309,13 +3358,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "I'm not looking for trouble!"
+						"text": "I'm sorry sir, but I'm not looking for trouble!"
 					}
 				]
 			]
@@ -3608,6 +3664,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -3830,6 +3893,13 @@
 				{
 					"category": "conversation",
 					"type": "GreetedStranger",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -5107,14 +5177,14 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -5650,6 +5720,12 @@
 				},
 				{
 					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
 					"type": "acquaintance",
 					"first": "responder",
 					"value": true
@@ -5716,6 +5792,12 @@
 				},
 				{
 					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
 					"type": "male",
 					"first": "initiator",
 					"value": true
@@ -5763,6 +5845,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -6005,14 +6094,14 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -6318,6 +6407,20 @@
 				{
 					"category": "conversation",
 					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -6822,7 +6925,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -6899,7 +7002,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -7763,6 +7866,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -7823,6 +7933,20 @@
 				{
 					"category": "conversation",
 					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -7997,6 +8121,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -8058,6 +8189,13 @@
 				{
 					"category": "conversation",
 					"type": "AskedAcquaintanceDistraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8216,6 +8354,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -8371,13 +8516,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "No thanks, begging your pardon, I'm not looking for trouble."
+						"text": "I beg your pardon sir, but I'm not looking for trouble!"
 					}
 				]
 			]
@@ -8432,6 +8584,13 @@
 				{
 					"category": "conversation",
 					"type": "AskedAcquaintanceDistraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8590,13 +8749,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "No thanks, begging your pardon, I'm not looking for trouble."
+						"text": "Are you mad? I'm not looking for trouble, you ruffian!"
 					}
 				]
 			]
@@ -8656,7 +8822,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8733,7 +8899,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8810,7 +8976,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8878,8 +9044,8 @@
 					"value": false
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": false
 				}
@@ -8893,8 +9059,8 @@
 					"value": true
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				},
@@ -8961,8 +9127,8 @@
 					"value": false
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -8976,7 +9142,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9053,7 +9219,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9130,8 +9296,8 @@
 					"value": true
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				},
@@ -9259,7 +9425,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9279,8 +9445,8 @@
 					"value": true
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -9295,8 +9461,8 @@
 			]
 		},
 				{
-			"name": "You don't question me, you obey, rascal! Now do as I say! (female noble)",
-			"displayName": "You don't question me, you obey, rascal! Now do as I say! (female noble)",
+			"name": "Surely you cannot deny a lady in need? Please help me with this task! (female noble)",
+			"displayName": "Surely you cannot deny a lady in need? Please help me with this task! (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -9349,8 +9515,8 @@
 					"value": true
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -9365,8 +9531,8 @@
 			]
 		},
 		{
-			"name": "You don't question me, you obey, rascal! Now do as I say! (servant)",
-			"displayName": "You don't question me, you obey, rascal! Now do as I say! (servant)",
+			"name": "Please, I implore you, you must help me with this task! (servant)",
+			"displayName": "Please, I implore you, you must help me with this task! (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -9419,9 +9585,16 @@
 					"value": true
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -9475,7 +9648,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9488,8 +9661,8 @@
 					"value": false
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -9544,7 +9717,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9557,8 +9730,8 @@
 					"value": false
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -9619,7 +9792,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9632,8 +9805,8 @@
 					"value": false
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -9694,7 +9867,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -9707,8 +9880,8 @@
 					"value": false
 				},
 				{
-					"category": "secondconversation",
-					"type": "secondround",
+					"category": "round",
+					"type": "second",
 					"first": "initiator",
 					"value": true
 				}
@@ -9764,6 +9937,20 @@
 				{
 					"category": "conversation",
 					"type": "TellALieAcquaintance",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": false
@@ -10309,6 +10496,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10416,7 +10610,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10479,7 +10673,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10548,7 +10742,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10617,7 +10811,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10686,7 +10880,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10749,7 +10943,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10818,7 +11012,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10887,7 +11081,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -10956,7 +11150,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11019,7 +11213,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11088,7 +11282,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11157,7 +11351,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11226,7 +11420,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11289,7 +11483,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11358,7 +11552,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11427,7 +11621,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11490,7 +11684,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11547,7 +11741,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11610,7 +11804,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11673,7 +11867,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11736,7 +11930,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11793,7 +11987,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11856,7 +12050,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11919,7 +12113,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -11988,7 +12182,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12051,7 +12245,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12120,7 +12314,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12189,7 +12383,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12258,7 +12452,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12327,7 +12521,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12396,7 +12590,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12471,7 +12665,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12540,7 +12734,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12609,7 +12803,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12678,7 +12872,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12741,7 +12935,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12810,7 +13004,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12879,7 +13073,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -12948,7 +13142,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13011,7 +13205,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13080,7 +13274,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13149,7 +13343,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13212,7 +13406,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13269,7 +13463,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13332,7 +13526,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13395,7 +13589,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastPositiveInteraction",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13458,7 +13652,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13515,7 +13709,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13578,7 +13772,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -13641,7 +13835,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "LastNegativeInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true

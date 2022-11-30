@@ -125,12 +125,12 @@
 		},
 		{
 			"actionable": true,
-			"category": "secondconversation",
+			"category": "round",
 			"defaultValue": false,
 			"directionType": "undirected",
 			"isBoolean": true,
 			"types": [
-				"secondround"
+				"second"
 			]
 		},
 		{
@@ -163,8 +163,8 @@
 				"NearStageInteraction",
 				"OfferARefreshment",
 				"OfferedARefreshment",
-				"LastPositiveInteraction",
-				"LastNegativeInteraction",
+				"PositiveInteraction",
+				"NegativeInteraction",
 				"LastInteractionResponse",
 				"CompletedConversationNegative",
 				"CompletedConversationPositive"

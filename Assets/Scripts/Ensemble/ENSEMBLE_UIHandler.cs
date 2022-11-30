@@ -130,10 +130,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject backstageRight;
 
     public string finalInterlocutor;
+    public bool approachedFinalInterlocutor = false;
 
     private List<Action> gameActions = new List<Action>();
 
     private bool initiatedProgressPanel = false;
+    private int negativeInteractionCount = 0;
+    private bool completedTwoInteractions = false;
+    private List<string> characterInteractions = new List<string>();
 
     private Cast cast = new Cast { 
         "Male Noble Player", 
@@ -225,7 +229,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             characterAvailable.Add(character, false);
         }
 
-        //StartCoroutine(SetCharacterAvailability());
+        // StartCoroutine(SetCharacterAvailability());
     }
 
     private IEnumerator<object> SetCharacterAvailability()
@@ -508,7 +512,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         {
             string[] predicateDebug = new string[] { datum.First, datum.Second, datum.Category, datum.Type };
             string predicateToString = string.Format("First: {0}, Second: {1}, Category: {2}, Type: {3}", predicateDebug);
-            //Debug.Log(predicateToString);
 
             if (datum.Category == "trait")
             {
@@ -582,10 +585,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     public void getCharacterOmeka(string objectName){
-        // Debug.Log("Getting Omeka data for " + objectName);
         GameObject characterInQuestion = GameObject.Find(objectName);
         currentOmekaIDOfClickedCharacter = characterInQuestion.GetComponent<EnsembleObject>().omekaDatabaseID;
-        // Debug.Log("Their database id is: " + currentOmekaIDOfClickedCharacter);
         currentPositionOfClickedCharacter = characterInQuestion.transform.position;
     }
 
@@ -593,9 +594,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
-
-        // Debug.Log("getCharacterActions: " + initiator);
-        // Debug.Log("getCharacterActions: " + objectName);
 
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
         List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
@@ -609,34 +607,19 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             if (!suppressResponse) {
                 StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
             }
+        } else if (actions.Count > 0 && actions[0].Name.Contains("interaction")) {
+            actions = new List<Action>();
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
-            bool finalInteraction = false;
-
-            foreach (Action action in actions) {
-                if (action.Name == "unseen male noble positive interaction" ||
-                    action.Name == "unseen male noble negative interaction" ||
-                    action.Name == "unseen female noble positive interaction" ||
-                    action.Name == "unseen female noble negative interaction" ||
-                    action.Name == "unseen servant positive interaction" ||
-                    action.Name == "unseen servant negative interaction" ||
-                    action.Name == "seen male noble positive interaction" ||
-                    action.Name == "seen male noble negative interaction" ||
-                    action.Name == "seen female noble positive interaction" ||
-                    action.Name == "seen female noble negative interaction" ||
-                    action.Name == "seen servant positive interaction" ||
-                    action.Name == "seen servant negative interaction"
-                ) {
-                    finalInteraction = true;
+            if (finalInterlocutor == objectName) {
+                if (approachedFinalInterlocutor != true) {
+                    approachedFinalInterlocutor = true;
+                    TakeAction(objectName, actions[0]);
+                    volitionInterface = data.ensemble.calculateVolition(cast);
+                    actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
                 }
-            }
-
-            if (finalInteraction == true) {
-                // Debug.Log("found last interaction: " + actions[0].Name);
-                finalInterlocutor = objectName;
-
-                TakeAction(objectName, actions[0]);
-                volitionInterface = data.ensemble.calculateVolition(cast);
-                actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+            } else {
+                CloseMenu();
+                StartCoroutine(DisplayDialogue(objectName, "Did I just see you sneak backstage?"));
             }
         } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
             if (objectName == "Marie-Catherine Bienfait, ticket taker") {
@@ -658,13 +641,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         float y = -0.05f;
         float z = 5602.218f;
 
-        // Debug.Log("actions: " + actions);
-
         if (actions.Count > 0) {
             foreach (Action action in actions)
             {   
-                // Debug.Log("action: " + action);
-                
                 string actionName = action.Name;
 
                 if (actionName.Contains("(") && actionName.Contains(")")) {
@@ -759,8 +738,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         resultsJsonBuilder.Append("]}");
 
-        Debug.Log(resultsJsonBuilder.ToString());
-
         // List<List<Predicate>> socialRecordDataByTimestep = data.ensemble.getSocialRecordCopy();
 
         StartCoroutine(ShowFinalResults(actionsBuilder.ToString(), resultsJsonBuilder.ToString()));
@@ -768,7 +745,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private void ShowFinalText(string objectName, Action action)
     {
-        Debug.Log("ShowFinalText");
         StartCoroutine(DisplayDialogue(objectName, action.Name));
         string finalResult = getDialogueResponse(action);
         data.ensemble.takeAction(action);
@@ -840,17 +816,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             foreach(Effect e in action.Effects) {
                 if (e.Type == "HasTicket" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.POSSESS_TICKET);
-                    Debug.Log("Got ticket!");
                 }
                 
                 if (e.Type == "GaveTicket" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.HANDED_TICKET_TO_TICKET_TAKER);
-                    Debug.Log("Gave ticket!");
                 }
 
                 if (e.Type == "HasMark" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.RECEIVED_MARK);
-                    Debug.Log("Got mark!");
 
                     //start the show -- not sure if this is where people start taking their seats?
                     //GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
@@ -861,7 +834,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 }
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
-                    Debug.Log("Stomping and whistling!");
                     GameObject characterInQuestion = GameObject.Find(objectName);
                     Animator anim = characterInQuestion.GetComponent<Animator>();
 
@@ -873,28 +845,46 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 }
 
                 if (e.Type == "NearStageInteraction" && e.Value is bool && e.Value is true) {
-                    Debug.Log("Near stage interaction!");
+
                 }
 
                 if (e.Type == "SuccessfulDistraction" && e.Value is bool && e.Value is true) {
-                    Debug.Log("Successful distraction!");
+
                 }
 
                 if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
+                    finalInterlocutor = objectName;
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                    Debug.Log("Got backstage access!");
                     StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.FINAL_INTERACTION);
-                    Debug.Log("Completed final interaction!");
                 }
 
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.THROWN_OUT);
-                    Debug.Log("Got thrown out!");
                     StartCoroutine(GameOver());
+                }
+
+                if (e.Type == "NegativeInteraction" && e.Value is bool && e.Value is true) {
+                    negativeInteractionCount += 1;
+                    Debug.Log("had a negative interaction!");
+
+                    if (negativeInteractionCount > 1) {
+                        hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+                        StartCoroutine(ShowProgress(3, "Unfortunately it looks like you've drawn attention to yourself, but you're quick on your feet and see an opportunity to sneak backstage."));
+                    }
+                }
+
+                if (e.Type == "AcquaintanceSecondInteraction" && e.Value is bool && e.Value is true) {
+                    if (!characterInteractions.Contains(objectName)) {
+                        characterInteractions.Add(objectName);
+
+                        if (characterInteractions.Count == 2) {
+                            completedTwoInteractions = true;
+                        }
+                    }
                 }
             }
         }
@@ -974,9 +964,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         dialogueHUD.SetActive(true);
 
-        Debug.Log("DisplayDialogue characterName: " + characterName);
-        Debug.Log("DisplayDialogue dialogue: " + dialogue);
-
         setDialogueHudImage(characterName);
         placeDialogueHud();
 
@@ -994,7 +981,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void OpenPlans()
     {
         hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
-        Debug.Log("***PLANS CLICKED****");
         artGallery.gameObject.SetActive(true);
         artGallery.SetPlayer(playerObject);
     }

@@ -42,25 +42,21 @@ public class EmotiveState : MonoBehaviour
         halo = gameObject.transform.GetChild(0);
     }
 
-    bool getIsApproachable(string characterName)
+    public IEnumerator<object> RunApproachableUpdate()
     {
+        yield return new WaitForSeconds(0);
+
         bool isApproachable = false;
 
         //Run Ensemble data to find out if this person is friends with the player.
         ENSEMBLE_UIHandler uiHandler = GameObject.Find("UIHandler").GetComponent<ENSEMBLE_UIHandler>();
 
         bool result;
-        if (uiHandler.characterAvailable.TryGetValue(characterName, out result)) {
-            return result;
-        } else {
-            return false;
+        if (uiHandler.characterAvailable.TryGetValue(transform.parent.name, out result)) {
+            Debug.Log("isApproachable: " + result);
+            isApproachable = result;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        bool isApproachable = getIsApproachable(transform.parent.name);
         haloParticleRenderer = halo.GetComponent<ParticleSystemRenderer>();
         
         if (isApproachable)
@@ -71,6 +67,11 @@ public class EmotiveState : MonoBehaviour
         {
             haloParticleRenderer.material = Resources.Load("HoverHighlight_No") as Material;
         }
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        StartCoroutine(RunApproachableUpdate());
     }
 }
