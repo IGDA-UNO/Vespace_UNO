@@ -229,21 +229,31 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             characterAvailable.Add(character, false);
         }
 
-        // StartCoroutine(SetCharacterAvailability());
+        StartCoroutine(SetCharacterAvailability());
+        StartCoroutine(StartCountdown());
     }
 
     private IEnumerator<object> SetCharacterAvailability()
     {
-        yield return new WaitForSeconds(5);
+        yield return null;
+        VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
 
         foreach (string character in cast) {
             string initiator = EnsemblePlayer.GetSelectedCharacter();
             string responder = character;
 
-            VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
             List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
-
             characterAvailable[character] = actions.Count > 0;
+        }
+    }
+
+    private IEnumerator<object> StartCountdown()
+    {
+        yield return new WaitForSeconds(360);
+
+        if (hud.GetQuestProgress() == HUD.RECEIVED_MARK) {
+            hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+            StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, but you see an opening, so you head backstage!"));
         }
     }
 
@@ -871,9 +881,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     negativeInteractionCount += 1;
                     Debug.Log("had a negative interaction!");
 
-                    if (negativeInteractionCount > 1) {
-                        hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                        StartCoroutine(ShowProgress(3, "Unfortunately it looks like you've drawn attention to yourself, but you're quick on your feet and see an opportunity to sneak backstage."));
+                    if (negativeInteractionCount == 2) {
+                        string role = "servant";
+                        StartCoroutine(ShowProgress(3, "It looks like you're drawing attention to yourself. Try to find another " + role + " to talk to who may be more willing to help."));
                     }
                 }
 
@@ -896,7 +906,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         getCharacterActions(objectName, true);
 
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
-        //StartCoroutine(SetCharacterAvailability());
+        StartCoroutine(SetCharacterAvailability());
     }
 
     private IEnumerator<object> GameOver()

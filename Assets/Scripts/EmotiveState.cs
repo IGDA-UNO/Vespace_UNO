@@ -44,7 +44,7 @@ public class EmotiveState : MonoBehaviour
 
     public IEnumerator<object> RunApproachableUpdate()
     {
-        yield return new WaitForSeconds(0);
+        yield return null;
 
         bool isApproachable = false;
 
@@ -53,7 +53,6 @@ public class EmotiveState : MonoBehaviour
 
         bool result;
         if (uiHandler.characterAvailable.TryGetValue(transform.parent.name, out result)) {
-            Debug.Log("isApproachable: " + result);
             isApproachable = result;
         }
 
