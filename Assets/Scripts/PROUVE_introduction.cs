@@ -213,6 +213,7 @@ public class PROUVE_introduction : MonoBehaviour
     {
         thirdCanvas.SetActive(true);
         fourthCanvas.SetActive(false);
+        demoNPC.SetActive(true);
     }
 
     public void closeFourthCanvas() {
