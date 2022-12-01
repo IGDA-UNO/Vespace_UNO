@@ -144,6 +144,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private float xCoordinateThatMeansYouHaveEnteredTheTheatre;
     private bool hasActIPlayStarted;
 
+    //For ensuring the player can't go to places we don't want them to go yet.
+    public List<GameObject> houseTeleporters = new List<GameObject>();
+    public List<GameObject> backstageTeleporters = new List<GameObject>();
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -236,6 +240,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         //For starting the play in Act I once you've entered the theatre.
         xCoordinateThatMeansYouHaveEnteredTheTheatre = -1.5f;
         hasActIPlayStarted = false;
+
+        //Initialize all teleporters to inactive
+        SetUsabilityOfHouseTeleporters(false);
+        SetUsabilityOfBackstageTeleporters(true);
 
         foreach (string character in cast) {
             characterAvailable.Add(character, false);
@@ -877,6 +885,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //SuperTitles.StartTimer();
 
                     StartCoroutine(ShowProgress(3, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
+
+                    //make it so that now you can teleport into the theatre.
+                    SetUsabilityOfHouseTeleporters(true);
                 }
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
@@ -1082,6 +1093,19 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             getCharacterHistory(objectName);
             getCharacterActions(objectName, false);
             getCharacterOmeka(objectName);
+        }
+    }
+
+    public void SetUsabilityOfHouseTeleporters(bool canBeUsed){
+        foreach(GameObject teleporter in houseTeleporters){
+            teleporter.SetActive(canBeUsed);
+        }
+    }
+
+    public void SetUsabilityOfBackstageTeleporters(bool canBeUsed){
+        foreach (GameObject teleporter in backstageTeleporters)
+        {
+            teleporter.SetActive(canBeUsed);
         }
     }
 
