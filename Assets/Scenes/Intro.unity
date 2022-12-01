@@ -3236,7 +3236,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f0a9d81b05e32a14f820d1d9196c91b6, type: 2}
+  - {fileID: 2100000, guid: 1cf9b4b3287642e4cb1935755075ec98, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10800,7 +10800,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1cf9b4b3287642e4cb1935755075ec98, type: 2}
+  - {fileID: 2100000, guid: f0a9d81b05e32a14f820d1d9196c91b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12797,7 +12797,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f0a9d81b05e32a14f820d1d9196c91b6, type: 2}
+  - {fileID: 2100000, guid: 4603449dc221e6b46a51994593976678, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17598,6 +17598,7 @@ MonoBehaviour:
   resultsOffset: {x: -0.03, y: -0.03, z: 0.5}
   marionetteVideoFront: {fileID: 0}
   marionetteVideoBack: {fileID: 0}
+  marionnettisteAudio: {fileID: 0}
   MarieCatherineBienfait: {fileID: 2800000, guid: 573b0c00062f8534d9b8cc404c4a4bae,
     type: 3}
   BrunoDufort: {fileID: 2800000, guid: 6c3630a27d58d8c4981871a9b8fef9cf, type: 3}
@@ -25610,7 +25611,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1.187, y: 1.269}
-  m_SizeDelta: {x: 2500, y: 1500}
+  m_SizeDelta: {x: 2500, y: 1700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1560366135
 GameObject:
@@ -33756,7 +33757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.187, y: 59}
+  m_AnchoredPosition: {x: -1.187, y: 219}
   m_SizeDelta: {x: 1500, y: 1225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828142434
@@ -35399,7 +35400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.187, y: 386}
+  m_AnchoredPosition: {x: -1.187, y: 583}
   m_SizeDelta: {x: 21000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916754554
@@ -35427,11 +35428,15 @@ MonoBehaviour:
     DeKerlegand, Ben Samuel</indent>\n\n<b><indent=0%><size=60>VR architectural restitution,
     Prouv\xE9 system\r</size></indent></b>\n<indent=0%>Paul Fran\xE7ois</indent>\n\n<b><indent=0%><size=60>Avatar
     design, additional Unity programming\r</size></indent></b>\n<indent=0%>Norman
-    Bennet</indent>\n\n<b><indent=0%><size=60>English supertitles for Denis Carolet\u2019s
-    Polichinelle censeur des th\xE9\xE2tres\r\r</size></indent></b>\n<indent=0%>Henry
-    J. Kantrow</indent>\n\n<b><indent=0%><size=65>Ensemble rules authors</size>\r\r</indent></b>\n<indent=0%>Chiara
-    Azzaretti, Paul Fran\xE7ois, Camille Gros</indent>\n<indent=0%>Julien LeGoff,
-    Louise Moulin, Charlee Redman Bezilla</indent>"
+    Bennet</indent>\n\n<b><i><indent=0%><size=60>Polichinelle, Censeur des th\xE9\xE2tres
+    (1736)\r\r</size></indent></i></b>\n<indent=0%>Performed by Jean-Philippe Desrousseaux</indent>\n<indent=0%>English
+    supertitle translation by Henry J. Kantrow</indent>\n\n<b><indent=0%><size=65>Ensemble
+    rules authors</size>\r\r</indent></b>\n<indent=0%>Chiara Azzaretti, Paul Fran\xE7ois,
+    Camille Gros</indent>\n<indent=0%>Julien LeGoff, Louise Moulin, Charlee Redman
+    Bezilla</indent>\n\n<b><indent=0%><size=60>\"Snuffbox with theatrical scenes
+    of a rope dancer and a puppet show\" </size></indent></b>\nbox by Joseph Etienne
+    Blerzy,\nminiatures by Louis Nicolas van Blarenberghe and Henri Joseph van Blarenberghe,
+    \nMetropolitan Museum of Art."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
