@@ -140,6 +140,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private bool completedTwoInteractions = false;
     private List<string> characterInteractions = new List<string>();
 
+    //For starting the play in Act I once you've entered the theatre.
+    private float xCoordinateThatMeansYouHaveEnteredTheTheatre;
+    private bool hasActIPlayStarted;
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -229,12 +233,39 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         professionMenu = GameObject.Find("ProfessionList");
         characterMenu = GameObject.Find("Character_Name");
 
+        //For starting the play in Act I once you've entered the theatre.
+        xCoordinateThatMeansYouHaveEnteredTheTheatre = -1.5f;
+        hasActIPlayStarted = false;
+
         foreach (string character in cast) {
             characterAvailable.Add(character, false);
         }
 
         StartCoroutine(SetCharacterAvailability());
         StartCoroutine(StartCountdown());
+    }
+
+    void Update(){
+        //Debug.Log("The position of the player is: " + playerCamera.transform.position);
+
+        if(!hasActIPlayStarted){
+            if (playerCamera.transform.position.x > xCoordinateThatMeansYouHaveEnteredTheTheatre)
+            {
+                Debug.Log("IN THE THEATRE!");
+                hasActIPlayStarted = true;
+
+                //start the show!
+                marionetteVideoFront.gameObject.SetActive(true);
+                marionnettisteAudio.gameObject.SetActive(true);
+                SuperTitles.StartTimer();
+            }
+            else
+            {
+                Debug.Log("NOT IN THEATRE!");
+            }
+        }
+
+
     }
 
     private IEnumerator<object> SetCharacterAvailability()
@@ -841,9 +872,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                     //start the show -- not sure if this is where people start taking their seats?
                     //GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
-                    marionetteVideoFront.gameObject.SetActive(true);
-                    marionnettisteAudio.gameObject.SetActive(true);
-                    SuperTitles.StartTimer();
+                    //marionetteVideoFront.gameObject.SetActive(true);
+                    //marionnettisteAudio.gameObject.SetActive(true);
+                    //SuperTitles.StartTimer();
 
                     StartCoroutine(ShowProgress(3, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
                 }
