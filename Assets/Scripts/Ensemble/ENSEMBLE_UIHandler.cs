@@ -99,6 +99,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public VideoPlayer marionetteVideoFront;
     public VideoPlayer marionetteVideoBack;
+    public AudioSource marionnettisteAudio;
 
     public Texture MarieCatherineBienfait;
     public Texture BrunoDufort;
@@ -178,8 +179,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         //Turn off the play on start...
-        GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(false);
-        GameObject.Find("Marionettes").transform.Find("Marionette Video Back").gameObject.SetActive(false);
+        marionetteVideoFront.gameObject.SetActive(false);
+        marionetteVideoBack.gameObject.SetActive(false);
+        marionnettisteAudio.gameObject.SetActive(false);
+        //GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(false);
+        //GameObject.Find("Marionettes").transform.Find("Marionette Video Back").gameObject.SetActive(false);
 
         //Testing jumping to specific places in the video...
         //marionetteVideoBack.frame = 4000;
@@ -838,6 +842,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //start the show -- not sure if this is where people start taking their seats?
                     //GameObject.Find("Marionettes").transform.Find("Marionette Video Front").gameObject.SetActive(true);
                     marionetteVideoFront.gameObject.SetActive(true);
+                    marionnettisteAudio.gameObject.SetActive(true);
                     SuperTitles.StartTimer();
 
                     StartCoroutine(ShowProgress(3, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
