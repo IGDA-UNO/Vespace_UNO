@@ -266,7 +266,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         if(!hasActIPlayStarted){
             if (playerCamera.transform.position.x > xCoordinateThatMeansYouHaveEnteredTheTheatre)
             {
-                Debug.Log("IN THE THEATRE!");
+                //Debug.Log("IN THE THEATRE!");
                 hasActIPlayStarted = true;
 
                 //start the show!
@@ -276,7 +276,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
             else
             {
-                Debug.Log("NOT IN THEATRE!");
+                //Debug.Log("NOT IN THEATRE!");
             }
         }
 
