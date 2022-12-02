@@ -35,7 +35,7 @@ public class SuperTitles : MonoBehaviour
     void Start()
     {
         linesOfDialogue.Add(new SuperTitleHelper(0f, 0f, ""));
-        linesOfDialogue.Add(new SuperTitleHelper(0f, .1f, "I've got the floor!"));
+        linesOfDialogue.Add(new SuperTitleHelper(0f, 5f, "I've got the floor!"));
         linesOfDialogue.Add(new SuperTitleHelper(0f, 10f, "Cupid decided to critique all the theatres last week, \n and I in turn will do the same..."));
         linesOfDialogue.Add(new SuperTitleHelper(0f, 23f, "Polichinelle's theatre is the noblest of the Fair, \n and that's a fact!"));
         linesOfDialogue.Add(new SuperTitleHelper(0f, 29f, "The rope dancers shut their trap, they did well \n to keep quiet. The Opéra-Comique blabbered \n on and on, and he should have just shut up."));
@@ -67,7 +67,7 @@ public class SuperTitles : MonoBehaviour
         linesOfDialogue.Add(new SuperTitleHelper(4f, 52f, "If I'm pleased, \n I will grant you my protection \n and you can count on my friendship."));
         linesOfDialogue.Add(new SuperTitleHelper(5f, 02f, "Seems like you learned your lesson \n from <i>The School of Friends</i>. \n We will see about that."));
         linesOfDialogue.Add(new SuperTitleHelper(5f, 09f, "Here comes the Comédie-Italienne. \n The gang will all be here now."));
-        linesOfDialogue.Add(new SuperTitleHelper(5f, 20f, ""));
+        linesOfDialogue.Add(new SuperTitleHelper(5f, 15f, ""));
 
         nextLineIndex = 1;
         currentLine = linesOfDialogue[0];

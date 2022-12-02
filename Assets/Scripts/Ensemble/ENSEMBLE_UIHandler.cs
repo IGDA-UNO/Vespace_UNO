@@ -1199,15 +1199,20 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     public void SetUsabilityOfHouseTeleporters(bool canBeUsed){
+        Debug.Log("INSIDE SET USABILITY OF HOUSE TELEPORTERS");
         foreach(GameObject teleporter in houseTeleporters){
-            teleporter.SetActive(canBeUsed);
+            teleporter.SetActive(true);
+            teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
+            
         }
     }
 
     public void SetUsabilityOfBackstageTeleporters(bool canBeUsed){
         foreach (GameObject teleporter in backstageTeleporters)
         {
-            teleporter.SetActive(canBeUsed);
+            teleporter.SetActive(true);
+            teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
+            
         }
     }
 
