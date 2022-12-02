@@ -155,6 +155,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public List<GameObject> houseTeleporters = new List<GameObject>();
     public List<GameObject> backstageTeleporters = new List<GameObject>();
 
+    //For keeping track of moments when using a headset or not.
+    public bool isUsingVRHeadset;
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -191,9 +194,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         dialogueOffset = new Vector3(-0.06f, 0.04f, 0.51f);
         resultsOffset = new Vector3(0f, 0f, 0.5f);
 
+        isUsingVRHeadset = true;
         if (!SteamVRObjects.activeSelf)
         {
             playerCamera = fallBackCamera;
+            isUsingVRHeadset = false;
         }
 
         //Turn off the play on start...
@@ -253,7 +258,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         //Initialize all teleporters to inactive
         SetUsabilityOfHouseTeleporters(false);
-        SetUsabilityOfBackstageTeleporters(true);
+        SetUsabilityOfBackstageTeleporters(false);
 
         foreach (string character in cast) {
             characterAvailable.Add(character, false);
@@ -430,7 +435,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
 
             //make use of existing prouve system!
+            //But I think we need to do things slightly differently if we are using
+            //a mouse or if we are using the headset!
+           
+            if(isUsingVRHeadset){
+                GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().SetInterfaceMode(2);
+            }
+            else{
+                GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().SetInterfaceMode(4);
+            }
+
             GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().clickOnObject(currentOmekaIDOfClickedCharacter, currentPositionOfClickedCharacter);
+
         }
     }
 

@@ -113,10 +113,16 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.BACKSTAGE_ACCESS)
         {
+            //make it so that you can't teleport back to the theatre when you are backstage.
+            ensembleUI.SetUsabilityOfBackstageTeleporters(true);
+            ensembleUI.SetUsabilityOfHouseTeleporters(false);
             return "You've evaded the audience's watch, now find the plans backstage!";
         }
         else if (HUD.questProgress == HUD.POSSESS_PLANS)
         {
+            //make it so that you can't teleport backstage again after you have the plans.
+            ensembleUI.SetUsabilityOfBackstageTeleporters(false);
+            ensembleUI.SetUsabilityOfHouseTeleporters(true);
             return "You have the plans! Now ask " + ensembleUI.finalInterlocutor + " to help you exit the theatre!";
         }
         else if (HUD.questProgress == HUD.FINAL_INTERACTION)
