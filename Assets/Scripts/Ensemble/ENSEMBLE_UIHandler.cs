@@ -1098,11 +1098,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         CharacterNameText.text = characterName;
         DialogueText.text = dialogue;
 
-        if (displayingDialogue == false) {
-            displayingDialogue = true;
-            yield return new WaitForSeconds(10);
+        string dialogueToHide = dialogue;
+
+        yield return new WaitForSeconds(10);
+
+        if (DialogueText.text == dialogueToHide) {
             dialogueHUD.SetActive(false);
-            displayingDialogue = false;
+        } else {
+            Debug.Log("not closing dialogue early");
         }
     }
 
