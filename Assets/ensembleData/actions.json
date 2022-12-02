@@ -58,11 +58,11 @@
 			"influenceRules": [],
 			"leadsTo": [
 				"Greet stranger",
-				"Hello there, old friend! (male noble)",
-				"Hello there, old friend! (female noble)",
-				"Hello there, old friend! (servant)", 
-				"Hello esteemed person I've never met before! (noble)",
-				"Hello esteemed person I've never met before! (servant)",
+				"Hello there, pardon me for bothering you! (male noble)",
+				"Hello there, pardon me for bothering you! (female noble)",
+				"Hello there, pardon me for bothering you! (servant)", 
+				"Hello, so nice to see the right kind of people here! (noble)",
+				"Hello, you look just like a friend of my master! (servant)",
 				"Hello, I love this play, I've seen it four times! (female noble)",
 				"Hello, I love this play, I've seen it four times! (males)"
 			]
@@ -96,8 +96,6 @@
 				"Can you help me get backstage? (unesteemedFemaleNobleVersion)",
 				"Can you help me get backstage? (esteemedMaleNobleVersion)",
 				"Can you help me get backstage? (unesteemedMaleNobleVersion)",
-				"You seem trustworthy. Could you please hold on to this package until I come back?",
-				"What do you say we whistle and stomp? (femaleNobleYesStomp)",
 				"What do you say we whistle and stomp? (femaleNobleNoStomp)"
 			]
 		},
@@ -217,7 +215,7 @@
 			"leadsTo": [
 				"Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
 				"I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
-				"Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
+				"Please, let me buy you a refreshment, and urge you to respect the privacy of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
 				"I insist that you take this orange and respect a noble woman's privacy. (unallied female noble)",
 				"Please take this orange and respect a noble woman's privacy. (unallied female noble)",
 				"Here, let me buy you an orange. To be honest, it's my master's urgent business so I can't talk about it other than that it's, of course, an affair of the heart and that my very life depends on my getting backstage! (allied servant)",
@@ -285,7 +283,7 @@
 				"Silence fool, and clear me a passage so that I may leave!",
 				"unseen servant positive interaction",
 				"Thank you friend! Now if you can help me get out of this theatre, I'll really owe you one!",
-				"My Master's work is almost completed, will you help me leave?",
+				"My Master's work is almost completed, will you help me leave? (unseen servant)",
 				"Shh! Don't speak, fool, just get me out of here!",
 				"unseen servant negative interaction",
 				"I'm the crook?! You're the crook - this one just attempted to rob me! Help!",
@@ -318,7 +316,7 @@
 				"Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!",
 				"seen servant positive interaction",
 				"Thank you friend! Now if you can help me get out of this theatre, I'll forever be in your debt!",
-				"My Master's work is almost completed, will you help me leave?",
+				"My Master's work is almost completed, will you help me leave? (seen servant)",
 				"Shh! Don't speak, fool, just get me out of here!",
 				"seen servant negative interaction",
 				"I'm the criminal?! You're the criminal - this one just attempted to rob me! Help!",
@@ -343,7 +341,7 @@
 				"Look what you've done! Give me back what you took, and leave - and never come back!!",
 				"You there, what's going on? Hand over what you have and get out of here before I call the police!",
 				"Good day, sir!",
-				"You there, what's going on? Were you just backstage? Get out of here before I call the poilice!",
+				"You there, what's going on? Were you just backstage? Get out of here before I call the police!",
 				"What is the meaning of this violence! Seize those men!",
 				"You there! Stop! What is this? Police! Police! Thief!",
 				"You there, what's going on? I don't know what you're up to, but you better leave before I have to call someone to throw you out!"
@@ -632,7 +630,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "The ticket taker looks at you quizzicaly. \"You purchased a ticket but did not know the show? How curious!\""
+						"text": "The ticket taker looks at you quizzicaly. \"Why, Polichinelle censeur des théâtres, by Denis Carolet - didn't you see the posters?\""
 					}
 				]
 			]
@@ -823,8 +821,8 @@
 			]
 		},
 		{
-			"name": "Hello there, old friend! (male noble)",
-			"displayName": "Hello there, old friend! (male noble)",
+			"name": "Hello there, pardon me for bothering you! (male noble)",
+			"displayName": "Hello there, pardon me for bothering you! (male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -917,8 +915,8 @@
 			]
 		},
 		{
-			"name": "Hello there, old friend! (female noble)",
-			"displayName": "Hello there, old friend! (female noble)",
+			"name": "Hello there, pardon me for bothering you! (female noble)",
+			"displayName": "Hello there, pardon me for bothering you! (female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1011,8 +1009,8 @@
 			]
 		},
 		{
-			"name": "Hello there, old friend! (servant)",
-			"displayName": "Hello there, old friend! (servant)",
+			"name": "Hello there, pardon me for bothering you! (servant)",
+			"displayName": "Hello there, pardon me for bothering you! (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1099,8 +1097,8 @@
 			]
 		},
 		{
-			"name": "Hello esteemed person I've never met before! (noble)",
-			"displayName": "Hello esteemed person I've never met before! (noble)",
+			"name": "Hello, so nice to see the right kind of people here! (noble)",
+			"displayName": "Hello, so nice to see the right kind of people here! (noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -1178,8 +1176,8 @@
 			]
 		},
 		{
-			"name": "Hello esteemed person I've never met before! (servant)",
-			"displayName": "Hello esteemed person I've never met before! (servant)",
+			"name": "Hello, you look just like a friend of my master! (servant)",
+			"displayName": "Hello, you look just like a friend of my master! (servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -2946,175 +2944,6 @@
 			]
 		},
 		{
-			"name": "You seem trustworthy. Could you please hold on to this package until I come back?",
-			"displayName": "You seem trustworthy. Could you please hold on to this package until I come back?",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "AskStrangerFavor",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "curiosity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "+"
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "AskStrangerFavor",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				},
-				{
-					"category": "conversation",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "AskedStrangerFavor",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "OK, but what's going on?"
-					}
-				]
-			]
-		},
-		{
-			"name": "What do you say we whistle and stomp? (femaleNobleYesStomp)",
-			"displayName": "What do you say we whistle and stomp? (femaleNobleYesStomp)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 4,
-					"operator": ">"
-				},
-				{
-					"category": "conversation",
-					"type": "AskStrangerFavor",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 3,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "conversation",
-					"type": "AskStrangerFavor",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				},
-				{
-					"category": "conversation",
-					"type": "StompAndWhistle",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "AskedStrangerFavor",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Sounds fun, let's make some noise!"
-					}
-				]
-			]
-		},
-		{
 			"name": "What do you say we whistle and stomp? (femaleNobleNoStomp)",
 			"displayName": "What do you say we whistle and stomp? (femaleNobleNoStomp)",
 			"influenceRules": [],
@@ -3282,6 +3111,19 @@
 				{
 					"category": "conversation",
 					"type": "AskedStrangerFavor",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -4657,6 +4499,19 @@
 					"type": "SuccessfulDistraction",
 					"first": "initiator",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -4935,6 +4790,19 @@
 					"category": "progress",
 					"type": "SuccessfulDistraction",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -5240,6 +5108,12 @@
 					"value": true
 				},
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
@@ -5321,6 +5195,12 @@
 					"value": true
 				},
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
@@ -5382,6 +5262,12 @@
 				{
 					"category": "role",
 					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
 					"first": "responder",
 					"value": true
 				},
@@ -5451,6 +5337,12 @@
 					"value": true
 				},
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
@@ -5516,6 +5408,12 @@
 					"value": true
 				},
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "TellTheTruthAcquaintance",
 					"first": "initiator",
@@ -5577,6 +5475,12 @@
 				{
 					"category": "role",
 					"type": "acquaintance",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
 					"first": "responder",
 					"value": true
 				},
@@ -7704,7 +7608,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "I'm really in no moode to push through this crowd right now."
+						"text": "I'm really in no mood to push through this crowd right now."
 					}
 				]
 			]
@@ -8043,6 +7947,19 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -8243,13 +8160,6 @@
 				},
 				{
 					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": true
-				},
-				{
-					"category": "relationship",
 					"type": "esteem",
 					"first": "responder",
 					"second": "initiator",
@@ -8273,6 +8183,19 @@
 				{
 					"category": "conversation",
 					"type": "AskedAcquaintanceDistraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8317,13 +8240,6 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
-				},
-				{
-					"category": "relationship",
-					"type": "ally",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
 				},
 				{
 					"category": "relationship",
@@ -8420,9 +8336,10 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
-					"type": "SuccessfulDistraction",
+					"category": "conversation",
+					"type": "StompAndWhistle",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8435,6 +8352,19 @@
 				{
 					"category": "conversation",
 					"type": "AskedAcquaintanceDistraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8630,6 +8560,12 @@
 					"value": true
 				},
 				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "AskAcquaintanceDistraction",
 					"first": "initiator",
@@ -8653,9 +8589,10 @@
 			],
 			"effects": [
 				{
-					"category": "progress",
-					"type": "SuccessfulDistraction",
+					"category": "conversation",
+					"type": "StompAndWhistle",
 					"first": "initiator",
+					"second": "responder",
 					"value": true
 				},
 				{
@@ -8668,6 +8605,19 @@
 				{
 					"category": "conversation",
 					"type": "AskedAcquaintanceDistraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -8922,8 +8872,8 @@
 			]
 		},
 		{
-			"name": "Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
-			"displayName": "Please, let me buy you a refreshment, and urge you to respect the pudeur of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
+			"name": "Please, let me buy you a refreshment, and urge you to respect the privacy of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
+			"displayName": "Please, let me buy you a refreshment, and urge you to respect the privacy of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -9236,7 +9186,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "If your master commands it, I am sure his aims are just!"
+						"text": "If your master commands it, I am sure he has his reasons!"
 					}
 				]
 			]
@@ -11779,8 +11729,8 @@
 			]
 		},
 		{
-			"name": "My Master's work is almost completed, will you help me leave?",
-			"displayName": "My Master's work is almost completed, will you help me leave?",
+			"name": "My Master's work is almost completed, will you help me leave? (unseen servant)",
+			"displayName": "My Master's work is almost completed, will you help me leave? (unseen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -13501,8 +13451,8 @@
 			]
 		},
 		{
-			"name": "My Master's work is almost completed, will you help me leave?",
-			"displayName": "My Master's work is almost completed, will you help me leave?",
+			"name": "My Master's work is almost completed, will you help me leave? (seen servant)",
+			"displayName": "My Master's work is almost completed, will you help me leave? (seen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -14509,8 +14459,8 @@
 			]
 		},
 		{
-			"name": "You there, what's going on? Were you just backstage? Get out of here before I call the poilice!",
-			"displayName": "You there, what's going on? Were you just backstage? Get out of here before I call the poilice!",
+			"name": "You there, what's going on? Were you just backstage? Get out of here before I call the police!",
+			"displayName": "You there, what's going on? Were you just backstage? Get out of here before I call the police!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -14551,7 +14501,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "You slink out of the theatre somewhat ashamed, but you managed to keep the plans! While you lack social power, you ahve the advanateg of relative invisibility - servants attract little attention, although their clothing can cause trouble. In the uniform of a particular noble house - en livrée - servants may be given greater deference, but their conduct also reflects on the master. Today it worked in your favor - you will surely be rewarded!"
+						"text": "You slink out of the theatre somewhat ashamed, but you managed to keep the plans! While you lack social power, you have the advantage of relative invisibility - servants attract little attention, although their clothing can cause trouble. In the uniform of a particular noble house - en livrée - servants may be given greater deference, but their conduct also reflects on the master. Today it worked in your favor - you will surely be rewarded!"
 					}
 				]
 			]
@@ -14599,7 +14549,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "The ticket taker, wary of what looks like an impending fight, draws attention to you and your interlocutor; The crowd separates you, and the plans are stripped from your person before you are thrown out onto the street. If your master hears about this, you'll surely be fired, but at least you didn't end up in jail!"
+						"text": "The ticket taker, wary of what looks like an impending fight, draws attention to you and your interlocutor; the crowd separates you, and the plans are stripped from your person before you are thrown out onto the street. If your master hears about this, you'll surely be fired, but at least you didn't end up in jail!"
 					}
 				]
 			]
@@ -14695,7 +14645,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "You are allowed to leave the theatre with the plans. What luck! Despite causing a scandal, you are considered of too little importance to really pursue, and run striaght to your master with the plans - which he immediately burns, before giving you a Louis d'or and firing you. You possess compromising information, and your master promises to have you severely beaten should you ever be seen in Paris again. Sometimes there's just nothing you can do - in many instances, nobles can abuse commoners (especially their servants) with impunity, and you are now effectively an outcast from the capital."
+						"text": "You are allowed to leave the theatre with the plans. What luck! Despite causing a scandal, you are considered of too little importance to really pursue, and run straight to your master with the plans - which he immediately burns, before giving you a Louis d'or and firing you. You possess compromising information, and your master promises to have you severely beaten should you ever be seen in Paris again. Sometimes there's just nothing you can do - in many instances, nobles can abuse commoners (especially their servants) with impunity, and you are now effectively an outcast from the capital."
 					}
 				]
 			]

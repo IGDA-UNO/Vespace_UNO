@@ -935,6 +935,20 @@
 					"second": "Servant Player"
 				},
 				{
+					"category": "relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
 					"category": "role",
 					"type": "acquaintance",
 					"value": true,
@@ -1463,6 +1477,20 @@
 					"type": "emulation",
 					"value": 30,
 					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Chérubin",
 					"second": "Servant Player"
 				},
 				{

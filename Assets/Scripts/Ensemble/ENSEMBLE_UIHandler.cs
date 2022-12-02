@@ -47,8 +47,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject characterMenu;
     public GameObject attributesMenu;
     public GameObject traitsMenu;
-    public GameObject clothingMenu;
-    public GameObject professionMenu;
+    // public GameObject clothingMenu;
+    // public GameObject professionMenu;
     public GameObject directedStatusMenu;
     public GameObject networkMenu;
     public GameObject nonActionableRelationshipMenu;
@@ -94,8 +94,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Text DialogueText;
     public GameObject dialogueIcon;
 
-    public Vector3 dialogueOffset = new Vector3(-0.03f, -0.03f, 0.5f);
-    public Vector3 resultsOffset = new Vector3(-0.03f, -0.03f, 0.5f);
+    public Vector3 dialogueOffset;
+    public Vector3 resultsOffset;
 
     public VideoPlayer marionetteVideoFront;
     public VideoPlayer marionetteVideoBack;
@@ -130,14 +130,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject backstageRight;
 
     public string finalInterlocutor;
+    public Transform lastInterlocutorTransform;
     public bool approachedFinalInterlocutor = false;
 
     private List<Action> gameActions = new List<Action>();
 
     private bool initiatedProgressPanel = false;
     private int negativeInteractionCount = 0;
+    private int positiveInteractionCount = 0;
     private bool completedTwoInteractions = false;
-    private List<string> characterInteractions = new List<string>();
+    public List<string> characterInteractions = new List<string>();
+
+    private string finalResult;
 
     private Cast cast = new Cast { 
         "Male Noble Player", 
@@ -171,6 +175,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     void Start()
     {
         hud.UpdateQuestProgress(HUD.NO_TICKET);
+
+        dialogueOffset = new Vector3(-0.06f, -0.07f, 0.51f);
+        resultsOffset = new Vector3(-0.06f, -0.03f, 0.5f);
 
         if (!SteamVRObjects.activeSelf)
         {
@@ -221,8 +228,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         attributesMenu = GameObject.Find("AttributesList");
         omekaMenu = GameObject.Find("OmekaList");
         traitsMenu = GameObject.Find("TraitsList");
-        clothingMenu = GameObject.Find("TraitClothingList");
-        professionMenu = GameObject.Find("ProfessionList");
+        // clothingMenu = GameObject.Find("TraitClothingList");
+        // professionMenu = GameObject.Find("ProfessionList");
         characterMenu = GameObject.Find("Character_Name");
 
         foreach (string character in cast) {
@@ -415,6 +422,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             StartCoroutine(TransportHeadBackstage());
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
             StartCoroutine(TransportReturnToTheater());
+        } else if (hud.GetQuestProgress() == HUD.THROWN_OUT) {
+            StartCoroutine(GameOver());
+        } else if (hud.GetQuestProgress() == HUD.GAME_COMPLETED) {
+            HandleFinalResults();
         }
     }
 
@@ -422,8 +433,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         attributesMenu.GetComponent<UnityEngine.UI.Text>().text = attributesBuilder.ToString();
         traitsMenu.GetComponent<UnityEngine.UI.Text>().text = traitsBuilder.ToString();
-        clothingMenu.GetComponent<UnityEngine.UI.Text>().text = clothingBuilder.ToString();
-        professionMenu.GetComponent<UnityEngine.UI.Text>().text = professionBuilder.ToString();
+        //clothingMenu.GetComponent<UnityEngine.UI.Text>().text = clothingBuilder.ToString();
+        //professionMenu.GetComponent<UnityEngine.UI.Text>().text = professionBuilder.ToString();
     }
 
     public void Orientation()
@@ -527,6 +538,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             {
                 traitsBuilder.Append(datum.Type + "\n");
             }
+            else if (datum.Category == "role" && datum.Type != "player")
+            {
+                attributesBuilder.Append(datum.Type + "\n");
+            }
 
             // if(datum.Category == "Attribute")
             // {
@@ -577,17 +592,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         List<List<Predicate>> socialRecordDataByTimestep = data.ensemble.getSocialRecordCopy();
 
-        int timestep = 0;
+        // int timestep = 0;
 
         foreach (List<Predicate> predicatesForTimestep in socialRecordDataByTimestep)
         {
             List<Predicate> characterData = predicatesForTimestep.FindAll(predicate => predicate.First == objectName).ToList();
-            historyBuilder.Append("\nTimestep " + timestep.ToString() + ": " + "\n\n");
+            // historyBuilder.Append("\nTimestep " + timestep.ToString() + ": " + "\n\n");
 
             foreach (Predicate datum in characterData)
             {
-                string[] predicateDebug = new string[] { datum.First, datum.Second, datum.Category, datum.Type };
-                string predicateToString = string.Format("First: {0}, Second: {1}, Category: {2}, Type: {3}", predicateDebug);
+                string predicateToString = data.ensemble.predicateToEnglish(datum).Text;
+                //string[] predicateDebug = new string[] { datum.First, datum.Second, datum.Category, datum.Type };
+                //string predicateToString = string.Format("First: {0}, Second: {1}, Category: {2}, Type: {3}", predicateDebug);
 
                 historyBuilder.Append(predicateToString + "\n");
             }
@@ -617,8 +633,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             if (!suppressResponse) {
                 StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
             }
-        } else if (actions.Count > 0 && actions[0].Name.Contains("interaction")) {
-            actions = new List<Action>();
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
             if (finalInterlocutor == objectName) {
                 if (approachedFinalInterlocutor != true) {
@@ -631,6 +645,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 CloseMenu();
                 StartCoroutine(DisplayDialogue(objectName, "Did I just see you sneak backstage?"));
             }
+        } else if (actions.Count > 0 && actions[0].Name.Contains("interaction")) {
+            actions = new List<Action>();
         } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
             if (objectName == "Marie-Catherine Bienfait, ticket taker") {
                 if (actions.Count > 0) {
@@ -653,28 +669,30 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         if (actions.Count > 0) {
             foreach (Action action in actions)
-            {   
-                string actionName = action.Name;
+            {
+                if (!action.Name.Contains("interaction")) {
+                    string actionName = action.Name;
 
-                if (actionName.Contains("(") && actionName.Contains(")")) {
-                    int parensStart = actionName.LastIndexOf("(");
-                    int parensEnd = actionName.LastIndexOf(")") + 1;
-                    actionName = actionName.Remove(parensStart, parensEnd - parensStart);
+                    if (actionName.Contains("(") && actionName.Contains(")")) {
+                        int parensStart = actionName.LastIndexOf("(");
+                        int parensEnd = actionName.LastIndexOf(")") + 1;
+                        actionName = actionName.Remove(parensStart, parensEnd - parensStart);
+                    }
+
+                    GameObject goButton = (GameObject)Instantiate(prefabButton);
+                    goButton.transform.SetParent(actionsMenuImageZone, false);
+
+                    
+                    goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
+                    goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
+                    y -= 0.1f;
+
+                    Button tempButton = goButton.GetComponent<Button>();
+                    tempButton.GetComponentInChildren<Text>().text = actionName;
+                    tempButton.onClick.AddListener(() => TakeAction(objectName, action));
+
+                    actionButtonRefs.Add(goButton);
                 }
-
-                GameObject goButton = (GameObject)Instantiate(prefabButton);
-                goButton.transform.SetParent(actionsMenuImageZone, false);
-
-                
-                goButton.GetComponent<RectTransform>().transform.localPosition = new Vector3(x, y, z);
-                goButton.GetComponent<RectTransform>().transform.rotation = new Quaternion(0, 0, 0, 0);
-                y -= 0.1f;
-
-                Button tempButton = goButton.GetComponent<Button>();
-                tempButton.GetComponentInChildren<Text>().text = actionName;
-                tempButton.onClick.AddListener(() => TakeAction(objectName, action));
-
-                actionButtonRefs.Add(goButton);
             }
         } else {
             CloseMenu();
@@ -707,8 +725,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private IEnumerator<object> ShowFinalResults(string actions, string results)
     {
-        yield return new WaitForSeconds(10);
-        dialogueHUD.SetActive(true);
+        yield return new WaitForSeconds(6);
+        dialogueHUD.SetActive(false);
         hud.removeHud();
 
         resultsPanel.SetActive(true);
@@ -720,23 +738,24 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         StartCoroutine(postRequest("http://ensemble-tool.herokuapp.com/gamelog", results));
     }
 
-    private void HandleFinalResults(string title, string results)
+    private void HandleFinalResults()
     {
+        string title = "Results";
         actionsBuilder.Clear();
         actionsBuilder.Append(title + "\n\n");
 
-        if (title == "Game Log" && results != "")
-        {
-            actionsBuilder.Append(results + "\n\n");
-        }
-
         StringBuilder resultsJsonBuilder = new StringBuilder();
         resultsJsonBuilder.Append("{\"actions\":[");
-        int i = 1;
 
+        actionsBuilder.Append("You impressed this many people: " + positiveInteractionCount + "\n\n");
+        actionsBuilder.Append("You annoyed this many people: " + negativeInteractionCount + "\n\n");
+        actionsBuilder.Append("You talked to these people you knew: \n\n");
+        actionsBuilder.Append("You talked to these people you didn't know: \n\n");
+
+        int i = 1;
         foreach(Action act in gameActions)
         {
-            actionsBuilder.Append(i.ToString() + ": " + act.Name.ToString() + "\n");
+            // actionsBuilder.Append(i.ToString() + ": " + act.Name.ToString() + "\n");
             resultsJsonBuilder.Append("{ \"name\": \"" + act.Name.ToString() + "\"}");
 
             if (i < gameActions.Count) {
@@ -756,10 +775,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private void ShowFinalText(string objectName, Action action)
     {
         StartCoroutine(DisplayDialogue(objectName, action.Name));
-        string finalResult = getDialogueResponse(action);
-        data.ensemble.takeAction(action);
         hud.UpdateQuestProgress(HUD.GAME_COMPLETED);
-        HandleFinalResults("Results", finalResult);
+
+        data.ensemble.takeAction(action);
+        finalResult = getDialogueResponse(action);
+        StartCoroutine(ShowProgress(3, finalResult));
     }
 
     private string getDialogueResponse(Action action) 
@@ -788,8 +808,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private IEnumerator<object> TransportReturnToTheater()
     {
         // vm.PositionAssigner();
-        // GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
-        // lastInterlocutor.transform.position = new Vector3(2.5f, 0f, 2f);
+        GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+        Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
+        lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
+        lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
 
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
@@ -821,8 +843,15 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         gameActions.Add(action);
 
         string dialogueResponse = "";
+        bool backstageAccess = false;
 
         if (action.Effects != null) {
+            foreach(Effect e in action.Effects) {
+                if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
+                    backstageAccess = true;
+                }
+            }
+
             foreach(Effect e in action.Effects) {
                 if (e.Type == "HasTicket" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.POSSESS_TICKET);
@@ -852,6 +881,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                         whistleAudioSource.Play();
                         stompAudioSource.Play();
                     }
+
+                    finalInterlocutor = objectName;
+                    hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+                    StartCoroutine(ShowProgress(7, "All of that whistling and stomping is seriously distracting! It looks like now is your chance to slip backstage..."));
                 }
 
                 if (e.Type == "NearStageInteraction" && e.Value is bool && e.Value is true) {
@@ -859,13 +892,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 }
 
                 if (e.Type == "SuccessfulDistraction" && e.Value is bool && e.Value is true) {
+                    GameObject characterInQuestion = GameObject.Find(objectName);
+                    Animator anim = characterInQuestion.GetComponent<Animator>();
 
-                }
+                    if (anim != null) {
+                        anim.SetTrigger("Active");
+                        // yellingAudioSource.Play();
+                    }
 
-                if (e.Type == "BackstageAccess" && e.Value is bool && e.Value is true) {
                     finalInterlocutor = objectName;
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                    StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
+                    StartCoroutine(ShowProgress(3, "Your friend has really caused a scene! It seems to have distracted the crowd enough that you can slip backstage..."));
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
@@ -874,7 +911,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.THROWN_OUT);
-                    StartCoroutine(GameOver());
+                    StartCoroutine(ShowProgress(3, "Unfortunately you've drawn too much attention to yourself. The bouncer grabs you by the collar and begins to drag you out of the theatre."));
+                }
+
+                if (e.Type == "PositiveInteraction" && e.Value is bool && e.Value is true) {
+                    positiveInteractionCount += 1;
+                    Debug.Log("had a positive interaction!");
                 }
 
                 if (e.Type == "NegativeInteraction" && e.Value is bool && e.Value is true) {
@@ -882,21 +924,44 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     Debug.Log("had a negative interaction!");
 
                     if (negativeInteractionCount == 2) {
-                        string role = "servant";
-                        StartCoroutine(ShowProgress(3, "It looks like you're drawing attention to yourself. Try to find another " + role + " to talk to who may be more willing to help."));
+                        string role = EnsemblePlayer.GetSelectedCharacter().ToLower();
+                        StartCoroutine(ShowProgress(3, "It looks like you're drawing attention to yourself. Try to find a fellow " + role + " to talk to who may be more willing to help."));
                     }
                 }
 
-                if (e.Type == "AcquaintanceSecondInteraction" && e.Value is bool && e.Value is true) {
+                bool isCompleteInteraction = e.Value is bool && e.Value is true &&
+                    (e.Type == "AcquaintanceSecondInteraction" || 
+                    e.Type == "NegativeInteraction" || 
+                    e.Type == "PositiveInteraction");
+
+                if (isCompleteInteraction) {
                     if (!characterInteractions.Contains(objectName)) {
                         characterInteractions.Add(objectName);
 
                         if (characterInteractions.Count == 2) {
                             completedTwoInteractions = true;
                         }
+
+                        if (hud.GetQuestProgress() == HUD.RECEIVED_MARK) {
+                            hud.UpdateQuestProgress(HUD.RECEIVED_MARK);
+                        }
                     }
                 }
             }
+        }
+
+        if (backstageAccess && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
+            // if (completedTwoInteractions) {
+                finalInterlocutor = objectName;
+                hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+                StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
+            // } else {
+            //     StartCoroutine(ShowProgress(3, "Great, you're certainly being persuasive! However, you need to speak to at least one more person to gain further intel before going backstage."));
+            // }
+        }
+
+        if (hud.GetQuestProgress() == HUD.RECEIVED_MARK) {
+            finalInterlocutor = objectName;
         }
 
         dialogueResponse = getDialogueResponse(action);
@@ -909,11 +974,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         StartCoroutine(SetCharacterAvailability());
     }
 
+    public void ExitGame()
+    {
+        data.ensemble.clearHistory();
+        SceneManager.LoadScene("Intro");
+    }
+
     private IEnumerator<object> GameOver()
     {
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("Intro");
-        HandleFinalResults("Game Over", "");
+        SteamVR_Fade.Start(Color.black, 10);
+        yield return new WaitForSeconds(3);
+        ExitGame();
     }
 
     public void setDialogueHudImage(string characterName)

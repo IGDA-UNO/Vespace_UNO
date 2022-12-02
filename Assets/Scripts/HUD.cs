@@ -15,6 +15,7 @@ public class HUD : MonoBehaviour
     public Texture NoblewomanTexture;
     public Texture ServantTexture;
     public Text CurrentObjectiveText;
+    public ENSEMBLE_UIHandler ensembleUI;
 
     public static int questProgress; // = POSSESS_TICKET; //start off assuming you possess a ticket? 
 
@@ -80,7 +81,7 @@ public class HUD : MonoBehaviour
     {
         HUDObject.transform.rotation = playerCamera.transform.rotation;
         HUDObject.transform.SetParent(playerCamera.transform);
-        HUDObject.transform.localPosition = new Vector3(-0.06f, 0.1f, 0.5f);
+        HUDObject.transform.localPosition = new Vector3(-0.06f, 0.1f, 0.51f);
     }
 
     public void removeHud()
@@ -106,7 +107,9 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.RECEIVED_MARK)
         {
-            return "Enter the theatre, and find someone to help you backstage!";
+            string interactionCount = ensembleUI.characterInteractions.Count.ToString();
+            Debug.Log("interactionCount: " + interactionCount);
+            return "1. Speak to at least two people: " + interactionCount + "/2\n2. Find someone to help you backstage!";
         }
         else if (HUD.questProgress == HUD.BACKSTAGE_ACCESS)
         {
@@ -114,7 +117,7 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.POSSESS_PLANS)
         {
-            return "You have the plans! Now speak to the last person you spoke to!";
+            return "You have the plans! Now speak to " + ensembleUI.finalInterlocutor + " again!";
         }
         else if (HUD.questProgress == HUD.FINAL_INTERACTION)
         {
