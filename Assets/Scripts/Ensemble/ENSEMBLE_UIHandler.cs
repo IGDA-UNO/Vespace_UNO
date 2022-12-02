@@ -185,8 +185,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         hud.UpdateQuestProgress(HUD.NO_TICKET);
 
-        dialogueOffset = new Vector3(-0.06f, -0.07f, 0.51f);
-        resultsOffset = new Vector3(-0.06f, -0.03f, 0.5f);
+        dialogueOffset = new Vector3(-0.06f, 0.04f, 0.51f);
+        resultsOffset = new Vector3(0f, 0f, 0.5f);
 
         if (!SteamVRObjects.activeSelf)
         {

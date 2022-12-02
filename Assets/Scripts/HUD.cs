@@ -81,7 +81,7 @@ public class HUD : MonoBehaviour
     {
         HUDObject.transform.rotation = playerCamera.transform.rotation;
         HUDObject.transform.SetParent(playerCamera.transform);
-        HUDObject.transform.localPosition = new Vector3(-0.06f, 0.1f, 0.51f);
+        HUDObject.transform.localPosition = new Vector3(-0.06f, 0.2f, 0.51f);
     }
 
     public void removeHud()
