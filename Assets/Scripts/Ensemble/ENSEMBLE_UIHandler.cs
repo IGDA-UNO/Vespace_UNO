@@ -140,7 +140,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private int negativeInteractionCount = 0;
     private int positiveInteractionCount = 0;
     private bool completedTwoInteractions = false;
+
     public List<string> characterInteractions = new List<string>();
+    public List<string> strangerInteractions = new List<string>();
+    public List<string> acquaintanceInteractions = new List<string>();
 
     private string finalResult;
 
@@ -792,8 +795,16 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         actionsBuilder.Append("You impressed this many people: " + positiveInteractionCount + "\n\n");
         actionsBuilder.Append("You annoyed this many people: " + negativeInteractionCount + "\n\n");
-        actionsBuilder.Append("You talked to these people you knew: \n\n");
-        actionsBuilder.Append("You talked to these people you didn't know: \n\n");
+
+        actionsBuilder.Append("You talked to these people you knew: \n");
+        foreach (string acquaintance in acquaintanceInteractions) {
+            actionsBuilder.Append(acquaintance + "\n");
+        }
+
+        actionsBuilder.Append("\n\nYou talked to these people you didn't know: \n");
+        foreach (string stranger in strangerInteractions) {
+            actionsBuilder.Append(stranger + "\n");
+        }
 
         int i = 1;
         foreach(Action act in gameActions)
@@ -887,6 +898,25 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         string dialogueResponse = "";
         bool backstageAccess = false;
+
+        List<Predicate> socialRecordData = data.ensemble.getSocialRecordCopyAtTimestep(0);
+        List<Predicate> characterData = socialRecordData.FindAll(predicate => predicate.First == objectName).ToList();
+
+        foreach(Predicate pred in characterData) {
+            if (pred.Category == "role" && pred.Type == "stranger")
+            {
+                if (!strangerInteractions.Contains(objectName)) {
+                    strangerInteractions.Add(objectName);
+                }
+            }
+
+            if (pred.Category == "role" && pred.Type == "acquaintance") 
+            {
+                if (!acquaintanceInteractions.Contains(objectName)) {
+                    acquaintanceInteractions.Add(objectName);
+                }
+            }
+        }
 
         if (action.Effects != null) {
             foreach(Effect e in action.Effects) {
@@ -1104,8 +1134,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         if (DialogueText.text == dialogueToHide) {
             dialogueHUD.SetActive(false);
-        } else {
-            Debug.Log("not closing dialogue early");
         }
     }
 
