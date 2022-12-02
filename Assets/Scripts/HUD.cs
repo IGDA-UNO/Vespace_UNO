@@ -117,7 +117,7 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.POSSESS_PLANS)
         {
-            return "You have the plans! Now speak to " + ensembleUI.finalInterlocutor + " again!";
+            return "You have the plans! Now ask " + ensembleUI.finalInterlocutor + " to help you exit the theatre!";
         }
         else if (HUD.questProgress == HUD.FINAL_INTERACTION)
         {
@@ -125,11 +125,11 @@ public class HUD : MonoBehaviour
         }
         else if (HUD.questProgress == HUD.GAME_COMPLETED)
         {
-            return "Game completed!";
+            return "Congratulations - you've completed the game!";
         }
         else if (HUD.questProgress == HUD.THROWN_OUT)
         {
-            return "You've been thrown out of the theater!";
+            return "Oh no - you've been thrown out of the theater!";
         }
 
         return "Unknown objective!";
