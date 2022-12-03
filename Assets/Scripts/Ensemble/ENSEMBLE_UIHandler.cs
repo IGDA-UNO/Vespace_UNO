@@ -49,12 +49,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public GameObject traitsMenu;
     // public GameObject clothingMenu;
     // public GameObject professionMenu;
-    public GameObject directedStatusMenu;
-    public GameObject networkMenu;
-    public GameObject nonActionableRelationshipMenu;
-    public GameObject relationshipMenu;
-    public GameObject socialRecordLabelMenu;
-    public GameObject statusMenu;
+    // public GameObject directedStatusMenu;
+    // public GameObject networkMenu;
+    // public GameObject nonActionableRelationshipMenu;
+    // public GameObject relationshipMenu;
+    // public GameObject socialRecordLabelMenu;
+    // public GameObject statusMenu;
     public GameObject historyMenu;
     public GameObject omekaMenu;
     public GameObject actionsMenu;
@@ -242,12 +242,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         actionsMenu = GameObject.Find("ActionsMenu");
         actionsMenuImageZone = actionsMenu.transform.Find("MainView/ScrollViewActions/Viewport/Content/ImageZone");
-        directedStatusMenu = GameObject.Find("DirectedStatusList");
-        networkMenu = GameObject.Find("NetworkList");
-        nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
-        relationshipMenu = GameObject.Find("RelationshipList");
-        socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
-        statusMenu = GameObject.Find("StatusList");
+        // directedStatusMenu = GameObject.Find("DirectedStatusList");
+        // networkMenu = GameObject.Find("NetworkList");
+        // nonActionableRelationshipMenu = GameObject.Find("NonActionableRelationshipList");
+        // relationshipMenu = GameObject.Find("RelationshipList");
+        // socialRecordLabelMenu = GameObject.Find("SocialRecordLabelList");
+        // statusMenu = GameObject.Find("StatusList");
         historyMenu = GameObject.Find("HistoryList");
         attributesMenu = GameObject.Find("AttributesList");
         omekaMenu = GameObject.Find("OmekaList");
@@ -269,7 +269,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         StartCoroutine(SetCharacterAvailability());
-        StartCoroutine(StartCountdown());
     }
 
     void Update(){
@@ -285,6 +284,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 marionetteVideoFront.gameObject.SetActive(true);
                 marionnettisteAudio.gameObject.SetActive(true);
                 SuperTitles.StartTimer();
+
+                StartCoroutine(StartCountdown());
             }
             else
             {
@@ -311,11 +312,27 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private IEnumerator<object> StartCountdown()
     {
-        yield return new WaitForSeconds(360);
+        yield return new WaitForSeconds(300);
 
         if (hud.GetQuestProgress() == HUD.RECEIVED_MARK) {
-            hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-            StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, but you see an opening, so you head backstage!"));
+            if (finalInterlocutor != null) {
+                string initiator = EnsemblePlayer.GetSelectedCharacter();
+                Predicate accessPred = new Predicate("progress", "BackstageAccess", initiator, true);
+                Predicate greetedPred = new Predicate("conversation", "GreetedStranger", initiator, finalInterlocutor, true);
+                Predicate greetPred = new Predicate("conversation", "GreetStranger", initiator, finalInterlocutor, false);
+                Predicate negativeInteractionPred = new Predicate("conversation", "NegativeInteraction", initiator, finalInterlocutor, true);
+
+                data.ensemble.set(accessPred);
+                data.ensemble.set(greetedPred);
+                data.ensemble.set(greetPred);
+                data.ensemble.set(negativeInteractionPred);
+
+                hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+                StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, but you see an opening, so you head backstage!"));
+            } else {
+                hud.UpdateQuestProgress(HUD.THROWN_OUT);
+                StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, and unfortunately you haven't spoken to enough people to create a diversion!"));
+            }
         }
     }
 
@@ -388,12 +405,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             FindObjectsGetStrings();
 
-            directedStatusMenu.GetComponent<UnityEngine.UI.Text>().text = directedStatusBuilder.ToString();
-            networkMenu.GetComponent<UnityEngine.UI.Text>().text = networkBuilder.ToString();
-            nonActionableRelationshipMenu.GetComponent<UnityEngine.UI.Text>().text = nonActionableRelationshipBuilder.ToString();
-            relationshipMenu.GetComponent<UnityEngine.UI.Text>().text = relationshipBuilder.ToString();
-            socialRecordLabelMenu.GetComponent<UnityEngine.UI.Text>().text = socialRecordLabelBuilder.ToString();
-            statusMenu.GetComponent<UnityEngine.UI.Text>().text = statusBuilder.ToString();
+            // directedStatusMenu.GetComponent<UnityEngine.UI.Text>().text = directedStatusBuilder.ToString();
+            // networkMenu.GetComponent<UnityEngine.UI.Text>().text = networkBuilder.ToString();
+            // nonActionableRelationshipMenu.GetComponent<UnityEngine.UI.Text>().text = nonActionableRelationshipBuilder.ToString();
+            // relationshipMenu.GetComponent<UnityEngine.UI.Text>().text = relationshipBuilder.ToString();
+            // socialRecordLabelMenu.GetComponent<UnityEngine.UI.Text>().text = socialRecordLabelBuilder.ToString();
+            // statusMenu.GetComponent<UnityEngine.UI.Text>().text = statusBuilder.ToString();
         }
     }
     public void DisplayHistory()
@@ -448,6 +465,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             else{
                 GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().SetInterfaceMode(4);
             }
+
+            Debug.Log("currentOmekaIDOfClickedCharacter: " + currentOmekaIDOfClickedCharacter);
+            Debug.Log("currentPositionOfClickedCharacter: " + currentPositionOfClickedCharacter);
 
             GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().clickOnObject(currentOmekaIDOfClickedCharacter, currentPositionOfClickedCharacter);
 
@@ -716,11 +736,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
             if (finalInterlocutor == objectName) {
+                Debug.Log("clicked on finalInterlocutor");
                 if (approachedFinalInterlocutor != true) {
                     approachedFinalInterlocutor = true;
-                    TakeAction(objectName, actions[0]);
-                    volitionInterface = data.ensemble.calculateVolition(cast);
-                    actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+
+                    foreach (Action action in actions) {
+                        if (action.Name.Contains("interaction")) {
+                            TakeAction(objectName, action);
+                            volitionInterface = data.ensemble.calculateVolition(cast);
+                            actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+                            break;
+                        }
+                    }
                 }
             } else {
                 CloseMenu();
@@ -1031,6 +1058,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.THROWN_OUT);
+                    CloseMenu();
                     StartCoroutine(ShowProgress(3, "Unfortunately you've drawn too much attention to yourself. The bouncer grabs you by the collar and begins to drag you out of the theatre."));
                 }
 
@@ -1044,6 +1072,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     Debug.Log("had a negative interaction!");
 
                     if (negativeInteractionCount == 2) {
+                        CloseMenu();
                         string role = EnsemblePlayer.GetSelectedCharacter().ToLower();
                         StartCoroutine(ShowProgress(3, "It looks like you're drawing attention to yourself. Try to find a fellow " + role + " to talk to who may be more willing to help."));
                     }
@@ -1071,13 +1100,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         if (backstageAccess && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
-            // if (completedTwoInteractions) {
+            if (completedTwoInteractions) {
                 finalInterlocutor = objectName;
                 hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                 StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
-            // } else {
-            //     StartCoroutine(ShowProgress(3, "Great, you're certainly being persuasive! However, you need to speak to at least one more person to gain further intel before going backstage."));
-            // }
+            } else {
+                StartCoroutine(ShowProgress(3, "Great, you're certainly being persuasive! However, you need to speak to at least one more person to gain further intel before going backstage."));
+            }
         }
 
         if (hud.GetQuestProgress() == HUD.RECEIVED_MARK) {
@@ -1193,8 +1222,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void clickOnObject(string objectName, Vector3 position)  
     {
-        Debug.Log("clickOnObject: " + objectName);
-        
         if (objectName == "TheatrePlans") {
             OpenPlans();
         } else {

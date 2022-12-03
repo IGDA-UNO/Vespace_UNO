@@ -16,8 +16,10 @@
 				"give ticket",
 				"receive mark",
 				"greet a stranger",
-				"ask stranger for a favor",
 				"ask stranger a question",
+				"ask stranger for a favor",
+				"bribe a stranger",
+				"give stranger a command",
 				"greet acquaintance",
 				"lie to acquaintance",
 				"ask acquaintance for a favor",
@@ -105,7 +107,6 @@
 			"influenceRules": [],
 			"leadsTo": [
 				"I may have something for you...",
-				"If you help me out, I'll give you this juicy orange. (maleNobleVersion)",
 				"If you help me out, I'll give you this juicy orange. (femaleNobleVersion)",
 				"If you help me out, I'll give you this juicy orange. (servantVersion)",
 				"If you help me out, I'll give you 6 sous. (maleNobleVersion)",
@@ -213,8 +214,8 @@
 			"conditions": [],
 			"influenceRules": [],
 			"leadsTo": [
-				"Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
-				"I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
+				"Here, take this gold Louis d'or. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
+				"I insist that you take this gold Louis d'or and remain silent on my activities here. My business is my own. (unallied male noble)",
 				"Please, let me buy you a refreshment, and urge you to respect the privacy of a noblewoman in need, and trust that if my next actions seem strange, they are just... (allied female noble)",
 				"I insist that you take this orange and respect a noble woman's privacy. (unallied female noble)",
 				"Please take this orange and respect a noble woman's privacy. (unallied female noble)",
@@ -311,13 +312,12 @@
 				"I must leave now, and you must help me - clear a passage that I might leave unmolested!",
 				"I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
 				"seen female noble negative interaction",
-				"Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!",
+				"Who dares address me in this way? Seize this fool, and have him thrown out on the street - or in jail!",
 				"What are you talking about?! This is a lie, a terrible lie!",
 				"Silence, and I will reward you handsomely - help me get out and I shall forever be in your debt!",
 				"seen servant positive interaction",
 				"Thank you friend! Now if you can help me get out of this theatre, I'll forever be in your debt!",
 				"My Master's work is almost completed, will you help me leave? (seen servant)",
-				"Shh! Don't speak, fool, just get me out of here!",
 				"seen servant negative interaction",
 				"I'm the criminal?! You're the criminal - this one just attempted to rob me! Help!",
 				"Silence, fool, or I will have my master's men beat you!",
@@ -1115,6 +1115,12 @@
 					"value": true
 				},
 				{
+					"category": "role",
+					"type": "noble",
+					"first": "responder",
+					"value": true
+				},
+				{
 					"category": "progress",
 					"type": "HasMark",
 					"first": "initiator",
@@ -1504,13 +1510,6 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
 				}
 			],
 			"performance": [
@@ -2428,13 +2427,6 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
 				}
 			],
 			"performance": [
@@ -3264,99 +3256,19 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
 				{
 					"category": "conversation",
 					"type": "OfferStrangerBribe",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "And what might that be?"
-					}
-				]
-			]
-		},
-		{
-			"name": "If you help me out, I'll give you this juicy orange. (maleNobleVersion)",
-			"displayName": "If you help me out, I'll give you this juicy orange. (maleNobleVersion)",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "stranger",
-					"first": "responder",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "male",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "OfferStrangerBribe",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "network",
-					"type": "affinity",
-					"first": "responder",
-					"second": "initiator",
-					"value": 2,
-					"operator": "-"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"first": "responder",
-					"second": "initiator",
-					"value": 1,
-					"operator": "-"
-				},
-				{
-					"category": "relationship",
-					"type": "esteem",
-					"first": "responder",
-					"second": "initiator",
-					"value": false
-				},
-				{
-					"category": "conversation",
-					"type": "OfferStrangerBribe",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				},
-				{
-					"category": "conversation",
-					"type": "GreetedStranger",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3366,7 +3278,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "I beg your pardon, I cannot help you."
+						"text": "And what might that be?"
 					}
 				]
 			]
@@ -3509,7 +3421,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "PositiveInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3582,6 +3494,13 @@
 				{
 					"category": "conversation",
 					"type": "GreetedStranger",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GiveStrangerCommand",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3741,7 +3660,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "PositiveInteraction",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3840,6 +3759,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -3935,6 +3861,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -3962,6 +3895,12 @@
 					"category": "role",
 					"type": "servant",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
 					"value": true
 				},
 				{
@@ -4024,13 +3963,20 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GiveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
 				[
 					{
 						"type": "dialogue",
-						"text": "OK I'll help, but who are you working for?"
+						"text": "OK I'll help, but who are you working for, and what do I need to do?"
 					}
 				]
 			]
@@ -4074,7 +4020,7 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": 1,
-					"operator": "+"
+					"operator": "-"
 				},
 				{
 					"category": "network",
@@ -4097,14 +4043,14 @@
 					"type": "esteem",
 					"first": "responder",
 					"second": "initiator",
-					"value": true
+					"value": false
 				},
 				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
 					"second": "initiator",
-					"value": true
+					"value": false
 				},
 				{
 					"category": "conversation",
@@ -4115,7 +4061,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "GreetedStranger",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -4203,6 +4149,13 @@
 				{
 					"category": "conversation",
 					"type": "GreetedStranger",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -4295,6 +4248,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -4352,6 +4312,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				}
 			],
 			"effects": [
@@ -4361,13 +4328,6 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "GreetedStranger",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
 				}
 			],
 			"performance": [
@@ -8718,8 +8678,8 @@
 			]
 		},
 		{
-			"name": "Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
-			"displayName": "Here, let me buy you an orange. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
+			"name": "Here, take this gold Louis d'or. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
+			"displayName": "Here, take this gold Louis d'or. Don't ask me any questions concerning my business here. You know very well I can't answer them! (allied male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -8795,8 +8755,8 @@
 			]
 		},
 		{
-			"name": "I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
-			"displayName": "I insist that you take this orange and remain silent on my activities here. My business is my own. (unallied male noble)",
+			"name": "I insist that you take this gold Louis d'or and remain silent on my activities here. My business is my own. (unallied male noble)",
+			"displayName": "I insist that you take this gold Louis d'or and remain silent on my activities here. My business is my own. (unallied male noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -11900,6 +11860,12 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -11963,6 +11929,12 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -12490,6 +12462,12 @@
 					"type": "LastInteractionResponse",
 					"first": "initiator",
 					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -13112,6 +13090,12 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -13124,8 +13108,8 @@
 			]
 		},
 		{
-			"name": "Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!",
-			"displayName": "Who dares address me in this way! Seize this fool, and have him thrown out on the street - or in jail!",
+			"name": "Who dares address me in this way? Seize this fool, and have him thrown out on the street - or in jail!",
+			"displayName": "Who dares address me in this way? Seize this fool, and have him thrown out on the street - or in jail!",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -13181,6 +13165,12 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -13250,6 +13240,12 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [
@@ -13514,69 +13510,6 @@
 			]
 		},
 		{
-			"name": "Shh! Don't speak, fool, just get me out of here!",
-			"displayName": "Shh! Don't speak, fool, just get me out of here!",
-			"influenceRules": [],
-			"isAccept": true,
-			"conditions": [
-				{
-					"category": "role",
-					"type": "servant",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "progress",
-					"type": "SeenBackstage",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "PositiveInteraction",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "LastInteractionResponse",
-					"first": "initiator",
-					"second": "responder",
-					"value": true
-				}
-			],
-			"effects": [
-				{
-					"category": "progress",
-					"type": "FinalInteraction",
-					"first": "initiator",
-					"value": true
-				},
-				{
-					"category": "conversation",
-					"type": "LastInteractionResponse",
-					"first": "initiator",
-					"second": "responder",
-					"value": false
-				}
-			],
-			"performance": [
-				[
-					{
-						"type": "dialogue",
-						"text": "Ha! Talk to me like that again and I promise you'll soon feel the back of my hand!"
-					}
-				]
-			]
-		},
-		{
 			"name": "seen servant negative interaction",
 			"displayName": "seen servant negative interaction",
 			"influenceRules": [],
@@ -13621,6 +13554,12 @@
 					"type": "LastInteractionResponse",
 					"first": "initiator",
 					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
 					"value": true
 				}
 			],
@@ -13685,6 +13624,12 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "ThrownOut",
+					"first": "initiator",
+					"value": true
 				}
 			],
 			"performance": [

@@ -27,6 +27,12 @@
 					"value": true,
 					"first": "Male Noble Player"
 				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"value": false,
+					"first": "Male Noble Player"
+				},
 
 
 				{
@@ -53,6 +59,12 @@
 					"value": true,
 					"first": "Female Noble Player"
 				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"value": false,
+					"first": "Female Noble Player"
+				},
 
 				
 				{
@@ -77,6 +89,12 @@
 					"category": "progress",
 					"type": "HasTicket",
 					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"value": false,
 					"first": "Servant Player"
 				},
 
@@ -1160,6 +1178,276 @@
 					"second": "Servant Player"
 				},
 
+				
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Valère",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Valère",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Valère",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Valère",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Valère",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Valère",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Valère",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Valère",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Valère",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Valère",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Valère",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "loyal",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Valère"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "clever",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "deceptive",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "haughty",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+
 
 				{
 					"category": "network",
@@ -1603,14 +1891,14 @@
 					"category": "relationship",
 					"type": "esteem",
 					"value": true,
-					"first": "Chérubin",
+					"first": "Toinette",
 					"second": "Servant Player"
 				},
 				{
 					"category": "relationship",
 					"type": "ally",
 					"value": true,
-					"first": "Chérubin",
+					"first": "Toinette",
 					"second": "Servant Player"
 				},
 				{

@@ -22,6 +22,8 @@ public class EmotiveState : MonoBehaviour
 		"Monsieur d'Issy",
 		"Madame de Blasé-l'Evêque",
 		"Chérubin",
+        "Valère",
+        "Madame du Puy-des-Gougères",
 		"Madame de Cher-sur-Tendre",
 		"Mademoiselle Eloïse de Hauteclaire",
 		"Ninon",
