@@ -61,7 +61,8 @@ public class ArtGallery : MonoBehaviour
        
         galleryIndex -= 1;
         if(galleryIndex < 0){
-            galleryIndex = theatreImages.Count - 1;
+            //galleryIndex = theatreImages.Count - 1;
+            galleryIndex = 0;
         }
         UpdatePlanToDisplay();
         Debug.Log("Previous button pushed! gallery index is now " + galleryIndex);
@@ -72,7 +73,8 @@ public class ArtGallery : MonoBehaviour
         Debug.Log("Next button pushed!");
         galleryIndex += 1;
         if(galleryIndex >= theatreImages.Count){
-            galleryIndex = 0;
+            //galleryIndex = 0;
+            galleryIndex = theatreImages.Count - 1;
         }
         Debug.Log("Next button pushed! gallery index is now " + galleryIndex);
         UpdatePlanToDisplay();
