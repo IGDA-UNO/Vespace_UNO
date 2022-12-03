@@ -268,8 +268,8 @@
 			"leadsTo": [
 				"unseen male noble positive interaction",
 				"All I can say is that it's an urgent matter, and you must now help me leave - clear a passage for me!",
-				"There was something that I needed to verify, but it's not important. Can you help me leave without drawing any more attention?",
-				"Silence fool! Now I will take my leave.",
+				"That's not important. Can you help me leave without drawing any more attention?",
+				"Silence fool! Now I will take my leave. (unseen noble male positive)",
 				"unseen male noble negative interaction",
 				"How dare you ask me what I was doing - out of my way!",
 				"I'm sorry about before, but my business here is confidential. Will you help me get out of this crowd!",
@@ -277,7 +277,7 @@
 				"unseen female noble positive interaction",
 				"I can't thank you enough for your help, and I'm afraid I must ask it of you again - I need to leave this theatre immediately!",
 				"I really can't disclose the nature of my query, but I implore you to trust me - please help me leave at once!",
-				"I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+				"I don't wish to talk about this, ever; please don't mention my presence here to anyone. (unseen female noble)",
 				"unseen female noble negative interaction",
 				"You must help get these people away from me, so that I may leave unmolested!",
 				"I am so sorry if I offended you, although I hardly thought that possible.",
@@ -285,11 +285,11 @@
 				"unseen servant positive interaction",
 				"Thank you friend! Now if you can help me get out of this theatre, I'll really owe you one!",
 				"My Master's work is almost completed, will you help me leave? (unseen servant)",
-				"Shh! Don't speak, fool, just get me out of here!",
+				"Shh! Don't speak, fool, just get me out of here! (unseen servant)",
 				"unseen servant negative interaction",
 				"I'm the crook?! You're the crook - this one just attempted to rob me! Help!",
-				"Silence, fool, or I will have my master's men beat you!",
-				"Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!"
+				"Silence, fool, or I will have my master's men beat you! (unseen servant)",
+				"Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now! (unseen servant)"
 			]
 		},
 		{
@@ -301,7 +301,7 @@
 				"I was seen? Then I really need your help getting out of here!",
 				"Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (noble interlocutor)",
 				"Shh! I can't say, but you'll be handsomely rewarded if you can help me escape this theatre. (non-noble interlocutor)",
-				"Silence fool! Now I will take my leave.",
+				"Silence fool! Now I will take my leave. (seen noble male positive)",
 				"seen male noble negative interaction",
 				"How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (noble interlocutor)",
 				"How dare you address me in this way; normally I would challenge you on the field of honor, but you don't seem the type. (non-noble interlocutor)",
@@ -310,7 +310,7 @@
 				"seen female noble positive interaction",
 				"I am distraught by this indiscretion, and beg you to help me leave this theatre immediately!",
 				"I must leave now, and you must help me - clear a passage that I might leave unmolested!",
-				"I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+				"I don't wish to talk about this, ever; please don't mention my presence here to anyone. (seen female noble)",
 				"seen female noble negative interaction",
 				"Who dares address me in this way? Seize this fool, and have him thrown out on the street - or in jail!",
 				"What are you talking about?! This is a lie, a terrible lie!",
@@ -320,8 +320,8 @@
 				"My Master's work is almost completed, will you help me leave? (seen servant)",
 				"seen servant negative interaction",
 				"I'm the criminal?! You're the criminal - this one just attempted to rob me! Help!",
-				"Silence, fool, or I will have my master's men beat you!",
-				"Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!"
+				"Silence, fool, or I will have my master's men beat you! (seen servant)",
+				"Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now! (seen servant)"
 			]
 		},
 		{
@@ -3259,6 +3259,13 @@
 				},
 				{
 					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
 					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
@@ -3581,6 +3588,13 @@
 				{
 					"category": "conversation",
 					"type": "GreetedStranger",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3918,7 +3932,7 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": 1,
-					"operator": "+"
+					"operator": "-"
 				},
 				{
 					"category": "network",
@@ -3926,7 +3940,7 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": 2,
-					"operator": "+"
+					"operator": "-"
 				},
 				{
 					"category": "network",
@@ -3948,7 +3962,7 @@
 					"type": "ally",
 					"first": "responder",
 					"second": "initiator",
-					"value": true
+					"value": false
 				},
 				{
 					"category": "conversation",
@@ -3966,7 +3980,7 @@
 				},
 				{
 					"category": "conversation",
-					"type": "GiveStrangerCommand",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -3976,7 +3990,7 @@
 				[
 					{
 						"type": "dialogue",
-						"text": "OK I'll help, but who are you working for, and what do I need to do?"
+						"text": "This seems very shady. Where did you get that kind of money?"
 					}
 				]
 			]
@@ -4315,6 +4329,13 @@
 				},
 				{
 					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
 					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
@@ -4359,6 +4380,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -4371,6 +4399,13 @@
 					"category": "progress",
 					"type": "ThrownOut",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4413,6 +4448,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				},
 				{
 					"category": "relationship",
@@ -4469,6 +4511,13 @@
 				{
 					"category": "conversation",
 					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -4515,6 +4564,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -4553,6 +4609,13 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -4590,6 +4653,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -4620,6 +4690,13 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -4651,6 +4728,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -4663,6 +4747,13 @@
 					"category": "progress",
 					"type": "ThrownOut",
 					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
 					"value": true
 				}
 			],
@@ -4705,6 +4796,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
 				},
 				{
 					"category": "relationship",
@@ -4764,6 +4862,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -4807,6 +4912,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -4845,6 +4957,13 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -4882,6 +5001,13 @@
 					"value": true
 				},
 				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
 					"category": "relationship",
 					"type": "ally",
 					"first": "responder",
@@ -4912,6 +5038,13 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "GaveStrangerCommand",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -10621,8 +10754,8 @@
 			]
 		},
 		{
-			"name": "There was something that I needed to verify, but it's not important. Can you help me leave without drawing any more attention?",
-			"displayName": "There was something that I needed to verify, but it's not important. Can you help me leave without drawing any more attention?",
+			"name": "That's not important. Can you help me leave without drawing any more attention?",
+			"displayName": "That's not important. Can you help me leave without drawing any more attention?",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -10690,8 +10823,8 @@
 			]
 		},
 		{
-			"name": "Silence fool! Now I will take my leave.",
-			"displayName": "Silence fool! Now I will take my leave.",
+			"name": "Silence fool! Now I will take my leave. (unseen noble male positive)",
+			"displayName": "Silence fool! Now I will take my leave. (unseen noble male positive)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -11230,8 +11363,8 @@
 			]
 		},
 		{
-			"name": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
-			"displayName": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+			"name": "I don't wish to talk about this, ever; please don't mention my presence here to anyone. (unseen female noble)",
+			"displayName": "I don't wish to talk about this, ever; please don't mention my presence here to anyone. (unseen female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -11752,8 +11885,8 @@
 			]
 		},
 		{
-			"name": "Shh! Don't speak, fool, just get me out of here!",
-			"displayName": "Shh! Don't speak, fool, just get me out of here!",
+			"name": "Shh! Don't speak, fool, just get me out of here! (unseen servant)",
+			"displayName": "Shh! Don't speak, fool, just get me out of here! (unseen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -11947,8 +12080,8 @@
 			]
 		},
 		{
-			"name": "Silence, fool, or I will have my master's men beat you!",
-			"displayName": "Silence, fool, or I will have my master's men beat you!",
+			"name": "Silence, fool, or I will have my master's men beat you! (unseen servant)",
+			"displayName": "Silence, fool, or I will have my master's men beat you! (unseen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -12010,8 +12143,8 @@
 			]
 		},
 		{
-			"name": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
-			"displayName": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
+			"name": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now! (unseen servant)",
+			"displayName": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now! (unseen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -12343,8 +12476,8 @@
 			]
 		},
 		{
-			"name": "Silence fool! Now I will take my leave.",
-			"displayName": "Silence fool! Now I will take my leave.",
+			"name": "Silence fool! Now I will take my leave. (seen noble male positive)",
+			"displayName": "Silence fool! Now I will take my leave. (seen noble male positive)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -12970,8 +13103,8 @@
 			]
 		},
 		{
-			"name": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
-			"displayName": "I don't wish to talk about this, ever; please don't mention my presence here to anyone.",
+			"name": "I don't wish to talk about this, ever; please don't mention my presence here to anyone. (seen female noble)",
+			"displayName": "I don't wish to talk about this, ever; please don't mention my presence here to anyone. (seen female noble)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -13642,8 +13775,8 @@
 			]
 		},
 		{
-			"name": "Silence, fool, or I will have my master's men beat you!",
-			"displayName": "Silence, fool, or I will have my master's men beat you!",
+			"name": "Silence, fool, or I will have my master's men beat you! (seen servant)",
+			"displayName": "Silence, fool, or I will have my master's men beat you! (seen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
@@ -13705,8 +13838,8 @@
 			]
 		},
 		{
-			"name": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
-			"displayName": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now!",
+			"name": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now! (seen servant)",
+			"displayName": "Please, I am so sorry that we didn't get along before, but I really need your help leaving the theatre now! (seen servant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
