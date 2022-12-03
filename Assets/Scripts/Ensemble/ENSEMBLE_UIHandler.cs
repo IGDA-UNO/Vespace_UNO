@@ -269,7 +269,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     void Update(){
-        //Debug.Log("The position of the player is: " + playerCamera.transform.position);
+        Debug.Log("The position of the player is: " + playerCamera.transform.position);
 
         if(!hasActIPlayStarted){
             if (playerCamera.transform.position.x > xCoordinateThatMeansYouHaveEnteredTheTheatre)
@@ -871,7 +871,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(4f, 1.015f, 2f);
+        //playerObject.transform.position = new Vector3(4f, 1.015f, 2f);
+        //playerObject.transform.position = new Vector3(3.8f, 0.5f, 2f);
+        //playerObject.transform.position = backstageTeleporters[0].transform.position;
+        //playerObject.trackingOriginTransform.position = backstageTeleporters[0].transform.position;
+        //Teleport.Player.Send(backstageTeleporters[0].GetComponent<TeleportArea>());
+        //playerObject.trackingOriginTransform.position
+        playerCamera.transform.position = new Vector3(4f, 2.0f, 2f);
+        Debug.Log("Teleporting player to ... " + backstageTeleporters[0].transform.position);
         SteamVR_Fade.Start(Color.clear, 10);
     }
 
@@ -885,7 +892,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(3f, 0f, 2f);
+        //playerObject.transform.position = new Vector3(3f, 0f, 2f);
+        playerCamera.transform.position = new Vector3(3f, 1.5f, 2f);
 		SteamVR_Fade.Start(Color.clear, 10);
     }
 
