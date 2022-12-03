@@ -157,6 +157,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public List<GameObject> houseTeleporters = new List<GameObject>();
     public List<GameObject> backstageTeleporters = new List<GameObject>();
 
+    //For keeping track of moments when using a headset or not.
+    public bool isUsingVRHeadset;
+
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -195,9 +198,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         dialogueOffset = new Vector3(-0.06f, 0.04f, 0.51f);
         resultsOffset = new Vector3(0f, 0f, 0.5f);
 
+        isUsingVRHeadset = true;
         if (!SteamVRObjects.activeSelf)
         {
             playerCamera = fallBackCamera;
+            isUsingVRHeadset = false;
         }
 
         //Turn off the play on start...
@@ -257,7 +262,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         //Initialize all teleporters to inactive
         SetUsabilityOfHouseTeleporters(false);
-        SetUsabilityOfBackstageTeleporters(true);
+        SetUsabilityOfBackstageTeleporters(false);
 
         foreach (string character in cast) {
             characterAvailable.Add(character, false);
@@ -434,7 +439,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
 
             //make use of existing prouve system!
+            //But I think we need to do things slightly differently if we are using
+            //a mouse or if we are using the headset!
+           
+            if(isUsingVRHeadset){
+                GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().SetInterfaceMode(2);
+            }
+            else{
+                GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().SetInterfaceMode(4);
+            }
+
             GameObject.Find("PROUVE/SceneHandler").GetComponent<PROUVE_SceneHandler>().clickOnObject(currentOmekaIDOfClickedCharacter, currentPositionOfClickedCharacter);
+
         }
     }
 
@@ -469,8 +485,23 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         hud.replaceHud();
 
         if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
+            //start the 'backwards play'
+            marionetteVideoFront.gameObject.SetActive(false);
+            marionetteVideoBack.gameObject.SetActive(true);
+            marionetteVideoBack.isLooping = true;
+            marionnettisteAudio.gameObject.SetActive(true);
+            marionnettisteAudio.Play();
+            marionnettisteAudio.loop = true;
+
             StartCoroutine(TransportHeadBackstage());
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+            //start the 'forwards' play again.
+            marionetteVideoFront.gameObject.SetActive(true);
+            marionetteVideoFront.frame = 0;
+            SuperTitles.ResetSupertitles();
+            marionetteVideoBack.gameObject.SetActive(false);
+            marionnettisteAudio.gameObject.SetActive(true);
+            marionnettisteAudio.Play();
             StartCoroutine(TransportReturnToTheater());
         } else if (hud.GetQuestProgress() == HUD.THROWN_OUT) {
             StartCoroutine(GameOver());
@@ -859,7 +890,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(4f, 1.015f, 2f);
+        //playerObject.transform.position = new Vector3(4f, 1.015f, 2f);
+        //playerObject.transform.position = new Vector3(3.8f, 0.5f, 2f);
+        //playerObject.transform.position = backstageTeleporters[0].transform.position;
+        //playerObject.trackingOriginTransform.position = backstageTeleporters[0].transform.position;
+        //Teleport.Player.Send(backstageTeleporters[0].GetComponent<TeleportArea>());
+        //playerObject.trackingOriginTransform.position
+        playerCamera.transform.position = new Vector3(4f, 2.0f, 2f);
+        Debug.Log("Teleporting player to ... " + backstageTeleporters[0].transform.position);
         SteamVR_Fade.Start(Color.clear, 10);
     }
 
@@ -873,7 +911,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(3f, 0f, 2f);
+        //playerObject.transform.position = new Vector3(3f, 0f, 2f);
+        playerCamera.transform.position = new Vector3(3f, 1.5f, 2f);
 		SteamVR_Fade.Start(Color.clear, 10);
     }
 
@@ -1209,15 +1248,21 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     public void SetUsabilityOfHouseTeleporters(bool canBeUsed){
+        Debug.Log("INSIDE SET USABILITY OF HOUSE TELEPORTERS");
         foreach(GameObject teleporter in houseTeleporters){
-            teleporter.SetActive(canBeUsed);
+            teleporter.SetActive(true);
+            teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
+            teleporter.GetComponent<TeleportArea>().UpdateVisuals();
         }
     }
 
     public void SetUsabilityOfBackstageTeleporters(bool canBeUsed){
         foreach (GameObject teleporter in backstageTeleporters)
         {
-            teleporter.SetActive(canBeUsed);
+            teleporter.SetActive(true);
+            teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
+            teleporter.GetComponent<TeleportArea>().UpdateVisuals();
+            
         }
     }
 

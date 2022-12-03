@@ -111,6 +111,9 @@ public class PROUVE_SceneHandler : MonoBehaviour
             Debug.Log("Main scene loaded, starting record") ;      
             allowRestart = true ; 
         }
+
+        //I believe by default, unless otherwise specified, we are assuming interface mode 2.
+        interfaceMode = 2;
     }
 
     // Update is called once per frame
@@ -308,8 +311,8 @@ public class PROUVE_SceneHandler : MonoBehaviour
     public void clickOnObject(int objectID, Vector3 position)  
     {
         Debug.Log("Clicked on object " + objectID) ; 
-        invokeMainMenu() ; 
-        interfaceMode = 4 ; 
+        //invokeMainMenu() ;  
+        //interfaceMode = 4 ; set this at the beginning when we first detect headset existence.
         placePad(position) ; 
         omekaPad.displayItem(objectID) ; 
     }
@@ -365,6 +368,10 @@ public class PROUVE_SceneHandler : MonoBehaviour
             float position = e.velocity*0.55f+0.5f ; 
             descriptionScroll.verticalNormalizedPosition = position ;  
         }
+    }
+
+    public void SetInterfaceMode(int newMode){
+        this.interfaceMode = newMode;
     }
 
 
