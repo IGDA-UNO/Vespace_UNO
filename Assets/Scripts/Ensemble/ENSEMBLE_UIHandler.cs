@@ -481,8 +481,23 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         hud.replaceHud();
 
         if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
+            //start the 'backwards play'
+            marionetteVideoFront.gameObject.SetActive(false);
+            marionetteVideoBack.gameObject.SetActive(true);
+            marionetteVideoBack.isLooping = true;
+            marionnettisteAudio.gameObject.SetActive(true);
+            marionnettisteAudio.Play();
+            marionnettisteAudio.loop = true;
+
             StartCoroutine(TransportHeadBackstage());
         } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+            //start the 'forwards' play again.
+            marionetteVideoFront.gameObject.SetActive(true);
+            marionetteVideoFront.frame = 0;
+            SuperTitles.ResetSupertitles();
+            marionetteVideoBack.gameObject.SetActive(false);
+            marionnettisteAudio.gameObject.SetActive(true);
+            marionnettisteAudio.Play();
             StartCoroutine(TransportReturnToTheater());
         } else if (hud.GetQuestProgress() == HUD.THROWN_OUT) {
             StartCoroutine(GameOver());

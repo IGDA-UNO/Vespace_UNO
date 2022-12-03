@@ -23,13 +23,13 @@ public class SuperTitles : MonoBehaviour
         }
     }
 
-    public float currentTimeElapsed;
+    public static float currentTimeElapsed;
     public static bool timerStarted;
     public Text textField;
     List<SuperTitleHelper> linesOfDialogue = new List <SuperTitleHelper>();
     SuperTitleHelper currentLine;
     SuperTitleHelper nextLine;
-    int nextLineIndex;
+    static int nextLineIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -115,6 +115,12 @@ public class SuperTitles : MonoBehaviour
 
     public void ShowNextLine(){
         nextLineIndex++;
+    }
+
+    public static void ResetSupertitles(){
+        timerStarted = true;
+        currentTimeElapsed = 0;
+        nextLineIndex = 0;
     }
 
 }
