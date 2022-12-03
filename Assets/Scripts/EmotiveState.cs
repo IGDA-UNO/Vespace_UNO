@@ -29,11 +29,11 @@ public class EmotiveState : MonoBehaviour
 		"Fruit-seller / la Fruitière",
 		"Cellist",
 		"L'Animateur",
-		"Fanon la Poche",
+		"Fanchon la Poche",
 		"Henriette Lavocat",
 		"Jeannot la Panse",
-		"Perso 2",
-		"Seated Female Noble"
+		"Scaramouche",
+		"Madame Argant"
     };
 
     // Start is called before the first frame update

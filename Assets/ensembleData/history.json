@@ -875,6 +875,126 @@
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
+					"first": "Madame Argant",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame Argant",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame Argant",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame Argant",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame Argant",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame Argant",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame Argant",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame Argant",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame Argant",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "role",
+					"type": "non-noble",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "rich",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "amorous",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "not friendly",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "religious",
+					"value": true,
+					"first": "Madame Argant"
+				},
+
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
 					"first": "Chérubin",
 					"second": "Male Noble Player"
 				},
@@ -1798,6 +1918,113 @@
 					"first": "Cellist"
 				},
 
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Scaramouche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Scaramouche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Scaramouche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Scaramouche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Scaramouche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Scaramouche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Scaramouche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Scaramouche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Scaramouche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "trait",
+					"type": "not very sophisticated",
+					"value": true,
+					"first": "Scaramouche"
+				},
+
 				
 				{
 					"category": "network",
@@ -1898,118 +2125,118 @@
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "credibility",
 					"value": 40,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "curiosity",
 					"value": 20,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Servant Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Male Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Female Noble Player"
 				},
 				{
 					"category": "network",
 					"type": "emulation",
 					"value": 30,
-					"first": "Fanon la Poche",
+					"first": "Fanchon la Poche",
 					"second": "Servant Player"
 				},
 				{
 					"category": "role",
 					"type": "acquaintance",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "role",
 					"type": "female",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "role",
 					"type": "servant",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "role",
 					"type": "player",
 					"value": false,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "trait",
 					"type": "non-noble",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "trait",
 					"type": "very friendly",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "trait",
 					"type": "easy to get along with",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "trait",
 					"type": "dishonest",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 				{
 					"category": "trait",
 					"type": "thief",
 					"value": true,
-					"first": "Fanon la Poche"
+					"first": "Fanchon la Poche"
 				},
 
 
@@ -2225,183 +2452,23 @@
 					"value": true,
 					"first": "Jeannot la Panse"
 				},
-
-
 				{
-					"category": "network",
-					"type": "credibility",
-					"value": 40,
-					"first": "Perso 2",
-					"second": "Male Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"value": 40,
-					"first": "Perso 2",
-					"second": "Female Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"value": 40,
-					"first": "Perso 2",
-					"second": "Servant Player"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"value": 20,
-					"first": "Perso 2",
-					"second": "Male Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"value": 20,
-					"first": "Perso 2",
-					"second": "Female Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"value": 20,
-					"first": "Perso 2",
-					"second": "Servant Player"
-				},
-				{
-					"category": "network",
-					"type": "emulation",
-					"value": 30,
-					"first": "Perso 2",
-					"second": "Male Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "emulation",
-					"value": 30,
-					"first": "Perso 2",
-					"second": "Female Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "emulation",
-					"value": 30,
-					"first": "Perso 2",
-					"second": "Servant Player"
-				},
-				{
-					"category": "role",
-					"type": "acquaintance",
+					"category": "trait",
+					"type": "non friendly",
 					"value": true,
-					"first": "Perso 2"
+					"first": "Jeannot la Panse"
 				},
 				{
-					"category": "role",
-					"type": "male",
+					"category": "trait",
+					"type": "amorous",
 					"value": true,
-					"first": "Perso 2"
+					"first": "Jeannot la Panse"
 				},
 				{
-					"category": "role",
-					"type": "servant",
+					"category": "trait",
+					"type": "dishonest",
 					"value": true,
-					"first": "Perso 2"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": false,
-					"first": "Perso 2"
-				},
-
-
-				{
-					"category": "network",
-					"type": "credibility",
-					"value": 40,
-					"first": "Seated Female Noble",
-					"second": "Male Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"value": 40,
-					"first": "Seated Female Noble",
-					"second": "Female Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "credibility",
-					"value": 40,
-					"first": "Seated Female Noble",
-					"second": "Servant Player"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"value": 20,
-					"first": "Seated Female Noble",
-					"second": "Male Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"value": 20,
-					"first": "Seated Female Noble",
-					"second": "Female Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "curiosity",
-					"value": 20,
-					"first": "Seated Female Noble",
-					"second": "Servant Player"
-				},
-				{
-					"category": "network",
-					"type": "emulation",
-					"value": 30,
-					"first": "Seated Female Noble",
-					"second": "Male Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "emulation",
-					"value": 30,
-					"first": "Seated Female Noble",
-					"second": "Female Noble Player"
-				},
-				{
-					"category": "network",
-					"type": "emulation",
-					"value": 30,
-					"first": "Seated Female Noble",
-					"second": "Servant Player"
-				},
-				{
-					"category": "role",
-					"type": "acquaintance",
-					"value": true,
-					"first": "Seated Female Noble"
-				},
-				{
-					"category": "role",
-					"type": "female",
-					"value": true,
-					"first": "Seated Female Noble"
-				},
-				{
-					"category": "role",
-					"type": "noble",
-					"value": true,
-					"first": "Seated Female Noble"
-				},
-				{
-					"category": "role",
-					"type": "player",
-					"value": false,
-					"first": "Seated Female Noble"
+					"first": "Jeannot la Panse"
 				}
 			]
 		}

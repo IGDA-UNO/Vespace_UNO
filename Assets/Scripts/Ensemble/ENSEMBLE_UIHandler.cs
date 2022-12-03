@@ -110,6 +110,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Texture MonsieurdIssy;
     public Texture MadamedeBlaselEveque;
     public Texture Cherubin;
+    public Texture Valere;
+    public Texture MadameduPuydesGougeres;
     public Texture MadamedeChersurTendre;
     public Texture MademoiselleEloisedeHauteclaire;
     public Texture Ninon;
@@ -120,8 +122,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public Texture FanchonLaPoche;
     public Texture HenrietteLavocat;
     public Texture JeannotLaPanse;
-    public Texture Perso2;
-    public Texture SeatedFemaleNoble;
+    public Texture Scaramouche;
+    public Texture MadameArgant;
 
     public AudioSource whistleAudioSource;
     public AudioSource stompAudioSource;
@@ -168,6 +170,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 		"Monsieur d'Issy",
 		"Madame de Blasé-l'Evêque",
 		"Chérubin",
+        "Valère",
+        "Madame du Puy-des-Gougères",
 		"Madame de Cher-sur-Tendre",
 		"Mademoiselle Eloïse de Hauteclaire",
 		"Ninon",
@@ -175,11 +179,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 		"Fruit-seller / la Fruitière",
 		"Cellist",
 		"L'Animateur",
-		"Fanon la Poche",
+		"Fanchon la Poche",
 		"Henriette Lavocat",
 		"Jeannot la Panse",
-		"Perso 2",
-		"Seated Female Noble"
+		"Scaramouche",
+		"Madame Argant"
     };
 
     public Dictionary<string, bool> characterAvailable = new Dictionary<string, bool>();
@@ -1084,6 +1088,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             dialogueIcon.GetComponent<RawImage>().texture = MadamedeBlaselEveque;
         } else if (characterName == "Chérubin") {
             dialogueIcon.GetComponent<RawImage>().texture = Cherubin;
+        } else if (characterName == "Valère") {
+            dialogueIcon.GetComponent<RawImage>().texture = Valere;
+        } else if (characterName == "Madame du Puy-des-Gougères") {
+            dialogueIcon.GetComponent<RawImage>().texture = MadameduPuydesGougeres;
         } else if (characterName == "Madame de Cher-sur-Tendre") {
             dialogueIcon.GetComponent<RawImage>().texture = MadamedeChersurTendre;
         } else if (characterName == "Mademoiselle Eloïse de Hauteclaire") {
@@ -1104,10 +1112,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             dialogueIcon.GetComponent<RawImage>().texture = HenrietteLavocat;
         } else if (characterName == "Jeannot la Panse") {
             dialogueIcon.GetComponent<RawImage>().texture = JeannotLaPanse;
-        } else if (characterName == "Perso 2") {
-            dialogueIcon.GetComponent<RawImage>().texture = Perso2;
-        } else if (characterName == "Seated Female Noble") {
-            dialogueIcon.GetComponent<RawImage>().texture = SeatedFemaleNoble;
+        } else if (characterName == "Scaramouche") {
+            dialogueIcon.GetComponent<RawImage>().texture = Scaramouche;
+        } else if (characterName == "Madame Argant") {
+            dialogueIcon.GetComponent<RawImage>().texture = MadameArgant;
         }
     }
 
@@ -1146,6 +1154,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void clickOnObject(string objectName, Vector3 position)  
     {
+        Debug.Log("clickOnObject: " + objectName);
+        
         if (objectName == "TheatrePlans") {
             OpenPlans();
         } else {
