@@ -1227,7 +1227,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         foreach(GameObject teleporter in houseTeleporters){
             teleporter.SetActive(true);
             teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
-            
+            teleporter.GetComponent<TeleportArea>().UpdateVisuals();
         }
     }
 
@@ -1236,6 +1236,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         {
             teleporter.SetActive(true);
             teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
+            teleporter.GetComponent<TeleportArea>().UpdateVisuals();
             
         }
     }
