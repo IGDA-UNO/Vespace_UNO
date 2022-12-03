@@ -960,6 +960,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         string dialogueResponse = "";
         bool backstageAccess = false;
+        bool successfulDistraction = false;
+        bool whistleAndStomp = false;
 
         List<Predicate> socialRecordData = data.ensemble.getSocialRecordCopyAtTimestep(0);
         List<Predicate> characterData = socialRecordData.FindAll(predicate => predicate.First == objectName).ToList();
@@ -1021,9 +1023,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                         stompAudioSource.Play();
                     }
 
-                    finalInterlocutor = objectName;
-                    hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                    StartCoroutine(ShowProgress(7, "All of that whistling and stomping is seriously distracting! It looks like now is your chance to slip backstage..."));
+                    whistleAndStomp = true;
                 }
 
                 if (e.Type == "NearStageInteraction" && e.Value is bool && e.Value is true) {
@@ -1039,9 +1039,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                         // yellingAudioSource.Play();
                     }
 
-                    finalInterlocutor = objectName;
-                    hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                    StartCoroutine(ShowProgress(3, "Your friend has really caused a scene! It seems to have distracted the crowd enough that you can slip backstage..."));
+                    successfulDistraction = true;
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
@@ -1091,13 +1089,29 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
         }
 
-        if (backstageAccess && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
+        if (whistleAndStomp && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
+            if (completedTwoInteractions) {
+                finalInterlocutor = objectName;
+                hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+                StartCoroutine(ShowProgress(3, "All of that whistling and stomping is seriously distracting! It looks like now is your chance to slip backstage..."));
+            } else {
+                StartCoroutine(ShowProgress(3, "Your friend is really causing a scene with the whistling and stomping! Still, you need to speak to at least one more person to gather further intel and continue your distactions."));
+            }
+        } else if (successfulDistraction && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
+            if (completedTwoInteractions) {
+                    finalInterlocutor = objectName;
+                    hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
+                    StartCoroutine(ShowProgress(3, "Your friend has really caused a scene! It seems to have distracted the crowd enough that you can slip backstage..."));
+            } else {
+                StartCoroutine(ShowProgress(3, "Your friend is making a serious racket! Still, you need to speak to at least one more person to gather further intel and continue your distactions."));
+            }
+        } else if (backstageAccess && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
             if (completedTwoInteractions) {
                 finalInterlocutor = objectName;
                 hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
                 StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
             } else {
-                StartCoroutine(ShowProgress(3, "Great, you're certainly being persuasive! However, you need to speak to at least one more person to gain further intel before going backstage."));
+                StartCoroutine(ShowProgress(3, "Great, you're certainly being persuasive! Still, you need to speak to at least one more person to gain further intel before going backstage."));
             }
         }
 
