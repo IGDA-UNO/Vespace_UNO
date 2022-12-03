@@ -269,7 +269,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log("The position of the player is: " + playerCamera.transform.position);
+        //Debug.Log("The position of the player is: " + playerCamera.transform.position);
 
         if(!hasActIPlayStarted){
             if (playerCamera.transform.position.x > xCoordinateThatMeansYouHaveEnteredTheTheatre)

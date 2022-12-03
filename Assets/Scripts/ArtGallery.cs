@@ -92,6 +92,6 @@ public class ArtGallery : MonoBehaviour
 
     private void UpdatePlanToDisplay(){
         planImage.GetComponent<RawImage>().texture = theatreImages[galleryIndex];
-        Debug.Log("Now showcasing: " + theatreImages[galleryIndex].name);
+        Debug.Log("Now showcasing: " + theatreImages[galleryIndex].name + " at index " + galleryIndex);
     }
 }
