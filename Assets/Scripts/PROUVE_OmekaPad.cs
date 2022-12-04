@@ -56,6 +56,7 @@ public class PROUVE_OmekaPad : MonoBehaviour
     private bool proModeActivated = false ;
 
     public ENSEMBLE_UIHandler ensemble;
+    public ENSEMBLE_UIHandler_Introduction ensembleIntro;
 
     //Initialization : 
 
@@ -72,9 +73,13 @@ public class PROUVE_OmekaPad : MonoBehaviour
     //Self interface control :
 
     public void Display() {
-        omekaPad.SetActive(true) ;
-        ensemble.CloseMenu();
+        omekaPad.SetActive(true);
 
+        if (ensemble != null) {
+            ensemble.CloseMenu();
+        } else if (ensembleIntro != null) {
+            ensembleIntro.CloseMenu();
+        }
     }
     
     public void closePad() {
