@@ -82,7 +82,7 @@ Material:
     - _BumpScale: 1
     - _ColorMask: 15
     - _Cutoff: 0.5
-    - _Darken: 0.641
+    - _Darken: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 10
     - _Emission: 0.01
@@ -97,7 +97,7 @@ Material:
     - _OcclusionStrengthIndirectDiffuse: 1
     - _OcclusionStrengthIndirectSpecular: 1
     - _Parallax: 0.02
-    - _SeeThru: 0.1
+    - _SeeThru: 0
     - _SpecularMode: 2
     - _SrcBlend: 1
     - _Stencil: 0
