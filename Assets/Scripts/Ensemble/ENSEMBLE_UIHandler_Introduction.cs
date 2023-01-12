@@ -217,7 +217,7 @@ public class ENSEMBLE_UIHandler_Introduction : MonoBehaviour
     //LaserPointer functions overload:
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        EnsembleObject ensemble = e.target.GetComponent<EnsembleObject>();
+        EnsembleObjectIntro ensemble = e.target.GetComponent<EnsembleObjectIntro>();
         Debug.Log("Intro scene: clicked with laser pointer");
         if (ensemble != null)
             {
