@@ -46,6 +46,7 @@ public class EnsembleObjectIntro : MonoBehaviour
 
     void OnMouseDown()
     {
+        Debug.Log("I clicked on an ensemble object in the intro scene!");
         handler.clickOnObject(gameObject.name, gameObject.transform.position);
     }
 

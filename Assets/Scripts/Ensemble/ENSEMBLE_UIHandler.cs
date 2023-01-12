@@ -574,11 +574,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void PointerClick(object sender, PointerEventArgs e)
     {
         EnsembleObject ensemble = e.target.GetComponent<EnsembleObject>();
-
+        Debug.Log("CLICK CLICK CLICK");
         if (ensemble != null)
         {
             //The object is an Ensemble object
-
+            
             if (ensemble.name == "TheatrePlans") {
                 OpenPlans();
             } else {
@@ -1232,6 +1232,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void clickOnObject(string objectName, Vector3 position)  
     {
+        Debug.Log("clicked on object...");
         if (objectName == "TheatrePlans") {
             OpenPlans();
         } else {
