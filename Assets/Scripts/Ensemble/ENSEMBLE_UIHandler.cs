@@ -269,6 +269,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         StartCoroutine(SetCharacterAvailability());
+
+
     }
 
     void Update(){
@@ -919,7 +921,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(4f, 1.015f, 2f);
+        playerObject.transform.position = new Vector3(4f, 0.015f, 2f);
         SteamVR_Fade.Start(Color.clear, 10);
     }
 
