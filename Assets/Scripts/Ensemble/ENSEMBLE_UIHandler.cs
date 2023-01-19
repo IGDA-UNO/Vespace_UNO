@@ -269,8 +269,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
 
         StartCoroutine(SetCharacterAvailability());
-
-
     }
 
     void Update(){
@@ -859,8 +857,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         StringBuilder resultsJsonBuilder = new StringBuilder();
         resultsJsonBuilder.Append("{\"actions\":[");
 
-        actionsBuilder.Append("You impressed this many people: " + positiveInteractionCount + "\n\n");
-        actionsBuilder.Append("You annoyed this many people: " + negativeInteractionCount + "\n\n");
+        actionsBuilder.Append("Annoying interactions: " + positiveInteractionCount + "\n\n");
+        actionsBuilder.Append("Impressive interactions: " + negativeInteractionCount + "\n\n");
 
         actionsBuilder.Append("You talked to these people you knew: \n");
         foreach (string acquaintance in acquaintanceInteractions) {
@@ -921,7 +919,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         SteamVR_Fade.Start(Color.black, 10);
         yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(4f, 0.015f, 2f);
+        playerObject.transform.position = new Vector3(4f, 1f, 2f);
         SteamVR_Fade.Start(Color.clear, 10);
     }
 
@@ -1072,12 +1070,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     }
                 }
 
-                bool isCompleteInteraction = e.Value is bool && e.Value is true &&
-                    (e.Type == "AcquaintanceSecondInteraction" || 
-                    e.Type == "NegativeInteraction" || 
-                    e.Type == "PositiveInteraction");
+                // bool isCompleteInteraction = e.Value is bool && e.Value is true &&
+                //     (e.Type == "AcquaintanceSecondInteraction" || 
+                //     e.Type == "NegativeInteraction" || 
+                //     e.Type == "PositiveInteraction");
+                bool isCompleteInteraction = true;
 
-                if (isCompleteInteraction) {
+                if (isCompleteInteraction && objectName != "Marie-Catherine Bienfait, ticket taker") {
                     if (!characterInteractions.Contains(objectName)) {
                         characterInteractions.Add(objectName);
 

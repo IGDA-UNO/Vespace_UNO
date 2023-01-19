@@ -97,7 +97,8 @@
 				"Can you help me get backstage? (esteemedFemaleNobleVersion)",
 				"Can you help me get backstage? (unesteemedFemaleNobleVersion)",
 				"Can you help me get backstage? (esteemedMaleNobleVersion)",
-				"Can you help me get backstage? (unesteemedMaleNobleVersion)",
+				"Can you help me get backstage? (unesteemedMaleNobleToServant)",
+				"Can you help me get backstage? (unesteemedMaleNobleToNoble)",
 				"What do you say we whistle and stomp? (femaleNobleNoStomp)"
 			]
 		},
@@ -2752,6 +2753,13 @@
 					"first": "initiator",
 					"second": "responder",
 					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				}
 			],
 			"performance": [
@@ -2850,14 +2858,20 @@
 			]
 		},
 		{
-			"name": "Can you help me get backstage? (unesteemedMaleNobleVersion)",
-			"displayName": "Can you help me get backstage? (unesteemedMaleNobleVersion)",
+			"name": "Can you help me get backstage? (unesteemedMaleNobleToServant)",
+			"displayName": "Can you help me get backstage? (unesteemedMaleNobleToServant)",
 			"influenceRules": [],
 			"isAccept": true,
 			"conditions": [
 				{
 					"category": "role",
 					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
 					"first": "responder",
 					"value": true
 				},
@@ -2921,6 +2935,105 @@
 				{
 					"category": "conversation",
 					"type": "AskedStrangerFavor",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"performance": [
+				[
+					{
+						"type": "dialogue",
+						"text": "Certainly not! What are you up to?"
+					}
+				]
+			]
+		},
+		{
+			"name": "Can you help me get backstage? (unesteemedMaleNobleToNoble)",
+			"displayName": "Can you help me get backstage? (unesteemedMaleNobleToNoble)",
+			"influenceRules": [],
+			"isAccept": true,
+			"conditions": [
+				{
+					"category": "role",
+					"type": "stranger",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"first": "responder",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				}
+			],
+			"effects": [
+				{
+					"category": "network",
+					"type": "credibility",
+					"first": "responder",
+					"second": "initiator",
+					"value": 1,
+					"operator": "-"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"first": "responder",
+					"second": "initiator",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "AskStrangerFavor",
+					"first": "initiator",
+					"second": "responder",
+					"value": false
+				},
+				{
+					"category": "conversation",
+					"type": "GreetedStranger",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "AskedStrangerFavor",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "NegativeInteraction",
 					"first": "initiator",
 					"second": "responder",
 					"value": true
@@ -4611,6 +4724,25 @@
 					"value": false
 				},
 				{
+					"category": "progress",
+					"type": "SuccessfulDistraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "GaveStrangerCommand",
 					"first": "initiator",
@@ -4690,6 +4822,25 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "SuccessfulDistraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				},
 				{
 					"category": "conversation",
@@ -4959,6 +5110,25 @@
 					"value": false
 				},
 				{
+					"category": "progress",
+					"type": "SuccessfulDistraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
+				},
+				{
 					"category": "conversation",
 					"type": "GaveStrangerCommand",
 					"first": "initiator",
@@ -5038,6 +5208,25 @@
 					"first": "responder",
 					"second": "initiator",
 					"value": false
+				},
+				{
+					"category": "progress",
+					"type": "SuccessfulDistraction",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "progress",
+					"type": "BackstageAccess",
+					"first": "initiator",
+					"value": true
+				},
+				{
+					"category": "conversation",
+					"type": "PositiveInteraction",
+					"first": "initiator",
+					"second": "responder",
+					"value": true
 				},
 				{
 					"category": "conversation",
