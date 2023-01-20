@@ -220,7 +220,7 @@ public class PROUVE_OmekaPad : MonoBehaviour
     }
 
     public void updateWithTextContent(PROUVE_TextComponent textComponent) {
-        updateBackButton() ; 
+        //updateBackButton() ; 
         omekaTitleText.text = selectStringLanguage(textComponent.title) ; 
         omekaDescriptionText.text = selectStringLanguage(textComponent.description) ; 
         currentOmekaItem = textComponent.id ; 
@@ -233,6 +233,11 @@ public class PROUVE_OmekaPad : MonoBehaviour
                 addElementObject(element) ; 
             }
         }
+    }
+
+    public void updateTextWithErrorMessage(){
+        omekaTitleText.text = selectStringLanguage("An Error Has Occured");
+        omekaDescriptionText.text = selectStringLanguage("We apologize. This data is not available.");
     }
 
     public void updateImageContent(PROUVE_ImageComponent imageComponent) {

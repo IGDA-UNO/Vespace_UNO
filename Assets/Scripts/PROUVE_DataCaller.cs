@@ -34,7 +34,7 @@ public class PROUVE_DataCaller : MonoBehaviour
         sceneHandler = handler ; 
 		omekaPad = pad ; 
         omeka_key = key ; 
-        omekaBaseURL = baseURL; 
+        omekaBaseURL = baseURL;
 		if(refreshLocalDB) {
 			retrieveOnlineDB() ; 
 		} else {
@@ -109,8 +109,10 @@ public class PROUVE_DataCaller : MonoBehaviour
 
 	public void lookForItemWithID(int itemID) {
 		if(useLocalDB) {
+			Debug.Log("XXXopen data for item!!");
 			StartCoroutine(openDataForItem(itemID)) ; 
 		} else {
+            Debug.Log("XXXbuild data for item!!");
 			StartCoroutine(buildDataForItem(itemID)) ; 
 		}
 	}
@@ -349,12 +351,14 @@ public class PROUVE_DataCaller : MonoBehaviour
     IEnumerator buildDataForItem(int item) {
 		addWorkLoad() ; 
 		string request = buildRequestJSONforItem(item) ;
+		Debug.Log("Request String: " + request);
 		UnityWebRequest webRqst = UnityWebRequest.Get(request) ; 
 		yield return webRqst.SendWebRequest() ; 
 
 		if(webRqst.isNetworkError || webRqst.isHttpError) {
 			Debug.Log("Erreur buidling data for item "+item) ; 
 			Debug.Log(webRqst.error) ; 
+			omekaPad.updateTextWithErrorMessage();
 		} 
 		else {
 			CurrentItem = JsonUtility.FromJson<OmekaItem>(webRqst.downloadHandler.text) ;
