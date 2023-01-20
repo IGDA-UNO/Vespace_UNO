@@ -33,6 +33,8 @@ public class PROUVE_introduction : MonoBehaviour
     public Button ObjectCanvasNextButton;
     public Button FinalCanvasNextButton;
 
+    public Button projectWebsiteButton;
+
 
     private const string VespaceUrl = "https://vespace.cs.uno.edu/";
     public TextMeshProUGUI welcomeCanvasText;
@@ -129,6 +131,16 @@ public class PROUVE_introduction : MonoBehaviour
         else{
             snuffBoxImage.SetActive(false);
         }
+
+        //Deal with the project webpage button
+        if (textIndex == 0 || textIndex == 4)
+        {
+            projectWebsiteButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            projectWebsiteButton.gameObject.SetActive(false);
+        }
     }
 
     public void retreatIntroText()
@@ -148,6 +160,8 @@ public class PROUVE_introduction : MonoBehaviour
             IntroCanvasTitleText.text = titleTextList[textIndex];
         }
 
+
+
         //update the 'next' button text.
         if (textIndex == introTextList.Count - 1)
         {
@@ -164,6 +178,21 @@ public class PROUVE_introduction : MonoBehaviour
         else{
             snuffBoxImage.SetActive(false);
         }
+
+        //Deal with the project webpage button
+        if (textIndex == 0 || textIndex == 4)
+        {
+            projectWebsiteButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            projectWebsiteButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void openProjectWebsite(){
+        Debug.Log("Opening project website");
+        Application.OpenURL(VespaceUrl);
     }
 
     public void skipIntroduction(){
