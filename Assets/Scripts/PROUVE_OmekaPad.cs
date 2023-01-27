@@ -164,9 +164,24 @@ public class PROUVE_OmekaPad : MonoBehaviour
     }
 
     private void updateBackButton() {
-        if(arborescenceOmekaID.Count > 1) {
-            backButton.SetActive(true) ;
+        Debug.Log("count is: " + arborescenceOmekaID.Count);
+        if(arborescenceOmekaID.Count > 0) {
+
+            Debug.Log("first element is: " + arborescenceOmekaID[0]);
+            // Characters ID's begin at 650. Only show back button for characters.
+            if(arborescenceOmekaID[0] > 600) {
+                backButton.SetActive(true);
+            }
+            else{
+                backButton.SetActive(false);
+            }
+
+            
         } else {backButton.SetActive(false);}
+        
+
+        
+        
     }
 
     private void refreshUI() {
@@ -222,7 +237,7 @@ public class PROUVE_OmekaPad : MonoBehaviour
     }
 
     public void updateWithTextContent(PROUVE_TextComponent textComponent) {
-        //updateBackButton() ; 
+        updateBackButton() ; 
         omekaTitleText.text = selectStringLanguage(textComponent.title) ; 
         omekaDescriptionText.text = selectStringLanguage(textComponent.description) ; 
         currentOmekaItem = textComponent.id ; 
