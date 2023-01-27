@@ -603,6 +603,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 getCharacterData(ensemble.name);
                 getCharacterHistory(ensemble.name);
                 getCharacterActions(ensemble.name, false);
+                getCharacterOmeka(ensemble.name);
             }
         }
         if (e.target.gameObject.layer == 5)

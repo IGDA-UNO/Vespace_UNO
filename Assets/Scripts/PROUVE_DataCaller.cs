@@ -349,6 +349,7 @@ public class PROUVE_DataCaller : MonoBehaviour
     //Web Requests : 
 
     IEnumerator buildDataForItem(int item) {
+		Debug.Log("Build Data For Item IEnumerator!!!!");
 		addWorkLoad() ; 
 		string request = buildRequestJSONforItem(item) ;
 		Debug.Log("Request String: " + request);
@@ -364,13 +365,17 @@ public class PROUVE_DataCaller : MonoBehaviour
 			CurrentItem = JsonUtility.FromJson<OmekaItem>(webRqst.downloadHandler.text) ;
 			askDisplayOfItem(CurrentItem) ; 
 			StartCoroutine(requestFilesForItem(CurrentItem,"main")) ; 
+			Debug.Log("relation count: " + CurrentItem.extended_resources.item_relations.relationsCount());
 			if(CurrentItem.extended_resources.item_relations.relationsCount()>0) {
+				
 				if(loadObjectRelations) {
+					Debug.Log("OBJECT RELATION");
 					foreach (OmekaItemRelationsObject relation in CurrentItem.extended_resources.item_relations.object_relations) {
 						omekaPad.addRelationButtonObject(relation) ; 
 					}
 				}
 				if(loadSubjectRelations) {
+                    Debug.Log("SUBJECT RELATION");
 					foreach (OmekaItemRelationsSubject relation in CurrentItem.extended_resources.item_relations.subject_relations) {
 						omekaPad.addRelationButtonSubject(relation) ; 
 					}
