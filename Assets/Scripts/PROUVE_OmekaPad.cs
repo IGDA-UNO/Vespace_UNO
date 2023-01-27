@@ -75,11 +75,13 @@ public class PROUVE_OmekaPad : MonoBehaviour
     public void Display() {
         omekaPad.SetActive(true);
 
-        if (ensemble != null) {
-            ensemble.CloseMenu();
-        } else if (ensembleIntro != null) {
-            ensembleIntro.CloseMenu();
-        }
+        //The following causes actions to not populate after clicking on Omeka. I'm not sure what they achieve.
+        // if (ensemble != null) {
+        //     ensemble.CloseMenu();
+        // } else if (ensembleIntro != null) {
+        //     ensembleIntro.CloseMenu();
+        // }
+        
     }
     
     public void closePad() {

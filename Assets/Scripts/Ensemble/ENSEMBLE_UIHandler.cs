@@ -478,6 +478,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void CloseMenu()
     {
 
+        Debug.Log("CALLING CLOSE MENU");
+
         ensembleUI.SetActive(false);
         mainActiveUI = false;
 
@@ -721,6 +723,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void getCharacterActions(string objectName, bool suppressResponse)
     {
+
+        Debug.Log("CALLING GET CHARACTER ACTIONS");
+
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
 
