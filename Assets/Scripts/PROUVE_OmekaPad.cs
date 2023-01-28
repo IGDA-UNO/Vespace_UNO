@@ -240,6 +240,10 @@ public class PROUVE_OmekaPad : MonoBehaviour
         updateBackButton() ; 
         omekaTitleText.text = selectStringLanguage(textComponent.title) ; 
         omekaDescriptionText.text = selectStringLanguage(textComponent.description) ; 
+        if(textComponent.source != ""){
+            omekaDescriptionText.text += "\n\nSource: " + textComponent.source;
+        }
+        Debug.Log("XXX updateWithTextContent");
         currentOmekaItem = textComponent.id ; 
         maxFileNumber = textComponent.filesCount ; 
         currentImageNumber = 0 ; 

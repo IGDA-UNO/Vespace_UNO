@@ -136,6 +136,7 @@ public class PROUVE_DataCaller : MonoBehaviour
 
     private void askDisplayOfItem(OmekaItem item) {
         PROUVE_TextComponent textComponent = new PROUVE_TextComponent() ;
+		Debug.Log("XXX Displaying " + item);
         textComponent.createFromItem(item) ; 
 		omekaPad.updateWithTextContent(textComponent) ; 
     }
@@ -692,6 +693,7 @@ public class PROUVE_TextComponent { //Is a simplified class of an omeka object s
     public int id ; 
     public string title ; 
     public string description ; 
+	public string source;
 	public int filesCount ; 
     public OmekaTag[] keywords ;
 	public PROUVE_QuickElement[] elements ;  
@@ -699,6 +701,8 @@ public class PROUVE_TextComponent { //Is a simplified class of an omeka object s
     public void createFromItem(OmekaItem item) {
         id = item.id ; 
         title = item.getElement("Title") ; 
+		source = item.getElement("Source");
+		Debug.Log("XXX I think the source is " + source);
         description = item.getElement("Description") ; 
         keywords = item.tags ; 
 		filesCount = item.files.count ; 
