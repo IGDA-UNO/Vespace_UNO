@@ -53,6 +53,9 @@ public class PROUVE_introduction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.unityLogger.logEnabled = false;
+        Debug.Log("LA LAL A LA CAN YOU SEE ME?");
+        Debug.Log("Quality Level: " + QualitySettings.names[QualitySettings.GetQualityLevel()]);
         sceneHandler = GetComponent<PROUVE_SceneHandler>() ; 
         firstCanvas.SetActive(true) ; 
         secondCanvas.SetActive(false) ; 
@@ -133,6 +136,7 @@ public class PROUVE_introduction : MonoBehaviour
         }
 
         //Deal with the project webpage button
+        /*
         if (textIndex == 0 || textIndex == 4)
         {
             projectWebsiteButton.gameObject.SetActive(true);
@@ -141,6 +145,7 @@ public class PROUVE_introduction : MonoBehaviour
         {
             projectWebsiteButton.gameObject.SetActive(false);
         }
+        */
     }
 
     public void retreatIntroText()
@@ -180,6 +185,7 @@ public class PROUVE_introduction : MonoBehaviour
         }
 
         //Deal with the project webpage button
+        /*
         if (textIndex == 0 || textIndex == 4)
         {
             projectWebsiteButton.gameObject.SetActive(true);
@@ -188,6 +194,7 @@ public class PROUVE_introduction : MonoBehaviour
         {
             projectWebsiteButton.gameObject.SetActive(false);
         }
+        */
     }
 
     public void openProjectWebsite(){

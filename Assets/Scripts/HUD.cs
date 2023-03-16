@@ -37,14 +37,14 @@ public class HUD : MonoBehaviour
         //figure out what image to display
         //playerIcon.GetComponent<RawImage>().texture = 
 
-        if(EnsemblePlayer.GetSelectedCharacter() == EnsemblePlayer.SERVANT){
+        if(EnsemblePlayer.GetSelectedCharacter() == EnsemblePlayer.SERVANT && playerIcon != null){
             playerIcon.GetComponent<RawImage>().texture = ServantTexture;
         }
-        else if (EnsemblePlayer.GetSelectedCharacter() == EnsemblePlayer.MALE_NOBLE)
+        else if (EnsemblePlayer.GetSelectedCharacter() == EnsemblePlayer.MALE_NOBLE && playerIcon != null)
         {
             playerIcon.GetComponent<RawImage>().texture = NoblemanTexture;
         }
-        else if (EnsemblePlayer.GetSelectedCharacter() == EnsemblePlayer.FEMALE_NOBLE)
+        else if (EnsemblePlayer.GetSelectedCharacter() == EnsemblePlayer.FEMALE_NOBLE && playerIcon != null)
         {
             playerIcon.GetComponent<RawImage>().texture = NoblewomanTexture;
         }

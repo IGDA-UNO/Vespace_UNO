@@ -12,6 +12,7 @@ using Valve.VR.InteractionSystem;
 using Ensemble;
 using System.Linq;
 using System.Text;
+using Unity.Profiling;
 
 public class ENSEMBLE_UIHandler : MonoBehaviour
 {
@@ -189,10 +190,57 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 		"Madame Argant"
     };
 
+
+    private Cast castWithoutInteractableCharacters = new Cast {
+        "Male Noble Player",
+        "Female Noble Player",
+        "Servant Player",
+        "Marie-Catherine Bienfait, ticket taker",
+        "Monsieur d'Ain d'Ygeste",
+        "Monsieur d'Hautainville",
+        "Monsieur de Gentilly",
+        "Monsieur des Trois-Landes",
+        "Monsieur d'Issy",
+        "Madame de Blasé-l'Evêque",
+        "Chérubin",
+        "Valère",
+        "Madame du Puy-des-Gougères",
+        "Madame de Cher-sur-Tendre",
+        "Mademoiselle Eloïse de Hauteclaire",
+        "Ninon",
+        "Toinette",
+        "Fruit-seller / la Fruitière",
+        "Henriette Lavocat",
+        "Madame Argant"
+    };
+
+    private Cast castForServant = new Cast {
+        "Servant Player",
+        "Marie-Catherine Bienfait, ticket taker",
+        "Monsieur d'Ain d'Ygeste",
+        "Monsieur d'Hautainville",
+        "Monsieur de Gentilly",
+        "Monsieur des Trois-Landes",
+        "Monsieur d'Issy",
+        "Madame de Blasé-l'Evêque",
+        "Chérubin",
+        "Valère",
+        "Madame du Puy-des-Gougères",
+        "Madame de Cher-sur-Tendre",
+        "Mademoiselle Eloïse de Hauteclaire",
+        "Ninon",
+        "Toinette",
+        "Fruit-seller / la Fruitière",
+        "Henriette Lavocat",
+        "Madame Argant"
+    };
+
     public Dictionary<string, bool> characterAvailable = new Dictionary<string, bool>();
 
     void Start()
     {
+        Debug.unityLogger.logEnabled = false;
+        Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         hud.UpdateQuestProgress(HUD.NO_TICKET);
 
         dialogueOffset = new Vector3(-0.06f, 0.04f, 0.51f);
@@ -300,8 +348,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     private IEnumerator<object> SetCharacterAvailability()
     {
         yield return null;
+        //VOLITION EXPERIMENT
+        
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
 
+        
         foreach (string character in cast) {
             string initiator = EnsemblePlayer.GetSelectedCharacter();
             string responder = character;
@@ -309,6 +360,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
             characterAvailable[character] = actions.Count > 0;
         }
+        
+        
     }
 
     private IEnumerator<object> StartCountdown()
@@ -725,13 +778,48 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void getCharacterActions(string objectName, bool suppressResponse)
     {
 
-        Debug.Log("CALLING GET CHARACTER ACTIONS");
+        Debug.Log("CALLING GET CHARACTER ACTIONS -- START");
 
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
 
+        ProfilerMarker s_PreparePerfMarker8 = new ProfilerMarker("CALCULATE VOLITIONS");
+        s_PreparePerfMarker8.Begin();
+        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+        stopwatch.Start();
         VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
+        stopwatch.Stop();
+        Debug.Log("Time spend calculating volitions (ms): " + stopwatch.ElapsedMilliseconds);
+        StartCoroutine(DisplayDialogue("cellist", "Time spent calculating volition: " + stopwatch.ElapsedMilliseconds));
+        /*
+        Cast tempCast = new Cast {
+        "Male Noble Player",
+        "Female Noble Player",
+        "Servant Player",
+        "Marie-Catherine Bienfait, ticket taker",
+        "Bruno Dufort, semainier",
+        "Monsieur d'Ain d'Ygeste",
+        "Monsieur d'Hautainville",
+        "Monsieur de Gentilly",
+        "Monsieur des Trois-Landes",
+        "Monsieur d'Issy",
+        "Madame de Blasé-l'Evêque",
+        "Chérubin",
+        "Valère",
+        "Madame du Puy-des-Gougères",
+        "Madame de Cher-sur-Tendre",
+        "Mademoiselle Eloïse de Hauteclaire",
+        "Ninon",
+        "Toinette"
+        };
+        */
+        //VolitionInterface volitionInterface = data.ensemble.calculateVolition(tempCast);
+        s_PreparePerfMarker8.End();
+
+        ProfilerMarker s_PreparePerfMarker4 = new ProfilerMarker("data.ensemble.getActions");
+        s_PreparePerfMarker4.Begin();
         List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+        s_PreparePerfMarker4.End();
 
         if (objectName == "Cellist") {
             CloseMenu();
@@ -795,7 +883,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                         actionName = actionName.Remove(parensStart, parensEnd - parensStart);
                     }
 
+                    ProfilerMarker s_PreparePerfMarker5 = new ProfilerMarker("about to instantiate a button");
+                    s_PreparePerfMarker5.Begin();
                     GameObject goButton = (GameObject)Instantiate(prefabButton);
+                    s_PreparePerfMarker5.End();
                     goButton.transform.SetParent(actionsMenuImageZone, false);
 
                     
@@ -816,6 +907,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 StartCoroutine(DisplayDialogue(objectName, "This person seems busy or uninterested in talking to you."));
             }
         }
+
+        Debug.Log("CALLING GET CHARACTER ACTIONS -- END");
     }
 
     private IEnumerator<object> postRequest(string url, string json)
@@ -1237,11 +1330,19 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void clickOnObject(string objectName, Vector3 position)  
     {
+        ProfilerMarker s_PreparePerfMarker = new ProfilerMarker("Click On Object");
+        s_PreparePerfMarker.Begin();
+
         Debug.Log("clicked on object...");
         if (objectName == "TheatrePlans") {
             OpenPlans();
         } else {
+            Debug.Log("before Display main");
+            ProfilerMarker s_PreparePerfMarker2 = new ProfilerMarker("DisplayMain");
+            s_PreparePerfMarker2.Begin();
             DisplayMain();
+            s_PreparePerfMarker2.End();
+            Debug.Log("After display main");
 
             ensembleUI.transform.SetParent(fallBackCamera.transform);
             ensembleUI.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
@@ -1285,8 +1386,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             getCharacterData(objectName);
             getCharacterHistory(objectName);
+            ProfilerMarker s_PreparePerfMarker3 = new ProfilerMarker("getCharacterActions");
+            s_PreparePerfMarker3.Begin();
             getCharacterActions(objectName, false);
+            s_PreparePerfMarker3.End();
             getCharacterOmeka(objectName);
+            Debug.Log("End of click on object");
+            s_PreparePerfMarker.End();
         }
     }
 
