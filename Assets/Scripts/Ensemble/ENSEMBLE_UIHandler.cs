@@ -237,9 +237,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public Dictionary<string, bool> characterAvailable = new Dictionary<string, bool>();
 
+    private VolitionInterface volitionInterface;
+
     void Start()
     {
-        Debug.unityLogger.logEnabled = false;
+        artGallery.gameObject.SetActive(true);
+
+        Debug.unityLogger.logEnabled = true;
         Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         hud.UpdateQuestProgress(HUD.NO_TICKET);
 
@@ -350,18 +354,15 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         yield return null;
         //VOLITION EXPERIMENT
         
-        VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
+        volitionInterface = calculateVolition(cast, null, () => {
+            foreach (string character in cast) {
+                string initiator = EnsemblePlayer.GetSelectedCharacter();
+                string responder = character;
 
-        
-        foreach (string character in cast) {
-            string initiator = EnsemblePlayer.GetSelectedCharacter();
-            string responder = character;
-
-            List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
-            characterAvailable[character] = actions.Count > 0;
-        }
-        
-        
+                List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+                characterAvailable[character] = actions.Count > 0;
+            }
+        });
     }
 
     private IEnumerator<object> StartCountdown()
@@ -777,96 +778,66 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     public void getCharacterActions(string objectName, bool suppressResponse)
     {
-
-        Debug.Log("CALLING GET CHARACTER ACTIONS -- START");
-
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
 
-        ProfilerMarker s_PreparePerfMarker8 = new ProfilerMarker("CALCULATE VOLITIONS");
-        s_PreparePerfMarker8.Begin();
-        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-        stopwatch.Start();
-        VolitionInterface volitionInterface = data.ensemble.calculateVolition(cast);
-        stopwatch.Stop();
-        Debug.Log("Time spend calculating volitions (ms): " + stopwatch.ElapsedMilliseconds);
-        StartCoroutine(DisplayDialogue("cellist", "Time spent calculating volition: " + stopwatch.ElapsedMilliseconds));
-        /*
-        Cast tempCast = new Cast {
-        "Male Noble Player",
-        "Female Noble Player",
-        "Servant Player",
-        "Marie-Catherine Bienfait, ticket taker",
-        "Bruno Dufort, semainier",
-        "Monsieur d'Ain d'Ygeste",
-        "Monsieur d'Hautainville",
-        "Monsieur de Gentilly",
-        "Monsieur des Trois-Landes",
-        "Monsieur d'Issy",
-        "Madame de Blasé-l'Evêque",
-        "Chérubin",
-        "Valère",
-        "Madame du Puy-des-Gougères",
-        "Madame de Cher-sur-Tendre",
-        "Mademoiselle Eloïse de Hauteclaire",
-        "Ninon",
-        "Toinette"
-        };
-        */
-        //VolitionInterface volitionInterface = data.ensemble.calculateVolition(tempCast);
-        s_PreparePerfMarker8.End();
+        volitionInterface = calculateVolition(cast, null, () => {
+            List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
 
-        ProfilerMarker s_PreparePerfMarker4 = new ProfilerMarker("data.ensemble.getActions");
-        s_PreparePerfMarker4.Begin();
-        List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
-        s_PreparePerfMarker4.End();
+            if (objectName == "Cellist") {
+                CloseMenu();
+                StartCoroutine(DisplayDialogue(objectName, "The cellist is busy playing."));
+            } else if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
+                CloseMenu();
 
-        if (objectName == "Cellist") {
-            CloseMenu();
-            StartCoroutine(DisplayDialogue(objectName, "The cellist is busy playing."));
-        } else if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
-            CloseMenu();
+                if (!suppressResponse) {
+                    StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
+                }
+            } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+                if (finalInterlocutor == objectName) {
+                    Debug.Log("clicked on finalInterlocutor");
+                    if (approachedFinalInterlocutor != true) {
+                        approachedFinalInterlocutor = true;
 
-            if (!suppressResponse) {
-                StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
-            }
-        } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
-            if (finalInterlocutor == objectName) {
-                Debug.Log("clicked on finalInterlocutor");
-                if (approachedFinalInterlocutor != true) {
-                    approachedFinalInterlocutor = true;
-
-                    foreach (Action action in actions) {
-                        if (action.Name.Contains("interaction")) {
-                            TakeAction(objectName, action);
-                            volitionInterface = data.ensemble.calculateVolition(cast);
-                            actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
-                            break;
+                        foreach (Action action in actions) {
+                            if (action.Name.Contains("interaction")) {
+                                TakeAction(objectName, action);
+                                volitionInterface = calculateVolition(cast, null, () => {
+                                    actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+                                    ShowActionsList(objectName, actions, suppressResponse);
+                                    return;
+                                });
+                            }
                         }
                     }
-                }
-            } else {
-                CloseMenu();
-                StartCoroutine(DisplayDialogue(objectName, "Did I just see you sneak backstage?"));
-            }
-        } else if (actions.Count > 0 && actions[0].Name.Contains("interaction")) {
-            actions = new List<Action>();
-        } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
-            if (objectName == "Marie-Catherine Bienfait, ticket taker") {
-                if (actions.Count > 0) {
+                } else {
                     CloseMenu();
-                    ShowFinalText(objectName, actions[0]);
+                    StartCoroutine(DisplayDialogue(objectName, "Did I just see you sneak backstage?"));
                 }
-            } else if (objectName == finalInterlocutor) {
-                CloseMenu();
-                StartCoroutine(DisplayDialogue(objectName, "Shouldn't you be on your way out by now?"));
-            } else {
-                CloseMenu();
-                StartCoroutine(DisplayDialogue(objectName, "Stop, thief!"));
-                StartCoroutine(GameOver());
+            } else if (actions.Count > 0 && actions[0].Name.Contains("interaction")) {
+                actions = new List<Action>();
+            } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
+                if (objectName == "Marie-Catherine Bienfait, ticket taker") {
+                    if (actions.Count > 0) {
+                        CloseMenu();
+                        ShowFinalText(objectName, actions[0]);
+                    }
+                } else if (objectName == finalInterlocutor) {
+                    CloseMenu();
+                    StartCoroutine(DisplayDialogue(objectName, "Shouldn't you be on your way out by now?"));
+                } else {
+                    CloseMenu();
+                    StartCoroutine(DisplayDialogue(objectName, "Stop, thief!"));
+                    StartCoroutine(GameOver());
+                }
             }
-        }
-        
+            
+            ShowActionsList(objectName, actions, suppressResponse);
+        });
+    }
+
+    private void ShowActionsList(string objectName, List<Action> actions, bool suppressResponse)
+    {
         float x = 0;
         float y = -0.05f;
         float z = 5602.218f;
@@ -907,8 +878,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 StartCoroutine(DisplayDialogue(objectName, "This person seems busy or uninterested in talking to you."));
             }
         }
-
-        Debug.Log("CALLING GET CHARACTER ACTIONS -- END");
     }
 
     private IEnumerator<object> postRequest(string url, string json)
@@ -1325,7 +1294,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
         artGallery.gameObject.SetActive(true);
-        artGallery.SetPlayer(playerObject);
     }
 
     public void clickOnObject(string objectName, Vector3 position)  
@@ -1411,8 +1379,95 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             teleporter.SetActive(true);
             teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
             teleporter.GetComponent<TeleportArea>().UpdateVisuals();
-            
         }
+    }
+
+    public VolitionInterface calculateVolition(Cast cast, int? timeStep, System.Action action)
+    {
+        VolitionSet calculatedVolitions = data.ensemble.getRuleLibrary().GetVolitionCache().newSet(cast);
+
+        Cast charactersToSkipVolitionCalculation = new Cast();
+        Cast offstageCharacters = data.ensemble.getRuleLibrary().GetSocialRecord().getOffstageCharacters();
+        Cast eliminatedCharacters = data.ensemble.getRuleLibrary().GetSocialRecord().getEliminatedCharacters(); // socialRecord.getEliminatedCharacters();
+
+        for (int i = 0; i < offstageCharacters.Count; i++)
+        {
+            if (!charactersToSkipVolitionCalculation.Contains(offstageCharacters[i]))
+            {
+                charactersToSkipVolitionCalculation.Add(offstageCharacters[i]);
+            }
+        }
+
+        for (int i = 0; i < eliminatedCharacters.Count; i++)
+        {
+            if (!charactersToSkipVolitionCalculation.Contains(eliminatedCharacters[i]))
+            {
+                charactersToSkipVolitionCalculation.Add(eliminatedCharacters[i]);
+            }
+        }
+
+        StartCoroutine(runRules("volitionRules", cast, "volition", timeStep, charactersToSkipVolitionCalculation, calculatedVolitions, action));
+        return data.ensemble.getRuleLibrary().GetVolitionCache().register("main", calculatedVolitions);
+    }
+
+    public IEnumerator<object> runRules(string ruleSet, Cast cast, string type, int? timeStep, Cast unaffectedCharacters, VolitionSet calculatedVolitions, System.Action action)
+    {
+        List<Rule> rules;
+
+        if (ruleSet == "triggerRules")
+            rules = data.ensemble.getRuleLibrary().getTriggerRules();
+        else
+            rules = data.ensemble.getRuleLibrary().getVolitionRules();
+
+        if (rules == null)
+            yield return null;
+
+        for (int i = 0; i < rules.Count; i++)
+        {
+            if (rules[i].Conditions == null)
+                // throw error
+            if (rules[i].IsActive == false)
+                continue;
+            
+            //construct a list of every predicate in the rule.
+            List<Predicate> allPredicates = new List<Predicate>();
+            for(int conditionCounter = 0; conditionCounter < rules[i].Conditions.Count; conditionCounter++){
+                allPredicates.Add(rules[i].Conditions[conditionCounter]);
+            }
+            for(int effectCounter = 0; effectCounter < rules[i].Effects.Count; effectCounter++){
+                allPredicates.Add(rules[i].Effects[effectCounter]);
+            }
+            
+            Binding uniqueBindings = getUniqueBindings(allPredicates);
+            data.ensemble.getRuleLibrary().matchUniqueBindings(uniqueBindings, cast, type, rules[i], timeStep, unaffectedCharacters, calculatedVolitions);
+
+            yield return null;
+        }
+
+        action();
+    }
+
+    public Binding getUniqueBindings(List<Predicate> ruleConditions)
+    {
+        Binding dictionary = new Binding();
+        for (int i = 0; i < ruleConditions.Count; i++)
+        {
+            Predicate predicate = ruleConditions[i];
+
+            if (!dictionary.ContainsKey(predicate.First) || dictionary[predicate.First] == null)
+            {
+                dictionary[predicate.First] = "";
+            }
+
+            if (predicate.Second != null)
+            {
+                if (!dictionary.ContainsKey(predicate.Second) || dictionary[predicate.Second] == null)
+                {
+                    dictionary[predicate.Second] = "";
+                }
+            }
+        }
+        return dictionary;
     }
 
 }

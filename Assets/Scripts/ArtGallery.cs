@@ -8,14 +8,14 @@ using Valve.VR.InteractionSystem;
 
 public class ArtGallery : MonoBehaviour
 {
-
+    public GameObject theaterPlans;
     private GameObject artGalleryObject;
     public GameObject SteamVRObjects;
     public GameObject planImage;
     public Camera playerCamera;
     public Camera fallBackCamera;
-    public Player player;
     public GameObject backstageLeft;
+    public GameObject leftHand;
 
     int galleryIndex = 0;
 
@@ -52,9 +52,10 @@ public class ArtGallery : MonoBehaviour
 
     public void placeArtGallery()
     {
-        artGalleryObject.transform.rotation = playerCamera.transform.rotation;
-        artGalleryObject.transform.SetParent(playerCamera.transform);
-        artGalleryObject.transform.localPosition = new Vector3(0.0f, 0.0f, 0.5f);
+        artGalleryObject.transform.SetParent(GameObject.Find("LeftHand").transform);
+        artGalleryObject.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
+        artGalleryObject.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        artGalleryObject.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
     }
 
     public void PreviousButtonPushed(){
@@ -78,11 +79,6 @@ public class ArtGallery : MonoBehaviour
         }
         Debug.Log("Next button pushed! gallery index is now " + galleryIndex);
         UpdatePlanToDisplay();
-    }
-
-    public void SetPlayer(Player p)
-    {
-        player = p;
     }
 
     public void FinishedButtonPushed(){
