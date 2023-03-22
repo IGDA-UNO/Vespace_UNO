@@ -1004,10 +1004,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         if (SteamVRObjects.activeSelf)
         {
             // vm.PositionAssigner();
-            GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
-            Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
-            lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
-            lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
+
+            if (finalInterlocutor == "Valère") {
+                GameObject madameDuPuyDesGougeres = GameObject.Find("Madame du Puy-des-Gougères");
+                Transform madameParent = madameDuPuyDesGougeres.transform.parent;
+                madameParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
+                madameParent.transform.position = new Vector3(2.5f, 0f, 2f);
+            } else {
+                GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+                Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
+                lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
+                lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
+            }
 
             SteamVR_Fade.Start(Color.black, 10);
             yield return new WaitForSeconds(3);
