@@ -241,8 +241,6 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     void Start()
     {
-        artGallery.gameObject.SetActive(true);
-
         Debug.unityLogger.logEnabled = true;
         Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         hud.UpdateQuestProgress(HUD.NO_TICKET);
@@ -634,7 +632,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             //The object is an Ensemble object
             
             if (ensemble.name == "TheatrePlans") {
-                OpenPlans();
+                GameObject.Find("TheatrePlans").SetActive(false);
+
+                artGallery.transform.SetParent(GameObject.Find("LeftHand").transform);
+                artGallery.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
+                artGallery.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+                artGallery.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
             } else {
                 Orientation();
                 DisplayMain();
@@ -985,24 +988,34 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private IEnumerator<object> TransportHeadBackstage()
     {
-        SteamVR_Fade.Start(Color.black, 10);
-        yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(4f, 1f, 2f);
-        SteamVR_Fade.Start(Color.clear, 10);
+        if (SteamVRObjects.activeSelf)
+        {
+            SteamVR_Fade.Start(Color.black, 10);
+            yield return new WaitForSeconds(3);
+            playerObject.transform.position = new Vector3(4f, 1f, 2f);
+            SteamVR_Fade.Start(Color.clear, 10);
+        } else {
+            playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.position;
+        }
     }
 
     private IEnumerator<object> TransportReturnToTheater()
     {
-        // vm.PositionAssigner();
-        GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
-        Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
-        lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
-        lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
+        if (SteamVRObjects.activeSelf)
+        {
+            // vm.PositionAssigner();
+            GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+            Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
+            lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
+            lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
 
-        SteamVR_Fade.Start(Color.black, 10);
-        yield return new WaitForSeconds(3);
-        playerObject.transform.position = new Vector3(3f, 0f, 2f);
-		SteamVR_Fade.Start(Color.clear, 10);
+            SteamVR_Fade.Start(Color.black, 10);
+            yield return new WaitForSeconds(3);
+            playerObject.transform.position = new Vector3(3f, 0f, 2f);
+            SteamVR_Fade.Start(Color.clear, 10);
+        } else {
+            //playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.position;
+        }
     }
 
     public IEnumerator<object> ShowProgress(int delay, string progressText)
@@ -1011,7 +1024,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         dialogueHUD.SetActive(false);
         hud.removeHud();
-        artGallery.gameObject.SetActive(false);
+
+        if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
+            artGallery.gameObject.SetActive(false);
+        }
 
         if (!initiatedProgressPanel) {
             progressPanel.transform.rotation = playerCamera.transform.rotation;
@@ -1290,20 +1306,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
     }
 
-    public void OpenPlans()
-    {
-        hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
-        artGallery.gameObject.SetActive(true);
-    }
-
     public void clickOnObject(string objectName, Vector3 position)  
     {
         ProfilerMarker s_PreparePerfMarker = new ProfilerMarker("Click On Object");
         s_PreparePerfMarker.Begin();
 
-        Debug.Log("clicked on object...");
         if (objectName == "TheatrePlans") {
-            OpenPlans();
+            GameObject.Find("TheatrePlans").SetActive(false);
+
+            artGallery.transform.SetParent(fallBackCamera.transform);
+            artGallery.transform.localEulerAngles = new Vector3(0f,0f,0f) ; 
+            artGallery.transform.localPosition = new Vector3(0.0f,0.0f,0.5f) ;  
+            artGallery.transform.localScale = new Vector3(0.0006f,0.0006f,0.0006f) ;
         } else {
             Debug.Log("before Display main");
             ProfilerMarker s_PreparePerfMarker2 = new ProfilerMarker("DisplayMain");
@@ -1367,7 +1381,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void SetUsabilityOfHouseTeleporters(bool canBeUsed){
         Debug.Log("INSIDE SET USABILITY OF HOUSE TELEPORTERS");
         foreach(GameObject teleporter in houseTeleporters){
-            teleporter.SetActive(true);
+            teleporter.SetActive(canBeUsed);
             teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
             teleporter.GetComponent<TeleportArea>().UpdateVisuals();
         }
@@ -1376,7 +1390,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     public void SetUsabilityOfBackstageTeleporters(bool canBeUsed){
         foreach (GameObject teleporter in backstageTeleporters)
         {
-            teleporter.SetActive(true);
+            teleporter.SetActive(canBeUsed);
             teleporter.GetComponent<TeleportArea>().locked = !canBeUsed;
             teleporter.GetComponent<TeleportArea>().UpdateVisuals();
         }

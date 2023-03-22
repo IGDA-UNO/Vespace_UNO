@@ -14,6 +14,7 @@ public class ArtGallery : MonoBehaviour
     public GameObject planImage;
     public Camera playerCamera;
     public Camera fallBackCamera;
+    public HUD hud;
     public GameObject backstageLeft;
     public GameObject leftHand;
 
@@ -34,28 +35,12 @@ public class ArtGallery : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("TEST: SteamVRObjects is enabled: " + SteamVRObjects.activeSelf);
         if (!SteamVRObjects.activeSelf)
         {
-            Debug.Log("NO PLAYER CAMERA!?!?!");
             playerCamera = fallBackCamera;
         }
-        placeArtGallery();
+
         UpdatePlanToDisplay();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void placeArtGallery()
-    {
-        artGalleryObject.transform.SetParent(GameObject.Find("LeftHand").transform);
-        artGalleryObject.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        artGalleryObject.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
-        artGalleryObject.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
     }
 
     public void PreviousButtonPushed(){
@@ -83,6 +68,7 @@ public class ArtGallery : MonoBehaviour
 
     public void FinishedButtonPushed(){
         Debug.Log("Finished button pushed!");
+        hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
         StartCoroutine(ensembleUI.ShowProgress(1, "You have the plans! Now you will return to the theatre. Seek out the last person you spoke to, in order to negotiate an escape."));
     }
 
