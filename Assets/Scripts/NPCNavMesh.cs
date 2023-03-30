@@ -22,7 +22,7 @@ public class NPCNavMesh : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (isServant && followTransform != null)
+        if (isServant && followTransform != null && navMeshAgent.isOnNavMesh)
         {
             navMeshAgent.destination = followTransform.position;
         }

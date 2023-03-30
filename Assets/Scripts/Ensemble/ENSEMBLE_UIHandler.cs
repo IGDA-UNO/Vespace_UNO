@@ -161,6 +161,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     //For keeping track of moments when using a headset or not.
     public bool isUsingVRHeadset;
 
+    //The full cast
     private Cast cast = new Cast { 
         "Male Noble Player", 
         "Female Noble Player", 
@@ -239,9 +240,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private VolitionInterface volitionInterface;
 
+    //Testing threads
+    private TestJob threadTestJob;
+    private EnsembleCalculateVolitionsJob ensembleJob;
+    bool volitionInterfaceIsLocked = true; //when the thread to calculate volitions is running, set this flag so that we don't try to use it.
+    EnsembleCalculateVolitionForSetCharacterAvailability ensembleCalculateVolitionsForSetCharacterAvailability;
+    EnsembleCalculateVolitionsJobForGetCharacterActions ensembleCalculateVolitionsJobForGetCharacterActions;
+    EnsembleCalculateVolitionsJobForFinalInterlocutor ensembleCalculateVolitionsJobForFinalInterlocutor;
+
     void Start()
     {
-        Debug.unityLogger.logEnabled = true;
+        Debug.Log("TURNING OFF DEBUG MESSAGES -- set Debug.unityLogger.logEnabled to true in ENSEMBLE_UIHandler.cs to re-enable them");
+        Debug.unityLogger.logEnabled = false;
         Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         hud.UpdateQuestProgress(HUD.NO_TICKET);
 
@@ -318,7 +328,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             characterAvailable.Add(character, false);
         }
 
-        StartCoroutine(SetCharacterAvailability());
+        //Moving this to the 'finished' of the thread of calculating volitions.
+        //SetCharacterAvailability();
+        //and instead, we'll start by calculating volitions
+        ensembleJob = new EnsembleCalculateVolitionsJob();
+        ensembleJob.InDataEnsemble = this.data.ensemble;
+        ensembleJob.InDataCharactersToCalculateVolitionsFor = this.cast;
+        volitionInterfaceIsLocked = true; // whenever we start ensemble job we should lock the interface.
+        ensembleJob.Start();
     }
 
     void Update(){
@@ -344,23 +361,242 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.N)){
+            Debug.Log("STARTING LONG DUMB THING SHOULD FREEZE THE GAME");
+            expensiveDumbOperationForTesting();
+            Debug.Log("ENDING DUMB THING GAME IS BACK!");
+        }
+
+        if(Input.GetKeyDown(KeyCode.M)){
+            Debug.Log("STARTING SMART THREAD FOR DUMMY DATA GAME SHOULD NOT FREEZE");
+            threadTestJob = new TestJob();
+            threadTestJob.InData = new Vector3[3];
+            threadTestJob.OutData = new Vector3[5];
+
+            threadTestJob.InData[0] = new Vector3(1f, 0f, 0f);
+            threadTestJob.InData[1] = new Vector3(0f, 1f, 0f);
+            threadTestJob.InData[2] = new Vector3(0f, 0f, 1f);
+            threadTestJob.Start();
+            Debug.Log("SMART THREAD THING FOR DUMMY DATA ENDED");
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("STARTING SMART THREAD FOR ENSEMBLE SHOULD NOT FREEZE");
+            ensembleJob = new EnsembleCalculateVolitionsJob();
+            ensembleJob.InDataEnsemble = this.data.ensemble;
+            ensembleJob.InDataCharactersToCalculateVolitionsFor = this.cast;
+            volitionInterfaceIsLocked = true;
+            ensembleJob.Start();
+            Debug.Log("SMART TREAD THING FOR ENSEMBLE ENDED");
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("STARTING SMART THREAD FOR ENSEMBLE GRAND FINALE SHOULD NOT FREEZE");
+            ensembleCalculateVolitionsJobForFinalInterlocutor = new EnsembleCalculateVolitionsJobForFinalInterlocutor();
+            ensembleCalculateVolitionsJobForFinalInterlocutor.InDataEnsemble = this.data.ensemble;
+            ensembleCalculateVolitionsJobForFinalInterlocutor.InDataCharactersToCalculateVolitionsFor = this.cast;
+            volitionInterfaceIsLocked = true;
+            ensembleCalculateVolitionsJobForFinalInterlocutor.Start();
+            Debug.Log("SMART TREAD THING FOR ENSEMBLE ENDED");
+        }
+
+        if(threadTestJob != null){
+            if(threadTestJob.Update()){
+                threadTestJob = null;
+            }
+        }
+
+        if(ensembleJob != null){
+            if(ensembleJob.Update()){
+                this.volitionInterface = ensembleJob.OutDataVolitionInterface;
+                volitionInterfaceIsLocked = false; // we can use volitions again.
+                SetCharacterAvailability();
+                ensembleJob = null;
+            }
+        }
+        if(ensembleCalculateVolitionsForSetCharacterAvailability != null){
+            if(ensembleCalculateVolitionsForSetCharacterAvailability.Update()){
+                this.volitionInterface = ensembleCalculateVolitionsForSetCharacterAvailability.OutDataVolitionInterface;
+                ensembleCalculateVolitionsForSetCharacterAvailability = null;
+                foreach (string character in cast)
+                {
+                    string initiator = EnsemblePlayer.GetSelectedCharacter();
+                    string responder = character;
+
+                    List<Action> actions = data.ensemble.getActions(initiator, responder, this.volitionInterface, cast, 999, 999, 999);
+                    characterAvailable[character] = actions.Count > 0;
+                }
+            }
+        }
+
+        //Thread that runs when we are populating the actions of a character.
+        if (ensembleCalculateVolitionsJobForGetCharacterActions != null)
+        {
+            if (ensembleCalculateVolitionsJobForGetCharacterActions.Update())
+            {
+                bool isGrandFinale = false;
+                this.volitionInterface = ensembleCalculateVolitionsJobForGetCharacterActions.OutDataVolitionInterface;
+                volitionInterfaceIsLocked = false; // we can safely use it again!
+                SetCharacterAvailability();
+                
+                Debug.Log("About to compute actions for " + ensembleCalculateVolitionsJobForGetCharacterActions.InDataInitiator + " and " + ensembleCalculateVolitionsJobForGetCharacterActions.InDataResponder);
+                List<Action> actions = data.ensemble.getActions(ensembleCalculateVolitionsJobForGetCharacterActions.InDataInitiator, ensembleCalculateVolitionsJobForGetCharacterActions.InDataResponder, volitionInterface, cast, 999, 999, 999);
+                Debug.Log("Action count is: " + actions.Count);
+
+                if (ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName == "Cellist")
+                {
+                    CloseMenu();
+                    StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "The cellist is busy playing."));
+                }
+                else if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS)
+                {
+                    CloseMenu();
+
+                    if (!ensembleCalculateVolitionsJobForGetCharacterActions.InDatasuppressResponse)
+                    {
+                        StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "Please, I'm trying to watch the performance!"));
+                    }
+                }
+                else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS)
+                {
+                    if (finalInterlocutor == ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName)
+                    {
+                        Debug.Log("clicked on finalInterlocutor");
+                        if (approachedFinalInterlocutor != true)
+                        {
+                            approachedFinalInterlocutor = true;
+
+                            foreach (Action action in actions)
+                            {
+                                if (action.Name.Contains("interaction"))
+                                {
+                                    TakeAction(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, action);
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor = new EnsembleCalculateVolitionsJobForFinalInterlocutor();
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.InDataCharactersToCalculateVolitionsFor = this.cast;
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.InDataEnsemble = this.data.ensemble;
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.InDataInitiator = ensembleCalculateVolitionsJobForGetCharacterActions.InDataInitiator;
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.InDataObjectName = ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName;
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.InDataResponder = ensembleCalculateVolitionsJobForGetCharacterActions.InDataResponder;
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.InDatasuppressResponse = ensembleCalculateVolitionsJobForGetCharacterActions.InDatasuppressResponse;
+                                    volitionInterfaceIsLocked = true;
+                                    isGrandFinale = true;
+                                    ensembleCalculateVolitionsJobForFinalInterlocutor.Start();
+                                    /*
+                                    volitionInterface = calculateVolition(cast, null, () =>
+                                    {
+                                        actions = data.ensemble.getActions(ensembleCalculateVolitionsJobForGetCharacterActions.InDataInitiator, ensembleCalculateVolitionsJobForGetCharacterActions.InDataResponder, volitionInterface, cast, 999, 999, 999);
+                                        ShowActionsList(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, actions, ensembleCalculateVolitionsJobForGetCharacterActions.InDatasuppressResponse);
+                                        return;
+                                    });
+                                    */
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        CloseMenu();
+                        StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "Did I just see you sneak backstage?"));
+                    }
+                }
+                else if (actions.Count > 0 && actions[0].Name.Contains("interaction"))
+                {
+                    actions = new List<Action>();
+                }
+                else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION)
+                {
+                    if (ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName == "Marie-Catherine Bienfait, ticket taker")
+                    {
+                        if (actions.Count > 0)
+                        {
+                            CloseMenu();
+                            ShowFinalText(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, actions[0]);
+                        }
+                    }
+                    else if (ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName == finalInterlocutor)
+                    {
+                        CloseMenu();
+                        StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "Shouldn't you be on your way out by now?"));
+                    }
+                    else
+                    {
+                        CloseMenu();
+                        StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "Stop, thief!"));
+                        StartCoroutine(GameOver());
+                    }
+                }
+
+                //if it is the grand finale, we have a separate thread for that.
+                if(!isGrandFinale){
+                    Debug.Log("*** ABOUT TO SHOW ACTION LIST AFTER THREAD COMPLETED FOR: " + ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName + " number of actions: " + actions.Count + " supress response: " + ensembleCalculateVolitionsJobForGetCharacterActions.InDatasuppressResponse);
+                    ShowActionsList(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, actions, ensembleCalculateVolitionsJobForGetCharacterActions.InDatasuppressResponse);
+                }
+                //zero this out for next time!
+                ensembleCalculateVolitionsJobForGetCharacterActions = null;
+
+            }
+        }
+
+
+
+        //For the very end!
+        if (ensembleCalculateVolitionsJobForFinalInterlocutor != null)
+        {
+            if (ensembleCalculateVolitionsJobForFinalInterlocutor.Update())
+            {
+                this.volitionInterface = ensembleCalculateVolitionsJobForFinalInterlocutor.OutDataVolitionInterface;
+                this.volitionInterfaceIsLocked = false;
+
+                List<Action> actions = data.ensemble.getActions(ensembleCalculateVolitionsJobForFinalInterlocutor.InDataInitiator, ensembleCalculateVolitionsJobForFinalInterlocutor.InDataResponder, this.volitionInterface, cast, 999, 999, 999);
+                ShowActionsList(ensembleCalculateVolitionsJobForFinalInterlocutor.InDataObjectName, actions, ensembleCalculateVolitionsJobForFinalInterlocutor.InDatasuppressResponse);
+
+
+                ensembleCalculateVolitionsJobForFinalInterlocutor = null;
+            }
+        }
+
+        
+
 
     }
 
-    private IEnumerator<object> SetCharacterAvailability()
+    private void SetCharacterAvailability()
     {
-        yield return null;
-        //VOLITION EXPERIMENT
-        
-        volitionInterface = calculateVolition(cast, null, () => {
-            foreach (string character in cast) {
+
+        if(!volitionInterfaceIsLocked && this.volitionInterface != null){
+            Debug.Log("**** about to set character availability");
+            foreach (string character in cast)
+            {
                 string initiator = EnsemblePlayer.GetSelectedCharacter();
                 string responder = character;
 
-                List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
+                List<Action> actions = data.ensemble.getActions(initiator, responder, this.volitionInterface, cast, 999, 999, 999);
                 characterAvailable[character] = actions.Count > 0;
             }
+        }
+        else{
+            Debug.Log("**** Tried to set character availability but either volition interface was locked or volition interface was null");
+        }
+        
+        /*
+        if(ensembleCalculateVolitionsForSetCharacterAvailability == null){
+            //only do this if it isn't null!
+            Debug.Log("trying to calculate volition...");
+            ensembleCalculateVolitionsForSetCharacterAvailability = new EnsembleCalculateVolitionForSetCharacterAvailability();
+            ensembleCalculateVolitionsForSetCharacterAvailability.InDataEnsemble = data.ensemble;
+            Debug.Log("Ensemble API: " + ensembleCalculateVolitionsForSetCharacterAvailability.InDataEnsemble);
+            ensembleCalculateVolitionsForSetCharacterAvailability.InDataCharactersToCalculateVolitionsFor = cast;
+            ensembleCalculateVolitionsForSetCharacterAvailability.Start();
+        }
+        */
+
+        /*
+        volitionInterface = calculateVolition(cast, null, () => {
+
         });
+        */
     }
 
     private IEnumerator<object> StartCountdown()
@@ -784,59 +1020,25 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         string initiator = EnsemblePlayer.GetSelectedCharacter();
         string responder = objectName;
 
+        if(ensembleCalculateVolitionsJobForGetCharacterActions == null){
+            ensembleCalculateVolitionsJobForGetCharacterActions = new EnsembleCalculateVolitionsJobForGetCharacterActions();
+            ensembleCalculateVolitionsJobForGetCharacterActions.InDataEnsemble = data.ensemble;
+            ensembleCalculateVolitionsJobForGetCharacterActions.InDataCharactersToCalculateVolitionsFor = cast;
+            ensembleCalculateVolitionsJobForGetCharacterActions.InDatasuppressResponse = suppressResponse;
+            ensembleCalculateVolitionsJobForGetCharacterActions.InDataInitiator = initiator;
+            ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName = objectName;
+            ensembleCalculateVolitionsJobForGetCharacterActions.InDataResponder = responder;
+            volitionInterfaceIsLocked = true; // should be locked before we ever try to do something with it.
+            ensembleCalculateVolitionsJobForGetCharacterActions.Start();
+        }
+
+
+        
+        /*
         volitionInterface = calculateVolition(cast, null, () => {
-            List<Action> actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
-
-            if (objectName == "Cellist") {
-                CloseMenu();
-                StartCoroutine(DisplayDialogue(objectName, "The cellist is busy playing."));
-            } else if (hud.GetQuestProgress() == HUD.BACKSTAGE_ACCESS) {
-                CloseMenu();
-
-                if (!suppressResponse) {
-                    StartCoroutine(DisplayDialogue(objectName, "Please, I'm trying to watch the performance!"));
-                }
-            } else if (hud.GetQuestProgress() == HUD.POSSESS_PLANS) {
-                if (finalInterlocutor == objectName) {
-                    Debug.Log("clicked on finalInterlocutor");
-                    if (approachedFinalInterlocutor != true) {
-                        approachedFinalInterlocutor = true;
-
-                        foreach (Action action in actions) {
-                            if (action.Name.Contains("interaction")) {
-                                TakeAction(objectName, action);
-                                volitionInterface = calculateVolition(cast, null, () => {
-                                    actions = data.ensemble.getActions(initiator, responder, volitionInterface, cast, 999, 999, 999);
-                                    ShowActionsList(objectName, actions, suppressResponse);
-                                    return;
-                                });
-                            }
-                        }
-                    }
-                } else {
-                    CloseMenu();
-                    StartCoroutine(DisplayDialogue(objectName, "Did I just see you sneak backstage?"));
-                }
-            } else if (actions.Count > 0 && actions[0].Name.Contains("interaction")) {
-                actions = new List<Action>();
-            } else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION) {
-                if (objectName == "Marie-Catherine Bienfait, ticket taker") {
-                    if (actions.Count > 0) {
-                        CloseMenu();
-                        ShowFinalText(objectName, actions[0]);
-                    }
-                } else if (objectName == finalInterlocutor) {
-                    CloseMenu();
-                    StartCoroutine(DisplayDialogue(objectName, "Shouldn't you be on your way out by now?"));
-                } else {
-                    CloseMenu();
-                    StartCoroutine(DisplayDialogue(objectName, "Stop, thief!"));
-                    StartCoroutine(GameOver());
-                }
-            }
             
-            ShowActionsList(objectName, actions, suppressResponse);
         });
+        */
     }
 
     private void ShowActionsList(string objectName, List<Action> actions, bool suppressResponse)
@@ -845,9 +1047,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         float y = -0.05f;
         float z = 5602.218f;
 
+        //Always clear out all of the action buttons so we are working with a blank slate.
+        foreach (GameObject bt in actionButtonRefs)
+        {
+            Destroy(bt);
+        }
+
+        actionButtonRefs.Clear();
+
         if (actions.Count > 0) {
             foreach (Action action in actions)
             {
+                Debug.Log("*** Loop! Action is " + action.DisplayName);
                 if (!action.Name.Contains("interaction")) {
                     string actionName = action.Name;
 
@@ -870,7 +1081,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                     Button tempButton = goButton.GetComponent<Button>();
                     tempButton.GetComponentInChildren<Text>().text = actionName;
-                    tempButton.onClick.AddListener(() => TakeAction(objectName, action));
+
+                    Debug.Log("***About to give button listener for: " + objectName + " " + action.DisplayName);
+                    tempButton.onClick.AddListener(() => {Debug.Log("***CLICK CLICK MAYBE???***");  TakeAction(objectName, action);});
+                    Debug.Log("***JUST GAVE BUTTON LISTENER FOR: " + objectName + " " + action.DisplayName);
 
                     actionButtonRefs.Add(goButton);
                 }
@@ -1047,8 +1261,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         progressPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = progressText;
     }
 
-    private void TakeAction(string objectName, Action action)
+    public void TakeAction(string objectName, Action action)
     {
+        Debug.Log("**** Inside of Take Action");
         data.ensemble.takeAction(action);
         gameActions.Add(action);
 
@@ -1216,12 +1431,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         dialogueResponse = getDialogueResponse(action);
 
+        Debug.Log("****About to call close menu inside of take action...");
         CloseMenu();
         DisplayActions();
         getCharacterActions(objectName, true);
 
         StartCoroutine(DisplayDialogue(objectName, dialogueResponse));
-        StartCoroutine(SetCharacterAvailability());
+        SetCharacterAvailability();
     }
 
     public void ExitGame()
@@ -1404,8 +1620,14 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
     }
 
+
+    //BEGIN CUSTOM ENSEMBLE CALCULATE VOLITIONS ATTEMPT
+
     public VolitionInterface calculateVolition(Cast cast, int? timeStep, System.Action action)
     {
+
+        Debug.Log("******** SLOW WAY ALERT &&&&&&&");
+
         VolitionSet calculatedVolitions = data.ensemble.getRuleLibrary().GetVolitionCache().newSet(cast);
 
         Cast charactersToSkipVolitionCalculation = new Cast();
@@ -1491,5 +1713,208 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         }
         return dictionary;
     }
+
+    //END CUSTOM ENSEMBLE CALCULATE VOLITIONS ATTEMPT
+
+
+
+    //BEGIN MULTI-THREADING SOLUTION
+    //TREMENDOUSLY INSPIRED BY https://answers.unity.com/questions/357033/unity3d-and-c-coroutines-vs-threading.html
+
+    public void expensiveDumbOperationForTesting(){
+        Vector3[] InData = new Vector3[3];
+        Vector3[] OutData = new Vector3[5];
+
+        InData[0] = new Vector3(1f, 0f, 0f);
+        InData[1] = new Vector3(0f, 1f, 0f);
+        InData[2] = new Vector3(0f, 0f, 1f);
+
+        for (int i = 0; i < 100000000; i++)
+        {
+            OutData[i % OutData.Length] += InData[(i + 1) % InData.Length];
+        }
+
+
+
+        //This gets called when the job is finished!
+        for (int i = 0; i < InData.Length; i++)
+        {
+            Debug.Log("In Data Results: (" + i + "): " + InData[i]);
+        }
+        //This gets called when the job is finished!
+        for (int i = 0; i < OutData.Length; i++)
+        {
+            Debug.Log("Out Data Results: (" + i + "): " + OutData[i]);
+        }     
+    }
+
+    public class ThreadedJob{
+        private bool m_IsDone = false;
+        private object m_Handle = new object();
+        private System.Threading.Thread m_Thread = null;
+        public bool IsDone{
+            get{
+                bool tmp;
+                lock (m_Handle){
+                    tmp = m_IsDone;
+                }
+                return tmp;
+            }
+            set{
+                lock(m_Handle){
+                    m_IsDone = value;
+                }
+            }
+        }
+
+        public virtual void Start(){
+            m_Thread = new System.Threading.Thread(Run);
+            m_Thread.Start();
+        }
+
+        public virtual void Abort(){
+            m_Thread.Abort();
+        }
+
+        //To be overridden by subclass
+        protected virtual void ThreadFunction() {}
+
+        //To be overridden by subclass
+        protected virtual void OnFinished() {}
+
+        public virtual bool Update(){
+            if (IsDone){
+                OnFinished();
+                return true;
+            }
+            return false;
+        }
+        public IEnumerator<object> WaitFor(){
+            while(!Update()){
+                yield return null;
+            }
+        }
+
+        private void Run(){
+            ThreadFunction();
+            IsDone = true;
+        }
+    }
+
+    public class TestJob : ThreadedJob{
+        public Vector3[] InData;
+        public Vector3[] OutData;
+
+        protected override void ThreadFunction()
+        {
+            //Threaded task goes here! This is where your long operation belongs!
+            for(int i = 0; i < 100000000; i++){
+                OutData[i % OutData.Length] += InData[(i+1) % InData.Length];
+            }
+        }
+
+        protected override void OnFinished()
+        {
+            //This gets called when the job is finished!
+            for(int i = 0; i < InData.Length; i++){
+                Debug.Log("In Data Results: (" + i + "): " + InData[i]);
+            }
+            //This gets called when the job is finished!
+            for (int i = 0; i < OutData.Length; i++)
+            {
+                Debug.Log("Out Data Results: (" + i + "): " + OutData[i]);
+            }
+        }
+    }
+
+    public class EnsembleCalculateVolitionForSetCharacterAvailability : ThreadedJob{
+        public EnsembleAPI InDataEnsemble;
+        public Cast InDataCharactersToCalculateVolitionsFor;
+        public VolitionInterface OutDataVolitionInterface;
+
+        protected override void ThreadFunction()
+        {
+            Debug.Log("******STARTING ENSEMBLE JOB: EnsembleCalculateVolitionForSetCharacterAvailability");
+            OutDataVolitionInterface = InDataEnsemble.calculateVolition(InDataCharactersToCalculateVolitionsFor);
+        }
+
+        protected override void OnFinished()
+        {
+            Debug.Log("*****FINISHED ASYNC VOLITION CALCULATION: EnsembleCalculateVolitionForSetCharacterAvailability******");
+
+        }
+    }
+
+    public class EnsembleCalculateVolitionsJobForGetCharacterActions : ThreadedJob
+    {
+        public EnsembleAPI InDataEnsemble;
+        public Cast InDataCharactersToCalculateVolitionsFor;
+        public bool InDatasuppressResponse;
+        public string InDataInitiator;
+        public string InDataResponder;
+        public string InDataObjectName;
+
+
+        public VolitionInterface OutDataVolitionInterface;
+        
+
+        protected override void ThreadFunction()
+        {
+            Debug.Log("****STARTING ENSEMBLE JOB: EnsembleCalculateVolitionsJobForGetCharacterActions (actions)*****");
+            OutDataVolitionInterface = InDataEnsemble.calculateVolition(InDataCharactersToCalculateVolitionsFor);
+        }
+
+        protected override void OnFinished()
+        {
+            Debug.Log("*****FINISHED ENSEMBLE JOB: EnsembleCalculateVolitionsJobForGetCharacterActions (actions) ******");      
+        }
+    }
+
+    public class EnsembleCalculateVolitionsJobForFinalInterlocutor : ThreadedJob
+    {
+        public EnsembleAPI InDataEnsemble;
+        public Cast InDataCharactersToCalculateVolitionsFor;
+        public bool InDatasuppressResponse;
+        public string InDataInitiator;
+        public string InDataResponder;
+        public string InDataObjectName;
+
+
+        public VolitionInterface OutDataVolitionInterface;
+
+
+        protected override void ThreadFunction()
+        {
+            Debug.Log("****STARTING ENSEMBLE JOB: EnsembleCalculateVolitionsJobForFinalInterlocutor (grand finale)*****");
+            OutDataVolitionInterface = InDataEnsemble.calculateVolition(InDataCharactersToCalculateVolitionsFor);
+        }
+
+        protected override void OnFinished()
+        {
+            Debug.Log("*****FINISHED ENSEMBLE JOB: EnsembleCalculateVolitionsJobForFinalInterlocutor (grand finale) ******");
+        }
+    }
+
+    public class EnsembleCalculateVolitionsJob : ThreadedJob
+    {
+        public EnsembleAPI InDataEnsemble;
+        public Cast InDataCharactersToCalculateVolitionsFor;
+        public VolitionInterface OutDataVolitionInterface;
+
+        protected override void ThreadFunction()
+        {
+            Debug.Log("******STARTING ENSEMBLE JOB: EnsembleCalculateVolitionsJob (i.e., vanilla)");
+            OutDataVolitionInterface = InDataEnsemble.calculateVolition(InDataCharactersToCalculateVolitionsFor);
+        }
+
+        protected override void OnFinished()
+        {
+            Debug.Log("******FINISHED ENSEMBLE JOB: EnsembleCalculateVolitionsJob (i.e., vanilla)");
+        }
+    }
+
+
+
+    //END MULTI-THREADING SOLUTION
 
 }

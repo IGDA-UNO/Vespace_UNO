@@ -348,7 +348,7 @@ namespace Ensemble
                 }
             }
 
-            foreach(Predicate res in matchedResults)
+            foreach(Predicate res in matchedResults.ToList())
             {
                 if (matchResult.Equals(res))
                 {
