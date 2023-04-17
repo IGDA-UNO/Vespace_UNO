@@ -251,7 +251,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     void Start()
     {
         Debug.Log("TURNING OFF DEBUG MESSAGES -- set Debug.unityLogger.logEnabled to true in ENSEMBLE_UIHandler.cs to re-enable them");
-        Debug.unityLogger.logEnabled = false;
+        //Debug.unityLogger.logEnabled = false;
         Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         hud.UpdateQuestProgress(HUD.NO_TICKET);
 

@@ -7,6 +7,11 @@ public class EmotiveHandler : MonoBehaviour
     public GameObject player;
     public GameObject[] characters;
     public GameObject closestCharacter;
+    ENSEMBLE_UIHandler uiHandler; 
+
+    public void Start(){
+        uiHandler = GameObject.Find("UIHandler").GetComponent<ENSEMBLE_UIHandler>();
+    }
 
     public GameObject FindClosest()
     {
@@ -50,7 +55,32 @@ public class EmotiveHandler : MonoBehaviour
             emotive.enabled = true;
             Debug.Log("enabled");*/
 
-            other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            //HALO VERSION -- TURN HALO ON
+            //other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+
+            //MATERIAL COLOR VERSION -- CHANGE COLOR BASED ON AVAILABILITY! GREEN = AVAILABLE, RED = NOT AVAILABLE
+            MeshRenderer characterToColorMeshRenderer = other.gameObject.GetComponentInParent<MeshRenderer>();
+
+
+            bool result;
+            bool isApproachable = false;
+            if (uiHandler.characterAvailable.TryGetValue(characterToColorMeshRenderer.gameObject.name, out result))
+            {
+                isApproachable = result;
+            }
+
+            if (isApproachable)
+            {
+                characterToColorMeshRenderer.material.color = Color.green;
+            }
+            else
+            {
+                characterToColorMeshRenderer.material.color = Color.red;
+            }
+
+            
+
+            Debug.Log("I AM NOW LOOKING AT " + characterToColorMeshRenderer.gameObject.name + "COLOR THEM GREEN OR WHATEVER!");
         }
     }
 
@@ -69,7 +99,12 @@ public class EmotiveHandler : MonoBehaviour
             emotive.enabled = false;
             Debug.Log("disabled");*/
 
-            other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            //HALO VERSION -- TURN HALO OFF
+            //other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+
+            //MATERIAL COLOR VERSION -- CHANGE COLOR BACK TO WHITE
+            MeshRenderer characterToColorMeshRenderer = other.gameObject.GetComponentInParent<MeshRenderer>();
+            characterToColorMeshRenderer.material.color = Color.white;
         }
     }
 }

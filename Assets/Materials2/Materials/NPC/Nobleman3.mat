@@ -67,6 +67,7 @@ Material:
     - _Metallic: 0
     - _Mode: 1
     - _OcclusionStrength: 1
+    - _Outline: 0
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -76,4 +77,5 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.35849056, g: 0.27082762, b: 0.18059805, a: 1}
+    - _OutlineColor: {r: 1, g: 0.27987415, b: 0.27987415, a: 1}
   m_BuildTextureStacks: []
