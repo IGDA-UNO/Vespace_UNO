@@ -16,17 +16,22 @@ public class PROUVE_introduction : MonoBehaviour
     public InputField userName ; 
     public PROUVE_SceneHandler sceneHandler ;
 
+    //Wallpaper Canvas
+    public Text WallpaperCanvasTitleText;
+
     public Text IntroCanvasTitleText;
 
     public GameObject snuffBoxImage;
 
     public Button SkipIntroductionButton;
 
+    public Button WallpaperCanvasPrevButton;
     public Button IntroCanvasPrevButton;
     public Button ControlCanvasPrevButton;
     public Button ObjectCanvasPrevButton;
     public Button FinalCanvasPrevButton;
 
+    public Button WallpaperCanvasNextButton;
     public Button IntroCanvasNextButton;
     public Text IntroCanvasNextButtonText;
     public Button ControlCanvasNextButton;
@@ -35,9 +40,13 @@ public class PROUVE_introduction : MonoBehaviour
 
     public Button projectWebsiteButton;
 
+    public string historicalScholarshipTitle;
+    public string historicalScholarshipText;
+
 
     private const string VespaceUrl = "https://vespace.cs.uno.edu/";
     public TextMeshProUGUI welcomeCanvasText;
+    public TextMeshProUGUI wallpaperCanvasText;
     public int textIndex = 0;
     public List<string> introTextList = new List<string>();
     public List<string> titleTextList = new List<string>();
@@ -56,10 +65,10 @@ public class PROUVE_introduction : MonoBehaviour
         //Debug.unityLogger.logEnabled = false;
         Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         Debug.Log("Quality Level: " + QualitySettings.names[QualitySettings.GetQualityLevel()]);
-        sceneHandler = GetComponent<PROUVE_SceneHandler>() ; 
+        sceneHandler = GetComponent<PROUVE_SceneHandler>(); 
         firstCanvas.SetActive(true) ; 
         secondCanvas.SetActive(false) ; 
-        demoNPC.SetActive(false) ;
+        demoNPC.SetActive(false);
         thirdCanvas.SetActive(false) ;  
         sceneHandler.setAllowRestart(false) ; 
         userName.ActivateInputField();
@@ -78,11 +87,15 @@ public class PROUVE_introduction : MonoBehaviour
         introTextList.Add("This sensory-immersive environment, and the interactions with non-player characters(NPCs) are also one way that our research team has attempted to present high-level scholarship in an accessible, engaging, non-print format.To that end, objects throughout the space link to a database of explanatory materials, allowing this experience to serve as the platform for further exploration of eighteenth-century French public culture.");
         titleTextList.Add("Objects and NPCs");
         
-        introTextList.Add("This phase of the VESPACE project represents a proof-of-concept for many of our experimental ambitions for rethinking historically-oriented scholarship for the twenty-first century.We hope you enjoy this experience, which represents the work of dozens of scholars across the US and Europe. We would be delighted to hear from you with feedback or suggestions – please contact us through our website, vespace.cs.uno.org – and enjoy the game!");
-        titleTextList.Add("Re-thinking Historical Scholarship");
+        historicalScholarshipText = "This phase of the VESPACE project represents a proof-of-concept for many of our experimental ambitions for rethinking historically-oriented scholarship for the twenty-first century.We hope you enjoy this experience, which represents the work of dozens of scholars across the US and Europe. We would be delighted to hear from you with feedback or suggestions – please contact us through our website, vespace.cs.uno.org – and enjoy the game!";
+        historicalScholarshipTitle = "Re-thinking Historical Scholarship";
+        
 
-        IntroCanvasTitleText.text = titleTextList[0];
-        welcomeCanvasText.text = introTextList[0];
+        WallpaperCanvasTitleText.text = titleTextList[0];
+        wallpaperCanvasText.text = introTextList[0];
+
+        IntroCanvasTitleText.text = historicalScholarshipTitle;
+        welcomeCanvasText.text = historicalScholarshipText;
     }
 
     public void advanceIntroText(){
@@ -110,23 +123,31 @@ public class PROUVE_introduction : MonoBehaviour
         }
     //*****end testing printing things out to identify input device.
 
-        IntroCanvasPrevButton.gameObject.SetActive(true);
+        WallpaperCanvasPrevButton.gameObject.SetActive(true);
 
         //update the 'next' button text.
+        /*
         if(textIndex == introTextList.Count-1){
             IntroCanvasNextButtonText.text = "To Controls";
         }
         else{
             IntroCanvasNextButtonText.text = "Next";
         }
+        */
 
-        if(textIndex >= introTextList.Count){
-            closeFirstCanvas();
+        
+        if(textIndex >= introTextList.Count - 1){
+            textIndex = introTextList.Count - 1;
+            WallpaperCanvasNextButton.gameObject.SetActive(false);
         }
         else{
-            welcomeCanvasText.text = introTextList[textIndex];
-            IntroCanvasTitleText.text = titleTextList[textIndex];
+            WallpaperCanvasNextButton.gameObject.SetActive(true);
         }
+
+        //update the text
+        WallpaperCanvasTitleText.text = titleTextList[textIndex];
+        wallpaperCanvasText.text = introTextList[textIndex];
+        
 
         if(textIndex == 2){
             snuffBoxImage.SetActive(true);
@@ -154,20 +175,26 @@ public class PROUVE_introduction : MonoBehaviour
         if (textIndex <= 0)
         {
             textIndex = 0;
-            welcomeCanvasText.text = introTextList[textIndex];
-            IntroCanvasTitleText.text = titleTextList[textIndex];
-            IntroCanvasPrevButton.gameObject.SetActive(false);
+            WallpaperCanvasTitleText.text = titleTextList[textIndex];
+            wallpaperCanvasText.text = introTextList[textIndex];
+            //welcomeCanvasText.text = introTextList[textIndex];
+            //IntroCanvasTitleText.text = titleTextList[textIndex];
+            WallpaperCanvasPrevButton.gameObject.SetActive(false);
         }
         else
         {
-            IntroCanvasPrevButton.gameObject.SetActive(true);
-            welcomeCanvasText.text = introTextList[textIndex];
-            IntroCanvasTitleText.text = titleTextList[textIndex];
+            WallpaperCanvasPrevButton.gameObject.SetActive(true);
+            WallpaperCanvasTitleText.text = titleTextList[textIndex];
+            wallpaperCanvasText.text = introTextList[textIndex];
         }
+
+        //We always want 'next' to be true after hitting 'previous'
+        WallpaperCanvasNextButton.gameObject.SetActive(true);
 
 
 
         //update the 'next' button text.
+        /*
         if (textIndex == introTextList.Count - 1)
         {
             IntroCanvasNextButtonText.text = "To Controls";
@@ -176,6 +203,7 @@ public class PROUVE_introduction : MonoBehaviour
         {
             IntroCanvasNextButtonText.text = "Next";
         }
+        */
 
         if(textIndex == 2){
             snuffBoxImage.SetActive(true);
@@ -222,7 +250,9 @@ public class PROUVE_introduction : MonoBehaviour
         secondCanvas.SetActive(false);
         firstCanvas.SetActive(true);
         demoNPC.SetActive(false);
-        retreatIntroText();
+        welcomeCanvasText.text = historicalScholarshipText;
+        IntroCanvasTitleText.text = historicalScholarshipTitle;
+        //retreatIntroText();
     }
 
     public void closeSecondCanvas() {
