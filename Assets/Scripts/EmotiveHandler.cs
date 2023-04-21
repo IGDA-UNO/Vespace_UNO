@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EmotiveHandler : MonoBehaviour
 {
@@ -62,11 +63,24 @@ public class EmotiveHandler : MonoBehaviour
             MeshRenderer characterToColorMeshRenderer = other.gameObject.GetComponentInParent<MeshRenderer>();
 
 
+
             bool result;
             bool isApproachable = false;
-            if (uiHandler.characterAvailable.TryGetValue(characterToColorMeshRenderer.gameObject.name, out result))
-            {
-                isApproachable = result;
+
+            //Going to do a bit of hackey game design magic!
+            //This is what we normally do -- in the theatre
+            //in the 'intro scene' we want to always turn the ticket taker green, even though there aren't actually any actions.
+            Scene currentScene = SceneManager.GetActiveScene();
+            if(currentScene.name != "Intro"){
+                if (uiHandler.characterAvailable.TryGetValue(characterToColorMeshRenderer.gameObject.name, out result))
+                {
+                    isApproachable = result;
+                }
+            }
+            else{
+                //we are in the intro! Just say isApproachable is true!
+                result = true;
+                isApproachable = true;
             }
 
             if (isApproachable)
