@@ -21720,29 +21720,28 @@ MonoBehaviour:
 
     <color=yellow><b>To
     interact</b></color> with another character in the space, <color=yellow><b>turn
-    your head to look at the character</b></color> until a halo appears over their
-    head. A <color=red><b>red halo</b></color> indicates someone who is busy or doesn''t
-    want to talk to you. A <color=green><b>green halo</b></color> indicates a character
-    ready to interact!
+    your head to look at the character</b></color>. If they turn <color=red><b>red</b></color>
+    it means that person is busy or doesn''t want to talk to you. Turning <color=green><b>green</b></color>
+    indicates a character ready to interact!
 
 
 
-    Point your <color=yellow><b>right-hand controller</b></color>
-    at the character and <color=yellow><b>pull the trigger</b></color>. An information
-    panel appears over your left-hand controller. You can then navigate within this
-    window by using the right-hand controller to select the tone and content of your
-    interaction.
+    Point your <color=yellow><b>right-hand
+    controller</b></color> at the character and <color=yellow><b>pull the trigger</b></color>.
+    An information panel appears over your left-hand controller. You can then navigate
+    within this window by using the right-hand controller to select the tone and
+    content of your interaction.
 
 
 
-    This system also works for obtaining more information about
-    graphic objects in the space.
+    This system also works for obtaining more
+    information about graphic objects in the space.
 
 
 
-    <color=yellow><b>Try it!</b></color> Display
-    the information panel for the object on the right, navigate inside it, and close
-    it.
+    <color=yellow><b>Try it!</b></color>
+    Display the information panel for the object on the right, navigate inside it,
+    and close it.
 
 
 
