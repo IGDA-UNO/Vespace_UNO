@@ -362,7 +362,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 //Debug.Log("NOT IN THEATRE!");
             }
         }
-
+/*
         if(Input.GetKeyDown(KeyCode.N)){
             Debug.Log("STARTING LONG DUMB THING SHOULD FREEZE THE GAME");
             expensiveDumbOperationForTesting();
@@ -402,6 +402,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             volitionInterfaceIsLocked = true;
             ensembleCalculateVolitionsJobForFinalInterlocutor.Start();
             Debug.Log("SMART TREAD THING FOR ENSEMBLE ENDED");
+        }
+*/
+        if(Input.GetKeyDown(KeyCode.J)){
+            playerCamera.transform.localRotation = Quaternion.Euler(0,90,0);
         }
 
         if(threadTestJob != null){
@@ -1211,8 +1215,10 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             playerObject.transform.position = new Vector3(4f, 1f, 2f);
             SteamVR_Fade.Start(Color.clear, 10);
         } else {
-            playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.position;
+            playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.localPosition;
         }
+        playerCamera.transform.localPosition = new Vector3(0f, 1f, 0f);
+        playerCamera.transform.localRotation = Quaternion.Euler(0, 90, 0);
     }
 
     private IEnumerator<object> TransportReturnToTheater()
