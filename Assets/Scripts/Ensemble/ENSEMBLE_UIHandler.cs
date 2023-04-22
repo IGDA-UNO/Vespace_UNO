@@ -161,6 +161,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     //For keeping track of moments when using a headset or not.
     public bool isUsingVRHeadset;
 
+    Transform lastInterlocutorParticleSystem;
+
     //The full cast
     private Cast cast = new Cast { 
         "Male Noble Player", 
@@ -1224,11 +1226,17 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 Transform madameParent = madameDuPuyDesGougeres.transform.parent;
                 madameParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
                 madameParent.transform.position = new Vector3(2.5f, 0f, 2f);
+                lastInterlocutorParticleSystem = madameDuPuyDesGougeres.transform.GetChild(0).GetChild(0);
+                Debug.Log("the game object we found was: " + lastInterlocutorParticleSystem);
+                lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
             } else {
                 GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
                 Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
                 lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
                 lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
+                lastInterlocutorParticleSystem = lastInterlocutor.transform.GetChild(0).GetChild(0);
+                Debug.Log("the game object we found was: " + lastInterlocutorParticleSystem);
+                lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
             }
 
             SteamVR_Fade.Start(Color.black, 10);
@@ -1237,6 +1245,11 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             SteamVR_Fade.Start(Color.clear, 10);
         } else {
             //playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.position;
+            GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+            lastInterlocutorParticleSystem = lastInterlocutor.transform.GetChild(0).GetChild(0);
+            Debug.Log("the game object we found was: " + lastInterlocutorParticleSystem);
+            lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
+            
         }
     }
 
@@ -1353,6 +1366,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.FINAL_INTERACTION);
+
+                    //Turn off previous person Halo, turn on ticket taker halo.
+                    lastInterlocutorParticleSystem.gameObject.SetActive(false);
+                    GameObject ticketTaker = GameObject.Find("Marie-Catherine Bienfait, ticket taker");
+                    Transform ticketTakerParticleSystem = ticketTaker.transform.GetChild(0).GetChild(0);
+                    ticketTakerParticleSystem.gameObject.SetActive(true);
+
                 }
 
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
