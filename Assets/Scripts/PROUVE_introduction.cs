@@ -23,6 +23,7 @@ public class PROUVE_introduction : MonoBehaviour
     public Text IntroCanvasTitleText;
 
     public GameObject snuffBoxImage;
+    public GameObject snuffBoxImageLarge;
 
     public Button SkipIntroductionButton;
 
@@ -87,6 +88,9 @@ public class PROUVE_introduction : MonoBehaviour
         
         introTextList.Add("This sensory-immersive environment, and the interactions with non-player characters(NPCs) are also one way that our research team has attempted to present high-level scholarship in an accessible, engaging, non-print format.To that end, objects throughout the space link to a database of explanatory materials, allowing this experience to serve as the platform for further exploration of eighteenth-century French public culture.");
         titleTextList.Add("Objects and NPCs");
+
+        introTextList.Add("");
+        titleTextList.Add("");
         
         historicalScholarshipText = "This phase of the VESPACE project represents a proof-of-concept for many of our experimental ambitions for rethinking historically-oriented scholarship for the twenty-first century.We hope you enjoy this experience, which represents the work of dozens of scholars across the US and Europe. We would be delighted to hear from you with feedback or suggestions – please contact us through our website, vespace.cs.uno.org – and enjoy the game!";
         historicalScholarshipTitle = "Re-thinking Historical Scholarship";
@@ -157,6 +161,15 @@ public class PROUVE_introduction : MonoBehaviour
             snuffBoxImage.SetActive(false);
         }
 
+        if (textIndex == 4)
+        {
+            snuffBoxImageLarge.SetActive(true);
+        }
+        else
+        {
+            snuffBoxImageLarge.SetActive(false);
+        }
+
         //Deal with the project webpage button
         /*
         if (textIndex == 0 || textIndex == 4)
@@ -211,6 +224,15 @@ public class PROUVE_introduction : MonoBehaviour
         }
         else{
             snuffBoxImage.SetActive(false);
+        }
+
+        if (textIndex == 4)
+        {
+            snuffBoxImageLarge.SetActive(true);
+        }
+        else
+        {
+            snuffBoxImageLarge.SetActive(false);
         }
 
         //Deal with the project webpage button

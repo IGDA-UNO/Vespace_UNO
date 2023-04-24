@@ -1210,10 +1210,12 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         if (SteamVRObjects.activeSelf)
         {
-            SteamVR_Fade.Start(Color.black, 10);
+            //SteamVR_Fade.Start(Color.black, 10);
+            SteamVR_Fade.View(Color.black, 10);
             yield return new WaitForSeconds(3);
             playerObject.transform.position = new Vector3(4f, 1f, 2f);
-            SteamVR_Fade.Start(Color.clear, 10);
+            //SteamVR_Fade.Start(Color.clear, 10);
+            SteamVR_Fade.View(Color.clear, 10);
         } else {
             playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.localPosition;
         }
