@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class CharacterSelection : MonoBehaviour
 {
@@ -40,10 +41,11 @@ public class CharacterSelection : MonoBehaviour
         maleNoble.characterDescription = "Your monthly tailor’s bill has gone unpaid for the fourth time, and your banker tells you there’s " +
                                          "simply no money for your late-night soirées with tout Paris – the fact is, at age 24, you’ve " +
                                          "squandered generations of family wealth in two wild years at court and in town, and now you " +
-                                         "need some cash.You’ve been tipped off to plans for a theatre that interested investors would " +
+                                         "need some cash.\n\nYou’ve been tipped off to plans for a theatre that interested investors would " +
                                         "pay good money for, and despite the indignity you’ll have to go fetch them backstage at " +
-                                        "Bienfait’s marionette theatre. \n\n" +
-                                        "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
+                                        "Bienfait’s marionette theatre.";
+
+        maleNoble.characterObjective = "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
                                         "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                         "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
                                         "the drawings before you put them in your pocket! Once you’re back in the theatre, find the last " +
@@ -55,10 +57,11 @@ public class CharacterSelection : MonoBehaviour
         femaleNoble.characterName = EnsemblePlayer.FEMALE_NOBLE;
         femaleNoble.characterDescription = "For weeks you’ve endured the humiliating rumors that your husband, the Marquis, was running " +
                                             "around with some actress, and then you overheard he’s spending a fortune to have a theatre " +
-                                            "built for the trollop at the Faoire Saint - Germain! Throwing caution to the wind, you decide on a " +
+                                            "built for the trollop at the Faoire Saint - Germain!\n\nThrowing caution to the wind, you decide on a " +
                                             "course of vengeance and set out to steal the theatre plans at the risk of seeming mad – because " +
-                                            "they’re hidden backstage in, of all places, Bienfait’s marionette theatre! \n\n" +
-                                            "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
+                                            "they’re hidden backstage in, of all places, Bienfait’s marionette theatre!";
+
+        femaleNoble.characterObjective = "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
                                             "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                             "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
                                             "the drawings before you put them in your pocket! Once you’re back in the theatre, find the last " +
@@ -72,9 +75,10 @@ public class CharacterSelection : MonoBehaviour
                                         "of recommendation to enter into the service of a powerful noble – and already your master has " +
                                         "sent you to the Foire Saint-Germain with a strange request. Having invested a large amount of " +
                                         "money in a proposed theatre at the Fair, he tells you the plans have been stolen and hidden " +
-                                        "somewhere backstage at Bienfait’s marionette theatre by a rival. He’s never really taken notice " +
-                                        "of you before – here’s an opportunity to make an impression!\n\n" +
-                                        "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
+                                        "somewhere backstage at Bienfait’s marionette theatre by a rival.\n\nHe’s never really taken notice " +
+                                        "of you before – here’s an opportunity to make an impression!";
+
+        servant.characterObjective = "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
                                         "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                         "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
                                         "the drawings before you put them in your pocket! Once you’re back in the theatre, find the last " +
@@ -137,6 +141,7 @@ public class CharacterSelection : MonoBehaviour
     }
 
     public void UpdateMenu(){
+        Debug.Log("Updating menu!");
         //update character title text name
         this.currentlySelectedCharacterText.text = selectableCharacters[currentlySelectedCharacterIndex].titleText;
 
@@ -161,6 +166,7 @@ public class CharacterSelection : MonoBehaviour
         public Material characterImage;
         public string titleText;
         public string characterDescription;
+        public string characterObjective;
     }
 
 
