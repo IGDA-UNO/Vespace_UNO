@@ -25,10 +25,21 @@ public class CharacterSelection : MonoBehaviour
     public RawImage characterImage;
     public Text currentlySelectedCharacterText;
     public Text characterDescription;
+    public bool onFirstPage;
+
+    //Game Objects on "first page"
+    public GameObject finalSelectCharacterButton;
+    public GameObject goBackToFirstPageButton;
+
+    //Game Objects on "second page"
+    public GameObject previousCharacterButton;
+    public GameObject nextCharacterButton;
+    public GameObject initialChooseThisCharacterButton;
 
 
     void Awake()
     {
+        onFirstPage = true;
         //Initialize all interface references needed to display information
         //Initialisation de toutes les références à l'interface nécessaires pour l'affichage des informations
         characterSelectionMenu = GameObject.Find("CharacterSelection");
@@ -48,7 +59,7 @@ public class CharacterSelection : MonoBehaviour
         maleNoble.characterObjective = "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
                                         "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                         "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
-                                        "the drawings before you put them in your pocket! Once you’re back in the theatre, find the last " +
+                                        "the drawings before you put them in your pocket!\n\nOnce you’re back in the theatre, find the last " +
                                         "person you spoke to, and make them help you escape!";
         maleNoble.characterImage = maleNobleMaterial;
         maleNoble.titleText = "The Nobleman";
@@ -64,7 +75,7 @@ public class CharacterSelection : MonoBehaviour
         femaleNoble.characterObjective = "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
                                             "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                             "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
-                                            "the drawings before you put them in your pocket! Once you’re back in the theatre, find the last " +
+                                            "the drawings before you put them in your pocket!\n\nOnce you’re back in the theatre, find the last " +
                                             "person you spoke to, and try to make as discreet an exit as possible!";
         femaleNoble.characterImage = femaleNobleMaterial;
         femaleNoble.titleText = "The Noblewoman";
@@ -81,7 +92,7 @@ public class CharacterSelection : MonoBehaviour
         servant.characterObjective = "First, give your ticket to the ticket taker. Next, interact with at least two people in the theatre, " +
                                         "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                         "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
-                                        "the drawings before you put them in your pocket! Once you’re back in the theatre, find the last " +
+                                        "the drawings before you put them in your pocket!\n\nOnce you’re back in the theatre, find the last " +
                                         "person you spoke to, and try to get out without causing a scandal!";
         servant.characterImage = servantMaterial;
         servant.titleText = "The Servant";
@@ -106,7 +117,38 @@ public class CharacterSelection : MonoBehaviour
         placeMenu();
     }
 
+    public void PreliminarySelectThisCharacterButtonPushed(){
+        Debug.Log("Preliminary push!");
+        onFirstPage = false;
 
+        //turn off and on the appropriate game objects.
+        //Turn OFF:
+        //PREVIOUS BUTTON, NEXT BUTTON, PRELIMINARY SELECT THIS CHARACTER BUTTON.
+        previousCharacterButton.gameObject.SetActive(false);
+        nextCharacterButton.gameObject.SetActive(false);
+        initialChooseThisCharacterButton.gameObject.SetActive(false);
+
+        //TURN ON:
+        //GO BACK TO FIRST PAGE BUTTON, FINAL SELECT CHACTER BUTTON.
+        finalSelectCharacterButton.gameObject.SetActive(true);
+        goBackToFirstPageButton.gameObject.SetActive(true);
+
+        characterDescription.text = selectableCharacters[currentlySelectedCharacterIndex].characterObjective;
+    }
+
+    public void GoBackToFirstPage(){
+        Debug.Log("going back to first page!");
+        onFirstPage = true;
+        previousCharacterButton.gameObject.SetActive(true);
+        nextCharacterButton.gameObject.SetActive(true);
+        initialChooseThisCharacterButton.gameObject.SetActive(true);
+
+        finalSelectCharacterButton.gameObject.SetActive(false);
+        goBackToFirstPageButton.gameObject.SetActive(false);
+
+        characterDescription.text = selectableCharacters[currentlySelectedCharacterIndex].characterDescription;
+        
+    }
 
     public void OnSelectThisCharacterButtonPushed()
     {
