@@ -60,7 +60,7 @@ public class CharacterSelection : MonoBehaviour
                                         "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                         "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
                                         "the drawings before you put them in your pocket!\n\nOnce you’re back in the theatre, find the last " +
-                                        "person you spoke to, and make them help you escape!";
+                                        "person you spoke to, and make them help you escape!\n\nYou may return to this intro at any time by pressing the 'r' key on your keyboard.";
         maleNoble.characterImage = maleNobleMaterial;
         maleNoble.titleText = "The Nobleman";
 
@@ -76,7 +76,7 @@ public class CharacterSelection : MonoBehaviour
                                             "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                             "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
                                             "the drawings before you put them in your pocket!\n\nOnce you’re back in the theatre, find the last " +
-                                            "person you spoke to, and try to make as discreet an exit as possible!";
+                                            "person you spoke to, and try to make as discreet an exit as possible!\n\nYou may return to this intro at any time by pressing the 'r' key on your keyboard.";
         femaleNoble.characterImage = femaleNobleMaterial;
         femaleNoble.titleText = "The Noblewoman";
 
@@ -93,7 +93,7 @@ public class CharacterSelection : MonoBehaviour
                                         "trying to convince them to help you get backstage. Once backstage, get the plans on the other " +
                                         "side by crossing over the catwalk without being seen by the audience – don’t forget to look at " +
                                         "the drawings before you put them in your pocket!\n\nOnce you’re back in the theatre, find the last " +
-                                        "person you spoke to, and try to get out without causing a scandal!";
+                                        "person you spoke to, and try to get out without causing a scandal!\n\nYou may return to this intro at any time by pressing the 'r' key on your keyboard.";
         servant.characterImage = servantMaterial;
         servant.titleText = "The Servant";
 

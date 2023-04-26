@@ -152,7 +152,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     //For starting the play in Act I once you've entered the theatre.
     private float xCoordinateThatMeansYouHaveEnteredTheTheatre;
-    private bool hasActIPlayStarted;
+    public bool hasActIPlayStarted;
 
     //For ensuring the player can't go to places we don't want them to go yet.
     public List<GameObject> houseTeleporters = new List<GameObject>();
@@ -509,6 +509,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 }
                 else if (actions.Count > 0 && actions[0].Name.Contains("interaction"))
                 {
+                    //Debug.Log("I think I'm getting here...? What is this interaction thingy? " + actions[0].Name);
                     actions = new List<Action>();
                 }
                 else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION)
@@ -579,7 +580,15 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 string responder = character;
 
                 List<Action> actions = data.ensemble.getActions(initiator, responder, this.volitionInterface, cast, 999, 999, 999);
-                characterAvailable[character] = actions.Count > 0;
+                bool areTheyAvailable = actions.Count > 0;
+
+                //I don't fully understand this, but checking to see if the first action has "interaction" in it seems to be code that 
+                //keeps them from wanting to takl to you -- mark it so that they are unavailable if this is the case.
+                if(actions.Count > 0 && actions[0].Name.Contains("interaction")){
+                    areTheyAvailable = false;
+                }
+                Debug.Log("SETCHARACTERAVAILABILITY: " + character + " is available: " + areTheyAvailable + " (action count was " + actions.Count);
+                characterAvailable[character] = areTheyAvailable;
             }
         }
         else{
@@ -1049,6 +1058,9 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     private void ShowActionsList(string objectName, List<Action> actions, bool suppressResponse)
     {
+
+        Debug.Log("In show action list object name is: " + objectName + " number of actions is " + actions.Count);
+
         float x = 0;
         float y = -0.05f;
         float z = 5602.218f;
@@ -1098,6 +1110,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         } else {
             CloseMenu();
             if (!suppressResponse) {
+                Debug.Log("wait maybe action count is actually zero?");
                 StartCoroutine(DisplayDialogue(objectName, "This person seems busy or uninterested in talking to you."));
             }
         }

@@ -74,6 +74,7 @@ public class EmotiveHandler : MonoBehaviour
             if(currentScene.name != "Intro"){
                 if (uiHandler.characterAvailable.TryGetValue(characterToColorMeshRenderer.gameObject.name, out result))
                 {
+                    Debug.Log("The character " + characterToColorMeshRenderer.name + " is available: " + result);
                     isApproachable = result;
                 }
             }
