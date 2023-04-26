@@ -26275,7 +26275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.187, y: 219}
+  m_AnchoredPosition: {x: -1.187, y: 246}
   m_SizeDelta: {x: 1500, y: 1225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828142434
@@ -27706,7 +27706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.187, y: 583}
+  m_AnchoredPosition: {x: -1.187, y: 632}
   m_SizeDelta: {x: 21000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916754554
@@ -27735,14 +27735,14 @@ MonoBehaviour:
     Prouv\xE9 system\r</size></indent></b>\n<indent=0%>Paul Fran\xE7ois</indent>\n\n<b><indent=0%><size=60>Avatar
     design, additional Unity programming\r</size></indent></b>\n<indent=0%>Norman
     Bennet</indent>\n\n<b><i><indent=0%><size=60>Polichinelle, Censeur des th\xE9\xE2tres
-    (1736)\r\r</size></indent></i></b>\n<indent=0%>Performed by Jean-Philippe Desrousseaux</indent>\n<indent=0%>English
-    supertitle translation by Henry J. Kantrow</indent>\n\n<b><indent=0%><size=65>Ensemble
-    rules authors</size>\r\r</indent></b>\n<indent=0%>Chiara Azzaretti, Paul Fran\xE7ois,
-    Camille Gros</indent>\n<indent=0%>Julien LeGoff, Louise Moulin, Charlee Redman
-    Bezilla</indent>\n\n<b><indent=0%><size=60>\"Snuffbox with theatrical scenes
-    of a rope dancer and a puppet show\" </size></indent></b>\nbox by Joseph Etienne
-    Blerzy,\nminiatures by Louis Nicolas van Blarenberghe and Henri Joseph van Blarenberghe,
-    \nMetropolitan Museum of Art."
+    (1736)\r\r</size></indent></i></b>\n<indent=0%>Written by Denis Carolet</indent>\n<indent=0%>Performed
+    by Jean-Philippe Desrousseaux</indent>\n<indent=0%>English supertitle translation
+    by Henry J. Kantrow</indent>\n\n<b><indent=0%><size=65>Ensemble rules authors</size>\r\r</indent></b>\n<indent=0%>Chiara
+    Azzaretti, Paul Fran\xE7ois, Camille Gros</indent>\n<indent=0%>Julien LeGoff,
+    Louise Moulin, Charlee Redman Bezilla</indent>\n\n<b><indent=0%><size=60>\"Snuffbox
+    with theatrical scenes of a rope dancer and a puppet show\" </size></indent></b>\nbox
+    by Joseph Etienne Blerzy,\nminiatures by Louis Nicolas van Blarenberghe and Henri
+    Joseph van Blarenberghe, \nMetropolitan Museum of Art."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
