@@ -69,6 +69,7 @@ public class ArtGallery : MonoBehaviour
     public void FinishedButtonPushed(){
         Debug.Log("Finished button pushed!");
         hud.UpdateQuestProgress(HUD.POSSESS_PLANS);
+        ensembleUI.SetCharacterAvailability();
         StartCoroutine(ensembleUI.ShowProgress(1, "You have the plans! Now you will return to the theatre. Seek out the last person you spoke to, in order to negotiate an escape."));
     }
 

@@ -569,7 +569,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
     }
 
-    private void SetCharacterAvailability()
+    public void SetCharacterAvailability()
     {
 
         if(!volitionInterfaceIsLocked && this.volitionInterface != null){
@@ -582,11 +582,42 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 List<Action> actions = data.ensemble.getActions(initiator, responder, this.volitionInterface, cast, 999, 999, 999);
                 bool areTheyAvailable = actions.Count > 0;
 
-                //I don't fully understand this, but checking to see if the first action has "interaction" in it seems to be code that 
-                //keeps them from wanting to takl to you -- mark it so that they are unavailable if this is the case.
-                if(actions.Count > 0 && actions[0].Name.Contains("interaction")){
+                //I also think we need to do something special so that all of them being angry at you at the end marks them as red.
+                /*
+                if(actions.Count > 0 && (finalInterlocutor.Length > 0)){
+                    Debug.Log("Final interlocutor is: " + finalInterlocutor);
+                    Debug.Log("Final INterlocturo is " + finalInterlocutor.Length);
                     areTheyAvailable = false;
                 }
+                */
+                //I don't fully understand this, but checking to see if the first action has "interaction" in it seems to be code that 
+                //keeps them from wanting to takl to you -- mark it so that they are unavailable if this is the case.
+
+
+                if (actions.Count > 0 && actions[0].Name.Contains("interaction"))
+                {
+                    areTheyAvailable = false;
+                }
+
+                Debug.Log("hud qeust progress is: " + hud.GetQuestProgress() + " and final interloctur is: " + finalInterlocutor + " and character is: " + character);
+                if (hud.GetQuestProgress() == HUD.POSSESS_PLANS)
+                {
+                    areTheyAvailable = false;
+                    if(character == finalInterlocutor){
+                        areTheyAvailable = true;
+                    }
+                }
+                
+                if(hud.GetQuestProgress() == HUD.FINAL_INTERACTION){
+                    areTheyAvailable = false;
+                    if(character == "Marie-Catherine Bienfait, ticket taker"){
+                        areTheyAvailable = true;
+                    }
+                }
+
+
+
+
                 Debug.Log("SETCHARACTERAVAILABILITY: " + character + " is available: " + areTheyAvailable + " (action count was " + actions.Count);
                 characterAvailable[character] = areTheyAvailable;
             }
