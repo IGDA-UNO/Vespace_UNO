@@ -104,10 +104,12 @@ public class PROUVE_introduction : MonoBehaviour
     }
 
     public void advanceIntroText(){
+        Debug.Log("advance intro text clicked. text index going from " + textIndex + " to " + (textIndex + 1));
         textIndex++;
 
 
         //***testing printing things out to identify input device
+        /*
         Debug.Log(SystemInfo.deviceModel);
         Debug.Log("operatingSystem: " + SystemInfo.operatingSystem);
         Debug.Log("deviceModel: " + SystemInfo.deviceModel);
@@ -126,6 +128,7 @@ public class PROUVE_introduction : MonoBehaviour
             Debug.Log("we detected speciifcally oculus quest 2");
             //DoNeededCode(); // Standalone Quest 2
         }
+        */
     //*****end testing printing things out to identify input device.
 
         WallpaperCanvasPrevButton.gameObject.SetActive(true);

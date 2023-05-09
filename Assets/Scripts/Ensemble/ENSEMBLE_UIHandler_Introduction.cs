@@ -59,7 +59,7 @@ public class ENSEMBLE_UIHandler_Introduction : MonoBehaviour
         laserPointer.color = miss_color;
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
-        laserPointer.PointerClick += PointerClick;
+        //laserPointer.PointerClick += PointerClick;
     }
 
     void Update(){}

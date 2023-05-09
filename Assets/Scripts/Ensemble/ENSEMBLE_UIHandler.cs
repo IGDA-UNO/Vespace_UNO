@@ -250,12 +250,19 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     EnsembleCalculateVolitionsJobForGetCharacterActions ensembleCalculateVolitionsJobForGetCharacterActions;
     EnsembleCalculateVolitionsJobForFinalInterlocutor ensembleCalculateVolitionsJobForFinalInterlocutor;
 
+
+    //The 'quest arrow'
+    GameObject arrowTarget;
+    public GameObject arrow;
+
     void Start()
     {
         Debug.Log("TURNING OFF DEBUG MESSAGES -- set Debug.unityLogger.logEnabled to true in ENSEMBLE_UIHandler.cs to re-enable them");
         //Debug.unityLogger.logEnabled = false;
         Debug.Log("LA LAL A LA CAN YOU SEE ME?");
         hud.UpdateQuestProgress(HUD.NO_TICKET);
+
+        arrowTarget = GameObject.Find("Marie-Catherine Bienfait, ticket taker");
 
         dialogueOffset = new Vector3(-0.06f, 0.04f, 0.51f);
         resultsOffset = new Vector3(0f, 0f, 0.5f);
@@ -404,8 +411,28 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             Debug.Log("SMART TREAD THING FOR ENSEMBLE ENDED");
         }
 */
+
+        //GameObject ticketTaker = GameObject.Find("TicketTakerTest");
+        
+
+        if(arrowTarget == null){
+            //if there is no arrow target, turn off the arrow
+            arrow.SetActive(false);
+        }
+        else{
+            arrow.SetActive(true);
+            arrow.transform.LookAt(arrowTarget.transform.position);
+        }
+        
+
+        //Vector3 dir = arrow.transform.InverseTransformPoint(ticketTaker.transform.position);
+
         if(Input.GetKeyDown(KeyCode.J)){
-            playerCamera.transform.localRotation = Quaternion.Euler(0,90,0);
+            Debug.Log("rotating...");
+            //playerCamera.transform.localRotation = Quaternion.Euler(0,180,0);
+            //playerCamera.transform.rotation = Quaternion.Euler(0,180,0);
+            Debug.Log("Payer camera is: " + playerCamera.name);
+            Debug.Log("player camera parent is: " + playerCamera.transform.parent.name); 
         }
 
         if(threadTestJob != null){
@@ -663,7 +690,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 data.ensemble.set(negativeInteractionPred);
 
                 hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, but you see an opening, so you head backstage!"));
+                StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, but you see an opening, so you head backstage! Hold still..."));
             } else {
                 hud.UpdateQuestProgress(HUD.THROWN_OUT);
                 StartCoroutine(ShowProgress(1, "You are running out of time... the play is almost over, and unfortunately you haven't spoken to enough people to create a diversion!"));
@@ -880,7 +907,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
     {
         ensembleUI.transform.SetParent(leftHand.transform);
         ensembleUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        ensembleUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        ensembleUI.transform.localPosition = new Vector3(0.1f, 0.0f, 0.2f);
         ensembleUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         actionsUI.transform.SetParent(leftHand.transform);
@@ -1232,7 +1259,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         data.ensemble.takeAction(action);
         finalResult = getDialogueResponse(action);
-        StartCoroutine(ShowProgress(3, finalResult));
+        StartCoroutine(ShowProgress(2, finalResult));
     }
 
     private string getDialogueResponse(Action action) 
@@ -1255,16 +1282,18 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         if (SteamVRObjects.activeSelf)
         {
             //SteamVR_Fade.Start(Color.black, 10);
-            SteamVR_Fade.View(Color.black, 10);
-            yield return new WaitForSeconds(3);
+            //SteamVR_Fade.View(Color.black, 10);
+            yield return new WaitForSeconds(1);
             playerObject.transform.position = new Vector3(4f, 1f, 2f);
             //SteamVR_Fade.Start(Color.clear, 10);
-            SteamVR_Fade.View(Color.clear, 10);
+            //SteamVR_Fade.View(Color.clear, 10);
         } else {
             playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.localPosition;
         }
         playerCamera.transform.localPosition = new Vector3(0f, 1f, 0f);
         playerCamera.transform.localRotation = Quaternion.Euler(0, 90, 0);
+        arrowTarget = GameObject.Find("TheatrePlans");
+        Debug.Log("ARROW: target is now " + arrowTarget.name);
     }
 
     private IEnumerator<object> TransportReturnToTheater()
@@ -1275,6 +1304,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
             if (finalInterlocutor == "Valère") {
                 GameObject madameDuPuyDesGougeres = GameObject.Find("Madame du Puy-des-Gougères");
+                arrowTarget = madameDuPuyDesGougeres;
                 Transform madameParent = madameDuPuyDesGougeres.transform.parent;
                 madameParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
                 madameParent.transform.position = new Vector3(2.5f, 0f, 2f);
@@ -1283,21 +1313,28 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
             } else {
                 GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+                arrowTarget = lastInterlocutor;
                 Transform lastInterlocutorParent = lastInterlocutor.transform.parent;
-                lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
-                lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
+                //if they have a nav mesh, it means they can walk -- teleport them close to the player.
+                //otherwise, they are seated, so don't bother moving them.
+                if(lastInterlocutorParent.GetComponent<NPCNavMesh>() != null){
+                    lastInterlocutorParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
+                    lastInterlocutorParent.transform.position = new Vector3(2.5f, 0f, 2f);
+                }
                 lastInterlocutorParticleSystem = lastInterlocutor.transform.GetChild(0).GetChild(0);
                 Debug.Log("the game object we found was: " + lastInterlocutorParticleSystem);
                 lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
             }
 
-            SteamVR_Fade.Start(Color.black, 10);
-            yield return new WaitForSeconds(3);
+            //SteamVR_Fade.Start(Color.black, 10);
+            yield return new WaitForSeconds(1);
             playerObject.transform.position = new Vector3(3f, 0f, 2f);
-            SteamVR_Fade.Start(Color.clear, 10);
+            playerCamera.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            //SteamVR_Fade.Start(Color.clear, 10);
         } else {
             //playerObject.transform.position = GameObject.Find("Backstage Right Tele").transform.position;
             GameObject lastInterlocutor = GameObject.Find(finalInterlocutor);
+            arrowTarget = lastInterlocutor;
             lastInterlocutorParticleSystem = lastInterlocutor.transform.GetChild(0).GetChild(0);
             Debug.Log("the game object we found was: " + lastInterlocutorParticleSystem);
             lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
@@ -1381,10 +1418,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //marionnettisteAudio.gameObject.SetActive(true);
                     //SuperTitles.StartTimer();
 
-                    StartCoroutine(ShowProgress(3, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
+                    StartCoroutine(ShowProgress(1, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
 
                     //make it so that now you can teleport into the theatre.
                     SetUsabilityOfHouseTeleporters(true);
+
+                    //turn off the arrow for the moment!
+                    arrowTarget = null;
                 }
 
                 if (e.Type == "StompAndWhistle" && e.Value is bool && e.Value is true) {
@@ -1422,6 +1462,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //Turn off previous person Halo, turn on ticket taker halo.
                     lastInterlocutorParticleSystem.gameObject.SetActive(false);
                     GameObject ticketTaker = GameObject.Find("Marie-Catherine Bienfait, ticket taker");
+                    arrowTarget = ticketTaker;
                     Transform ticketTakerParticleSystem = ticketTaker.transform.GetChild(0).GetChild(0);
                     ticketTakerParticleSystem.gameObject.SetActive(true);
 
@@ -1430,7 +1471,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 if (e.Type == "ThrownOut" && e.Value is bool && e.Value is true) {
                     hud.UpdateQuestProgress(HUD.THROWN_OUT);
                     CloseMenu();
-                    StartCoroutine(ShowProgress(3, "Unfortunately you've drawn too much attention to yourself. The bouncer grabs you by the collar and begins to drag you out of the theatre."));
+                    StartCoroutine(ShowProgress(1, "Unfortunately you've drawn too much attention to yourself. The bouncer grabs you by the collar and begins to drag you out of the theatre."));
                 }
 
                 if (e.Type == "PositiveInteraction" && e.Value is bool && e.Value is true) {
@@ -1445,7 +1486,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     if (negativeInteractionCount == 2) {
                         CloseMenu();
                         string role = EnsemblePlayer.GetSelectedCharacter().ToLower();
-                        StartCoroutine(ShowProgress(3, "It looks like you're drawing attention to yourself. Try to find a fellow " + role + " to talk to who may be more willing to help."));
+                        StartCoroutine(ShowProgress(1, "It looks like you're drawing attention to yourself. Try to find a fellow " + role + " to talk to who may be more willing to help."));
                     }
                 }
 
@@ -1475,25 +1516,25 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             if (completedTwoInteractions) {
                 finalInterlocutor = objectName;
                 hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                StartCoroutine(ShowProgress(3, "All of that whistling and stomping is seriously distracting! It looks like now is your chance to slip backstage..."));
+                StartCoroutine(ShowProgress(1, "All of that whistling and stomping is seriously distracting! It looks like now is your chance to slip backstage... hold still!"));
             } else {
-                StartCoroutine(ShowProgress(3, "Your friend is really causing a scene with the whistling and stomping! Still, you need to speak to at least one more person to gather further intel and continue your distactions."));
+                StartCoroutine(ShowProgress(1, "Your friend is really causing a scene with the whistling and stomping! Still, you need to speak to at least one more person to gather further intel and continue your distactions."));
             }
         } else if (successfulDistraction && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
             if (completedTwoInteractions) {
                     finalInterlocutor = objectName;
                     hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                    StartCoroutine(ShowProgress(3, "Your friend has really caused a scene! It seems to have distracted the crowd enough that you can slip backstage..."));
+                    StartCoroutine(ShowProgress(1, "Your friend has really caused a scene! It seems to have distracted the crowd enough that you can slip backstage... hold still!"));
             } else {
-                StartCoroutine(ShowProgress(3, "Your friend is making a serious racket! Still, you need to speak to at least one more person to gather further intel and continue your distactions."));
+                StartCoroutine(ShowProgress(1, "Your friend is making a serious racket! Still, you need to speak to at least one more person to gather further intel and continue your distactions."));
             }
         } else if (backstageAccess && hud.GetQuestProgress() != HUD.BACKSTAGE_ACCESS) {
             if (completedTwoInteractions) {
                 finalInterlocutor = objectName;
                 hud.UpdateQuestProgress(HUD.BACKSTAGE_ACCESS);
-                StartCoroutine(ShowProgress(3, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans."));
+                StartCoroutine(ShowProgress(1, "Good job! You've managed to create an opening to slip backstage! You will be transported behind the curtains, where you should look for the plans. Please hold still..."));
             } else {
-                StartCoroutine(ShowProgress(3, "Great, you're certainly being persuasive! Still, you need to speak to at least one more person to gain further intel before going backstage."));
+                StartCoroutine(ShowProgress(1, "Great, you're certainly being persuasive! Still, you need to speak to at least one more person to gain further intel before going backstage."));
             }
         }
 
