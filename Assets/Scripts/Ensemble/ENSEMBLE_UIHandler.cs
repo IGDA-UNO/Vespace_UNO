@@ -912,22 +912,22 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
         actionsUI.transform.SetParent(leftHand.transform);
         actionsUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        actionsUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        actionsUI.transform.localPosition = new Vector3(0.1f, 0.1f, 0.2f);
         actionsUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         attributesUI.transform.SetParent(leftHand.transform);
         attributesUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        attributesUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        attributesUI.transform.localPosition = new Vector3(0.1f, 0.0f, 0.2f);
         attributesUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         historyUI.transform.SetParent(leftHand.transform);
         historyUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        historyUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        historyUI.transform.localPosition = new Vector3(0.1f, 0.2f, 0.2f);
         historyUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         omekaUI.transform.SetParent(leftHand.transform);
         omekaUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        omekaUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        omekaUI.transform.localPosition = new Vector3(0.1f, 0.0f, 0.2f);
         omekaUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
     }
 
@@ -1303,12 +1303,13 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
             // vm.PositionAssigner();
 
             if (finalInterlocutor == "Valère") {
+                GameObject valere = GameObject.Find(finalInterlocutor);
                 GameObject madameDuPuyDesGougeres = GameObject.Find("Madame du Puy-des-Gougères");
-                arrowTarget = madameDuPuyDesGougeres;
+                arrowTarget = valere;
                 Transform madameParent = madameDuPuyDesGougeres.transform.parent;
                 madameParent.GetComponent<NPCNavMesh>().myViewingTransform = lastInterlocutorTransform;
                 madameParent.transform.position = new Vector3(2.5f, 0f, 2f);
-                lastInterlocutorParticleSystem = madameDuPuyDesGougeres.transform.GetChild(0).GetChild(0);
+                lastInterlocutorParticleSystem = valere.transform.GetChild(0).GetChild(0);
                 Debug.Log("the game object we found was: " + lastInterlocutorParticleSystem);
                 lastInterlocutorParticleSystem.gameObject.SetActive(true); // turn on the particle system!
             } else {
@@ -1418,7 +1419,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //marionnettisteAudio.gameObject.SetActive(true);
                     //SuperTitles.StartTimer();
 
-                    StartCoroutine(ShowProgress(1, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
+                    StartCoroutine(ShowProgress(4, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
 
                     //make it so that now you can teleport into the theatre.
                     SetUsabilityOfHouseTeleporters(true);
@@ -1457,6 +1458,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                 }
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
+                    Debug.Log("We are in final interaction!");
                     hud.UpdateQuestProgress(HUD.FINAL_INTERACTION);
 
                     //Turn off previous person Halo, turn on ticket taker halo.

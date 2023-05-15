@@ -22,9 +22,9 @@ public class CharacterSelection : MonoBehaviour
     public SelectableCharacterHelper femaleNoble;
     public SelectableCharacterHelper servant;
     private string actOneScene = "Theatre_late_august";
-    public RawImage characterImage;
-    public Text currentlySelectedCharacterText;
-    public Text characterDescription;
+    public Image characterImage;
+    public TextMeshProUGUI currentlySelectedCharacterText;
+    public TextMeshProUGUI characterDescription;
     public bool onFirstPage;
 
     //Game Objects on "first page"
@@ -68,7 +68,7 @@ public class CharacterSelection : MonoBehaviour
         femaleNoble.characterName = EnsemblePlayer.FEMALE_NOBLE;
         femaleNoble.characterDescription = "For weeks you’ve endured the humiliating rumors that your husband, the Marquis, was running " +
                                             "around with some actress, and then you overheard he’s spending a fortune to have a theatre " +
-                                            "built for the trollop at the Faoire Saint - Germain!\n\nThrowing caution to the wind, you decide on a " +
+                                            "built for the trollop at the Foire Saint-Germain!\n\nThrowing caution to the wind, you decide on a " +
                                             "course of vengeance and set out to steal the theatre plans at the risk of seeming mad – because " +
                                             "they’re hidden backstage in, of all places, Bienfait’s marionette theatre!";
 

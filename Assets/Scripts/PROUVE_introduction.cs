@@ -13,6 +13,7 @@ public class PROUVE_introduction : MonoBehaviour
     public GameObject secondCanvas ; 
     public GameObject thirdCanvas ;
     public GameObject fourthCanvas;
+    public GameObject characterSelectionCanvas;
     public GameObject demoNPC ;
     public InputField userName ; 
     public PROUVE_SceneHandler sceneHandler ;
@@ -72,6 +73,7 @@ public class PROUVE_introduction : MonoBehaviour
         secondCanvas.SetActive(false) ; 
         demoNPC.SetActive(false);
         thirdCanvas.SetActive(false) ;  
+        characterSelectionCanvas.SetActive(false);
         sceneHandler.setAllowRestart(false) ; 
         userName.ActivateInputField();
         userName.Select();
@@ -263,6 +265,7 @@ public class PROUVE_introduction : MonoBehaviour
         thirdCanvas.SetActive(false); 
         demoNPC.SetActive(false);
         fourthCanvas.SetActive(false);
+        characterSelectionCanvas.SetActive(true);
     }
 
     public void closeFirstCanvas() {
@@ -310,6 +313,7 @@ public class PROUVE_introduction : MonoBehaviour
 
     public void closeFourthCanvas() {
         fourthCanvas.SetActive(false) ; 
+        characterSelectionCanvas.SetActive(true);
     }
 
     static void saveUserName(string name) {
