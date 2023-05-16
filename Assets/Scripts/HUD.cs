@@ -96,20 +96,20 @@ public class HUD : MonoBehaviour
 
     private string GetObjectiveText(){
         if(HUD.questProgress == HUD.NO_TICKET){
-            return "Give your ticket to the ticket taker!";
+            return "Use the trigger button to select the ticket taker and hand her your ticket!";
         }
         else if(HUD.questProgress == HUD.POSSESS_TICKET){
             return "Hand your ticket to the ticket taker!";
         }
         else if (HUD.questProgress == HUD.HANDED_TICKET_TO_TICKET_TAKER)
         {
-            return "Speak to the ticket taker again to receive your mark!";
+            return "Speak to the ticket taker again to receive your mark! Select her by using the trigger button on your controller.";
         }
         else if (HUD.questProgress == HUD.RECEIVED_MARK)
         {
             string interactionCount = ensembleUI.characterInteractions.Count.ToString();
             Debug.Log("interactionCount: " + interactionCount);
-            return "1. Speak to at least two people: " + interactionCount + "/2\n2. Find someone to help you backstage!";
+            return "1. Speak to at least two people: " + interactionCount + "/2\n2. Find someone to help you backstage! \nRemember: Talk to characters by selecting them with the trigger button, and move by pushing down on the joystick or touchpad!";
         }
         else if (HUD.questProgress == HUD.BACKSTAGE_ACCESS)
         {

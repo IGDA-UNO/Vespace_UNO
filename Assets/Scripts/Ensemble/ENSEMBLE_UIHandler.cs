@@ -534,13 +534,15 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                         StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "Did I just see you sneak backstage?"));
                     }
                 }
-                else if (actions.Count > 0 && actions[0].Name.Contains("interaction"))
+                else if (actions.Count > 0 && actions[0].Name.Contains("interaction") && hud.GetQuestProgress() != HUD.FINAL_INTERACTION)
                 {
                     //Debug.Log("I think I'm getting here...? What is this interaction thingy? " + actions[0].Name);
+                    Debug.Log("In data object name BUG? actions.count is " + actions.Count);
                     actions = new List<Action>();
                 }
                 else if (hud.GetQuestProgress() == HUD.FINAL_INTERACTION)
                 {
+                    Debug.Log("In data object name " + ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName + " final interlocutor: " + finalInterlocutor);
                     if (ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName == "Marie-Catherine Bienfait, ticket taker")
                     {
                         if (actions.Count > 0)
@@ -558,7 +560,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     {
                         CloseMenu();
                         StartCoroutine(DisplayDialogue(ensembleCalculateVolitionsJobForGetCharacterActions.InDataObjectName, "Stop, thief!"));
-                        StartCoroutine(GameOver());
+                        //StartCoroutine(GameOver());
                     }
                 }
 
@@ -1364,6 +1366,20 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
         progressPanel.GetComponentInChildren<UnityEngine.UI.Text>().text = progressText;
     }
 
+    public IEnumerator<object> WaitToUpdateQuestProgress(float secondsToWait, int hudProgressToUpdateTo){
+        yield return new WaitForSeconds(secondsToWait);
+
+        hud.UpdateQuestProgress(hudProgressToUpdateTo);
+
+        //character availability is directly connected to quest progress!
+        SetCharacterAvailability();
+
+        //if the action menu is open, close it
+        if(actionsUI.activeSelf){
+            actionsUI.SetActive(false);
+        }
+    }
+
     public void TakeAction(string objectName, Action action)
     {
         Debug.Log("**** Inside of Take Action");
@@ -1419,7 +1435,7 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
                     //marionnettisteAudio.gameObject.SetActive(true);
                     //SuperTitles.StartTimer();
 
-                    StartCoroutine(ShowProgress(4, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage. You will need to speak to at least two people in order to proceed."));
+                    StartCoroutine(ShowProgress(4, "Good job! You've received a mark, which you needed in order to enter the theatre. Now make your way into the theater and start talking to people in order to find a way backstage.\n\nRemember: talk to people by selecting them with the trigger button. Move through the space with the joystick or touchpad.\n\nYou will need to speak to at least two people in order to proceed."));
 
                     //make it so that now you can teleport into the theatre.
                     SetUsabilityOfHouseTeleporters(true);
@@ -1459,7 +1475,8 @@ public class ENSEMBLE_UIHandler : MonoBehaviour
 
                 if (e.Type == "FinalInteraction" && e.Value is bool && e.Value is true) {
                     Debug.Log("We are in final interaction!");
-                    hud.UpdateQuestProgress(HUD.FINAL_INTERACTION);
+                    StartCoroutine(WaitToUpdateQuestProgress(3.5f, HUD.FINAL_INTERACTION));
+                    //hud.UpdateQuestProgress(HUD.FINAL_INTERACTION);
 
                     //Turn off previous person Halo, turn on ticket taker halo.
                     lastInterlocutorParticleSystem.gameObject.SetActive(false);

@@ -59,7 +59,7 @@ public class ENSEMBLE_UIHandler_Introduction : MonoBehaviour
         laserPointer.color = miss_color;
         laserPointer.PointerIn += PointerInside;
         laserPointer.PointerOut += PointerOutside;
-        //laserPointer.PointerClick += PointerClick;
+        laserPointer.PointerClick += PointerClick;
     }
 
     void Update(){}
@@ -195,22 +195,22 @@ public class ENSEMBLE_UIHandler_Introduction : MonoBehaviour
     {
         ensembleUI.transform.SetParent(leftHand.transform);
         ensembleUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        ensembleUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        ensembleUI.transform.localPosition = new Vector3(0.1f, 0.0f, 0.2f);
         ensembleUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         actionsUI.transform.SetParent(leftHand.transform);
         actionsUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        actionsUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        actionsUI.transform.localPosition = new Vector3(0.1f, 0.1f, 0.2f);
         actionsUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         historyUI.transform.SetParent(leftHand.transform);
         historyUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        historyUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        historyUI.transform.localPosition = new Vector3(0.1f, 0.2f, 0.2f);
         historyUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
 
         omekaUI.transform.SetParent(leftHand.transform);
         omekaUI.transform.localEulerAngles = new Vector3(45f, 0f, 0f);
-        omekaUI.transform.localPosition = new Vector3(0.2f, 0.3f, 0.2f);
+        omekaUI.transform.localPosition = new Vector3(0.1f, 0.0f, 0.2f);
         omekaUI.transform.localScale = new Vector3(0.0006f, 0.0006f, 0.0006f);
     }
 
@@ -225,6 +225,7 @@ public class ENSEMBLE_UIHandler_Introduction : MonoBehaviour
             Orientation();
             DisplayMain();
         }
+        /* //This is handled in Prouve for the introduction. Don't need to worry about this here.
         if (e.target.gameObject.layer == 5)
         {
             //layer of the UI: 5 
@@ -234,6 +235,7 @@ public class ENSEMBLE_UIHandler_Introduction : MonoBehaviour
                 button.onClick.Invoke();
             }
         }
+        */
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
