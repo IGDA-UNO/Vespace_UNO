@@ -12,13 +12,13 @@ public class EmotiveStateIntro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        halo = gameObject.transform.GetChild(0);
+        //halo = gameObject.transform.GetChild(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        haloParticleRenderer = halo.GetComponent<ParticleSystemRenderer>();
-        haloParticleRenderer.material = Resources.Load("HoverHighlight_Yes") as Material;
+        //haloParticleRenderer = halo.GetComponent<ParticleSystemRenderer>();
+        //haloParticleRenderer.material = Resources.Load("HoverHighlight_Yes") as Material;
     }
 }

@@ -157,7 +157,13 @@ public class PROUVE_SceneHandler : MonoBehaviour
 
             if(Input.GetKeyDown (KeyCode.T)) {
                 //dataCaller.debugTestSend() ; 
-            } 
+            }
+        }
+
+        //if the user hits the 'r' key, reset the experience.
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

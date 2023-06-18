@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8050645393039446340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,13 +1174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 544c030c9c2f9bc4194df17140ffbbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theaterPlans: {fileID: 0}
   SteamVRObjects: {fileID: 0}
   planImage: {fileID: 2456861483875429634}
   playerCamera: {fileID: 0}
-  filenameText: {fileID: 0}
   fallBackCamera: {fileID: 0}
-  player: {fileID: 0}
   backstageLeft: {fileID: 0}
+  leftHand: {fileID: 0}
   theatreImages:
   - {fileID: 2800000, guid: 43e3663082ae77641b6f1c56a1d78c38, type: 3}
   - {fileID: 2800000, guid: 5293b6ade4f023d4f968de7876425e0e, type: 3}
@@ -1246,6 +1246,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 027964a04646653419648a7c6dfecbce, type: 3}
   - {fileID: 2800000, guid: b9aedd11f97c71c43827e2af5c4bbcd4, type: 3}
   - {fileID: 2800000, guid: 258c68c35c815ec46b46fccda601dc89, type: 3}
+  vm: {fileID: 0}
+  ensembleUI: {fileID: 0}
 --- !u!1 &8050645393296319097
 GameObject:
   m_ObjectHideFlags: 0

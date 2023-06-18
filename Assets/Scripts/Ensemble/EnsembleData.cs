@@ -8,7 +8,7 @@ public class EnsembleData : MonoBehaviour
     public EnsembleAPI ensemble;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ensemble = new EnsembleAPI();
 
