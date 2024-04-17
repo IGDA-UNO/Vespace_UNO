@@ -62,3 +62,5 @@ crashlytics-build.properties
 MarionnettesV9.fbx
 Marionnettes.wav
 
+.DS_Store
+*/.DS_Store

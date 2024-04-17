@@ -4,2683 +4,2759 @@
 			"pos": 0,
 			"data": [
 				{
-					"category": "Trait",
+					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Jacob"
+					"first": "Male Noble Player"
 				},
 				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 40,
-					"first": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "provincial ",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 60,
-					"first": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 1,
-					"first": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "nosy / curious",
-					"value": 60,
-					"first": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "flirtatious / seductive",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "charming",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "TraitClothing",
-					"type": "wearing a sword",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "TraitClothing",
-					"type": "elegantly dressed",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "disdainful",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "cunningness",
-					"value": 60,
-					"first": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "married",
-					"value": true,
-					"first": "Jacob",
-					"second": "Mlle Habert"
-				},
-				{
-					"category": "Trait",
-					"type": "joker",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "Relationship",
-					"type": "ally",
-					"value": true,
-					"first": "Jacob",
-					"second": "M. d'Orsan"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Jacob",
-					"second": "M. d'Orsan"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "lovers",
-					"value": true,
-					"first": "Jacob",
-					"second": "Mme de Ferval"
-				},
-				{
-					"category": "Trait",
-					"type": "inconstant / volage",
-					"value": true,
-					"first": "Jacob"
-				},
-				{
-					"category": "TraitConditionProfession",
+					"category": "role",
 					"type": "noble",
 					"value": true,
-					"first": "Chevalier des Grieux"
+					"first": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
+					"category": "progress",
+					"type": "HasTicket",
+					"value": true,
+					"first": "Male Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"value": false,
+					"first": "Male Noble Player"
+				},
+
+
+				{
+					"category": "role",
+					"type": "player",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "HasTicket",
+					"value": true,
+					"first": "Female Noble Player"
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
+					"value": false,
+					"first": "Female Noble Player"
+				},
+
+				
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Chevalier des Grieux"
+					"first": "Servant Player"
 				},
 				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 75,
-					"first": "Chevalier des Grieux"
-				},
-				{
-					"category": "Status",
-					"type": "upset",
+					"category": "role",
+					"type": "player",
 					"value": true,
-					"first": "Chevalier des Grieux"
+					"first": "Servant Player"
 				},
 				{
-					"category": "Trait",
-					"type": "rich",
+					"category": "progress",
+					"type": "HasTicket",
+					"value": true,
+					"first": "Servant Player"
+				},
+				{
+					"category": "progress",
+					"type": "SeenBackstage",
 					"value": false,
-					"first": "Chevalier des Grieux"
+					"first": "Servant Player"
 				},
+
+
 				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
+					"category": "role",
+					"type": "ticket taker",
 					"value": true,
-					"first": "Chevalier des Grieux"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
 				{
-					"category": "Trait",
-					"type": "credulous",
-					"value": true,
-					"first": "Chevalier des Grieux"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Chevalier des Grieux",
-					"second": "Tiberge"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 25,
-					"first": "Manon"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Manon"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Manon"
-				},
-				{
-					"category": "Trait",
-					"type": "greedy",
-					"value": true,
-					"first": "Manon"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 80,
-					"first": "Manon"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
+					"category": "role",
+					"type": "player",
 					"value": false,
-					"first": "Manon"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
 				{
-					"category": "Trait",
-					"type": "charming",
+					"category": "trait",
+					"type": "agreeable",
 					"value": true,
-					"first": "Manon"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "clergy",
+					"category": "trait",
+					"type": "non-noble",
 					"value": true,
-					"first": "Père Joseph"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
 				{
-					"category": "Status",
-					"type": "inebriated",
+					"category": "trait",
+					"type": "friendly",
 					"value": true,
-					"first": "Père Joseph"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
 				{
-					"category": "Trait",
-					"type": "mocking",
+					"category": "trait",
+					"type": "outgoing",
 					"value": true,
-					"first": "Père Joseph"
+					"first": "Marie-Catherine Bienfait, ticket taker"
 				},
+
+
 				{
-					"category": "Trait",
-					"type": "hypocritical",
+					"category": "role",
+					"type": "bouncer",
 					"value": true,
-					"first": "Père Joseph"
+					"first": "Bruno Dufort, semainier"
 				},
 				{
-					"category": "Trait",
-					"type": "inconstant / volage",
-					"value": true,
-					"first": "Père Joseph"
-				},
-				{
-					"category": "Relationship",
-					"type": "ally",
-					"value": true,
-					"first": "Père Joseph",
-					"second": "Frontin"
-				},
-				{
-					"category": "Trait",
-					"type": "devout",
-					"value": true,
-					"first": "Père Joseph"
-				},
-				{
-					"category": "Trait",
-					"type": "intelligent",
+					"category": "role",
+					"type": "player",
 					"value": false,
-					"first": "Père Joseph"
+					"first": "Bruno Dufort, semainier"
 				},
 				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 15,
-					"first": "Père Joseph"
+					"category": "trait",
+					"type": "unfriendly",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
 				},
 				{
-					"category": "Attribute",
-					"type": "sophistication",
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+				{
+					"category": "trait",
+					"type": "aggressive",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+				{
+					"category": "trait",
+					"type": "unsophisticated",
+					"value": true,
+					"first": "Bruno Dufort, semainier"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
 					"value": 40,
-					"first": "Père Joseph"
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "modest",
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Ain d'Ygeste",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
 					"value": true,
-					"first": "Père Joseph"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
 				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 61,
-					"first": "Père Joseph",
-					"second": "Tiberge"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 31,
-					"first": "Tiberge",
-					"second": "Père Joseph"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "domestique / servant",
+					"category": "role",
+					"type": "male",
 					"value": true,
-					"first": "Geneviève"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
 				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 60,
-					"first": "Geneviève",
-					"second": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "nosy / curious",
-					"value": 50,
-					"first": "Geneviève"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
+					"category": "role",
+					"type": "noble",
 					"value": true,
-					"first": "Geneviève"
+					"first": "Monsieur d'Ain d'Ygeste"
 				},
 				{
-					"category": "Trait",
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+				{
+					"category": "trait",
+					"type": "unfriendly",
+					"value": true,
+					"first": "Monsieur d'Ain d'Ygeste"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Hautainville",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Hautainville",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Hautainville",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Hautainville",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Hautainville",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Hautainville",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Hautainville",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Hautainville",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Hautainville",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "very disdainful",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+				{
+					"category": "trait",
+					"type": "difficult to get along with",
+					"value": true,
+					"first": "Monsieur d'Hautainville"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur de Gentilly",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur de Gentilly",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur de Gentilly",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur de Gentilly",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur de Gentilly",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur de Gentilly",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur de Gentilly",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur de Gentilly",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur de Gentilly",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "very friendly",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "helpful",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+				{
+					"category": "trait",
+					"type": "refined",
+					"value": true,
+					"first": "Monsieur de Gentilly"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur des Trois-Landes",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
+					"type": "violent",
+					"value": true,
+					"first": "Monsieur des Trois-Landes"
+				},
+				{
+					"category": "trait",
 					"type": "poor",
 					"value": true,
-					"first": "Geneviève"
+					"first": "Monsieur des Trois-Landes"
 				},
 				{
-					"category": "SocialRecordLabel",
-					"type": "flirted with / made a pass at",
+					"category": "trait",
+					"type": "braggart",
 					"value": true,
-					"first": "Geneviève",
-					"second": "Jacob"
+					"first": "Monsieur des Trois-Landes"
 				},
 				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": false,
-					"first": "Geneviève"
-				},
-				{
-					"category": "Trait",
-					"type": "devout",
-					"value": false,
-					"first": "Geneviève"
-				},
-				{
-					"category": "Trait",
-					"type": "indiscreet / loose lipped",
+					"category": "trait",
+					"type": "either a great friend or an implacable enemy",
 					"value": true,
-					"first": "Geneviève"
+					"first": "Monsieur des Trois-Landes"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Issy",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "flirtatious / seductive",
-					"value": true,
-					"first": "Geneviève"
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Issy",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "domestique / servant",
-					"value": true,
-					"first": "Frontin"
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Monsieur d'Issy",
+					"second": "Servant Player"
 				},
 				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 45,
-					"first": "Frontin"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Issy",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 45,
-					"first": "Frontin"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Issy",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "DirectedStatus",
-					"type": "financially dependent on",
-					"value": true,
-					"first": "Frontin",
-					"second": "Chevalier des Grieux"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Monsieur d'Issy",
+					"second": "Servant Player"
 				},
 				{
-					"category": "TraitClothing",
-					"type": "en livrée",
-					"value": true,
-					"first": "Frontin"
-				},
-				{
-					"category": "Network",
+					"category": "network",
 					"type": "emulation",
-					"value": 61,
-					"first": "Frontin",
-					"second": "Jean-Jacques Adult"
+					"value": 30,
+					"first": "Monsieur d'Issy",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "NonActionableRelationship",
-					"type": "strangers",
-					"value": false,
-					"first": "Frontin",
-					"second": "Chevalier des Grieux"
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Issy",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "NonActionableRelationship",
-					"type": "strangers",
-					"value": false,
-					"first": "Frontin",
-					"second": "Jean-Jacques"
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Monsieur d'Issy",
+					"second": "Servant Player"
 				},
 				{
-					"category": "DirectedStatus",
-					"type": "resentful of",
+					"category": "role",
+					"type": "stranger",
 					"value": true,
-					"first": "Frontin",
-					"second": "Chevalier des Grieux"
+					"first": "Monsieur d'Issy"
 				},
 				{
-					"category": "Network",
-					"type": "curiosity / attention",
-					"value": 61,
-					"first": "Frontin",
-					"second": "Manon"
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Monsieur d'Issy"
 				},
 				{
-					"category": "Relationship",
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "educated",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "refined",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+				{
+					"category": "trait",
+					"type": "somewhat sneaky",
+					"value": true,
+					"first": "Monsieur d'Issy"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame de Blasé-l'Evêque",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "supercilious",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "devout",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+				{
+					"category": "trait",
+					"type": "not prone to seduction",
+					"value": true,
+					"first": "Madame de Blasé-l'Evêque"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame Argant",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame Argant",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame Argant",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame Argant",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame Argant",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame Argant",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame Argant",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame Argant",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame Argant",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "role",
+					"type": "non-noble",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "rich",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "amorous",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "not friendly",
+					"value": true,
+					"first": "Madame Argant"
+				},
+				{
+					"category": "trait",
+					"type": "religious",
+					"value": true,
+					"first": "Madame Argant"
+				},
+
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Chérubin",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Chérubin",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Chérubin",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Chérubin",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Chérubin",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Chérubin",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
 					"type": "ally",
 					"value": true,
-					"first": "Frontin",
-					"second": "Jean-Jacques Adult"
+					"first": "Chérubin",
+					"second": "Servant Player"
 				},
 				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": false,
-					"first": "Frontin"
-				},
-				{
-					"category": "Trait",
-					"type": "inconstant / volage",
+					"category": "role",
+					"type": "acquaintance",
 					"value": true,
-					"first": "Frontin"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Frontin"
-				},
-				{
-					"category": "Trait",
-					"type": "joker",
-					"value": true,
-					"first": "Frontin"
-				},
-				{
-					"category": "Trait",
+					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Frontin"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "ambitious",
+					"category": "role",
+					"type": "servant",
 					"value": true,
-					"first": "Frontin"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "child ",
-					"value": true,
-					"first": "Jean-Jacques Young"
-				},
-				{
-					"category": "Trait",
-					"type": "shy",
-					"value": true,
-					"first": "Jean-Jacques Young"
-				},
-				{
-					"category": "Trait",
-					"type": "clumsy / awkward",
-					"value": true,
-					"first": "Jean-Jacques Young"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
+					"category": "role",
+					"type": "player",
 					"value": false,
-					"first": "Jean-Jacques Young"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "unctuous",
+					"category": "trait",
+					"type": "servant",
 					"value": true,
-					"first": "Jean-Jacques Young"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "modest",
-					"value": false,
-					"first": "Jean-Jacques Young"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 25,
-					"first": "Jean-Jacques Young"
-				},
-				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 80,
-					"first": "Jean-Jacques Young"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
+					"category": "trait",
+					"type": "servant",
 					"value": true,
-					"first": "Jean-Jacques Young"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "provincial ",
+					"category": "trait",
+					"type": "non-noble",
 					"value": true,
-					"first": "Jean-Jacques Young"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
+					"category": "trait",
 					"type": "intelligent",
 					"value": true,
-					"first": "Jean-Jacques Young"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 95,
-					"first": "Jean-Jacques Young",
-					"second": "Vulson"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Jean-Jacques Young",
-					"second": "Vulson"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 75,
-					"first": "Tiberge"
-				},
-				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": true,
-					"first": "Tiberge"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "clergy",
-					"value": true,
-					"first": "Tiberge"
-				},
-				{
-					"category": "Trait",
-					"type": "devout",
-					"value": true,
-					"first": "Tiberge"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Tiberge",
-					"second": "Chevalier des Grieux"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Tiberge"
-				},
-				{
-					"category": "Trait",
-					"type": "kind",
-					"value": true,
-					"first": "Tiberge"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "domestique / servant",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "Attribute",
-					"type": "cunningness",
-					"value": 61,
-					"first": "Lisette"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 45,
-					"first": "Lisette"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 61,
-					"first": "Lisette"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "jealous of",
-					"value": true,
-					"first": "Lisette",
-					"second": "Manon"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 70,
-					"first": "Lisette",
-					"second": "Frontin"
-				},
-				{
-					"category": "Relationship",
-					"type": "ally",
-					"value": true,
-					"first": "Lisette",
-					"second": "Jean-Jacques Young"
-				},
-				{
-					"category": "Status",
-					"type": "happy",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "TraitClothing",
-					"type": "en livrée",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Lisette"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "financially dependent on",
-					"value": true,
-					"first": "Lisette",
-					"second": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 50,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "Trait",
-					"type": "devout",
-					"value": true,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "Trait",
-					"type": "credulous",
-					"value": true,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "married",
-					"value": true,
-					"first": "Mlle Habert",
-					"second": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": false,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "trusts",
-					"value": true,
-					"first": "Mlle Habert",
-					"second": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 40,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "bourgeois",
-					"value": true,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": true,
-					"first": "Mlle Habert"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Vulson"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Vulson"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "cares for",
-					"value": true,
-					"first": "Vulson",
-					"second": "Jean-Jacques Young"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 75,
-					"first": "Vulson",
-					"second": "Jean-Jacques Young"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Vulson"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": false,
-					"first": "Vulson"
-				},
-				{
-					"category": "Trait",
-					"type": "provincial ",
-					"value": true,
-					"first": "Vulson"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Vulson",
-					"second": "Jean-Jacques Young"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 70,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": true,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "Attribute",
-					"type": "social standing",
-					"value": 80,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 70,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "Trait",
-					"type": "penetrating",
-					"value": true,
-					"first": "M. d'Orsan"
-				},
-				{
-					"category": "Relationship",
-					"type": "ally",
-					"value": true,
-					"first": "M. d'Orsan",
-					"second": "Jacob"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "M. d'Orsan",
-					"second": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Barna Bredanna"
-				},
-				{
-					"category": "Trait",
-					"type": "child ",
-					"value": true,
-					"first": "Barna Bredanna"
-				},
-				{
-					"category": "Trait",
-					"type": "shy",
-					"value": true,
-					"first": "Barna Bredanna"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Barna Bredanna",
-					"second": "Jean-Jacques Young"
-				},
-				{
-					"category": "Trait",
-					"type": "clumsy / awkward",
-					"value": true,
-					"first": "Barna Bredanna"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": false,
-					"first": "Barna Bredanna"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 15,
-					"first": "Barna Bredanna"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "soldier",
-					"value": true,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "provincial ",
-					"value": true,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": true,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": false,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 70,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 70,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Relationship",
-					"type": "rivals",
-					"value": true,
-					"first": "Mirabeau",
-					"second": "Gensac"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "Mirabeau",
-					"second": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 45,
-					"first": "Mirabeau"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 30,
-					"first": "l'Aubergiste"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "merchant",
-					"value": true,
-					"first": "l'Aubergiste"
-				},
-				{
-					"category": "Trait",
-					"type": "poor",
-					"value": true,
-					"first": "l'Aubergiste"
-				},
-				{
-					"category": "Trait",
-					"type": "provincial ",
-					"value": true,
-					"first": "l'Aubergiste"
-				},
-				{
-					"category": "Trait",
-					"type": "boorish",
-					"value": true,
-					"first": "l'Aubergiste"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "domestique / servant",
-					"value": true,
-					"first": "Théodore"
-				},
-				{
-					"category": "Trait",
-					"type": "rich",
-					"value": false,
-					"first": "Théodore"
-				},
-				{
-					"category": "Attribute",
-					"type": "cunningness",
-					"value": 70,
-					"first": "Théodore"
-				},
-				{
-					"category": "Trait",
-					"type": "greedy",
-					"value": true,
-					"first": "Théodore"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 85,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 75,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 70,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 30,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Trait",
-					"type": "generous",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Status",
-					"type": "embarrassed",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": false,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Trait",
-					"type": "kind",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Relationship",
-					"type": "esteem",
-					"value": false,
-					"first": "Béatrice de Bouillon",
-					"second": "Père Joseph"
-				},
-				{
-					"category": "Trait",
-					"type": "rich",
-					"value": true,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "financially dependent on",
-					"value": true,
-					"first": "Lisette",
-					"second": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Relationship",
-					"type": "ally",
-					"value": true,
-					"first": "Béatrice de Bouillon",
-					"second": "Lisette"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "intimidates",
-					"value": true,
-					"first": "Béatrice de Bouillon",
-					"second": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": false,
-					"first": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Madame Clot"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "intimidates",
-					"value": true,
-					"first": "Madame Clot",
-					"second": "Jean-Jacques Young"
-				},
-				{
-					"category": "Trait",
-					"type": "cold / distant",
-					"value": true,
-					"first": "Madame Clot"
-				},
-				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 30,
-					"first": "Madame Clot"
-				},
-				{
-					"category": "Trait",
-					"type": "devout",
-					"value": true,
-					"first": "Madame Clot"
-				},
-				{
-					"category": "Trait",
-					"type": "disdainful",
-					"value": true,
-					"first": "Madame Clot"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": false,
-					"first": "Madame Clot"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 25,
-					"first": "Lescaut"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "military officer",
-					"value": true,
-					"first": "Lescaut"
-				},
-				{
-					"category": "Status",
-					"type": "inebriated",
-					"value": true,
-					"first": "Lescaut"
-				},
-				{
-					"category": "Trait",
-					"type": "kind",
-					"value": false,
-					"first": "Lescaut"
-				},
-				{
-					"category": "Attribute",
-					"type": "cunningness",
-					"value": 60,
-					"first": "Lescaut"
-				},
-				{
-					"category": "TraitClothing",
-					"type": "poorly dressed",
-					"value": true,
-					"first": "Lescaut"
-				},
-				{
-					"category": "Trait",
-					"type": "boorish",
-					"value": true,
-					"first": "Lescaut"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Lescaut"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "prostitute",
-					"value": true,
-					"first": "Flaminia"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Flaminia"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Flaminia"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 20,
-					"first": "Flaminia"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": false,
-					"first": "Flaminia"
-				},
-				{
-					"category": "Trait",
-					"type": "flirtatious / seductive",
-					"value": true,
-					"first": "Flaminia"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 20,
-					"first": "Flaminia"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "theatre personnel",
-					"value": true,
-					"first": "Flaminia"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 20,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 80,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Trait",
-					"type": "flirtatious / seductive",
-					"value": true,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 50,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 75,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 78,
-					"first": "Zanuzzi",
-					"second": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Zanuzzi"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 90,
-					"first": "Compère"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 30,
-					"first": "Compère"
-				},
-				{
-					"category": "Attribute",
-					"type": "nosy / curious",
-					"value": 60,
-					"first": "Compère"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 41,
-					"first": "Compère",
-					"second": "Flaminia"
-				},
-				{
-					"category": "Relationship",
-					"type": "rivals",
-					"value": true,
-					"first": "Compère",
-					"second": "l'Aubergiste"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 51,
-					"first": "Compère",
-					"second": "Lescaut"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 51,
-					"first": "Compère",
-					"second": "Mlle Habert"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "compère",
-					"value": true,
-					"first": "Compère"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "theatre personnel",
-					"value": true,
-					"first": "Compère"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": true,
-					"first": "Compère"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 90,
-					"first": "Compère"
-				},
-				{
-					"category": "Network",
-					"type": "emulation",
-					"value": 70,
-					"first": "Compère",
-					"second": "Flaminia"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Compère"
-				},
-				{
-					"category": "Trait",
-					"type": "indiscreet / loose lipped",
-					"value": true,
-					"first": "Compère"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 60,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": false,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": true,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": false,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 60,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 60,
-					"first": "Mme de Ferval",
-					"second": "Jacob"
-				},
-				{
-					"category": "Attribute",
-					"type": "social standing",
-					"value": 65,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "TraitClothing",
-					"type": "elegantly dressed",
-					"value": true,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "lovers",
-					"value": true,
-					"first": "Mme de Ferval",
-					"second": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "devout",
-					"value": true,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Trait",
-					"type": "inconstant / volage",
-					"value": true,
-					"first": "Mme de Ferval"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": false,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Trait",
-					"type": "modest",
-					"value": false,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 35,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Trait",
-					"type": "unctuous",
-					"value": true,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 80,
-					"first": "Jean-Jacques Adult"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 90,
-					"first": "Jean-Jacques Adult",
-					"second": "Vulson"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 55,
-					"first": "L'Officier"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 60,
-					"first": "L'Officier"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "L'Officier"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "intimidates",
-					"value": true,
-					"first": "L'Officier",
-					"second": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "old",
-					"value": true,
-					"first": "L'Officier"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": false,
-					"first": "L'Officier"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "strangers",
-					"value": true,
-					"first": "L'Officier",
-					"second": "Jacob"
-				},
-				{
-					"category": "Trait",
-					"type": "cold / distant",
-					"value": true,
-					"first": "L'Officier"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "bourgeois",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Attribute",
-					"type": "nosy / curious",
-					"value": 71,
-					"first": "Antoine"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 71,
-					"first": "Antoine"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 39,
-					"first": "Antoine"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 81,
-					"first": "Antoine"
-				},
-				{
-					"category": "Trait",
-					"type": "glorieux",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Trait",
-					"type": "impudent",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Trait",
-					"type": "eccentric",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Trait",
-					"type": "inconstant / volage",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Trait",
-					"type": "indiscreet / loose lipped",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "SocialRecordLabel",
-					"type": "flirted with / made a pass at",
-					"value": true,
-					"first": "Antoine",
-					"second": "Mme de Ferval"
-				},
-				{
-					"category": "SocialRecordLabel",
-					"type": "flirted with / made a pass at",
-					"value": true,
-					"first": "Antoine",
-					"second": "Manon"
-				},
-				{
-					"category": "Trait",
-					"type": "flirtatious / seductive",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": true,
-					"first": "Antoine"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 45,
-					"first": "Antoine"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "cares for",
-					"value": true,
-					"first": "Antoine",
-					"second": "Renette"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 71,
-					"first": "Ernestine"
-				},
-				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 61,
-					"first": "Ernestine"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "financially dependent on",
-					"value": true,
-					"first": "Ernestine",
-					"second": "Lescaut"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "trusts",
-					"value": true,
-					"first": "Ernestine",
-					"second": "Mlle Habert"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 71,
-					"first": "Ernestine",
-					"second": "Béatrice de Bouillon"
-				},
-				{
-					"category": "Relationship",
-					"type": "esteem",
-					"value": true,
-					"first": "Ernestine",
-					"second": "Madame Clot"
-				},
-				{
-					"category": "Status",
-					"type": "upset",
-					"value": true,
-					"first": "Ernestine"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
+					"category": "trait",
+					"type": "witty",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
+					"category": "trait",
+					"type": "clever",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
+					"category": "trait",
 					"type": "charming",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "female",
+					"category": "trait",
+					"type": "very friendly",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "foreigner",
+					"category": "trait",
+					"type": "seductive",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "honest",
+					"category": "trait",
+					"type": "poor",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin"
 				},
 				{
-					"category": "Trait",
-					"type": "kind",
+					"category": "relationship",
+					"type": "ally",
 					"value": true,
-					"first": "Ernestine"
+					"first": "Chérubin",
+					"second": "Servant Player"
+				},
+
+				
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Valère",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "modest",
-					"value": true,
-					"first": "Ernestine"
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Valère",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "rich",
-					"value": false,
-					"first": "Ernestine"
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Valère",
+					"second": "Servant Player"
 				},
 				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Ernestine"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Valère",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": true,
-					"first": "Ernestine"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Valère",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "Gensac"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Valère",
+					"second": "Servant Player"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "soldier",
-					"value": true,
-					"first": "Gensac"
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Valère",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Gensac"
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Valère",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "SocialRecordLabel",
-					"type": "did harm to / punished ",
-					"value": true,
-					"first": "Mirabeau",
-					"second": "Gensac"
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Valère",
+					"second": "Servant Player"
 				},
 				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 15,
-					"first": "Gensac",
-					"second": "Mirabeau"
-				},
-				{
-					"category": "Relationship",
-					"type": "rivals",
-					"value": true,
-					"first": "Gensac",
-					"second": "Mirabeau"
-				},
-				{
-					"category": "Trait",
-					"type": "impudent",
-					"value": true,
-					"first": "Gensac"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 15,
-					"first": "Gensac"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 25,
-					"first": "Gensac"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 5,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": true,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "Trait",
-					"type": "eccentric",
-					"value": true,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "Trait",
-					"type": "intelligent",
-					"value": true,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "Trait",
-					"type": "rich",
-					"value": true,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "Trait",
-					"type": "mocking",
-					"value": true,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "Trait",
-					"type": "penetrating",
-					"value": true,
-					"first": "Donatien Alphonse"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 75,
-					"first": "Renette"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 45,
-					"first": "Renette"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "financially dependent on",
-					"value": true,
-					"first": "Renette",
-					"second": "Antoine"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "offended by",
-					"value": true,
-					"first": "Renette",
-					"second": "Père Joseph"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Renette"
-				},
-				{
-					"category": "Trait",
-					"type": "impudent",
-					"value": true,
-					"first": "Renette"
-				},
-				{
-					"category": "Trait",
-					"type": "eccentric",
-					"value": true,
-					"first": "Renette"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Renette"
-				},
-				{
-					"category": "Trait",
-					"type": "médisant",
-					"value": true,
-					"first": "Renette"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
-					"value": true,
-					"first": "Renette"
-				},
-				{
-					"category": "Relationship",
+					"category": "relationship",
 					"type": "esteem",
 					"value": true,
-					"first": "Renette",
-					"second": "Lisette"
+					"first": "Valère",
+					"second": "Servant Player"
 				},
 				{
-					"category": "Status",
-					"type": "flattered",
+					"category": "relationship",
+					"type": "ally",
 					"value": true,
-					"first": "Renette"
+					"first": "Valère",
+					"second": "Servant Player"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "prostitute",
+					"category": "role",
+					"type": "acquaintance",
 					"value": true,
-					"first": "Renette"
+					"first": "Valère"
 				},
 				{
-					"category": "Trait",
-					"type": "greedy",
+					"category": "role",
+					"type": "male",
 					"value": true,
-					"first": "Renette"
+					"first": "Valère"
 				},
 				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 90,
-					"first": "l'Espion"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 51,
-					"first": "l'Espion"
-				},
-				{
-					"category": "Attribute",
-					"type": "cunningness",
-					"value": 60,
-					"first": "l'Espion"
-				},
-				{
-					"category": "Attribute",
-					"type": "nosy / curious",
-					"value": 70,
-					"first": "l'Espion"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 70,
-					"first": "l'Espion"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 60,
-					"first": "l'Espion"
-				},
-				{
-					"category": "Relationship",
-					"type": "rivals",
+					"category": "role",
+					"type": "servant",
 					"value": true,
-					"first": "l'Espion",
-					"second": "l'Officier"
+					"first": "Valère"
 				},
 				{
-					"category": "Status",
-					"type": "amused",
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
+					"type": "servant",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Valère"
 				},
 				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
+					"category": "trait",
+					"type": "servant",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Valère"
 				},
 				{
-					"category": "Trait",
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Valère"
+				},
+				{
+					"category": "trait",
 					"type": "intelligent",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Valère"
 				},
 				{
-					"category": "TraitClothing",
-					"type": "elegantly dressed",
+					"category": "trait",
+					"type": "poor",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Valère"
 				},
 				{
-					"category": "TraitClothing",
-					"type": "wearing a sword",
+					"category": "trait",
+					"type": "loyal",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Valère"
 				},
 				{
-					"category": "Trait",
-					"type": "trustworthy",
+					"category": "trait",
+					"type": "friendly",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Valère"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "penetrating",
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame du Puy-des-Gougères",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Madame du Puy-des-Gougères"
 				},
 				{
-					"category": "Trait",
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "wealthy",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
+					"type": "clever",
+					"value": true,
+					"first": "Madame du Puy-des-Gougères"
+				},
+				{
+					"category": "trait",
 					"type": "deceptive",
 					"value": true,
-					"first": "l'Espion"
+					"first": "Madame du Puy-des-Gougères"
 				},
 				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 51,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 61,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Attribute",
-					"type": "social standing",
-					"value": 61,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 61,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "hates",
+					"category": "trait",
+					"type": "haughty",
 					"value": true,
-					"first": "M. de Maugis",
-					"second": "Père Joseph"
+					"first": "Madame du Puy-des-Gougères"
 				},
+
+
 				{
-					"category": "DirectedStatus",
-					"type": "owes a favor to",
-					"value": true,
-					"first": "M. de Maugis",
-					"second": "Théodore"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 61,
-					"first": "M. de Maugis",
-					"second": "Ernestine"
-				},
-				{
-					"category": "Status",
-					"type": "inebriated",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "ambitious",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "disdainful",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "flirtatious / seductive",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "male",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "mocking",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "intimidating / imposing",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "rich",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "unctuous",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "Trait",
-					"type": "well-known",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "TraitClothing",
-					"type": "wearing a sword",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": true,
-					"first": "M. de Maugis"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "jealous of",
-					"value": true,
-					"first": "M. de Maugis",
-					"second": "M. d'Orsan"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 65,
-					"first": "Marianne"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 55,
-					"first": "Marianne"
-				},
-				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 80,
-					"first": "Marianne"
-				},
-				{
-					"category": "Attribute",
-					"type": "social standing",
-					"value": 30,
-					"first": "Marianne"
-				},
-				{
-					"category": "Network",
+					"category": "network",
 					"type": "credibility",
-					"value": 55,
-					"first": "M. d'Orsan",
-					"second": "Marianne"
-				},
-				{
-					"category": "Network",
-					"type": "credibility",
-					"value": 55,
-					"first": "M. de Maugis",
-					"second": "Marianne"
-				},
-				{
-					"category": "Network",
-					"type": "credibility",
-					"value": 65,
-					"first": "Lescaut",
-					"second": "Marianne"
-				},
-				{
-					"category": "Network",
-					"type": "curiosity / attention",
-					"value": 65,
-					"first": "M. d'Orsan",
-					"second": "Marianne"
-				},
-				{
-					"category": "Network",
-					"type": "curiosity / attention",
-					"value": 65,
-					"first": "M. de Maugis",
-					"second": "Marianne"
-				},
-				{
-					"category": "Network",
-					"type": "curiosity / attention",
-					"value": 75,
-					"first": "Lescaut",
-					"second": "Marianne"
-				},
-				{
-					"category": "Trait",
-					"type": "virtuous",
-					"value": true,
-					"first": "Marianne"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Marianne"
-				},
-				{
-					"category": "Trait",
-					"type": "poor",
-					"value": true,
-					"first": "Marianne"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Marianne"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Marianne"
-				},
-				{
-					"category": "Trait",
-					"type": "female",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "young / youthful",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 61,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "bourgeois",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "charming",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "ambitious",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "vain",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "unctuous",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "greedy",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 61,
-					"first": "Violette"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "offended by",
-					"value": true,
-					"first": "Violette",
-					"second": "Père Joseph"
-				},
-				{
-					"category": "Trait",
-					"type": "médisant",
-					"value": true,
-					"first": "Violette"
-				},
-				{
-					"category": "Trait",
-					"type": "modest",
-					"value": false,
-					"first": "Violette"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
 					"value": 40,
-					"first": "Denis"
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "charming",
-					"value": true,
-					"first": "Denis"
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "eccentric",
-					"value": true,
-					"first": "Denis"
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Servant Player"
 				},
 				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 75,
-					"first": "Denis"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 75,
-					"first": "Denis"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "provincial ",
-					"value": true,
-					"first": "Denis"
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Servant Player"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "noble",
-					"value": false,
-					"first": "Denis"
-				},
-				{
-					"category": "Trait",
-					"type": "intelligent",
-					"value": true,
-					"first": "Denis"
-				},
-				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 80,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "bourgeois",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "author",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Trait",
-					"type": "bonne physionomie / has a trustworthy face",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Trait",
-					"type": "intelligent",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Trait",
-					"type": "joker",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "TraitConditionProfession",
-					"type": "author",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
-					"value": 61,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Status",
-					"type": "happy",
-					"value": true,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Attribute",
-					"type": "self-assuredness",
-					"value": 70,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 65,
-					"first": "M. Deslandes",
-					"second": "M. de Maugis"
-				},
-				{
-					"category": "NonActionableRelationship",
-					"type": "friends",
-					"value": true,
-					"first": "M. Deslandes",
-					"second": "M. de Maugis"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 50,
-					"first": "M. Deslandes"
-				},
-				{
-					"category": "Attribute",
-					"type": "appropriate behavior",
-					"value": 71,
-					"first": "Henriette"
-				},
-				{
-					"category": "Attribute",
-					"type": "sophistication",
-					"value": 61,
-					"first": "Henriette"
-				},
-				{
-					"category": "Attribute",
-					"type": "sensitiveness / sensibilité",
-					"value": 61,
-					"first": "Henriette"
-				},
-				{
-					"category": "DirectedStatus",
-					"type": "offended by",
-					"value": true,
-					"first": "Henriette",
-					"second": "M. Maugis"
-				},
-				{
-					"category": "Network",
-					"type": "affinity",
-					"value": 61,
-					"first": "Henriette",
-					"second": "Ernestine"
-				},
-				{
-					"category": "Network",
+					"category": "network",
 					"type": "emulation",
-					"value": 51,
-					"first": "Henriette",
-					"second": "Mme de Ferval"
+					"value": 30,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "Trait",
-					"type": "beautiful",
-					"value": false,
-					"first": "Henriette"
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Female Noble Player"
 				},
 				{
-					"category": "Trait",
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Madame de Cher-sur-Tendre",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
+				{
+					"category": "role",
 					"type": "female",
 					"value": true,
-					"first": "Henriette"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "Trait",
-					"type": "kind",
+					"category": "role",
+					"type": "noble",
 					"value": true,
-					"first": "Henriette"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "Trait",
-					"type": "modest",
-					"value": true,
-					"first": "Henriette"
-				},
-				{
-					"category": "Trait",
-					"type": "rich",
+					"category": "role",
+					"type": "player",
 					"value": false,
-					"first": "Henriette"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "DirectedStatus",
-					"type": "ridicules",
+					"category": "trait",
+					"type": "noble",
 					"value": true,
-					"first": "Henriette",
-					"second": "Lisette"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "author",
+					"category": "trait",
+					"type": "amorous",
 					"value": true,
-					"first": "Pannard"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "TraitConditionProfession",
-					"type": "theatre personnel",
+					"category": "trait",
+					"type": "looking for love",
 					"value": true,
-					"first": "Pannard"
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "Attribute",
-					"type": "theater knowledge",
-					"value": 95,
-					"first": "Pannard"
+					"category": "trait",
+					"type": "prideful",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
 				},
 				{
-					"category": "Attribute",
-					"type": "attractiveness / charisma",
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Madame de Cher-sur-Tendre"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
 					"value": 30,
-					"first": "Pannard"
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Male Noble Player"
 				},
 				{
-					"category": "TraitClothing",
-					"type": "poorly dressed",
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Mademoiselle Eloïse de Hauteclaire",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
 					"value": true,
-					"first": "Pannard"
+					"first": "Mademoiselle Eloïse de Hauteclaire"
 				},
 				{
-					"category": "Trait",
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "role",
+					"type": "noble",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "noble",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "very haughty",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "very disdainful",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "not rich",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "not friendly",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+				{
+					"category": "trait",
+					"type": "seductive",
+					"value": true,
+					"first": "Mademoiselle Eloïse de Hauteclaire"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Ninon",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Ninon",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Ninon",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Ninon",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Ninon",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Ninon",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Ninon",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Ninon",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Ninon",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
 					"type": "poor",
 					"value": true,
-					"first": "Pannard"
+					"first": "Ninon"
 				},
 				{
-					"category": "Trait",
-					"type": "virtuous",
+					"category": "trait",
+					"type": "not well educated",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "fearful",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "easily intimidated",
+					"value": true,
+					"first": "Ninon"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Ninon"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Toinette",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Toinette",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Toinette",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Toinette",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Toinette",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Toinette",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "esteem",
+					"value": true,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "relationship",
+					"type": "ally",
+					"value": true,
+					"first": "Toinette",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "role",
+					"type": "player",
 					"value": false,
-					"first": "Pannard"
+					"first": "Toinette"
 				},
 				{
-					"category": "Trait",
+					"category": "trait",
+					"type": "servant",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "clever",
+					"value": true,
+					"first": "Toinette"
+				},
+				{
+					"category": "trait",
+					"type": "deceptive",
+					"value": true,
+					"first": "Toinette"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fruit-seller / la Fruitière",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "intelligent",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+				{
+					"category": "trait",
+					"type": "wants to sell fruit",
+					"value": true,
+					"first": "Fruit-seller / la Fruitière"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Cellist",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Cellist",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Cellist",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Cellist",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Cellist",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Cellist",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Cellist",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Cellist",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Cellist",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Cellist"
+				},
+				{
+					"category": "role",
 					"type": "male",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "virtuous",
+					"category": "role",
+					"type": "servant",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "devout",
-					"value": true,
-					"first": "Père Guillaume"
-				},
-				{
-					"category": "Trait",
-					"type": "talkative",
+					"category": "role",
+					"type": "player",
 					"value": false,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "rich",
+					"category": "trait",
+					"type": "non-noble",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "indifferent / unflappable",
+					"category": "trait",
+					"type": "intelligent",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "cold / distant",
+					"category": "trait",
+					"type": "not sociable",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "penetrating",
+					"category": "trait",
+					"type": "friendly",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
 				},
 				{
-					"category": "Trait",
-					"type": "greedy",
+					"category": "trait",
+					"type": "haughty",
 					"value": true,
-					"first": "Père Guillaume"
+					"first": "Cellist"
+				},
+				{
+					"category": "trait",
+					"type": "poor",
+					"value": true,
+					"first": "Cellist"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Scaramouche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Scaramouche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Scaramouche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Scaramouche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Scaramouche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Scaramouche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Scaramouche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Scaramouche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Scaramouche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Scaramouche"
+				},
+				{
+					"category": "trait",
+					"type": "not very sophisticated",
+					"value": true,
+					"first": "Scaramouche"
+				},
+
+				
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "L'Animateur",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "L'Animateur",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "L'Animateur",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "L'Animateur",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "L'Animateur",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "L'Animateur",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "L'Animateur",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "L'Animateur",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "L'Animateur",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "L'Animateur"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "L'Animateur"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "L'Animateur"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "L'Animateur"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "L'Animateur"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fanchon la Poche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fanchon la Poche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Fanchon la Poche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fanchon la Poche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fanchon la Poche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Fanchon la Poche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fanchon la Poche",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fanchon la Poche",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Fanchon la Poche",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "very friendly",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "easy to get along with",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "dishonest",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+				{
+					"category": "trait",
+					"type": "thief",
+					"value": true,
+					"first": "Fanchon la Poche"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Henriette Lavocat",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Henriette Lavocat",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Henriette Lavocat",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Henriette Lavocat",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Henriette Lavocat",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Henriette Lavocat",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Henriette Lavocat",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Henriette Lavocat",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Henriette Lavocat",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "stranger",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "role",
+					"type": "female",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "bourgeois",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "amorous",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "friendly",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+				{
+					"category": "trait",
+					"type": "helpful",
+					"value": true,
+					"first": "Henriette Lavocat"
+				},
+
+
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Jeannot la Panse",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Jeannot la Panse",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "credibility",
+					"value": 40,
+					"first": "Jeannot la Panse",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Jeannot la Panse",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Jeannot la Panse",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "curiosity",
+					"value": 20,
+					"first": "Jeannot la Panse",
+					"second": "Servant Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Jeannot la Panse",
+					"second": "Male Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Jeannot la Panse",
+					"second": "Female Noble Player"
+				},
+				{
+					"category": "network",
+					"type": "emulation",
+					"value": 30,
+					"first": "Jeannot la Panse",
+					"second": "Servant Player"
+				},
+				{
+					"category": "role",
+					"type": "acquaintance",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "role",
+					"type": "male",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "role",
+					"type": "servant",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "role",
+					"type": "player",
+					"value": false,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "trait",
+					"type": "non-noble",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "trait",
+					"type": "non friendly",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "trait",
+					"type": "amorous",
+					"value": true,
+					"first": "Jeannot la Panse"
+				},
+				{
+					"category": "trait",
+					"type": "dishonest",
+					"value": true,
+					"first": "Jeannot la Panse"
 				}
 			]
 		}

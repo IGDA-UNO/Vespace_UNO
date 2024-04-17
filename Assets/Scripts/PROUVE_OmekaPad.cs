@@ -53,7 +53,10 @@ public class PROUVE_OmekaPad : MonoBehaviour
     private float fullSizeImageMaxWidth = 1400 ; 
     private float fullSizeImageMaxHeight = 1000 ; 
 
-    private bool proModeActivated = false ; 
+    private bool proModeActivated = false ;
+
+    public ENSEMBLE_UIHandler ensemble;
+    public ENSEMBLE_UIHandler_Introduction ensembleIntro;
 
     //Initialization : 
 
@@ -70,8 +73,15 @@ public class PROUVE_OmekaPad : MonoBehaviour
     //Self interface control :
 
     public void Display() {
-        omekaPad.SetActive(true) ; 
+        omekaPad.SetActive(true);
 
+        //The following causes actions to not populate after clicking on Omeka. I'm not sure what they achieve.
+        // if (ensemble != null) {
+        //     ensemble.CloseMenu();
+        // } else if (ensembleIntro != null) {
+        //     ensembleIntro.CloseMenu();
+        // }
+        
     }
     
     public void closePad() {
@@ -154,9 +164,24 @@ public class PROUVE_OmekaPad : MonoBehaviour
     }
 
     private void updateBackButton() {
-        if(arborescenceOmekaID.Count > 1) {
-            backButton.SetActive(true) ;
+        Debug.Log("count is: " + arborescenceOmekaID.Count);
+        if(arborescenceOmekaID.Count > 0) {
+
+            Debug.Log("first element is: " + arborescenceOmekaID[0]);
+            // Characters ID's begin at 650. Only show back button for characters.
+            if(arborescenceOmekaID[0] > 600) {
+                backButton.SetActive(true);
+            }
+            else{
+                backButton.SetActive(false);
+            }
+
+            
         } else {backButton.SetActive(false);}
+        
+
+        
+        
     }
 
     private void refreshUI() {
@@ -215,6 +240,10 @@ public class PROUVE_OmekaPad : MonoBehaviour
         updateBackButton() ; 
         omekaTitleText.text = selectStringLanguage(textComponent.title) ; 
         omekaDescriptionText.text = selectStringLanguage(textComponent.description) ; 
+        if(textComponent.source != ""){
+            omekaDescriptionText.text += "\n\nSource: " + textComponent.source;
+        }
+        Debug.Log("XXX updateWithTextContent");
         currentOmekaItem = textComponent.id ; 
         maxFileNumber = textComponent.filesCount ; 
         currentImageNumber = 0 ; 
@@ -225,6 +254,11 @@ public class PROUVE_OmekaPad : MonoBehaviour
                 addElementObject(element) ; 
             }
         }
+    }
+
+    public void updateTextWithErrorMessage(){
+        omekaTitleText.text = selectStringLanguage("An Error Has Occured");
+        omekaDescriptionText.text = selectStringLanguage("We apologize. This data is not available.");
     }
 
     public void updateImageContent(PROUVE_ImageComponent imageComponent) {

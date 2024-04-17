@@ -41,7 +41,7 @@ public class VirtualOmekaObject : MonoBehaviour
     }
 
     void OnMouseDown() {
-        Debug.Log("Mouse down"); 
+        Debug.Log("Mouse down on " + this.name); 
         sceneHandler.clickOnObject(OmekaVirtualObjectID, gameObject.transform.position) ; 
     }
 

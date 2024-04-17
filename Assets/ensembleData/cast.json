@@ -1,121 +1,82 @@
 {
 	"cast": {
-		"Jacob": {
-			"name": "Jacob"
+		"Male Noble Player": {
+			"name": "Male Noble Player"
 		},
-		"Chevalier des Grieux": {
-			"name": "Chevalier des Grieux"
+		"Female Noble Player": {
+			"name": "Female Noble Player"
 		},
-		"Manon": {
-			"name": "Manon"
+		"Servant Player": {
+			"name": "Servant Player"
 		},
-		"Père Joseph": {
-			"name": "Père Joseph"
+		"Marie-Catherine Bienfait, ticket taker": {
+			"name": "Marie-Catherine Bienfait, ticket taker"
 		},
-		"Geneviève": {
-			"name": "Geneviève"
+		"Bruno Dufort, semainier": {
+			"name": "Bruno Dufort, semainier"
 		},
-		"Frontin": {
-			"name": "Frontin"
+		"Monsieur d'Ain d'Ygeste": {
+			"name": "Monsieur d'Ain d'Ygeste"
 		},
-		"Jean-Jacques Young": {
-			"name": "Jean-Jacques Young"
+		"Monsieur d'Hautainville": {
+			"name": "Monsieur d'Hautainville"
 		},
-		"Tiberge": {
-			"name": "Tiberge"
+		"Monsieur de Gentilly": {
+			"name": "Monsieur de Gentilly"
 		},
-		"Lisette": {
-			"name": "Lisette"
+		"Monsieur des Trois-Landes": {
+			"name": "Monsieur des Trois-Landes"
 		},
-		"Mlle Habert": {
-			"name": "Mlle Habert"
+		"Monsieur d'Issy": {
+			"name": "Monsieur d'Issy"
 		},
-		"Vulson": {
-			"name": "Vulson"
+		"Madame de Blasé-l'Evêque": {
+			"name": "Madame de Blasé-l'Evêque"
 		},
-		"M. d'Orsan": {
-			"name": "M. d'Orsan"
+		"Chérubin": {
+			"name": "Chérubin"
 		},
-		"Barna Bredanna": {
-			"name": "Barna Bredanna"
+		"Valère": {
+			"name": "Valère"
 		},
-		"Mirabeau": {
-			"name": "Mirabeau"
+		"Madame du Puy-des-Gougères": {
+			"name": "Madame du Puy-des-Gougères"
 		},
-		"l'Aubergiste": {
-			"name": "l'Aubergiste"
+		"Madame de Cher-sur-Tendre": {
+			"name": "Madame de Cher-sur-Tendre"
 		},
-		"Théodore": {
-			"name": "Théodore"
+		"Mademoiselle Eloïse de Hauteclaire": {
+			"name": "Mademoiselle Eloïse de Hauteclaire"
 		},
-		"Béatrice de Bouillon": {
-			"name": "Béatrice de Bouillon"
+		"Ninon": {
+			"name": "Ninon"
 		},
-		"Madame Clot": {
-			"name": "Madame Clot"
+		"Toinette": {
+			"name": "Toinette"
 		},
-		"Lescaut": {
-			"name": "Lescaut"
+		"Fruit-seller / la Fruitière": {
+			"name": "Fruit-seller / la Fruitière"
 		},
-		"Flaminia": {
-			"name": "Flaminia"
+		"Cellist": {
+			"name": "Cellist"
 		},
-		"Zanuzzi": {
-			"name": "Zanuzzi"
+		"L'Animateur": {
+			"name": "L'Animateur"
 		},
-		"Compère": {
-			"name": "Compère"
+		"Fanchon la Poche": {
+			"name": "Fanchon la Poche"
 		},
-		"Mme de Ferval": {
-			"name": "Mme de Ferval"
+		"Henriette Lavocat": {
+			"name": "Henriette Lavocat"
 		},
-		"Jean-Jacques Adult": {
-			"name": "Jean-Jacques Adult"
+		"Jeannot la Panse": {
+			"name": "Jeannot la Panse"
 		},
-		"L'Officier": {
-			"name": "L'Officier"
+		"Scaramouche": {
+			"name": "Scaramouche"
 		},
-		"Antoine": {
-			"name": "Antoine"
-		},
-		"Ernestine": {
-			"name": "Ernestine"
-		},
-		"Gensac": {
-			"name": "Gensac"
-		},
-		"Donatien Alphonse": {
-			"name": "Donatien Alphonse"
-		},
-		"Renette": {
-			"name": "Renette"
-		},
-		"l'Espion": {
-			"name": "l'Espion"
-		},
-		"M. de Maugis": {
-			"name": "M. de Maugis"
-		},
-		"Marianne": {
-			"name": "Marianne"
-		},
-		"Violette": {
-			"name": "Violette"
-		},
-		"Denis": {
-			"name": "Denis"
-		},
-		"M. Deslandes": {
-			"name": "M. Deslandes"
-		},
-		"Henriette": {
-			"name": "Henriette"
-		},
-		"Pannard": {
-			"name": "Pannard"
-		},
-		"Père Guillaume": {
-			"name": "Père Guillaume"
+		"Madame Argant": {
+			"name": "Madame Argant"
 		}
 	}
 }

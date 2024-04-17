@@ -12,6 +12,7 @@ public class EnsembleObject : MonoBehaviour
     private Vector3 thisCenter;
     private ENSEMBLE_UIHandler handler;
     public string currentName;
+    public int omekaDatabaseID;
 
     public void drawLineFromObject(GameObject targetObject, float duration)
     {
@@ -45,9 +46,7 @@ public class EnsembleObject : MonoBehaviour
 
     void OnMouseDown()
     {
-        handler.DisplayMain();
-        Debug.Log("Mouse down");
-        
+        handler.clickOnObject(gameObject.name, gameObject.transform.position);
     }
 
     void Update()

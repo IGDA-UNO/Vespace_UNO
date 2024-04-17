@@ -34,7 +34,7 @@ public class PROUVE_DataCaller : MonoBehaviour
         sceneHandler = handler ; 
 		omekaPad = pad ; 
         omeka_key = key ; 
-        omekaBaseURL = baseURL; 
+        omekaBaseURL = baseURL;
 		if(refreshLocalDB) {
 			retrieveOnlineDB() ; 
 		} else {
@@ -109,8 +109,10 @@ public class PROUVE_DataCaller : MonoBehaviour
 
 	public void lookForItemWithID(int itemID) {
 		if(useLocalDB) {
+			Debug.Log("XXXopen data for item!!");
 			StartCoroutine(openDataForItem(itemID)) ; 
 		} else {
+            Debug.Log("XXXbuild data for item!!");
 			StartCoroutine(buildDataForItem(itemID)) ; 
 		}
 	}
@@ -134,6 +136,7 @@ public class PROUVE_DataCaller : MonoBehaviour
 
     private void askDisplayOfItem(OmekaItem item) {
         PROUVE_TextComponent textComponent = new PROUVE_TextComponent() ;
+		Debug.Log("XXX Displaying " + item);
         textComponent.createFromItem(item) ; 
 		omekaPad.updateWithTextContent(textComponent) ; 
     }
@@ -347,26 +350,33 @@ public class PROUVE_DataCaller : MonoBehaviour
     //Web Requests : 
 
     IEnumerator buildDataForItem(int item) {
+		Debug.Log("Build Data For Item IEnumerator!!!!");
 		addWorkLoad() ; 
 		string request = buildRequestJSONforItem(item) ;
+		Debug.Log("Request String: " + request);
 		UnityWebRequest webRqst = UnityWebRequest.Get(request) ; 
 		yield return webRqst.SendWebRequest() ; 
 
 		if(webRqst.isNetworkError || webRqst.isHttpError) {
 			Debug.Log("Erreur buidling data for item "+item) ; 
 			Debug.Log(webRqst.error) ; 
+			omekaPad.updateTextWithErrorMessage();
 		} 
 		else {
 			CurrentItem = JsonUtility.FromJson<OmekaItem>(webRqst.downloadHandler.text) ;
 			askDisplayOfItem(CurrentItem) ; 
 			StartCoroutine(requestFilesForItem(CurrentItem,"main")) ; 
+			Debug.Log("relation count: " + CurrentItem.extended_resources.item_relations.relationsCount());
 			if(CurrentItem.extended_resources.item_relations.relationsCount()>0) {
+				
 				if(loadObjectRelations) {
+					Debug.Log("OBJECT RELATION");
 					foreach (OmekaItemRelationsObject relation in CurrentItem.extended_resources.item_relations.object_relations) {
 						omekaPad.addRelationButtonObject(relation) ; 
 					}
 				}
 				if(loadSubjectRelations) {
+                    Debug.Log("SUBJECT RELATION");
 					foreach (OmekaItemRelationsSubject relation in CurrentItem.extended_resources.item_relations.subject_relations) {
 						omekaPad.addRelationButtonSubject(relation) ; 
 					}
@@ -683,6 +693,7 @@ public class PROUVE_TextComponent { //Is a simplified class of an omeka object s
     public int id ; 
     public string title ; 
     public string description ; 
+	public string source;
 	public int filesCount ; 
     public OmekaTag[] keywords ;
 	public PROUVE_QuickElement[] elements ;  
@@ -690,6 +701,8 @@ public class PROUVE_TextComponent { //Is a simplified class of an omeka object s
     public void createFromItem(OmekaItem item) {
         id = item.id ; 
         title = item.getElement("Title") ; 
+		source = item.getElement("Source");
+		Debug.Log("XXX I think the source is " + source);
         description = item.getElement("Description") ; 
         keywords = item.tags ; 
 		filesCount = item.files.count ; 

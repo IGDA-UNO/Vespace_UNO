@@ -34,6 +34,7 @@ public class PROUVE_SceneHandler : MonoBehaviour
     private int demoPlayerID = 0 ; 
     private bool allowRestart ; 
     private bool proModeActive = false ;
+    private bool permitProMode;
     private int interfaceMode = 2 ; // 0: interface fixée à la caméra ; 1: interface fixée à l'objet ; 2: interface fixée au controlleur gauche 
     private float interfaceHeight = 1.5f; 
 
@@ -71,13 +72,14 @@ public class PROUVE_SceneHandler : MonoBehaviour
     void Start()
     {
         //Initializing actions and events
-        actionBoolean = SteamVR_Actions._default.GrabGrip ;
-        laserPointer.color = miss_color ; 
+        actionBoolean = SteamVR_Actions._default.GrabGrip;
+        laserPointer.color = miss_color; 
         laserPointer.PointerIn += PointerInside; 
         laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick; 
         interfaceController.SwipeHorizontal += SwipingHorizontal; 
         interfaceController.SwipeVertical += SwipingVertical ; 
+        permitProMode = false;
         if(CurrentLanguage != "fra" && CurrentLanguage != "eng") {
             CurrentLanguage = "fra";
         }
@@ -109,12 +111,15 @@ public class PROUVE_SceneHandler : MonoBehaviour
             Debug.Log("Main scene loaded, starting record") ;      
             allowRestart = true ; 
         }
+
+        //I believe by default, unless otherwise specified, we are assuming interface mode 2.
+        interfaceMode = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(actionBoolean.stateDown) {
+        if(actionBoolean.stateDown && permitProMode) {
             if(!mainMenu.activeSelf) {
                 invokeMainMenu() ; 
             } else {
@@ -152,7 +157,13 @@ public class PROUVE_SceneHandler : MonoBehaviour
 
             if(Input.GetKeyDown (KeyCode.T)) {
                 //dataCaller.debugTestSend() ; 
-            } 
+            }
+        }
+
+        //if the user hits the 'r' key, reset the experience.
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -306,8 +317,8 @@ public class PROUVE_SceneHandler : MonoBehaviour
     public void clickOnObject(int objectID, Vector3 position)  
     {
         Debug.Log("Clicked on object " + objectID) ; 
-        invokeMainMenu() ; 
-        interfaceMode = 4 ; 
+        //invokeMainMenu() ;  
+        //interfaceMode = 4 ; set this at the beginning when we first detect headset existence.
         placePad(position) ; 
         omekaPad.displayItem(objectID) ; 
     }
@@ -363,6 +374,10 @@ public class PROUVE_SceneHandler : MonoBehaviour
             float position = e.velocity*0.55f+0.5f ; 
             descriptionScroll.verticalNormalizedPosition = position ;  
         }
+    }
+
+    public void SetInterfaceMode(int newMode){
+        this.interfaceMode = newMode;
     }
 
 
